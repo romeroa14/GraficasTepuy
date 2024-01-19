@@ -1,0 +1,171 @@
+/* 
+    CSS: Estilos generales para toda la pagina
+    Autor: Juan
+    Fecha de creacion: 10/01/2024
+ */ 
+
+.contenedor-filtroEstadistica-secundarios{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: start;
+    column-gap: 21px;
+    row-gap: 11px;
+    margin-top: 10px;
+    
+}
+
+.filtroEstadistica-cargos{
+    /* font-weight: 600; */
+}
+
+.filtroEstadistica-boton{
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    background-color: #0F70B7;
+    border-style: none;
+}
+
+.filtroEstadistica-boton:hover {
+    background-color: #1c8edf;
+}
+
+.filtroEstadistica-boton:active {
+    background-color: #174c72;
+}
+
+body{
+    background-color: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+.cintillo{
+    background-color: #0F70B7;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin: 20px auto;
+    padding: 40px;
+    width: 100%;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fafafa;
+    color: rgba(0, 140, 255, 0.007)
+}
+.contenedor-mapa-panel {
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+
+.contenedor-estadisticas-selects {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+
+.logo-tepuy{
+    position: absolute;
+    margin-left: 100px;
+    padding: 15px;
+}
+
+.select {
+    width: 100%;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(209, 209, 209);
+    height: 40px;
+}
+
+.select:disabled {
+    background: rgb(212, 212, 212);
+}
+
+.hide {
+    display: none;
+}
+
+hr {
+    background-color:black;
+}
+
+path.leaflet-interactive{
+    outline: none;
+}
+
+.contenedorBarra{
+    display: flex;
+}
+
+.sugerencias{
+    position: absolute;
+    height: auto;
+    max-height: 300px;
+    top: 50px; /* Ajusta la posición superior según sea necesario */
+    left: 50px; /* Ajusta la posición izquierda según sea necesario */
+    z-index: 999; /* Establece un índice de apilamiento alto para asegurar que esté sobre otros elementos */
+    background-color:#fff; /* Color de fondo con opacidad */
+    padding: 10px;
+    color: #000;
+    list-style-type: none;
+    overflow-y: auto;
+}
+.sugerencias li:hover{
+    background-color: rgb(136, 174, 174);
+    color: #000;
+
+}
+
+.leaflet-legend-contents {
+    color: #000;
+}
+
+.titulo-graph{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[id*="contenedor-graph"] {
+
+   
+     margin-left: 145px;
+        
+}
+/* [id*="grafica"] {
+
+   
+     width: 500px;
+     height: 300px;
+} */
+
+[id*="panel-Graph-"] {
+
+    
+    margin-left: 65px;
+    padding: 10px;
+    
+}
+
+.row{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

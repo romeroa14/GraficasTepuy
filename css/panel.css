@@ -1,0 +1,199 @@
+/* 
+    CSS: Estilos para el panel de informacion
+    Autor: Juan
+    Fecha de creacion: 09/12/2023
+ */
+
+/* ---------- PANEL ---------- */
+#mapa_columna{
+    user-select: none;
+}
+
+.panel-boton-icono {
+    padding: 6px 8px;
+    background: white;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(151, 151, 151);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.panel-boton-icono:hover {
+    background: rgb(244, 244, 244);
+}
+
+.container{
+    width: 100%;
+
+    ::-webkit-scrollbar {
+        width: 5px;
+
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #0F70B7;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #2173df;
+    }
+}
+
+.contenedor-panel {
+    width: 100%;
+    max-width: 800px;
+    overflow-y: scroll;
+    overflow-Y: 'hidden';
+    overflow-x: hidden;
+    height: 600px;
+}
+
+
+
+/* ---------- PORTADA ---------- */
+.contenedor-panel #panel_nombre {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.contenedor-panel #panel_tipo {
+    font-size: 14px;
+    color: #4b4b4b;
+    text-align: left;
+}
+
+.contenedor-panel .portada {
+    text-align: center;
+    border-radius: 10px;
+    width: 98%;
+}
+
+.contenedor-panel hr {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+
+/* ---------- CATEGORIAS ---------- */
+.contenedor-panel .categoria {
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 0px;
+    color: #4b4b4b;
+}
+
+.contenedor-panel .categoria:hover {
+    border-bottom-color: #999;
+    color: #1a1a1a;
+}
+
+.contenedor-panel .categoria:focus {
+    border-bottom-color:#0F70B7;
+    color: #0F70B7;
+}
+
+.contenedor-panel .encabezado{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 18px;
+    border-bottom: #0F70B7;
+    border-bottom-style: solid;
+}
+
+.titulo{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 42px;
+    border-bottom: #0F70B7;
+    border-bottom-style: solid;
+}
+
+/* ---------- CATEGORIA INFORMACION ----------*/
+.contenedor-panel .logo {
+    display: flex;
+    margin: 0 auto;
+    width: 150px;
+}
+
+.contenedor-panel #categoria_informacion div{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.contenedor-panel #categoria_informacion .autoridad-nombre{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #ebebeb;
+    padding: 5px 10px 10px 5px;
+}
+
+.contenedor-panel #categoria_informacion .autoridad-cargo{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contenedor-panel #categoria_informacion .autoridad-hr{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedor-panel #categoria_informacion .autoridad-fichaTecnica{
+    text-align: center;
+}
+
+.contenedor-panel #categoria_informacion .autoridad-reseña{
+    text-align: justify;
+}
+
+.contenedor-panel .foto {
+    display: flex;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#panel_informacion {
+    height: auto;
+    display: block;
+    animation: aparecerDesdeArriba 0.5s ease-out;
+}
+
+@keyframes aparecerDesdeArriba {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ---------- CATEGORIA CARRERAS ---------- */
+.contenedor-panel #categoria_carreras div{
+    font-size: 14px;
+}
