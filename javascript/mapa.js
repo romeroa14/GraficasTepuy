@@ -315,18 +315,18 @@ const leyenda = L.control.legend({
 
 // console.log(leyenda.options.legends[0].inactive);
 let actividadMarcaPublica = document.querySelector('.leaflet-legend-item')
+let actividadMarcaPrivada = document.querySelector("section > div > div:nth-child(2)")
 let valorCambio = false;
+let valorCambio2 = false;
 
 actividadMarcaPublica.addEventListener("click",()=>{
     if (valorCambio == true) {
-        // console.log(estadoActualGlobal.toLocaleUpperCase());
         if (marcasFiltradas) {
             map.removeLayer(marcasFiltradas);
         }
         
         valorCambio = false; 
     } else {
-        // console.log(estadoActualGlobal.toLocaleUpperCase());
         if (marcasFiltradas) {
             map.removeLayer(marcasFiltradas);
         }
@@ -335,6 +335,21 @@ actividadMarcaPublica.addEventListener("click",()=>{
     }
 })
 
+actividadMarcaPrivada.addEventListener("click",()=>{
+    if (valorCambio2 == true) {
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        
+        valorCambio2 = false; 
+    } else {
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Privada').addTo(map)
+        valorCambio2 = true; 
+    }
+})
 
 // Cambiar titulo de la leyenda
 let titulo = document.querySelector('.leaflet-legend-title')

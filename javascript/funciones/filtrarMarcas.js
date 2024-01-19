@@ -27,7 +27,6 @@ function Filtrar(estado, municipio, siglas, hover, tipo) {
 
     // Devolver marcas publicas/privadas
     if (tipo) {
-        console.log("Filtrando por: tipo publica/privada")
         marcasFiltradas = marcasGlobal
             .filter((objeto) => objeto.tipo == tipo)
             .map((objeto) => objeto.marca);

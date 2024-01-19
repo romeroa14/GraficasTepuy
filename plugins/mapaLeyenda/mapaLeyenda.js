@@ -266,6 +266,7 @@
                 return;
             }
             this._legendSymbols.push(legendSymbol);
+            
 
             symbolContainer.style.width = this.options.symbolWidth + "px";
             symbolContainer.style.height = this.options.symbolHeight + "px";
