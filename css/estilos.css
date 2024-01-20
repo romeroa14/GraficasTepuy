@@ -15,10 +15,6 @@
     
 }
 
-.filtroEstadistica-cargos{
-    /* font-weight: 600; */
-}
-
 .filtroEstadistica-boton{
     padding: 7px;
     border-radius: 5px;
@@ -44,11 +40,12 @@ body{
 .cintillo{
     background-color: #0F70B7;
     text-align: center;
-    font-size: 60px;
+    font-size: 52px;
     color: white;
     margin: 20px auto;
     padding: 40px;
     width: 100%;
+    font-weight: 600;
 }
 
 #map {

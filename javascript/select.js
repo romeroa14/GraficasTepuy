@@ -23,7 +23,7 @@ let estadosvnzl =[
     "Zulia"
 ];
 
-let univzla =[  
+let univzla =[
     "(UNATUR) - UNIVERSIDAD NACIONAL DEL TURISMO (Anzoátegui, Barcelona)", 
     "(UPTJAA) - UNIVERSIDAD POLITÉCNICA TERRITORIAL JOSÉ ANTONIO ANZOÁTEGUI (Anzoátegui, El Tigre)", 
     "(UPTAFBF) - UNIVERSIDAD POLITÉCNICA TERRITORIAL DEL ESTADO ARAGUA FEDERICO BRITO FIGUEROA (Argua, Maracay) ", 

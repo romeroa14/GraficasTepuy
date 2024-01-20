@@ -151,6 +151,7 @@ for (let universidadKey in universidadesData) {
         if(!panel_boton.checked){
             AlternarPanel(true)
             panel_boton.checked = true
+            contenedor_panel_boton.classList.remove('hide');
         }
 
     });

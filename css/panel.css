@@ -21,8 +21,25 @@
     cursor: pointer;
 }
 
+
 .panel-boton-icono:hover {
-    background: rgb(244, 244, 244);
+    background: rgb(226, 226, 226);
+}
+
+.boton-restablecer {    
+    padding: 2px 2px;
+    background: white;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(151, 151, 151);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.boton-restablecer:hover {    
+    background: rgb(226, 226, 226);
 }
 
 .container{
