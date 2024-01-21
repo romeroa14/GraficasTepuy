@@ -1,5 +1,5 @@
 // Informacion a mostrar en el panel de informacion
-const universidadesData = {
+const UNI_DATA = {
 
     //Documento Ezequiel
    "UBTJR": {
@@ -3032,4 +3032,4 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
 
 }
 
-export {universidadesData};
+export {UNI_DATA};

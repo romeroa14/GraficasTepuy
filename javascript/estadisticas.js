@@ -1,7 +1,7 @@
 
 select_cargo.disabled = true
 select_tipo_persona.addEventListener('change', function(){
-    select_cargo.classList.remove('hide')
+    select_cargo.removeAttribute('hidden')
     // console.log(select_tipo_persona.value)
     if(select_tipo_persona.value == 'Administrativos'){
         select_cargo.disabled = false
@@ -19,7 +19,7 @@ select_tipo_persona.addEventListener('change', function(){
         select_cargo.disabled = false   
         return select_cargo.innerHTML = estudiantes
     }
-    select_cargo.classList.add('hide')
+    select_cargo.setAttribute('hidden')
     select_cargo.disabled = true
     return select_cargo.innerHTML = '<option disabled selected>Cargo obrero</option>'
 })

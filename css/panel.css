@@ -4,203 +4,184 @@
     Fecha de creacion: 09/12/2023
  */
 
+
+
+/* ---------- BOTON ALTERNAR PANEL ---------- */
+#contenedor_boton_alternar {
+    padding: 6px;
+    background: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(151, 151, 151);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    & .boton-alternar-icono {
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+#contenedor_boton_alternar:hover {
+    background: rgb(226, 226, 226);
+}
+
+
+
 /* ---------- PANEL ---------- */
-#mapa_columna{
-    user-select: none;
-}
-
-.panel-boton-icono {
-    padding: 6px 8px;
-    background: white;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 3px;
-    border-color:rgb(151, 151, 151);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-
-.panel-boton-icono:hover {
-    background: rgb(226, 226, 226);
-}
-
-.boton-restablecer {    
-    padding: 2px 2px;
-    background: white;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 3px;
-    border-color:rgb(151, 151, 151);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.boton-restablecer:hover {    
-    background: rgb(226, 226, 226);
-}
-
-.container{
-    width: 100%;
-
-    ::-webkit-scrollbar {
-        width: 5px;
-
-    }
-    ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #0F70B7;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: #2173df;
-    }
-}
-
-.contenedor-panel {
+.Panel-contenedor {
     width: 100%;
     max-width: 800px;
     overflow-y: scroll;
     overflow-Y: 'hidden';
     overflow-x: hidden;
     height: 600px;
+
+    /* ---------- PORTADA ---------- */
+    & .portada-nombre {
+        margin-top: 10px;
+        text-align: left;       
+    }
+
+    & .portada-tipo {
+        font-size: 14px;
+        color: #4b4b4b;
+        text-align: left;  
+    }
+
+    & .portada-fachada {
+        text-align: center;
+        border-radius: 10px;
+        width: 98%;
+    }
+
+    & hr {
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    /* ---------- BOTONES CATEGORIAS ---------- */
+    & .categoria {
+        border-color: transparent;
+        background-color: transparent;
+        font-size: 16px;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 0px;
+        color: #4b4b4b;
+    }
+
+    & .categoria:hover {
+        border-bottom-color: #999;
+        color: #1a1a1a;
+    }
+
+    & .categoria:focus {
+        border-bottom-color:var(--color-primario);
+        color: var(--color-primario);
+    }
+
+    & .encabezado {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 5px;
+        font-size: 18px;
+        border-bottom: var(--color-primario);
+        border-bottom-style: solid;
+    }
+
+    /* ---------- CATEGORIA INFORMACION ---------- */
+    #categoria_informacion {
+        font-size: 14px;
+        text-align: justify;
+    }    
+
+    & .logo {
+        display: flex;
+        margin: 0 auto;
+        width: 180px;
+    }
+
+    & .autoridad-foto  {
+        display: flex;
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    & .autoridad-nombre {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 800;
+        background-color: #ebebeb;
+        padding: 5px 10px 10px 5px;
+    }
+
+    & .autoridad-cargo {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    & .autoridad-reseña {
+        text-align: justify;
+    }
+
+    & .autoridad-fichaTecnica {
+        text-align: center;
+    }
+    
+    & .autoridad-hr {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    & #panel_informacion {
+        height: auto;
+        display: block;
+        animation: aparecerDesdeArriba 0.5s ease-out;
+    }
 }
 
 
 
-/* ---------- PORTADA ---------- */
-.contenedor-panel #panel_nombre {
-    margin-top: 10px;
-    text-align: left;
+/* ---------- BOTON RESTABLECER MAPA ---------- */
+.contenedor-boton-restablecer  {    
+    padding: 2px 2px;
+    background: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(151, 151, 151);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 
-.contenedor-panel #panel_tipo {
-    font-size: 14px;
-    color: #4b4b4b;
-    text-align: left;
-}
-
-.contenedor-panel .portada {
-    text-align: center;
-    border-radius: 10px;
-    width: 98%;
-}
-
-.contenedor-panel hr {
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+.contenedor-boton-restablecer:hover  {    
+    background: rgb(226, 226, 226);
 }
 
 
 
-/* ---------- CATEGORIAS ---------- */
-.contenedor-panel .categoria {
-    border-color: transparent;
-    background-color: transparent;
-    font-size: 16px;
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 0px;
-    color: #4b4b4b;
-}
-
-.contenedor-panel .categoria:hover {
-    border-bottom-color: #999;
-    color: #1a1a1a;
-}
-
-.contenedor-panel .categoria:focus {
-    border-bottom-color:#0F70B7;
-    color: #0F70B7;
-}
-
-.contenedor-panel .encabezado{
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding: 5px;
-    font-size: 18px;
-    border-bottom: #0F70B7;
-    border-bottom-style: solid;
-}
-
-
-/* ---------- CATEGORIA INFORMACION ----------*/
-.contenedor-panel .logo {
-    display: flex;
-    margin: 0 auto;
-    width: 150px;
-}
-
-.contenedor-panel #categoria_informacion div{
-    font-size: 14px;
-    text-align: justify;
-}
-
-.contenedor-panel #categoria_informacion .autoridad-nombre{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 800;
-    background-color: #ebebeb;
-    padding: 5px 10px 10px 5px;
-}
-
-.contenedor-panel #categoria_informacion .autoridad-cargo{
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.contenedor-panel #categoria_informacion .autoridad-hr{
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.contenedor-panel #categoria_informacion .autoridad-fichaTecnica{
-    text-align: center;
-}
-
-.contenedor-panel #categoria_informacion .autoridad-reseña{
-    text-align: justify;
-}
-
-.contenedor-panel .foto {
-    display: flex;
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.contenedor-panel #panel_informacion {
-    height: auto;
-    display: block;
-    animation: aparecerDesdeArriba 0.5s ease-out;
-}
-
-@keyframes aparecerDesdeArriba {
-    from {
+/* ---------- ANIMACIONES ---------- */
+@keyframes aparecerDesdeArriba  {
+    from  {
         transform: translateY(-100%);
     }
 
-    to {
+    to  {
         transform: translateY(0);
     }
-}
-
-
-
-/* ---------- CATEGORIA CARRERAS ---------- */
-.contenedor-panel #categoria_carreras div{
-    font-size: 14px;
 }

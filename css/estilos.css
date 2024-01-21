@@ -4,51 +4,114 @@
     Fecha de creacion: 10/01/2024
  */ 
 
-.cintillo{
-    box-shadow: 01px 0px 10px 1px rgba(0,0,0,0.5);
-    background-color: #0F70B7;
-    text-align: center;
-    font-size: 38px;
-    color: white;
-    margin: 20px auto;
-    padding: 40px;
-    width: 100%;
-    font-weight: 500;
+
+ 
+/* ---------- COLORES GLOBALES ---------- */
+:root {
+    --color-primario: #0F70B7;
+    --color-primario-resaltado: #1c8edf;
+    --color-primario-opaco: #174c72;
 }
 
-.contenedor-filtroEstadistica-secundarios{
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    justify-items: stretch;
-    align-items: start;
-    column-gap: 21px;
-    row-gap: 11px;
-    margin-top: 10px;
+
+
+/* ---------- MENU ---------- */
+.Menu{
+    & .mincyt{
+        width: 100%;
+    }
+
+    & .tepuy{
+        width: 100%;
+    }
+
+    /* &-tepuy-solo{
+        position: absolute;
+        margin-left: 100px;
+        padding: 15px;
+        margin-top: 8%;
+        position: absolute;
+        animation: aparecerIzquierda 1s ease-out;
+    }
+
+    @keyframes aparecerIzquierda {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }  */
+}
+
+
+
+/* ---------- ESTADISTICAS Y FILTROS ---------- */
+.Estadisticas-contenedor {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    border-radius: 5px;        
     
+    & .boton{
+        padding: 7px;
+        border-radius: 5px;
+        margin-top: 10px;
+        color: rgb(255, 255, 255);
+        background-color: var(--color-primario);
+        border-style: none;
+    }
+
+    & .boton:hover {
+        background-color: var(--color-primario-resaltado)
+    }
+    & .boton:active {
+        background-color: var(--color-primario-opaco)
+    }
+
+    & .filtros-secundarios{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        justify-items: stretch;
+        align-items: start;
+        column-gap: 21px;
+        row-gap: 11px;
+        margin-top: 10px;
+    }
 }
 
-.filtroEstadistica-boton{
-    padding: 7px;
-    border-radius: 5px;
-    margin-top: 10px;
-    color: white;
-    background-color: #0F70B7;
-    border-style: none;
+
+
+/* ---------- BARRA DE BUSQUEDA ---------- */
+.Barra-busqueda-contenedor{
+    & .barra-boton{
+        display: flex;
+    }
+    
+    & .sugerencias{
+        position: absolute;
+        height: auto;
+        max-height: 300px;
+        top: 50px;
+        /* left: 50px;  */
+        z-index: 999; /* Establece un índice de apilamiento alto para asegurar que esté sobre otros elementos */
+        background-color:#fff;
+        padding: 10px;
+        color: #000;
+        list-style-type: none;
+        overflow-y: auto;
+    }
+
+    & .sugerencias li:hover{
+        background-color: rgb(136, 174, 174);
+        color: #000;
+    }
 }
 
-.filtroEstadistica-boton:hover {
-    background-color: #1c8edf;
-}
 
-.filtroEstadistica-boton:active {
-    background-color: #174c72;
-}
 
-body{
-    background-color: #f3f3f3;
-    font-family: Arial, Helvetica, sans-serif;  
-}
-
+/* ---------- MAPA ---------- */
 #map {
     height: 600px;
     width: 100%;
@@ -56,8 +119,13 @@ body{
     background-color: #fafafa;
     color: rgba(0, 140, 255, 0.007)
 }
-.contenedor-mapa-panel {
-    background-color: white;
+
+#mapa_columna {
+    user-select: none;
+}
+
+.Mapa-Panel-contenedor {
+    background-color: rgb(255, 255, 255);
     margin-top: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -65,17 +133,42 @@ body{
     border-radius: 5px;
 }
 
-.contenedor-estadisticas-selects {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
-    border-radius: 5px;
+
+
+/* ---------- ETC ---------- */
+.cintillo{
+    box-shadow: 01px 0px 10px 1px rgba(0,0,0,0.5);
+    background-color: var(--color-primario);
+    text-align: center;
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+    margin: 20px auto;
+    padding: 40px;
+    width: 100%;
+    font-weight: 500;
 }
 
-.logo-tepuy{
-    position: absolute;
-    margin-left: 100px;
-    padding: 15px;
+.container {
+    width: 100%;
+
+    ::-webkit-scrollbar  {
+        width: 5px;
+
+    }
+    ::-webkit-scrollbar-track  {
+        background: #f1f1f1; 
+    }
+    ::-webkit-scrollbar-thumb  {
+        background: var(--color-primario);
+    }
+    ::-webkit-scrollbar-thumb:hover  {
+        background: #2173df;
+    }
+}
+
+body{
+    background-color: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;  
 }
 
 .select {
@@ -94,10 +187,6 @@ body{
     background: rgb(212, 212, 212);
 }
 
-.hide {
-    display: none;
-}
-
 hr {
     background-color:black;
 }
@@ -106,63 +195,30 @@ path.leaflet-interactive{
     outline: none;
 }
 
-.contenedorBarra{
-    display: flex;
-}
-
-.sugerencias{
-    position: absolute;
-    height: auto;
-    max-height: 300px;
-    top: 50px; /* Ajusta la posición superior según sea necesario */
-    left: 50px; /* Ajusta la posición izquierda según sea necesario */
-    z-index: 999; /* Establece un índice de apilamiento alto para asegurar que esté sobre otros elementos */
-    background-color:#fff; /* Color de fondo con opacidad */
-    padding: 10px;
-    color: #000;
-    list-style-type: none;
-    overflow-y: auto;
-}
-.sugerencias li:hover{
-    background-color: rgb(136, 174, 174);
-    color: #000;
-
-}
-
 .leaflet-legend-contents {
     color: #000;
 }
 
 .titulo-graph{
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 [id*="contenedor-graph"] {
-
-   
      margin-left: 145px;
-        
 }
 /* [id*="grafica"] {
-
-   
      width: 500px;
      height: 300px;
 } */
 
 [id*="panel-Graph-"] {
-
-    
     margin-left: 65px;
     padding: 10px;
-    
 }
 
 .row{
-
     display: flex;
     justify-content: center;
     align-items: center;

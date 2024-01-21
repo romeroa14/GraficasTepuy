@@ -1,3 +1,13 @@
+/* 
+    Script: Crear graficas mediante una funcion
+    Autor: Alfredo
+    Fecha de creacion: 15/01/2024
+ */
+
+export {crearGrafica}
+
+// ---------- FUNCION CREAR GRAFICOS ----------
+
 // Función para crear gráficos y colocarlos en divs específicos
 function crearGrafica(divId, canvasId, labels, data, backgroundColor, typeGraph) {
   
@@ -85,8 +95,3 @@ crearGrafica(document.getElementById('contenedor-graph7'),'grafica7', ['Albañil
 
 // Egresados 
     crearGrafica(document.getElementById('contenedor-graph8'),'grafica8', ['2023', '2022', '2021', '2020', '2019'], [3040, 2001, 4000, 4000, 5000], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'],'pie');
-
-
-
-export {crearGrafica}
-

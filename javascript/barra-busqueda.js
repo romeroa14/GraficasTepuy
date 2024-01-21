@@ -4,20 +4,18 @@
     Fecha de creacion: 10/01/2024
  */
 
-import { universidadesData } from "./data/universidadesData.js";
+import { UNI_DATA } from "./data/universidadesData.js";
 import { Filtrar } from "./funciones/filtrarMarcas.js";
 import { map } from "./mapa.js";
-import { mostrarPanel } from "./panelInformacion.js";
+import { mostrarPanel } from "./panel.js";
 import { eliminarAcentos } from "./funciones/eliminarAcentos.js";
 import { getGlobalVariable, setGlobalVariable } from './mapa.js';
-
-// var marcasFiltradas
-var estadoActualGlobal
+import { getEstadoActualGlobal, setEstadoActualGlobal } from './mapa.js';
 
 // ---------- BARRA DE BUSQUEDA ----------
 
 // Funcionalidades de la barra de busqueda
-const containerBar = document.querySelector('.barraBusqueda');
+const containerBar = document.querySelector('.Barra-busqueda-contenedor');
 const inputBar = containerBar.querySelector('input');
 const sugerenciasBar = document.querySelector('.sugerencias');
 
@@ -51,7 +49,7 @@ inputBar.onkeyup = (e) =>{
             let inputActual = document.querySelector(".form-control").value
             var siglas = crearSiglas(inputActual);
             
-            let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
+            let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
         if (getGlobalVariable()) {
@@ -84,7 +82,7 @@ const mostrarSugerencias = (list) =>{
             inputSeleccion.value = li.innerText;
             let siglas = crearSiglas(inputSeleccion.value);
                 
-            let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
+            let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
         if (getGlobalVariable()) {
@@ -154,7 +152,7 @@ function seleccionarOpcion(elemento) {
         if (inputValue) {
             var siglas = crearSiglas(inputValue);
             
-            let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
+            let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
         if (getGlobalVariable()) {
@@ -195,8 +193,9 @@ selectUniversidad.disabled = true;
 
 // Funcionalidad del select de Estados
 selectEstado.addEventListener("change",()=>{
-    let estadoActual = selectEstado.value.toLocaleLowerCase();
-    estadoActualGlobal = estadoActual
+    let estadoActual = '';
+    setEstadoActualGlobal(selectEstado.value.toLocaleLowerCase())
+    estadoActual = getEstadoActualGlobal()
     
     if(estadoActual == "estado") {
         return
@@ -221,7 +220,8 @@ selectUniversidad.addEventListener("click",()=>{
     
         // Enfocar el estado
         var siglas = crearSiglas(universidadActual);
-        let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
+        console.log(siglas);
+        let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Filtrar por siglas
         if (getGlobalVariable()) {
@@ -231,6 +231,4 @@ selectUniversidad.addEventListener("click",()=>{
         // marcasFiltradas = Filtrar(null, null, siglas).addTo(map);
         desplazarse(coordDesplazamiento);
         mostrarPanel(siglas)
-
-        if(panel_portada.complete) panel_portada.src = './img/no-foto.png';
 })

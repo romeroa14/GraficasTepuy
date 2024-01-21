@@ -5,12 +5,15 @@
  */
 
 import { getGlobalVariable } from './mapa.js';
-import { AlternarPanel } from "./panelInformacion.js";
+import { AlternarPanel } from "./panel.js";
 import { resetLayer } from './mapa.js';
 
-// ---------- BOTON PARA RESTABLECER ----------
+export { botonRestablecer };
 
-const BotonRestablecer = L.Control.extend({
+
+
+// ---------- BOTON PARA RESTABLECER ----------
+const botonRestablecer = L.Control.extend({
     options: {
         position: 'topleft'
     },
@@ -21,7 +24,7 @@ const BotonRestablecer = L.Control.extend({
         var label = L.DomUtil.create('label', '', div);
         label.setAttribute('for', 'boton_restablecer');
         
-        var img = L.DomUtil.create('img', 'boton-restablecer', label);
+        var img = L.DomUtil.create('img', 'contenedor-boton-restablecer', label);
         img.setAttribute('id', 'boton_restablecer');
         img.setAttribute('src', './icon/mapa-venezuela.png');
 
@@ -31,15 +34,12 @@ const BotonRestablecer = L.Control.extend({
             if (getGlobalVariable()) {
                 map.removeLayer(getGlobalVariable());
             }
-            if(panel_boton.checked){
+            if(boton_alternar.checked){
                 AlternarPanel(false)
-                panel_boton.checked = false
+                boton_alternar.checked = false
             }
             resetLayer()
         }); 
         return div;
     }
 })
-
-// ---------- EXPORTAR FUNCIONES Y ARCHIVOS ----------
-export { BotonRestablecer };
