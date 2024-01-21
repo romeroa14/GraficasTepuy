@@ -2903,7 +2903,7 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "municipio": 'SANTIAGO MARIO',
         "direccion": 'Av. Intercomunal Santiago Mariño, c/c Av. Universidad, Sector la Providencia.',
         "tipo": 'Privada',
-        "marcador" : "./img/marcadores/default-privada-marcador.png",
+        "marcador" : "./img/marcadores/UBA-marcador.png",
         "coordenadas" : [10.235088933461672, -67.52967591534474],
         "autoridades" : [
             {
@@ -2931,7 +2931,7 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "municipio": 'LIBERTADOR',
         "direccion": 'Av. Teherán, Montalbán, Parroquia La Vega, Municipio Libertador. ZP 1020.',
         "tipo": 'Privada',
-        "marcador" : "./img/marcadores/default-privada-marcador.png",
+        "marcador" : "./img/marcadores/UCAB-marcador.png",
         "coordenadas" : [10.469712462268067, -66.97712684389376],
         "autoridades" : [
             {
@@ -2945,21 +2945,21 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
             }
         ]
     },
-    "UHA": {
+    "UAH": {
         "nombre": 'Universidad Alejandro de Humboldt',
-        "siglas": 'UHA',
+        "siglas": 'UAH',
         "pagina": 'https://www.unihumboldt.edu.ve/',
         "mision": 'Tiene como misión fundamental la búsqueda de la verdad mediante la creación, asimilación y difusión del saber que se manifiesta en las funciones básicas de la investigación, docencia y extensión, dentro de una concepción dinámica que responda a las exigencias de la sociedad, lo cual implica el mantenimiento de relaciones permanentes con diversos sectores de la comunidad.',
         "vision": '',
         "descripcion": '',
-        "portada": './img/portadas/UHA-principal.png',
-        "logo": './img/logos/UHA-logo.png',
+        "portada": './img/portadas/UAH-principal.png',
+        "logo": './img/logos/UAH-logo.png',
         "escudo": '',
         "estado": 'MIRANDA', 
         "municipio": 'SUCRE',
         "direccion": 'Av. Rómulo Gallegos con 1.ª. calle de Monte Cristo, Edif. Universidad Alejandro de Humboldt, Los Dos Caminos. Caracas, Parroquia Petare, Municipio Sucre, Edo Miranda',
         "tipo": 'Privada',
-        "marcador" : "./img/marcadores/default-privada-marcador.png",
+        "marcador" : "./img/marcadores/UAH-marcador.png",
         "coordenadas" : [10.518809184852293, -66.84000721740215],
         "autoridades" : [
             {
@@ -2987,7 +2987,7 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "municipio": 'MARACAIBO',
         "direccion": '96J Calle 97, Maracaibo 4001, Zulia',
         "tipo": 'Privada',
-        "marcador" : "./img/marcadores/default-privada-marcador.png",
+        "marcador" : "./img/marcadores/UNICA-marcador.png",
         "coordenadas" : [10.6387581,-71.663349],
         "autoridades" : [
             {
@@ -3015,7 +3015,7 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "municipio": 'SAN CRISTOBAL',
         "direccion": 'Carrera 14, & Calle 14, San Cristóbal 5001, Táchira',
         "tipo": 'Privada',
-        "marcador" : "./img/marcadores/default-privada-marcador.png",
+        "marcador" : "./img/marcadores/UCAT-marcador.png",
         "coordenadas" : [7.7733465,-72.2285614],
         "autoridades" : [
             {

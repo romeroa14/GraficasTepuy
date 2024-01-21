@@ -30,6 +30,7 @@ function mostrarPanel(siglas) {
     panel_logo.src = universidadesData[siglas]["logo"];
 
     // Si la portada no carga/existe, mostrar una imagen por defecto (bug)
+    console.log(panel_portada.onerror);
     panel_portada.onerror = function () {panel_portada.src  = './img/no-imagen.png'; }
     panel_logo.onerror = function () {panel_logo.src  = './img/no-imagen.png'; }
 
@@ -37,18 +38,20 @@ function mostrarPanel(siglas) {
     if(!panel_boton.checked){
         AlternarPanel(true)
         panel_boton.checked = true
+        contenedor_panel_boton.classList.remove('hide');
     }
 }
 
 
-// ---------- BOTON LATERAL PARA ALTERNAR PANEL ---------- SE VA
+// ---------- BOTON LATERAL PARA ALTERNAR PANEL ----------
 const BotonMostraPanel = L.Control.extend({
     options: {
         position: 'bottomright'
     },
 
     onAdd: function (map) {
-        var div = L.DomUtil.create('div');
+        var div = L.DomUtil.create('div', 'hide');
+        div.setAttribute('id', 'contenedor_panel_boton');
 
         var input = L.DomUtil.create('input', 'hide', div);
         input.setAttribute('type', 'checkbox');
@@ -60,7 +63,7 @@ const BotonMostraPanel = L.Control.extend({
         var img = L.DomUtil.create('img', 'panel-boton-icono', label);
         img.setAttribute('id', 'panel_boton_icono');
         img.setAttribute('src', './icon/panel-on.png');   
-             
+
         // Evento change para el checkbox
         input.addEventListener('change', function () {
             if (input.checked) {

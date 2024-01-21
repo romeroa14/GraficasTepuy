@@ -6,6 +6,7 @@
 
 import { Filtrar } from "./funciones/filtrarMarcas.js"; 
 import { BotonMostraPanel } from "./panelInformacion.js";
+import { BotonRestablecer } from "./botonRestablecer.js";
 import { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioStyle, highlightStyle, hoverStyle } from "./mapaEstilos.js";
 
 
@@ -34,15 +35,29 @@ var municipiosLink = "./geo/municipios.geojson";
 
 
 // ---------- CONFIGURAR ESTADOS Y MUNICIPIOS DEL MAPA ---------- SE QUEDA
+
 map.addControl(new BotonMostraPanel());
+map.addControl(new BotonRestablecer());
 
 var geojsonLayer;
 var municipiosLayer;
 var municipiosLayerTmp;
 var selectedLayer = null; // Para almacenar la capa seleccionada actualmente
 var selectedLayerMunicipio = null; // Para almacenar la capa seleccionada actualmente el municipio
-// var marcasFiltradas;
 let marcasHover;
+
+function resetLayer(){
+    // map.removeLayer(geojsonLayer);
+    if(municipiosLayer) map.removeLayer(municipiosLayer);
+    if(municipiosLayerTmp) map.removeLayer(municipiosLayerTmp);
+    // geojsonLayer.resetStyle(selectedLayer);
+    // map.removeLayer(selectedLayerMunicipio);
+    // map.removeLayer(marcasHover);
+
+    // selectedLayer.setStyle(hoverStyle)
+    estadoActualGlobal = ''
+}
+export { resetLayer }
 
 // sharedModule.js
 let marcasFiltradas;
@@ -100,6 +115,7 @@ function onEachFeature(feature, layer) {
             if (!selectedLayer || (selectedLayer && selectedLayer !== layer)) {
                 layer.setStyle(hoverStyle);
             }
+            
             layer.openTooltip();
 
             // Eliminar marcas hover
@@ -315,18 +331,18 @@ const leyenda = L.control.legend({
 
 // console.log(leyenda.options.legends[0].inactive);
 let actividadMarcaPublica = document.querySelector('.leaflet-legend-item')
+let actividadMarcaPrivada = document.querySelector("section > div > div:nth-child(2)")
 let valorCambio = false;
+let valorCambio2 = false;
 
 actividadMarcaPublica.addEventListener("click",()=>{
     if (valorCambio == true) {
-        // console.log(estadoActualGlobal.toLocaleUpperCase());
         if (marcasFiltradas) {
             map.removeLayer(marcasFiltradas);
         }
         
         valorCambio = false; 
     } else {
-        // console.log(estadoActualGlobal.toLocaleUpperCase());
         if (marcasFiltradas) {
             map.removeLayer(marcasFiltradas);
         }
@@ -335,6 +351,21 @@ actividadMarcaPublica.addEventListener("click",()=>{
     }
 })
 
+actividadMarcaPrivada.addEventListener("click",()=>{
+    if (valorCambio2 == true) {
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        
+        valorCambio2 = false; 
+    } else {
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Privada').addTo(map)
+        valorCambio2 = true; 
+    }
+})
 
 // Cambiar titulo de la leyenda
 let titulo = document.querySelector('.leaflet-legend-title')

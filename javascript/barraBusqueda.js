@@ -25,7 +25,6 @@ const sugerenciasBar = document.querySelector('.sugerencias');
 inputBar.onkeyup = (e) =>{
     let userData = e.target.value;
     let arraySugerencias = [];
-    console.log(userData);
     if (userData) {
         sugerenciasBar.removeAttribute('hidden')
         arraySugerencias = sugerenciasUniversidades.filter(data => {
@@ -52,7 +51,7 @@ inputBar.onkeyup = (e) =>{
             let inputActual = document.querySelector(".form-control").value
             var siglas = crearSiglas(inputActual);
             
-             let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
+            let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
         if (getGlobalVariable()) {
@@ -64,9 +63,10 @@ inputBar.onkeyup = (e) =>{
     }
 }
 
+let listaSugerencias;
+let todasSugerencias;
 // Mostramos el filtrado de la barra de busqueda
 const mostrarSugerencias = (list) =>{
-    let listaSugerencias;
     
     if (list.lenght == 0) {
         let userValue = inputBar.value;
@@ -75,14 +75,15 @@ const mostrarSugerencias = (list) =>{
         listaSugerencias = list.join(' ');
     }
     sugerenciasBar.innerHTML = listaSugerencias;
-    let selectUl = document.querySelector('.sugerencias')
+    let selectUl = sugerenciasBar;
     let selectLiAll = selectUl.querySelectorAll('li')
+    let cantidadSugerencias = selectLiAll.length;
     selectLiAll.forEach(function(li) {
-            li.addEventListener('click', function() {
-        let inputSeleccion = document.querySelector(".form-control");
-        inputSeleccion.value = li.innerText;
-        let siglas = crearSiglas(inputSeleccion.value);
-            
+        li.addEventListener('click', function() {
+            let inputSeleccion = document.querySelector(".form-control");
+            inputSeleccion.value = li.innerText;
+            let siglas = crearSiglas(inputSeleccion.value);
+                
             let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
@@ -94,11 +95,54 @@ const mostrarSugerencias = (list) =>{
         selectUl.setAttribute('hidden','hidden')
         mostrarPanel(siglas);
         setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(null, null, siglas).addTo(map);
-        
         })})
+        todasSugerencias = listaSugerencias
+        
 }
 
+let contador = 0;
+
+inputBar.addEventListener('keyup',(e)=>{
+    let eventoEjecutado = false;
+    let selectLiAll = sugerenciasBar.querySelectorAll('li');
+    let cantidadSugerencias = selectLiAll.length;
+    if (e.key === 'ArrowDown' && contador >= 0 && contador <= cantidadSugerencias && cantidadSugerencias > 0 && !eventoEjecutado ) {
+        if (contador < cantidadSugerencias) {
+            contador++;
+        }
+        selectLiAll[contador-1].style.backgroundColor = '#ddd';
+        
+        eventoEjecutado = true;
+    }else if (e.key === 'ArrowUp' && contador >= 1 && contador <= cantidadSugerencias && cantidadSugerencias > 0 && !eventoEjecutado) {
+        
+        if (contador >1 ) {
+            contador--;
+        }
+        selectLiAll[contador-1].style.backgroundColor = '#ddd';
+        
+        eventoEjecutado = true;
+    }else if (e.key === 'Enter' && cantidadSugerencias > 0 && !eventoEjecutado ) {
+        
+        
+        
+        let etiqueta = selectLiAll[contador-1]
+        
+        seleccionarOpcion(etiqueta);
+        
+        contador = 0;
+        return;
+    }else if (e.key === 'Escape' && cantidadSugerencias > 0 && !eventoEjecutado ) {
+        inputBar.value = '';
+        sugerenciasBar.setAttribute('hidden','hidden');
+        contador = 0;
+        
+        return;
+    }else{
+        eventoEjecutado = true;
+        contador = 0;
+    }
+
+})
 // Agregamos el contenido al input
 function seleccionarOpcion(elemento) {
     let inputSeleccion = document.querySelector(".form-control");
@@ -121,6 +165,7 @@ function seleccionarOpcion(elemento) {
         desplazarse(coordDesplazamiento);
         }
     var siglas = crearSiglas(inputSeleccion.value)
+    mostrarPanel(siglas);
     return siglas;
 }
 
@@ -158,19 +203,14 @@ selectEstado.addEventListener("change",()=>{
     }else{
         selectUniversidad.disabled = false;
         estadoActual = eliminarAcentos(estadoActual)
-        
+    
         let coordDesplazamiento = sugerenciasEstados[estadoActual]["coordenadas"];
         let zoomDesplazamiento = sugerenciasEstados[estadoActual]["zoom"];
-
         map.flyTo(coordDesplazamiento, zoomDesplazamiento);
-        //mostrarMarcas(coordenadas);
-        console.log(estadoActual.toLocaleUpperCase());
-
         if (getGlobalVariable()) {
             map.removeLayer(getGlobalVariable());
         }
         setGlobalVariable(Filtrar(estadoActual.toLocaleUpperCase()).addTo(map))
-        // marcasFiltradas = Filtrar(estadoActual.toLocaleUpperCase()).addTo(map)
     }
 })
 

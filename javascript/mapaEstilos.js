@@ -54,11 +54,11 @@ var hoverStyle = {
 };
 
 // Añadir boton para alternar el panel
-var BotonMostraPanel = L.Control.extend({
-    options: {
-        position: 'bottomright'
-    }
-})
+// var BotonMostraPanel = L.Control.extend({
+//     options: {
+//         position: 'bottomright'
+//     }
+// })
 
 
 export { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioStyle, highlightStyle, hoverStyle }
