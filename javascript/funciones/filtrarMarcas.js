@@ -35,7 +35,7 @@ function Filtrar(estado, municipio, siglas, hover, tipo) {
 
     // Devolver array solo con marcas
     if (hover) {
-        console.log("Filtrando por: hover")
+        // console.log("Filtrando por: hover")
         marcasHoverTemp = marcasHover
             .filter((objeto) => objeto.estado == estado)
             .map((objeto) => objeto.marca);
