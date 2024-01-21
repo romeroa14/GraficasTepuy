@@ -30,339 +30,330 @@
 </head>
 
 <body>
+<!-- ---------- MEU ------------>
+<div>
 
-  <!-- ---------- CINTA AZUL MENU ------------>
+  <!-- Mincyt -->
   <div>
-    <div>
-      <img src="./img/cintillo-mincyt.png" width="100%">
-    </div>
-    <div>
-      <!-- <img class="logo-tepuy" src="./img/tepuy-solo.png" height="200px"> -->
-      <img src="./img/fondo-azul.png" width="100%">
-    </div>    
+    <img src="./img/cintillo-mincyt.png" width="100%" />
   </div>
 
-  <div class="cintillo">Educación Universitaria Venezolana</div>
-  <!-- ----------TODO ---------- -->
-  <div class="container">
+  <!-- Tepuy -->
+  <div>
+    <img src="./img/fondo-azul.png" width="100%" />
+  </div>
+</div>
 
-    <!-- ---------- ESTADISTICAS POR ESTADOS ---------- -->
-    <div class="container">
+<!-- ----------ESTADISTICAS ---------- -->
+<h2 class="cintillo">Estadísticas</h2>
 
-      <!-- ESTADISTICAS POR ESTADO -->
-      <div><br><br>
-        <form action="#" method="POST">
-          <h2 class="titulo">Estadísticas</h2>
-
-          <div class="contenedor-estadisticas-selects mt-5 mb-3">
-            <div>
-              <!-- Estado del filtro -->
-            <div class="row">
-              <div class="col-2">
-                <select class="select " name="select-location">
-                  <option disabled selected>Tipo</option>
-                  <option>Todas</option>
-                  <option>Públicas</option>
-                  <option>Privadas</option>
-                </select>
-              </div>
-              <div class="col-2">
-                <select class="select" id="estadisticas_estado">
-                  <option disabled selected>Estado</option>
-                  <option>Todos</option>
-                </select>
-              </div>
-              <div class="col-4">
-                <select class="select" id="estadisticas_universidades">
-                  <option disabled selected>Universidad</option>
-                  <option>Todas</option>
-                </select>
-              </div>
-              <div class="col-2">
-                <select class="select" id="select_tipo_persona">
-                  <option disabled selected>Tipo de persona</option>
-                  <option>Todo</option>
-                  <option>Profesores</option>
-                  <option>Estudiantes</option>
-                  <option>Administrativos</option>
-                  <option>Obreros</option>
-
-                </select>
-              </div>
-              <div class="col-2">
-                <select class="select" name="select-location">
-                  <option disabled selected>Sexo</option>
-                  <option>Todos</option>
-                  <option>Masculino</option>
-                  <option>Femenino</option>
-                </select>
-              </div>
+  <!-- Filtros de estadisticas -->
+    <div class="container contenedor-estadisticas-selects mt-5 mb-3">
+      <form action="#" method="POST">
+        <div>
+          <!-- Estado del filtro -->
+          <div class="row">
+            <div class="col-2">
+              <select class="select" name="select-location">
+                <option disabled selected>Tipo</option>
+                <option>Todas</option>
+                <option>Públicas</option>
+                <option>Privadas</option>
+              </select>
             </div>
-
-            <div class="contenedor-filtroEstadistica-secundarios">
-
-              <select class="hide filtroEstadistica-cargos select" name="select-cargo" id="select_cargo">
-                <option disabled selected>Cargos1</option>
+            <div class="col-2">
+              <select class="select" id="estadisticas_estado">
+                <option disabled selected>Estado</option>
                 <option>Todos</option>
               </select>
-              <!-- <select class="filtroEstadistica-cargos select" name="select-cargo">
-                <option disabled selected>Cargos2</option>
-                <option>Todos</option>
+            </div>
+            <div class="col-4">
+              <select class="select" id="estadisticas_universidades">
+                <option disabled selected>Universidad</option>
+                <option>Todas</option>
               </select>
-              <select class="filtroEstadistica-cargos select" name="select-cargo">
-                <option disabled selected>Cargos3</option>
+            </div>
+            <div class="col-2">
+              <select class="select" id="select_tipo_persona">
+                <option disabled selected>Tipo de persona</option>
+                <option>Todo</option>
+                <option>Profesores</option>
+                <option>Estudiantes</option>
+                <option>Administrativos</option>
+                <option>Obreros</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <select class="select" name="select-location">
+                <option disabled selected>Sexo</option>
                 <option>Todos</option>
-              </select> -->
-
-            </div> 
-
-            <div>
-              <button class="filtroEstadistica-boton" type="submit" >Filtrar</button>
-            </div>          
-
-          </div>
-        </form>
-      </div>
-
-        <div class="row">
-          <!-- PROFESORES #1 -->
-          <div class="col-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><img src="icon/profesor.png"></img></span>  <!-- icono -->
-              <div class="info-box-content">
-                <span class="info-box-text">Profesores:</span>
-                <div class="row">
-                  <div class="col-6">
-                    <div><b>3794</b></div>
-                  </div>
-                  <!-- mas informacion-->
-                  <div class="col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#profesoresModal">Ver más</a>
-                  </div>
-                </div>
-                
-                <!-- modal -->
-                <div class="modal fade" id="profesoresModal" tabindex="-1" aria-labelledby="profesoresModalLabel" aria-hidden="true">
-                  <div class="modal-dialog  modal-xl">
-                    <div class="modal-content">
-                      <!-- contenido -->
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="profesoresModalLabel">PROFESORES</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class=""></div>
-
-                      <div class="row">
-                        <h2 class="titulo-graph">Sexo</h2>
-                        <div id="contenedor-graph1"></div>
-
-                        <h2 class="titulo-graph">Tipos de profesores</h2>
-                        <div id="contenedor-graph2"></div>
-
-                        
-                      </div>
-
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- ESTUDIANTES #2 -->
-          <div class="col-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><img src="icon/estudiante.png"></img></span>  <!-- icono -->
-              <div class="info-box-content">
-                <span class="info-box-text">Estudiantes:</span>
-                <div class="row">
-                  <div class="col-6">
-                    <div><b>10945</b></div>
-                  </div>
-                  <!-- mas informacion-->
-                  <div class="col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#estudiantesModal">Ver más</a>
-                  </div>
-                </div>
-                
-                <!-- modal -->
-                <div class="modal fade" id="estudiantesModal" tabindex="-1" aria-labelledby="estudiantesModalLabel" aria-hidden="true">
-                  <div class="modal-dialog  modal-xl">
-                    <div class="modal-content">
-                      <!-- contenido -->
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="estudiantesModalLabel">ESTUDIANTES</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-
-                      <div class="row">
-                        <h2 class="titulo-graph">Sexo</h2>
-                        <div id="contenedor-graph3"></div>
-
-                        <h2 class="titulo-graph">Tipos de discapacidades</h2>
-                        <div id="contenedor-graph4"></div>
-
-                        
-                      </div>
-
-                      <div class="row">
-                        <h2 class="titulo-graph">Ingreso, prosecucion y egreso</h2>
-                        <div id="contenedor-graph5"></div>
-                    
-                      </div>
-
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- PERSONAL #3 -->
-          <div class="col-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><img src="icon/profesor.png"></img></span>  <!-- icono -->
-              <div class="info-box-content">
-                <span class="info-box-text">Personal:</span>
-                <div class="row">
-                  <div class="col-6">
-                    <div><b>540</b></div>
-                  </div>
-                  <!-- mas informacion-->
-                  <div class="col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
-                  </div>
-                </div>
-                
-                <!-- modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog  modal-xl">
-                    <div class="modal-content">
-                      <!-- contenido -->
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">PERSONAL</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                     <div class="row">
-                      <titulo-graph>Personal Admnistrativo</titulo-graph>
-                      <div id="contenedor-graph6"></div>
-
-                      <titulo-graph>Personal Obrero</titulo-graph>
-                      <div id="contenedor-graph7"></div>
-                     </div>
-
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <option>Masculino</option>
+                <option>Femenino</option>
+              </select>
             </div>
           </div>
 
-          <!-- EGRESADOS #4 -->
-          <div class="col-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><img src="icon/estudiante.png"></img></span>  <!-- icono -->
-              <div class="info-box-content">
-                <span class="info-box-text">Egresados:</span>
-                <div class="row">
-                  <div class="col-6">
-                    <div><b>3485</b></div>
-                  </div>
-                  <!-- mas informacion-->
-                  <div class="col-6">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#egresados">Ver más</a>
-                  </div>
-                </div>
-                
-                <!-- modal -->
-                <div class="modal fade" id="egresados" tabindex="-1" aria-labelledby="egresadosLabel" aria-hidden="true">
-                  <div class="modal-dialog  modal-xl">
-                    <div class="modal-content">
-                      <!-- contenido -->
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="egresadosLabel">EGRESADOS</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="row titulo-graph8">Egresados por año</div>
-                      <div id="contenedor-graph8"></div>
+          <div class="contenedor-filtroEstadistica-secundarios">
+            <select class="hide filtroEstadistica-cargos select" name="select-cargo" id="select_cargo">
+              <option disabled selected>Cargos1</option>
+              <option>Todos</option>
+            </select>
+            <!-- <select class="filtroEstadistica-cargos select" name="select-cargo">
+              <option disabled selected>Cargos2</option>
+              <option>Todos</option>
+            </select>
+            <select class="filtroEstadistica-cargos select" name="select-cargo">
+              <option disabled selected>Cargos3</option>
+              <option>Todos</option>
+            </select> -->
+          </div>
 
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <button class="filtroEstadistica-boton" type="submit">Filtrar</button>
           </div>
         </div>
-
-        <div  class="row"><br>
-          <div id="Grafica_principal1" class="col-3" ></div>
-          <div id="Grafica_principal2" class="col-3" ></div>
-          <div id="Grafica_principal3" class="col-3" ></div>
-          <div id="Grafica_principal4" class="col-3" ></div>
-        </div><br>
-      </div>
-
+      </form>
     </div>
-    <h2 class="titulo">Buscar universidades en el país</h2>
-    <!-- CONTENEDOR DEL MAPA Y PANEL -->
-    <div class="contenedor-mapa-panel container-fluid" id="supercontenedor">
-      <div class="row align-items-start" id="grancontenedor">
-  
-      <!-- FILTROS DE BUSQUEDA -->
-      <div id="contenedor-filtros">
-        <div class="row" id="contenedor-barra-busqueda">
 
-          <!-- Barra de busqueda -->
-          <div class="col-6">
-            <div class="barraBusqueda active">
-              <div class="contenedorBarra">
-              <input type="text"  class="form-control" placeholder="Buscar universidad ..." >
-              <button class="btn btn-outline-secondary" type="button" id="boton-busqueda" > Buscar</button>
+    <!-- Tarjetitas -->
+    <div class="container">
+    <div class="row">
+      <!-- PROFESORES #1 -->
+      <div class="col-3">
+        <div class="info-box">
+          <span class="info-box-icon bg-info elevation-1"><img src="icon/profesor.png" /></span>
+          <!-- icono -->
+          <div class="info-box-content">
+            <span class="info-box-text">Profesores:</span>
+            <div class="row">
+              <div class="col-6">
+                <div><b>3794</b></div>
               </div>
-              <ul class="sugerencias" hidden="hidden" >
-              </ul>
+              <!-- mas informacion-->
+              <div class="col-6">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#profesoresModal">Ver más</a>
+              </div>
+            </div>
+
+            <!-- modal -->
+            <div class="modal fade" id="profesoresModal" tabindex="-1" aria-labelledby="profesoresModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <!-- contenido -->
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="profesoresModalLabel">PROFESORES</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class=""></div>
+
+                  <div class="row">
+                    <h2 class="titulo-graph">Sexo</h2>
+                    <div id="contenedor-graph1"></div>
+
+                    <h2 class="titulo-graph">Tipos de profesores</h2>
+                    <div id="contenedor-graph2"></div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESTUDIANTES #2 -->
+      <div class="col-3">
+        <div class="info-box">
+          <span class="info-box-icon bg-info elevation-1"><img src="icon/estudiante.png" /></span>
+          <!-- icono -->
+          <div class="info-box-content">
+            <span class="info-box-text">Estudiantes:</span>
+            <div class="row">
+              <div class="col-6">
+                <div><b>10945</b></div>
+              </div>
+              <!-- mas informacion-->
+              <div class="col-6">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#estudiantesModal">Ver más</a>
+              </div>
+            </div>
+
+            <!-- modal -->
+            <div class="modal fade" id="estudiantesModal" tabindex="-1" aria-labelledby="estudiantesModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <!-- contenido -->
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="estudiantesModalLabel">ESTUDIANTES</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="row">
+                    <h2 class="titulo-graph">Sexo</h2>
+                    <div id="contenedor-graph3"></div>
+
+                    <h2 class="titulo-graph">Tipos de discapacidades</h2>
+                    <div id="contenedor-graph4"></div>
+                  </div>
+
+                  <div class="row">
+                    <h2 class="titulo-graph">Ingreso, prosecucion y egreso</h2>
+                    <div id="contenedor-graph5"></div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERSONAL #3 -->
+      <div class="col-3">
+        <div class="info-box">
+          <span class="info-box-icon bg-info elevation-1"><img src="icon/profesor.png" /></span>
+          <!-- icono -->
+          <div class="info-box-content">
+            <span class="info-box-text">Personal:</span>
+            <div class="row">
+              <div class="col-6">
+                <div><b>540</b></div>
+              </div>
+              <!-- mas informacion-->
+              <div class="col-6">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
+              </div>
+            </div>
+
+            <!-- modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <!-- contenido -->
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">PERSONAL</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="row">
+                    <titulo-graph>Personal Admnistrativo</titulo-graph>
+                    <div id="contenedor-graph6"></div>
+
+                    <titulo-graph>Personal Obrero</titulo-graph>
+                    <div id="contenedor-graph7"></div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EGRESADOS #4 -->
+      <div class="col-3">
+        <div class="info-box">
+          <span class="info-box-icon bg-info elevation-1"><img src="icon/estudiante.png" /></span>
+          <!-- icono -->
+          <div class="info-box-content">
+            <span class="info-box-text">Egresados:</span>
+            <div class="row">
+              <div class="col-6">
+                <div><b>3485</b></div>
+              </div>
+              <!-- mas informacion-->
+              <div class="col-6">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#egresados">Ver más</a>
+              </div>
+            </div>
+
+            <!-- modal -->
+            <div class="modal fade" id="egresados" tabindex="-1" aria-labelledby="egresadosLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <!-- contenido -->
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="egresadosLabel">EGRESADOS</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="row titulo-graph8">Egresados por año</div>
+                  <div id="contenedor-graph8"></div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="row">
+      <br>
+      <div id="Grafica_principal1" class="col-3"></div>
+      <div id="Grafica_principal2" class="col-3"></div>
+      <div id="Grafica_principal3" class="col-3"></div>
+      <div id="Grafica_principal4" class="col-3"></div>
+    </div><br>      
+    </div>
+
+    <h2 class="cintillo">Buscar universidades en el país</h2>
+
+    <!-- CONTENEDOR DEL MAPA Y PANEL -->
+    <div class="contenedor-mapa-panel container">
+      <div class="row align-items-start">
+
+        <!-- FILTROS DE BUSQUEDA -->
+        <div id="contenedor-filtros">
+          <div class="row">
+
+            <!-- Barra de busqueda -->
+            <div class="col-6">
+              <div class="barraBusqueda active">
+                <div class="contenedorBarra">
+                  <input type="text" class="form-control" placeholder="Buscar universidad ..." />
+                  <button class="btn btn-outline-secondary" type="button" id="boton-busqueda">Buscar</button>
+                </div>
+                <ul class="sugerencias" hidden="hidden"></ul>
+              </div>
+            </div>
+
+            <!-- Select de estados -->
+            <div class="col-3">
+              <select class="select select-location" name="select-location" id="select-location">
+                <option disabled selected>Estado</option>
+              </select>
+            </div>
+
+            <!-- Select de universidades -->
+            <div class="col-3">
+              <select class="select select-location3" name="select-location" id="select-location3">
+                <option disabled selected>Universidades</option>
+              </select>
             </div>
           </div>
 
-          <!-- Select de estados -->
-          <div class="col-3">
-            <select class="select select-location" name="select-location" id="select-location">
-              <option disabled selected>Estado</option>
-            </select>
-          </div>
-
-          <!-- Select de universidades -->
-          <div class="col-3">
-            <select class="select select-location3" name="select-location" id="select-location3">
-              <option disabled selected>Universidades</option>
-            </select>
-          </div>
+          <hr class="separador-mapa-barra" />
         </div>
-
-        <hr class="separador-mapa-barra">
-      </div>
 
         <!-- MAPA -->
         <div id="mapa_columna" class="col-12">
           <div id="map"></div>
         </div>
-  
+
         <!-- PANEL DE INFORMACION -->
         <div id="panel_columna" class="hide">
           <div class="contenedor-panel" id="contenedor-panel">
-            <div  id="panel_informacion" class="hide">
+            <div  id="panel_informacion">
 
               <!-- Portada -->
               <div>
@@ -421,33 +412,30 @@
                       
                       <br>
                       <div class="logo"><img id="panel_logo" src="./img/no-imagen.png" class="logo"></div><br>
-                      <b class="encabezado">Descripción</b>
+                      <b class="encabezado">Descripción:</b>
                       <div id="panel_descripcion"></div><br>
-                      <b class="encabezado">Direccion</b>
+                      <b class="encabezado">Direccion:</b>
                       <div id="panel_direccion"></div><br>
-                      <b class="encabezado">Página web</b>
+                      <b class="encabezado">Página web:</b>
                       <div><a id="panel_pagina"></a></div><br>
-                      <b class="encabezado">Misión</b>
+                      <b class="encabezado">Misión:</b>
                       <div id="panel_mision"></div><br>
-                      <b class="encabezado">Visión</b>
+                      <b class="encabezado">Visión:</b>
                       <div id="panel_vision"></div><br>
-                      <b class="encabezado">Autoridades</b>
+                      <b class="encabezado">Autoridades:</b>
                       <div id="panel_autoridades"></div><br>
 
                     </div class= "panel_autoridades">
 
                     <!-- Estadisticas -->
                     <div id="categoria_estadisticas" class="accordion-collapse collapse" data-bs-parent="#panel_categorias">
-                      <b>Estadisticas</b><br><br><br>
+                      <b>Estadisticas</b><br>
 
                       <div class="row">
                         <div id="panel_Graph_estudiantes"></div>
                         <div id="panel_Graph_Transporte"></div>
                         <div id="panel_Graph_Personal"></div>
                       </div>
-
-
-                      <!-- <img src="https://duckbase-infogram.jifo.co/uploads/ckeditor/pictures/40/content_Pie_Chart_type_examples.png" width="100%"> -->
                     </div>
 
                     <!-- Carreras -->
@@ -461,22 +449,24 @@
           </div>
         </div>
 
+        </div>
+
       </div>
     </div>
 
-  </div>
+    <!-- AÑADIENDO MODULOS -->
+    <script src="javascript/mapa.js" type="module"></script>
+    <script src="javascript/data/universidadesData.js" type="module"></script>
+    <script src="javascript/barraBusqueda.js" type="module"></script>
+    <script src="javascript/filtrosEstadisticas.js" type="module"></script>
+    <script src="javascript/graficos.js" type="module"></script>
 
-  <div id="prueba"></div>
+    <!-- AÑADIENDO SCRIPTS -->
+    <script src="javascript/data/sugerencias.js"></script>
+    <script src="plugins/mapaLeyenda/mapaLeyenda.js"></script>
+    <script src="javascript/select.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</div>
 
-<!-- AÑADIENDO SCRIPTS -->
-<script src="javascript/mapa.js" type="module"></script>
-<script src="javascript/data/universidadesData.js" type="module"></script>
-<script src="./javascript/barraBusqueda.js" type="module"></script>
-<script src="./javascript/filtrosEstadisticas.js" type="module"></script>
-<script src="javascript/graficos.js" type="module"></script>
-<script src="/javascript/data/sugerencias.js"></script>
-<script src="./plugins/mapaLeyenda/mapaLeyenda.js"></script>
-<script src="/javascript/select.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

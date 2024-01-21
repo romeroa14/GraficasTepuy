@@ -129,16 +129,6 @@
     border-bottom-style: solid;
 }
 
-.titulo{
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding: 5px;
-    font-size: 42px;
-    border-bottom: #0F70B7;
-    border-bottom-style: solid;
-}
 
 /* ---------- CATEGORIA INFORMACION ----------*/
 .contenedor-panel .logo {
@@ -192,7 +182,7 @@
     margin-bottom: 10px;
 }
 
-#panel_informacion {
+.contenedor-panel #panel_informacion {
     height: auto;
     display: block;
     animation: aparecerDesdeArriba 0.5s ease-out;

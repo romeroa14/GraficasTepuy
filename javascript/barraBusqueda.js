@@ -78,25 +78,24 @@ const mostrarSugerencias = (list) =>{
     let selectUl = document.querySelector('.sugerencias')
     let selectLiAll = selectUl.querySelectorAll('li')
     selectLiAll.forEach(function(li) {
-            li.addEventListener('click', function() {
-        let inputSeleccion = document.querySelector(".form-control");
-        inputSeleccion.value = li.innerText;
-        let siglas = crearSiglas(inputSeleccion.value);
-            
+        li.addEventListener('click', function() {
+            let inputSeleccion = document.querySelector(".form-control");
+            inputSeleccion.value = li.innerText;
+            let siglas = crearSiglas(inputSeleccion.value);
+                
             let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
 
-        // Mostrar marcas por siglas
-        if (getGlobalVariable()) {
-            map.removeLayer(getGlobalVariable());
-        }
-        
-        desplazarse(coordDesplazamiento);
-        selectUl.setAttribute('hidden','hidden')
-        mostrarPanel(siglas);
-        setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(null, null, siglas).addTo(map);
-        
-        })})
+            // Mostrar marcas por siglas
+            if (getGlobalVariable()) {
+                map.removeLayer(getGlobalVariable());
+            }
+            
+            desplazarse(coordDesplazamiento);
+            selectUl.setAttribute('hidden','hidden')
+            mostrarPanel(siglas);
+            setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
+        })
+    })
 }
 
 // Agregamos el contenido al input
