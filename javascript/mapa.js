@@ -6,6 +6,7 @@
 
 import { Filtrar } from "./funciones/filtrarMarcas.js"; 
 import { BotonMostraPanel } from "./panelInformacion.js";
+import { BotonRestablecer } from "./botonRestablecer.js";
 import { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioStyle, highlightStyle, hoverStyle } from "./mapaEstilos.js";
 
 
@@ -34,15 +35,29 @@ var municipiosLink = "./geo/municipios.geojson";
 
 
 // ---------- CONFIGURAR ESTADOS Y MUNICIPIOS DEL MAPA ---------- SE QUEDA
+
 map.addControl(new BotonMostraPanel());
+map.addControl(new BotonRestablecer());
 
 var geojsonLayer;
 var municipiosLayer;
 var municipiosLayerTmp;
 var selectedLayer = null; // Para almacenar la capa seleccionada actualmente
 var selectedLayerMunicipio = null; // Para almacenar la capa seleccionada actualmente el municipio
-// var marcasFiltradas;
 let marcasHover;
+
+function resetLayer(){
+    // map.removeLayer(geojsonLayer);
+    if(municipiosLayer) map.removeLayer(municipiosLayer);
+    if(municipiosLayerTmp) map.removeLayer(municipiosLayerTmp);
+    // geojsonLayer.resetStyle(selectedLayer);
+    // map.removeLayer(selectedLayerMunicipio);
+    // map.removeLayer(marcasHover);
+
+    // selectedLayer.setStyle(hoverStyle)
+    estadoActualGlobal = ''
+}
+export { resetLayer }
 
 // sharedModule.js
 let marcasFiltradas;
@@ -100,6 +115,7 @@ function onEachFeature(feature, layer) {
             if (!selectedLayer || (selectedLayer && selectedLayer !== layer)) {
                 layer.setStyle(hoverStyle);
             }
+            
             layer.openTooltip();
 
             // Eliminar marcas hover

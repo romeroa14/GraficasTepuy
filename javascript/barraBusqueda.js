@@ -79,11 +79,12 @@ const mostrarSugerencias = (list) =>{
     let selectLiAll = selectUl.querySelectorAll('li')
     let cantidadSugerencias = selectLiAll.length;
     selectLiAll.forEach(function(li) {
-            li.addEventListener('click', function() {
-        let inputSeleccion = document.querySelector(".form-control");
-        inputSeleccion.value = li.innerText;
-        let siglas = crearSiglas(inputSeleccion.value);
-        let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
+        li.addEventListener('click', function() {
+            let inputSeleccion = document.querySelector(".form-control");
+            inputSeleccion.value = li.innerText;
+            let siglas = crearSiglas(inputSeleccion.value);
+                
+            let coordDesplazamiento = universidadesData[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
         if (getGlobalVariable()) {
@@ -94,8 +95,6 @@ const mostrarSugerencias = (list) =>{
         selectUl.setAttribute('hidden','hidden')
         mostrarPanel(siglas);
         setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(null, null, siglas).addTo(map);
-        
         })})
         todasSugerencias = listaSugerencias
         

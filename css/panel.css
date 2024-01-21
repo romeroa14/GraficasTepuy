@@ -21,8 +21,25 @@
     cursor: pointer;
 }
 
+
 .panel-boton-icono:hover {
-    background: rgb(244, 244, 244);
+    background: rgb(226, 226, 226);
+}
+
+.boton-restablecer {    
+    padding: 2px 2px;
+    background: white;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(151, 151, 151);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.boton-restablecer:hover {    
+    background: rgb(226, 226, 226);
 }
 
 .container{
@@ -112,16 +129,6 @@
     border-bottom-style: solid;
 }
 
-.titulo{
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding: 5px;
-    font-size: 42px;
-    border-bottom: #0F70B7;
-    border-bottom-style: solid;
-}
 
 /* ---------- CATEGORIA INFORMACION ----------*/
 .contenedor-panel .logo {
@@ -175,7 +182,7 @@
     margin-bottom: 10px;
 }
 
-#panel_informacion {
+.contenedor-panel #panel_informacion {
     height: auto;
     display: block;
     animation: aparecerDesdeArriba 0.5s ease-out;
