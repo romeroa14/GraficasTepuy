@@ -4,10 +4,15 @@
     Fecha de creacion: 18/12/2023
  */
 
-import { carrerasData } from "./data/carreras.js";
-import { AlternarPanel } from "./panelInformacion.js";
-import { universidadesData } from "./data/universidadesData.js";
+import { CARRERAS_DATA } from "./data/carreras.js";
+import { AlternarPanel } from "./panel.js";
+import { UNI_DATA } from "./data/universidadesData.js";
 import { crearGrafica } from "./graficos.js";
+
+export { constructorAutoridades };
+export { constructorCarreras };
+export { marcasGlobal };
+export { marcasHover };
 
 
 
@@ -24,9 +29,9 @@ class CrearMarcaHover {
 // ---------- CREAR MARCAS HOVER ----------
 var marcasHover = [];
 
-// Crear y guardar todas las marcas que existen en universidadesData
-for (let universidad in universidadesData) {
-    universidad = universidadesData[universidad];
+// Crear y guardar todas las marcas que existen en UNI_DATA
+for (let universidad in UNI_DATA) {
+    universidad = UNI_DATA[universidad];
 
     // Crear icono
     var icono = L.icon({
@@ -50,31 +55,6 @@ for (let universidad in universidadesData) {
     // Añadir nueva marca al objeto
     marcasHover.push(objeto);
 }
-/* 
-for (let universidad in universidadesData) {
-    universidad = universidadesData[universidad];
-
-    // Crear icono
-    var icono = L.icon({
-        iconUrl: universidad["marcador"],
-        iconSize: [30, 45],
-        iconAnchor: [8, 45],
-        popupAnchor: [8, -40],
-    });
-
-    // Crear nueva marca
-    let nuevaMarca = L.marker(universidad["coordenadas"], { icon: icono });
-
-    // Crear objeto con los datos de la nueva marca
-    let objeto = new CrearMarcaHover(
-        nuevaMarca, 
-        universidad["estado"]
-    );
-
-    // Añadir nueva marca al objeto
-    marcasHover.push(objeto);
-}
- */
 
 // ---------- CREAR CLASE QUE CONSTRUYE LOS DATOS DE LAS MARCAS ----------
 class CrearMarca {
@@ -99,14 +79,13 @@ class CrearMarca {
 // ---------- CREAR MARCAS ----------
 var marcasGlobal = [];
 
-    
-// Crear y guardar todas las marcas que existen en universidadesData
-for (let universidadKey in universidadesData) {
-    let universidad = universidadesData[universidadKey];
+// Crear y guardar todas las marcas que existen en universidadesData.js
+for (let universidadKey in UNI_DATA) {
+    let universidad = UNI_DATA[universidadKey];
 
     // Crear icono
     var icono = L.icon({
-        iconUrl: universidad["marcador"], // Usar la propiedad src en lugar de la variable icon
+        iconUrl: universidad["marcador"],
         iconSize: [30, 45],
         iconAnchor: [8, 45],
         popupAnchor: [8, -40],
@@ -120,12 +99,12 @@ for (let universidadKey in universidadesData) {
     nuevaMarca.on("click", function () {
 
         // Mostrar campos del panel
-        panel_informacion.classList.remove("hide");
+        panel_informacion.removeAttribute('hidden')
 
         // LLenar datos
         panel_nombre.innerHTML = `${universidad["nombre"]} (${universidad["siglas"]})`;
         panel_descripcion.innerHTML = universidad["descripcion"];
-        panel_portada.src = universidad["portada"];
+        panel_fachada.src = universidad["portada"];
         panel_pagina.innerHTML = universidad["pagina"];
         panel_pagina.setAttribute('href', universidad["pagina"]);
         panel_mision.innerHTML = universidad["mision"];
@@ -145,11 +124,15 @@ for (let universidadKey in universidadesData) {
         crearGrafica(document.getElementById('panel_Graph_Personal'),'Personal', ['Personal Administrativo', 'Personal de Limpieza', 'Personal Transporte', 'Personal Comedor','Personal Obrero'], [40, 50, 60, 30], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'], 'pie')
 
         // Verificar si el panel esta oculto para mostrarlo
-        if(!panel_boton.checked){
+        if(!boton_alternar.checked){
             AlternarPanel(true)
-            panel_boton.checked = true
-            contenedor_panel_boton.classList.remove('hide');
+            boton_alternar.checked = true
+            contenedor_boton_alternar.removeAttribute('hidden');
         }
+
+        // Si la portada no carga/existe, mostrar una imagen por defecto
+        panel_fachada.onerror = function () {panel_fachada.src = './img/no-imagen.png';}
+        panel_logo.onerror = function () {panel_logo.src = './img/no-imagen.png';}
 
     });
 
@@ -185,10 +168,9 @@ for (let universidadKey in universidadesData) {
 // Constructor de todas las autoridades
 function constructorAutoridades(autoridades){
 
-    // Limpiar anterior div e iniciar nuevo div
+    // Limpiar anterior div y crear nuevo div
     document.getElementById('panel_autoridades').innerHTML = ''
-    const div = document.createElement('div');
-    const br = document.createElement('br');
+    var contenedorAutoridades = document.createElement('div');
 
     autoridades.forEach(persona => {
 
@@ -196,14 +178,14 @@ function constructorAutoridades(autoridades){
         var img = document.createElement('img')
         img.src = persona['foto'];
         img.onerror = function () {img.src = './img/no-foto.png';}
-        img.className = 'foto';
-        div.appendChild(img)
+        img.className = 'autoridad-foto';
+        contenedorAutoridades.appendChild(img)
     
         // Añadir nombre
         var nombre = document.createElement('div');
         nombre.classList.add('autoridad-nombre')
         nombre.innerHTML = persona['nombre']
-        div.appendChild(nombre)
+        contenedorAutoridades.appendChild(nombre)
 
         // Añadir cargo
         var cargo = document.createElement('div');
@@ -214,39 +196,39 @@ function constructorAutoridades(autoridades){
         // Añadir reseña
         var reseña = document.createElement('p');
         reseña.innerHTML = persona['reseña']
-        div.appendChild(reseña)        
+        contenedorAutoridades.appendChild(reseña)        
 
         // Añadir fichaTecnica
         var fichaTecnica = document.createElement('div');
         fichaTecnica.classList.add('autoridad-fichaTecnica')
         fichaTecnica.innerHTML = '<b>Ficha tecnica:</b><br>'
         var a = document.createElement('a');
-        a.href = '#'
+        a.href = ''
         a.innerHTML = persona['nombre']+".pdf"
         fichaTecnica.appendChild(a)
-        div.appendChild(fichaTecnica)
+        contenedorAutoridades.appendChild(fichaTecnica)
     
         // Añadir linea divisora
         var hr = document.createElement('hr')
         hr.classList.add('autoridad-hr')
-        div.appendChild(hr)
+        contenedorAutoridades.appendChild(hr)
 
     });
 
     // Retorna una estructura HTML con todas las autoridades
-    return div
+    return contenedorAutoridades
 }
-    
+
 // Constructor de lista de carreras
 function constructorCarreras(siglas){
 
     // Limpiar div e iniciaizar algunas variables
     document.getElementById('panel_carreras').innerHTML = ''
-    let divCarreras = document.createElement('div');
+    var contenedorCarreras = document.createElement('div');
     const br = document.createElement('br');
     
     // Recibe todos los tipos de carreras de la universidad buscada
-    let carrerasUni = carrerasData[siglas]
+    let carrerasUni = CARRERAS_DATA[siglas]
 
     // NOTA: tipoCarrera es el nombre de cada tipo de carrera. Ejem: tipoCarrera = 'Carreras Cortas'
     for (let tipoCarrera in carrerasUni) {
@@ -259,15 +241,15 @@ function constructorCarreras(siglas){
         var tipo = document.createElement('b');
         tipo.classList.add('encabezado')
         tipo.innerHTML = tipoCarrera
-        divCarreras.appendChild(tipo)
-        divCarreras.appendChild(br)
+        contenedorCarreras.appendChild(tipo)
+        contenedorCarreras.appendChild(br)
 
         // Inicializar nueva lista para tipo de carrera
         var ul = document.createElement('ul');
-        divCarreras.appendChild(ul)
+        contenedorCarreras.appendChild(ul)
 
         // Iterar por cada carrera dentro de cada tipo de carrera
-        carrerasData[siglas][tipoCarrera].forEach(carrera => {
+        CARRERAS_DATA[siglas][tipoCarrera].forEach(carrera => {
 
             // Añadir carreras a la lista
             var li = document.createElement('li');
@@ -278,11 +260,5 @@ function constructorCarreras(siglas){
     }
 
     // Retorna una estructura HTML con todas las carreras
-    return divCarreras
+    return contenedorCarreras
 }
-    
-export { constructorAutoridades };
-export { constructorCarreras };
-export { marcasGlobal };
-export { marcasHover };
-

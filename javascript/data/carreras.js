@@ -1,4 +1,4 @@
-let carrerasData = {
+const CARRERAS_DATA = {
 
     'UBTJR': {
         "Carreras Largas": [
@@ -2501,4 +2501,4 @@ let carrerasData = {
     },
 };
 
-export { carrerasData };
+export { CARRERAS_DATA };

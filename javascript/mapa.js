@@ -5,9 +5,12 @@
  */
 
 import { Filtrar } from "./funciones/filtrarMarcas.js"; 
-import { BotonMostraPanel } from "./panelInformacion.js";
-import { BotonRestablecer } from "./botonRestablecer.js";
-import { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioStyle, highlightStyle, hoverStyle } from "./mapaEstilos.js";
+import { BotonMostraPanel } from "./panel.js";
+import { botonRestablecer } from "./boton-restablecer.js";
+import { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioStyle, highlightStyle, hoverStyle } from "./mapa-estilos.js";
+
+export { geojsonLink, municipiosLink }
+export { map }
 
 
 
@@ -33,11 +36,10 @@ var municipiosLink = "./geo/municipios.geojson";
 
 
 
-
 // ---------- CONFIGURAR ESTADOS Y MUNICIPIOS DEL MAPA ---------- SE QUEDA
 
 map.addControl(new BotonMostraPanel());
-map.addControl(new BotonRestablecer());
+map.addControl(new botonRestablecer());
 
 var geojsonLayer;
 var municipiosLayer;
@@ -47,19 +49,13 @@ var selectedLayerMunicipio = null; // Para almacenar la capa seleccionada actual
 let marcasHover;
 
 function resetLayer(){
-    // map.removeLayer(geojsonLayer);
     if(municipiosLayer) map.removeLayer(municipiosLayer);
     if(municipiosLayerTmp) map.removeLayer(municipiosLayerTmp);
-    // geojsonLayer.resetStyle(selectedLayer);
-    // map.removeLayer(selectedLayerMunicipio);
-    // map.removeLayer(marcasHover);
-
-    // selectedLayer.setStyle(hoverStyle)
     estadoActualGlobal = ''
 }
 export { resetLayer }
 
-// sharedModule.js
+// Definir variable que podrá ser cambiada en otros archivos
 let marcasFiltradas;
 
 export function getGlobalVariable() {
@@ -68,6 +64,14 @@ export function getGlobalVariable() {
 
 export function setGlobalVariable(newValue) {
     marcasFiltradas = newValue;
+}
+
+export function getEstadoActualGlobal() {
+  return estadoActualGlobal;
+}
+
+export function setEstadoActualGlobal(newValue) {
+    estadoActualGlobal = newValue;
 }
 
 // Función para manejar el clic en los Estados
@@ -413,6 +417,3 @@ function closeAllTooltips() {
         }
     });
 }
-
-export { geojsonLink, municipiosLink }
-export { map }
