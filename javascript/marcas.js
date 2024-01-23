@@ -242,7 +242,6 @@ function constructorCarreras(siglas){
         tipo.classList.add('encabezado')
         tipo.innerHTML = tipoCarrera
         contenedorCarreras.appendChild(tipo)
-        contenedorCarreras.appendChild(br)
 
         // Inicializar nueva lista para tipo de carrera
         var ul = document.createElement('ul');

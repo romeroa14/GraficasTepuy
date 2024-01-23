@@ -1084,9 +1084,7 @@ const UNI_DATA = {
         ]
     },
 
-
-//Documento Diego
-    "UPTNMLS": {
+    "UPTNMS": {
         "nombre": 'Universidad Politécnica Territorial del Norte del Táchira "Manuela Sáenz"',
         "siglas": 'UPTNMLS',
         "pagina": 'http://www.uptnmls.edu.ve/',
@@ -1120,22 +1118,22 @@ const UNI_DATA = {
                 "cargo": 'Vicerrector Académico',
                 "foto": '',
                 "url_curriculum": 'enlace.pdf'
-            },
+            },            
             {
                 "id": '3',
-                "nombre": 'Rosalia Colmenares Rodriguez',
+                "nombre": 'Judith Yolanda Peña Morales',
                 "cedula": '',
                 "reseña": '',
-                "cargo": 'Secretaria',
+                "cargo": 'Vicerrectora Territorial',
                 "foto": '',
                 "url_curriculum": 'enlace.pdf'
             },
             {
                 "id": '4',
-                "nombre": 'Judith Yolanda Peña Morales',
+                "nombre": 'Rosalia Colmenares Rodriguez',
                 "cedula": '',
                 "reseña": '',
-                "cargo": 'Vicerrectora Territorial',
+                "cargo": 'Secretaria',
                 "foto": '',
                 "url_curriculum": 'enlace.pdf'
             }
@@ -1184,15 +1182,11 @@ const UNI_DATA = {
         "nombre": 'Universidad Politécnica Territorial del Norte de Monagas “Ludovico Silva”',
         "siglas": 'UPTNMLS',
         "pagina": 'http://www.uptnmls.edu.ve/',
-        "mision": `La integración de la Universidad Politécnica Territorial del Norte de Monagas “Ludovico Silva” con la comunidad se identifica en la propuesta del Departamento de Extensión Universitaria, como un norte a seguir por la universidad, para cumplir responsablemente con la oferta de una educación para el pueblo a través de elementos genéricos pero fundamentales como son la equidad, dignidad, gratuidad y obligatoriedad, razones suficientemente lógicas para desarrollar  cuatro líneas de acción orientadas a la enseñanza – aprendizaje, cultural – artístico, Socio Comunitario y deportivo.
-En la parte académica implementamos cursos, talleres, charlas, foros, seminarios, entre otros, dirigidos a toda la colectividad intra y extra universitaria incluyendo profesores, alumnos, personal administrativo, obreros, y Consejo comunales, utilizando para  las actividades programadas, como ente facilitador, los recursos humanos profesionales que hacen vida en nuestra institución, de esta manera contribuiremos con la racionalización de los recursos económicos y por ende del déficit fiscal de la UPTNM. Mientras que en las comunidades iniciaremos con visitas a todos los sectores del Municipio Bolívar, para  detectar  problemáticas existentes relacionadas a infraestructuras, saneamiento ambiental, educación, salud, cultura y otros. Una vez ubicado el o los problema, se procederá a incorporar a los estudiantes de los últimos semestre de las carreras universitaria y docentes afines quienes se encargaran de la elaboración de los proyectos y con el apoyo de los Consejos Comunales y la Comunas del Municipio, canalizar el mismo ante los organismos competentes, para gestionar los recursos económicos y así llevar a feliz término el cumplimiento con la solución de una problemática.
+        "mision": `La integración de la Universidad Politécnica Territorial del Norte de Monagas “Ludovico Silva” con la comunidad se identifica en la propuesta del Departamento de Extensión Universitaria, como un norte a seguir por la universidad, para cumplir responsablemente con la oferta de una educación para el pueblo a través de elementos genéricos pero fundamentales como son la equidad, dignidad, gratuidad y obligatoriedad, razones suficientemente lógicas para desarrollar  cuatro líneas de acción orientadas a la enseñanza – aprendizaje, cultural – artístico, Socio Comunitario y deportivo. En la parte académica implementamos cursos, talleres, charlas, foros, seminarios, entre otros, dirigidos a toda la colectividad intra y extra universitaria incluyendo profesores, alumnos, personal administrativo, obreros, y Consejo comunales, utilizando para  las actividades programadas, como ente facilitador, los recursos humanos profesionales que hacen vida en nuestra institución, de esta manera contribuiremos con la racionalización de los recursos económicos y por ende del déficit fiscal de la UPTNM. Mientras que en las comunidades iniciaremos con visitas a todos los sectores del Municipio Bolívar, para  detectar  problemáticas existentes relacionadas a infraestructuras, saneamiento ambiental, educación, salud, cultura y otros. Una vez ubicado el o los problema, se procederá a incorporar a los estudiantes de los últimos semestre de las carreras universitaria y docentes afines quienes se encargaran de la elaboración de los proyectos y con el apoyo de los Consejos Comunales y la Comunas del Municipio, canalizar el mismo ante los organismos competentes, para gestionar los recursos económicos y así llevar a feliz término el cumplimiento con la solución de una problemática.
 Tenemos la voluntad y necesidad de desarrollar mecanismos efectivos de interrelación entre el tecnológico y los sectores productivos, mediante alianzas estratégicas, con la finalidad de proporcionarle a la comunidad intra y extra universitaria las herramientas necesarias para el desarrollo, tanto personal, como colectivo.
-Se realizaran cursos de arte y oficio, para seguir preparando al pueblo y que a través de estos puedan obtener sus propios ingresos y así sacar adelante a su familia y su comunidad.
-En la parte cultural-artístico, se implementarán mecanismos para rescatar la cultura popular, la cual ha sido abandonada por décadas, desarrollando políticas de integración, en donde por medio de investigación se pueda recabar información y de esta manera promover el resurgimiento de la misma.
-Se rescatarán todas las agrupaciones musicales (Tecnología Banda Show, Tecnología Gaitera, Coral “ Celestino Ramírez”, Tecnología Criolla) que tanto renombre le han dado al otrora instituto, dentro y fuera del Municipio Bolívar, poniendo en alto el nombre de la Universidad. También se creara la Estudiantina de la Ludovico Silva, conformada por estudiantes de la institución, los cuales tendrán la responsabilidad de representarnos en actividades intra y extra universitaria.
-Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, fomentando el deporte como medio de recreación, logrando transmitir mensajes a niños, jóvenes y adultos, sobre el sano goce en las distintas etapas de la vida y erradicando el uso de las drogas. Todo esto enmarcado en el Movimiento por la Paz y la Vida.`,
-
-        "vision": '',
+Se realizaran cursos de arte y oficio, para seguir preparando al pueblo y que a través de estos puedan obtener sus propios ingresos y así sacar adelante a su familia y su comunidad. En la parte cultural-artístico, se implementarán mecanismos para rescatar la cultura popular, la cual ha sido abandonada por décadas, desarrollando políticas de integración, en donde por medio de investigación se pueda recabar información y de esta manera promover el resurgimiento de la misma.
+Se rescatarán todas las agrupaciones musicales (Tecnología Banda Show, Tecnología Gaitera, Coral “ Celestino Ramírez”, Tecnología Criolla) que tanto renombre le han dado al otrora instituto, dentro y fuera del Municipio Bolívar, poniendo en alto el nombre de la Universidad. También se creara la Estudiantina de la Ludovico Silva, conformada por estudiantes de la institución, los cuales tendrán la responsabilidad de representarnos en actividades intra y extra universitaria. Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, fomentando el deporte como medio de recreación, logrando transmitir mensajes a niños, jóvenes y adultos, sobre el sano goce en las distintas etapas de la vida y erradicando el uso de las drogas. Todo esto enmarcado en el Movimiento por la Paz y la Vida.`,
+        "vision": 'El Ministerio del Poder Popular para la Defensa será una organización moderna, con capital humano, esencialmente profesional y elevado sentido de pertenencia, que contribuya efectivamente con la Fuerza Armada Nacional Bolivariana en el proceso de consolidación de la seguridad y defensa integral de la Nación y el resguardo de la territorialidad del Estado venezolano.',
         "descripcion": 'Ubicada en Caripito, Monagas, la UPTNMLS es una universidad pública venezolana fundada en el año 2012 que ofrece 11 carreras.',
         "portada": './img/portadas/UPTNMLS-TNMLS.png',
         "logo": './img/logos/UPTNMLS-logo.png',
@@ -2889,13 +2883,13 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
 
     // ----------------------------- UNIVERSIDADES PRIVADAS -----------------------------
 
-    "UBA": {
+    "UBA": { //faltan las autoridades
         "nombre": 'Universidad Bicentenaria de Aragua',
         "siglas": 'UBA',
         "pagina": 'http://www.uba.edu.ve/',
-        "mision": '',
-        "vision": '',
-        "descripcion": '',
+        "mision": 'La Universidad Bicentenaria de Aragua, UBA, cumple el propósito de formar profesionales orientados a la búsqueda permanente de la transformación social para el bienestar y desarrollo humano, en adhesión a los principios y valores trascendentales del hombre y la sociedad, con criterios de pertinencia, calidad, sostenibilidad y justicia.',
+        "vision": 'La UBA aspira a ser un centro de excelencia académica, de investigación y de extensión, que contribuya a la transformación social, la formación de ciudadanos integrales y el desarrollo humano sostenible.',
+        "descripcion": 'La Universidad Bicentenaria de Aragua es una institución de educación superior pública, creada en 1970. Está ubicada en la ciudad de Maracay, estado Aragua, Venezuela. <br><br>La UBA ofrece una amplia gama de programas académicos, tanto de pregrado como de postgrado, en las áreas de ciencias, ingeniería, humanidades y ciencias sociales. Sus estudiantes provienen de todo el país y del extranjero.',
         "portada": './img/portadas/UBA-principal.png',
         "logo": './img/logos/UBA-logo.png',
         "escudo": '',
@@ -2908,22 +2902,123 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "autoridades" : [
             {
                 "id": '1',
-                "nombre": '',
+                "nombre": 'Dr. Basilio Sánchez Aranguren',
                 "cedula": '',
-                "reseña": '',
-                "cargo": '',
+                "reseña": 'Reseña super duper mega requete increible',
+                "cargo": 'Rector',
+                "foto": './img/autoridades/basilioSanchez.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '2',
+                "nombre": 'Dr. Manuel Piñate',
+                "cedula": '',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Vicerrector Académico',
+                "foto": './img/autoridades/manuelPinate.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '3',
+                "nombre": 'Dr. Gustavo Sánchez',
+                "cedula": '',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Vicerrectorado Administrativo',
+                "foto": './img/autoridades/gustavoSanchez.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '4',
+                "nombre": 'Dra. Edilia Papa',
+                "cedula": '',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Secretaría General',
+                "foto": './img/autoridades/ediliaPapa.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '5',
+                "nombre": 'Dr. Julio César Pineda',
+                "cedula": '',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Decano de Relaciones Internacionales',
+                "foto": './img/autoridades/julioCesar.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '6',
+                "nombre": 'Ing. Andres Guzman, MSc.',
+                "cedula": '',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Decanato de la Facultad de Ingeniería',
                 "foto": './img/autoridades/.png',
                 "url_curriculum" : 'enlace.pdf'
-            }
+            },
+
+            {
+                "id": '7',
+                "nombre": 'Abog. Nelson Sánchez, MSc.',
+                "cedula": '',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Decanato de la Facultad de Ciencias Jurídicas y Políticas',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '8',
+                "nombre": 'Dra. Zoricar Ojeda',
+                "cedula": '',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Decanato de la Facultad de Ciencias Administrativas y Sociales',
+                "foto": './img/autoridades/zoricarOjeda.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '9',
+                "nombre": 'Abog. Wilmer Galindez, MSc.',
+                "cedula": '',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Decanato de Investigación, Extensión y Postgrado',
+                "foto": './img/autoridades/wilmerGalindez.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '10',
+                "nombre": 'Dr. Rodolfo Piña',
+                "cedula": '',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Decanato de Emprendimiento',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '11',
+                "nombre": 'NDr. José Gerardo Guarisma Jr.',
+                "cedula": '',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Presidente del Consejo Superior',
+                "foto": './img/autoridades/joseGarisma.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
         ]
     },
-    "UCAB": {
+
+    "UCAB": { //faltan las autoridades
         "nombre": 'Universidad Católica Andrés Bello',
         "siglas": 'UCAB',
         "pagina": 'http://www.ucab.edu.ve/',
-        "mision": '',
-        "vision": '',
-        "descripcion": '',
+        "mision": 'La Universidad Católica Andrés Bello considera como misión específica suya contribuir a la formación integral de la juventud universitaria, en su aspecto personal y comunitario, dentro de la concepción cristiana de la vida.',
+        "vision": 'La UCAB aspira a ser una universidad de excelencia académica, de investigación y de extensión, que contribuya a la transformación social, la formación de ciudadanos integrales y el desarrollo humano sostenible.',
+        "descripcion": 'La Universidad Católica Andrés Bello es una institución de educación superior privada, creada en 1953. Está ubicada en la ciudad de Caracas, Venezuela. <br><br> La UCAB es una universidad católica, fundamentada en la fe y la razón. Su lema es "Veritas et Libertas", que significa "Verdad y Libertad".',
         "portada": './img/portadas/UCAB-principal.png',
         "logo": './img/logos/UCAB-logo.png',
         "escudo": '',
@@ -2936,22 +3031,43 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "autoridades" : [
             {
                 "id": '1',
-                "nombre": '',
-                "cedula": '',
-                "reseña": '',
-                "cargo": '',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super duper mega requete increible',
+                "cargo": 'Rectorx',
                 "foto": './img/autoridades/.png',
                 "url_curriculum" : 'enlace.pdf'
-            }
+            },
+
+            {
+                "id": '2',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Vicerrectorx',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '3',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Secretarix',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
         ]
-    },
-    "UAH": {
+    }
+    ,
+    "UAH": { //faltan las autoridades
         "nombre": 'Universidad Alejandro de Humboldt',
         "siglas": 'UAH',
         "pagina": 'https://www.unihumboldt.edu.ve/',
         "mision": 'Tiene como misión fundamental la búsqueda de la verdad mediante la creación, asimilación y difusión del saber que se manifiesta en las funciones básicas de la investigación, docencia y extensión, dentro de una concepción dinámica que responda a las exigencias de la sociedad, lo cual implica el mantenimiento de relaciones permanentes con diversos sectores de la comunidad.',
-        "vision": '',
-        "descripcion": '',
+        "vision": 'Ser una universidad líder en la formación de profesionales integrales, competentes y comprometidos con el desarrollo de Venezuela y el mundo.',
+        "descripcion": 'La Universidad Alejandro de Humboldt es una institución de educación superior privada, fundada en 1997. Está ubicada en la ciudad de Caracas, Venezuela, y cuenta con una sede en la ciudad de Valencia. <br><br> La UAH ofrece una amplia gama de programas académicos, tanto de pregrado como de postgrado, en las áreas de ciencias, ingeniería, humanidades y ciencias sociales. Sus estudiantes provienen de todo el país y del extranjero.',
         "portada": './img/portadas/UAH-principal.png',
         "logo": './img/logos/UAH-logo.png',
         "escudo": '',
@@ -2964,22 +3080,43 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "autoridades" : [
             {
                 "id": '1',
-                "nombre": '',
-                "cedula": '',
-                "reseña": '',
-                "cargo": '',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super duper mega requete increible',
+                "cargo": 'Rectorx',
                 "foto": './img/autoridades/.png',
                 "url_curriculum" : 'enlace.pdf'
-            }
+            },
+
+            {
+                "id": '2',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Vicerrectxr',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '3',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Secretarix',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
         ]
     },
-    "UNICA": {
+
+    "UNICA": { //faltan las autoridades
         "nombre": 'Universidad Católica Cecilio Acosta',
         "siglas": 'UNICA',
         "pagina": 'https://unica.edu.ve/',
-        "mision": '',
-        "vision": '',
-        "descripcion": '',
+        "mision": 'La Universidad Católica Cecilio Acosta, UNICA, cumple el propósito de formar profesionales orientados a la búsqueda permanente de la transformación social para el bienestar y desarrollo humano, en adhesión a los principios y valores trascendentales del hombre y la sociedad, con criterios de pertinencia, calidad, sostenibilidad y justicia.',
+        "vision": 'La UNICA aspira a ser un centro de excelencia académica, de investigación y de extensión, que contribuya a la transformación social, la formación de ciudadanos integrales y el desarrollo humano sostenible.',
+        "descripcion": 'La Universidad Católica Cecilio Acosta es una institución de educación superior privada, fundada en 1983. Está ubicada en la ciudad de Maracaibo, Venezuela.<br><br> La UNICA es una universidad católica, fundamentada en la fe y la razón. Su lema es "Educar para el servicio".<br><br> La UNICA ofrece una amplia gama de programas académicos, tanto de pregrado como de postgrado, en las áreas de ciencias, ingeniería, humanidades y ciencias sociales. Sus estudiantes provienen de todo el país y del extranjero.',
         "portada": './img/portadas/UNICA-principal.png',
         "logo": './img/logos/UNICA-logo.png',
         "escudo": '',
@@ -2992,22 +3129,43 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "autoridades" : [
             {
                 "id": '1',
-                "nombre": '',
-                "cedula": '',
-                "reseña": '',
-                "cargo": '',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super duper mega requete increible',
+                "cargo": 'Rectorx',
                 "foto": './img/autoridades/.png',
                 "url_curriculum" : 'enlace.pdf'
-            }
+            },
+
+            {
+                "id": '2',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Vicerrectxr',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '3',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Secretarix',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
         ]
     },
-    "UCAT": {
+
+    "UCAT": { //faltan las autoridades
         "nombre": 'Universidad Católica del Táchira',
         "siglas": 'UCAT',
         "pagina": 'https://www.ucat.edu.ve/web/',
-        "mision": '',
-        "vision": '',
-        "descripcion": '',
+        "mision": 'La Universidad Católica del Táchira, UCAT, es una institución de educación superior, nacida de la iniciativa de la Diócesis de San Cristóbal, ante lo que consideraba como la necesidad de contar con este instrumento de la cultura en la región tachirense.',
+        "vision": 'La UCAT aspira a ser una universidad líder en la formación de profesionales integrales, competentes y comprometidos con el desarrollo de la región y el país.',
+        "descripcion": 'La Universidad Católica del Táchira es una institución de educación superior privada, fundada en 1962. Está ubicada en la ciudad de San Cristóbal, capital del Estado Táchira, Venezuela. <br><br> La UCAT es una universidad católica, fundamentada en la fe y la razón. Su lema es "Educar para la vida". <br><br> La UCAT ofrece una amplia gama de programas académicos, tanto de pregrado como de postgrado, en las áreas de ciencias, ingeniería, humanidades y ciencias sociales. Sus estudiantes provienen de todo el país y del extranjero.',
         "portada": './img/portadas/UCAT-principal.png',
         "logo": './img/logos/UCAT-logo.png',
         "escudo": '',
@@ -3020,16 +3178,36 @@ Se implementarán actividades deportivas dentro y fuera de nuestra Alma mater, f
         "autoridades" : [
             {
                 "id": '1',
-                "nombre": '',
-                "cedula": '',
-                "reseña": '',
-                "cargo": '',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super duper mega requete increible',
+                "cargo": 'Rectorx',
                 "foto": './img/autoridades/.png',
                 "url_curriculum" : 'enlace.pdf'
-            }
+            },
+
+            {
+                "id": '2',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super increible tumba suegra atomico nuclear chernobil',
+                "cargo": 'Vicerrectxr',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
+
+            {
+                "id": '3',
+                "nombre": 'Nombre y Apellido',
+                "cedula": '00.000.000',
+                "reseña": 'Reseña super trifasico tridimensional 4K ultra HD con pedigri electromengue 6G',
+                "cargo": 'Secretarix',
+                "foto": './img/autoridades/.png',
+                "url_curriculum" : 'enlace.pdf'
+            },
         ]
     }
 
 }
 
-export {UNI_DATA};
+export {UNI_DATA };
