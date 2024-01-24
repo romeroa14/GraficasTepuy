@@ -55,7 +55,6 @@ inputBar.onkeyup = (e) =>{
             map.removeLayer(getGlobal('marcasFiltradas'));
         }
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map);
         desplazarse(coordDesplazamiento);
     }
 }
@@ -91,7 +90,7 @@ const mostrarSugerencias = (list) =>{
         desplazarse(coordDesplazamiento);
         selectUl.setAttribute('hidden','hidden')
         mostrarPanel(siglas);
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
         })})
         todasSugerencias = listaSugerencias
         
@@ -157,8 +156,7 @@ function seleccionarOpcion(elemento) {
         if (getGlobal('marcasFiltradas')) {
             map.removeLayer(getGlobal('marcasFiltradas'));
         }
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map);
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
         desplazarse(coordDesplazamiento);
         }
     var siglas = crearSiglas(inputSeleccion.value)
@@ -188,13 +186,16 @@ function crearSiglas(textoCompleto) {
 
 let selectUniversidad = document.getElementById("select-location3");
 let selectEstado = document.getElementById("select-location");
+let estadoActual = '';
 selectUniversidad.disabled = true;
 
 // Funcionalidad del select de Estados
 selectEstado.addEventListener("change",()=>{
-    let estadoActual = '';
-    setEstadoActualGlobal(selectEstado.value.toLocaleLowerCase())
-    estadoActual = getEstadoActualGlobal()
+    
+    // setEstadoActualGlobal(selectEstado.value.toLocaleLowerCase())
+    estadoActual = selectEstado.value.toLocaleLowerCase()
+    setGlobal('estadoActual', estadoActual)
+    setGlobal('municipioActual', null)
     
     if(estadoActual == "estado") {
         return
@@ -226,8 +227,7 @@ selectUniversidad.addEventListener("click",()=>{
         if (getGlobal('marcasFiltradas')) {
             map.removeLayer(getGlobal('marcasFiltradas'));
         }
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map);
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
         desplazarse(coordDesplazamiento);
         mostrarPanel(siglas)
 })

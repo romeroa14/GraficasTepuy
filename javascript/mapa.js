@@ -33,9 +33,9 @@ var map = L.map("map", {
 var geojsonLink = "./geo/estados.geojson";
 var municipiosLink = "./geo/municipios.geojson";
 
-var marcasFiltradas = getGlobal('marcasFiltradas')
+// var marcasFiltradas = getGlobal('marcasFiltradas')
 
-// ---------- CONFIGURAR ESTADOS Y MUNICIPIOS DEL MAPA ---------- SE QUEDA
+// ---------- CONFIGURAR ESTADOS Y MUNICIPIOS DEL MAPA ----------
 
 map.addControl(new BotonMostraPanel());
 map.addControl(new botonRestablecer());
@@ -50,20 +50,21 @@ let marcasHover;
 function resetLayer() {
     if (municipiosLayer) map.removeLayer(municipiosLayer);
     if (municipiosLayerTmp) map.removeLayer(municipiosLayerTmp);
-    estadoActualGlobal = ''
-    municipioActualGlobal = ''
+    setGlobal('estadoActual', null)
+    setGlobal('municipioActual', null)
 }
 export { resetLayer }
 
 // Función para manejar el clic en los Estados
 function onEachFeature(feature, layer) {
-
+    
     // Popup que muestra el nombre del estado
     layer.bindTooltip("<strong>" + feature.properties.ESTADO + "</strong>", { permanent: false, direction: "top" });
     
     layer.on({
         click: function (e) {
-            estadoActualGlobal = feature.properties.ESTADO
+            setGlobal('estadoActual', feature.properties.ESTADO)
+            setGlobal('municipioActual', null)
 
             // Hacer zoom al estado seleccionado
             map.fitBounds(e.target.getBounds());
@@ -84,10 +85,10 @@ function onEachFeature(feature, layer) {
             if (getGlobal('marcasFiltradas')) {
                 map.removeLayer(getGlobal('marcasFiltradas'));
             }
-            console.log("aaaaaaaaaa"+getGlobal('tipoActual'));
-            marcasFiltradas = Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO).addTo(map);
-            setGlobal('marcasFiltradas', marcasFiltradas)
-            
+            console.log("------------ "+getGlobal('tipoActual'));
+            if (getGlobal('tipoActual') != 'Ninguna')
+            setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO).addTo(map))
+
             // Eliminar marcas hover
             if (marcasHover) {
                 marcasHover.forEach(marcador => {
@@ -166,8 +167,7 @@ function onEachFeatureMunicipios(feature, layer) {
     layer.bindTooltip(feature.properties.MUNICIPIO, { permanent: false, direction: "bottom" });
     layer.on({
         click: function (e) {
-            municipioActualGlobal = feature.properties.MUNICIPIO
-
+            setGlobal('municipioActual', feature.properties.MUNICIPIO)
             // Hacer zoom al estado seleccionado (deshabilitado por comodidad)
             // map.fitBounds(e.target.getBounds());
 
@@ -184,9 +184,9 @@ function onEachFeatureMunicipios(feature, layer) {
             if (getGlobal('marcasFiltradas')) {
                 map.removeLayer(getGlobal('marcasFiltradas'));
             }
-            console.log("aaaaaaaaaa"+getGlobal('tipoActual'));
-            marcasFiltradas = Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO, feature.properties.MUNICIPIO).addTo(map);
-            setGlobal('marcasFiltradas', marcasFiltradas)
+            console.log("------------ "+getGlobal('tipoActual'));
+            if (getGlobal('tipoActual') != 'Ninguna')
+            setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO, feature.properties.MUNICIPIO).addTo(map))
         },
         mouseover: function (e) {
 
@@ -286,9 +286,6 @@ fetch(municipiosLink)
 
 // ---------- LEYENDA DEL MAPA ---------- SE VA
 
-let estadoActualGlobal = '';
-let municipioActualGlobal = '';
-
 // Agregando leyenda
 const leyenda = L.control.legend({
     position: "bottomleft",
@@ -336,41 +333,36 @@ actividadMarcaPublica.addEventListener("click",()=>{
         mostrarPublicas = true
     }
     
-    console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
+    // console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
     if (mostrarPublicas && mostrarPrivadas) {
         console.log("-------------- lasdos");
         setGlobal('tipoActual', 'Ambas')
-        console.log(municipioActualGlobal.toLocaleUpperCase());
-        marcasFiltradas = Filtrar(getGlobal('tipoActual'), estadoActualGlobal.toLocaleUpperCase(), municipioActualGlobal.toLocaleUpperCase()).addTo(map)
-        setGlobal('marcasFiltradas', marcasFiltradas)
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
     }
     if (!mostrarPublicas && !mostrarPrivadas) {
         console.log("-------------- nonguna");
-        setGlobal('tipoActual', '')
+        setGlobal('tipoActual', 'Ninguna')
         return
     }
 
     if (mostrarPublicas) {
         console.log("-------------- solopublica");
         setGlobal('tipoActual', 'Publica')
-        console.log(municipioActualGlobal.toLocaleUpperCase());
-        marcasFiltradas = Filtrar(getGlobal('tipoActual'), estadoActualGlobal.toLocaleUpperCase(), municipioActualGlobal.toLocaleUpperCase()).addTo(map)
-        setGlobal('marcasFiltradas', marcasFiltradas)
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
     }
     if (mostrarPrivadas) {
         console.log("-------------- soloprivada");
         setGlobal('tipoActual', 'Privada')
-        console.log(municipioActualGlobal.toLocaleUpperCase());
-        marcasFiltradas = Filtrar(getGlobal('tipoActual'), estadoActualGlobal.toLocaleUpperCase(), municipioActualGlobal.toLocaleUpperCase()).addTo(map)
-        setGlobal('marcasFiltradas', marcasFiltradas)
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
     }
 
     // console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
 })
 
 actividadMarcaPrivada.addEventListener("click",()=>{
+    // console.log(getGlobal('estadoActual'));
     if (getGlobal('marcasFiltradas')) {
         map.removeLayer(getGlobal('marcasFiltradas'));
     }
@@ -380,39 +372,32 @@ actividadMarcaPrivada.addEventListener("click",()=>{
         mostrarPrivadas = true
     }
 
-    console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
+    // console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
     if (mostrarPublicas && mostrarPrivadas) {
         console.log("-------------- lasdos");
         setGlobal('tipoActual', 'Ambas')
-        console.log(municipioActualGlobal.toLocaleUpperCase());
-        marcasFiltradas = Filtrar(getGlobal('tipoActual'), estadoActualGlobal.toLocaleUpperCase(), municipioActualGlobal.toLocaleUpperCase()).addTo(map)
-        setGlobal('marcasFiltradas', marcasFiltradas)
+        // NOTA: si estadoActual = null, da error al usar toLocaleUpperCase(), por eso se usa el operador ternario. 
+        //       Si estadoActual = null, devuelve null, sino, aplica toLocaleUpperCase()
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
     }
     if (!mostrarPublicas && !mostrarPrivadas) {
         console.log("-------------- ninguna");
-        setGlobal('tipoActual', '')
+        setGlobal('tipoActual', 'Ninguna')
         return
     }
 
     if (mostrarPrivadas) {
         console.log("-------------- soloprivada");
         setGlobal('tipoActual', 'Privada')
-        console.log(municipioActualGlobal.toLocaleUpperCase());
-        marcasFiltradas = Filtrar(getGlobal('tipoActual'), estadoActualGlobal.toLocaleUpperCase(), municipioActualGlobal.toLocaleUpperCase()).addTo(map)
-        setGlobal('marcasFiltradas', marcasFiltradas)
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
     }
     if (mostrarPublicas) {
         console.log("-------------- solopublica");
         setGlobal('tipoActual', 'Publica')
-        console.log(municipioActualGlobal.toLocaleUpperCase());
-        marcasFiltradas = Filtrar(getGlobal('tipoActual'), estadoActualGlobal.toLocaleUpperCase(), municipioActualGlobal.toLocaleUpperCase()).addTo(map)
-        setGlobal('marcasFiltradas', marcasFiltradas)
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
     }
-
-
-    // console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
 })
 
 // Cambiar titulo de la leyenda
@@ -421,8 +406,7 @@ titulo.innerHTML = '';
 
 
 
-
-// ---------- EVENTOS EN EL MAPA ---------- SE QUEDA
+// ---------- EVENTOS EN EL MAPA ----------
 map.on({
 
     // Solucion al bug de los ToolTips persistentes de los estados y municipios

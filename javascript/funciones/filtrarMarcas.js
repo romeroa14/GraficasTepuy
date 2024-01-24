@@ -15,20 +15,10 @@ var marcasHoverTemp;
 
 // Funcion para mostrar marcas segun el estado o municipio
 function Filtrar(tipo, estado, municipio, siglas, hover) {  
-    if (tipo === '') return console.log("No hay tipo para mostrar");
-    // Por estado y tipo
-    // if (estado && tipo) {
-    //     console.log("Filtrando por: estado y tipo")
-    //     marcasFiltradas = marcasGlobal
-    //         .filter((objeto) => objeto.estado == estado && objeto.tipo == tipo)
-    //         .map((objeto) => objeto.marca);
-    //         return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
-    // }
-
+    if (tipo === '') return console.log("Filtrando por: nada");
 
     // Devolver array solo con marcas
     if (hover) {
-        // console.log("Filtrando por: hover")
         marcasHoverTemp = marcasHover
             .filter((objeto) => objeto.estado == estado)
             .map((objeto) => objeto.marca);
@@ -44,13 +34,14 @@ function Filtrar(tipo, estado, municipio, siglas, hover) {
             .map((objeto) => objeto.marca);
         } else {
             marcasFiltradas = marcasGlobal
-            .filter((objeto) => objeto.siglas == siglas)
+            .filter((objeto) => objeto.tipo == tipo && objeto.siglas == siglas)
             .map((objeto) => objeto.marca);
         }
         return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
     }
 
     // Por estado y municipio
+    console.log(estado+" "+municipio)
     if (tipo && estado && municipio) {
         console.log("Filtrando por: estado y municipio")
         if (tipo === "Ambas"){
@@ -80,7 +71,7 @@ function Filtrar(tipo, estado, municipio, siglas, hover) {
         return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
     }
 
-    // Devolver marcas publicas o privadas o ambas
+    // Devolver marcas publicas, privadas o ambas
     if (tipo) {
         console.log("Filtrando por: pais")
         if (tipo === "Ambas"){
