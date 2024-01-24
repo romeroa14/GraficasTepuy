@@ -9,8 +9,7 @@ import { Filtrar } from "./funciones/filtrarMarcas.js";
 import { map } from "./mapa.js";
 import { mostrarPanel } from "./panel.js";
 import { eliminarAcentos } from "./funciones/eliminarAcentos.js";
-import { getGlobalVariable, setGlobalVariable } from './mapa.js';
-import { getEstadoActualGlobal, setEstadoActualGlobal } from './mapa.js';
+import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
 
 // ---------- BARRA DE BUSQUEDA ----------
 
@@ -52,11 +51,11 @@ inputBar.onkeyup = (e) =>{
             let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
-        if (getGlobalVariable()) {
-            map.removeLayer(getGlobalVariable());
+        if (getGlobal('marcasFiltradas')) {
+            map.removeLayer(getGlobal('marcasFiltradas'));
         }
-        setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(null, null, siglas).addTo(map);
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
+        // marcasFiltradas = Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map);
         desplazarse(coordDesplazamiento);
     }
 }
@@ -85,14 +84,14 @@ const mostrarSugerencias = (list) =>{
             let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
-        if (getGlobalVariable()) {
-            map.removeLayer(getGlobalVariable());
+        if (getGlobal('marcasFiltradas')) {
+            map.removeLayer(getGlobal('marcasFiltradas'));
         }
         
         desplazarse(coordDesplazamiento);
         selectUl.setAttribute('hidden','hidden')
         mostrarPanel(siglas);
-        setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
         })})
         todasSugerencias = listaSugerencias
         
@@ -155,11 +154,11 @@ function seleccionarOpcion(elemento) {
             let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Mostrar marcas por siglas
-        if (getGlobalVariable()) {
-            map.removeLayer(getGlobalVariable());
+        if (getGlobal('marcasFiltradas')) {
+            map.removeLayer(getGlobal('marcasFiltradas'));
         }
-        setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(null, null, siglas).addTo(map);
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
+        // marcasFiltradas = Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map);
         desplazarse(coordDesplazamiento);
         }
     var siglas = crearSiglas(inputSeleccion.value)
@@ -206,10 +205,10 @@ selectEstado.addEventListener("change",()=>{
         let coordDesplazamiento = sugerenciasEstados[estadoActual]["coordenadas"];
         let zoomDesplazamiento = sugerenciasEstados[estadoActual]["zoom"];
         map.flyTo(coordDesplazamiento, zoomDesplazamiento);
-        if (getGlobalVariable()) {
-            map.removeLayer(getGlobalVariable());
+        if (getGlobal('marcasFiltradas')) {
+            map.removeLayer(getGlobal('marcasFiltradas'));
         }
-        setGlobalVariable(Filtrar(estadoActual.toLocaleUpperCase()).addTo(map))
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), estadoActual.toLocaleUpperCase()).addTo(map))
     }
 })
 
@@ -224,11 +223,11 @@ selectUniversidad.addEventListener("click",()=>{
         let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Filtrar por siglas
-        if (getGlobalVariable()) {
-            map.removeLayer(getGlobalVariable());
+        if (getGlobal('marcasFiltradas')) {
+            map.removeLayer(getGlobal('marcasFiltradas'));
         }
-        setGlobalVariable(Filtrar(null, null, siglas).addTo(map))
-        // marcasFiltradas = Filtrar(null, null, siglas).addTo(map);
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
+        // marcasFiltradas = Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map);
         desplazarse(coordDesplazamiento);
         mostrarPanel(siglas)
 })

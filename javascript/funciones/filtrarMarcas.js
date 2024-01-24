@@ -14,25 +14,17 @@ var marcasFiltradas;
 var marcasHoverTemp;
 
 // Funcion para mostrar marcas segun el estado o municipio
-function Filtrar(estado, municipio, siglas, hover, tipo) {
-    
-    // Por estado y municipio
-    if (estado && tipo) {
-        console.log("Filtrando por: estado y tipo")
-        marcasFiltradas = marcasGlobal
-            .filter((objeto) => objeto.estado == estado && objeto.tipo == tipo)
-            .map((objeto) => objeto.marca);
-            return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
-    }
+function Filtrar(tipo, estado, municipio, siglas, hover) {  
+    if (tipo === '') return console.log("No hay tipo para mostrar");
+    // Por estado y tipo
+    // if (estado && tipo) {
+    //     console.log("Filtrando por: estado y tipo")
+    //     marcasFiltradas = marcasGlobal
+    //         .filter((objeto) => objeto.estado == estado && objeto.tipo == tipo)
+    //         .map((objeto) => objeto.marca);
+    //         return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
+    // }
 
-    // Devolver marcas publicas/privadas
-    if (tipo) {
-        console.log("Filtrando por: tipo")
-        marcasFiltradas = marcasGlobal
-            .filter((objeto) => objeto.tipo == tipo)
-            .map((objeto) => objeto.marca);
-            return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));            
-    }
 
     // Devolver array solo con marcas
     if (hover) {
@@ -44,30 +36,62 @@ function Filtrar(estado, municipio, siglas, hover, tipo) {
     }
 
     // Por siglas
-    if (siglas) {
+    if (tipo && siglas) {
         console.log("Filtrando por: siglas")
-        marcasFiltradas = marcasGlobal
+        if (tipo === "Ambas"){
+            marcasFiltradas = marcasGlobal
             .filter((objeto) => objeto.siglas == siglas)
             .map((objeto) => objeto.marca);
-            return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
+        } else {
+            marcasFiltradas = marcasGlobal
+            .filter((objeto) => objeto.siglas == siglas)
+            .map((objeto) => objeto.marca);
+        }
+        return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
     }
 
     // Por estado y municipio
-    if (estado && municipio) {
+    if (tipo && estado && municipio) {
         console.log("Filtrando por: estado y municipio")
-        marcasFiltradas = marcasGlobal
+        if (tipo === "Ambas"){
+            marcasFiltradas = marcasGlobal
             .filter((objeto) => objeto.estado == estado && objeto.municipio == municipio)
             .map((objeto) => objeto.marca);
-            return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
+        } else {
+            marcasFiltradas = marcasGlobal
+                .filter((objeto) => objeto.tipo == tipo && objeto.estado == estado && objeto.municipio == municipio)
+                .map((objeto) => objeto.marca);
+        }
+        return (marcasFiltradas = L.layerGroup([...marcasFiltradas])); 
     }
 
     // Por estado
-    if (estado) {
-        console.log("Filtrando por: estado")
-        marcasFiltradas = marcasGlobal
+    if (tipo && estado) {
+        console.log("Filtrando por: Estado")
+        if(tipo === "Ambas"){
+            marcasFiltradas = marcasGlobal
             .filter((objeto) => objeto.estado == estado)
+            .map((objeto) => objeto.marca); 
+        } else {
+            marcasFiltradas = marcasGlobal
+            .filter((objeto) => objeto.tipo == tipo && objeto.estado == estado)
             .map((objeto) => objeto.marca);
-            return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
+        }
+        return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
+    }
+
+    // Devolver marcas publicas o privadas o ambas
+    if (tipo) {
+        console.log("Filtrando por: pais")
+        if (tipo === "Ambas"){
+            marcasFiltradas = marcasGlobal
+            .map((objeto) => objeto.marca);
+        } else {
+            marcasFiltradas = marcasGlobal
+            .filter((objeto) => objeto.tipo == tipo)
+            .map((objeto) => objeto.marca);
+        }
+        return (marcasFiltradas = L.layerGroup([...marcasFiltradas]));
     }
 }
     

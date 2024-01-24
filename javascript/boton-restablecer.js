@@ -4,7 +4,7 @@
     Fecha de creacion: 18-01-2024
  */
 
-import { getGlobalVariable } from './mapa.js';
+import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
 import { AlternarPanel } from "./panel.js";
 import { resetLayer } from './mapa.js';
 
@@ -31,8 +31,8 @@ const botonRestablecer = L.Control.extend({
         // Evento para restablecer capas y marcas en el mapa
         img.addEventListener('click', function () {
             map.flyTo([7, -66], 6)
-            if (getGlobalVariable()) {
-                map.removeLayer(getGlobalVariable());
+            if (getGlobal('marcasFiltradas')) {
+                map.removeLayer(getGlobal('marcasFiltradas'));
             }
             if(boton_alternar.checked){
                 AlternarPanel(false)
