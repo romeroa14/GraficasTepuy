@@ -317,7 +317,7 @@ const leyenda = L.control.legend({
             type: "image",
             url: "./img/marcadores/default-marcador.png",
             layers: [],
-            inactive: true
+            inactive: false
         },
         {
             label: "Universidades Privadas",
@@ -326,7 +326,7 @@ const leyenda = L.control.legend({
             url: "./img/marcadores/default-privada-marcador.png",
             SymbolWidht: 22,
             layers: [],
-            inactive: true
+            inactive: false
         }
 
     ]
@@ -336,38 +336,116 @@ const leyenda = L.control.legend({
 // console.log(leyenda.options.legends[0].inactive);
 let actividadMarcaPublica = document.querySelector('.leaflet-legend-item')
 let actividadMarcaPrivada = document.querySelector("section > div > div:nth-child(2)")
-let valorCambio = false;
-let valorCambio2 = false;
+let marcadorPublicas = true;
+let marcadorPrivadas = true;
 
 actividadMarcaPublica.addEventListener("click",()=>{
-    if (valorCambio == true) {
-        if (marcasFiltradas) {
-            map.removeLayer(marcasFiltradas);
-        }
-        
-        valorCambio = false; 
-    } else {
+    marcadorPublicas = !marcadorPublicas
+    if (marcadorPublicas && marcadorPrivadas) {
+
+        console.log('Mostrar ambas');
         if (marcasFiltradas) {
             map.removeLayer(marcasFiltradas);
         }
         marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
-        valorCambio = true; 
-    }
-})
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Privada').addTo(map)
+        // if (marcasFiltradas) {
+        //     map.removeLayer(marcasFiltradas);
+        // }
+        
+        // marcadorPublicas = false; 
+    } else if(marcadorPublicas && !marcadorPrivadas){
 
-actividadMarcaPrivada.addEventListener("click",()=>{
-    if (valorCambio2 == true) {
+        console.log('Mostrar publicas');
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        
+        // if (marcasFiltradas) {
+        //     map.removeLayer(marcasFiltradas);
+        // }
+        // marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        // marcadorPublicas = true; 
+    }else if(!marcadorPublicas && marcadorPrivadas){
+
+        console.log('Mostrar privadas');
         if (marcasFiltradas) {
             map.removeLayer(marcasFiltradas);
         }
         
-        valorCambio2 = false; 
-    } else {
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Privada').addTo(map)
+        // if (marcasFiltradas) {
+        //     map.removeLayer(marcasFiltradas);
+        // }
+        // marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        // marcadorPublicas = true; 
+    }else if(!marcadorPublicas && !marcadorPrivadas){
+
+        console.log('Mostrar nada');
         if (marcasFiltradas) {
             map.removeLayer(marcasFiltradas);
         }
+        
+        // if (marcasFiltradas) {
+        //     map.removeLayer(marcasFiltradas);
+        // }
+        // marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        // marcadorPublicas = true; 
+    }
+})
+
+actividadMarcaPrivada.addEventListener("click",()=>{
+    marcadorPrivadas = !marcadorPrivadas
+    if (marcadorPublicas && marcadorPrivadas) {
+
+        console.log('Mostrar ambas');
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
         marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Privada').addTo(map)
-        valorCambio2 = true; 
+        
+        // marcadorPublicas = false; 
+    } else if(marcadorPublicas && !marcadorPrivadas){
+
+        console.log('Mostrar publicas');
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        
+        // if (marcasFiltradas) {
+        //     map.removeLayer(marcasFiltradas);
+        // }
+        // marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        // marcadorPublicas = true; 
+    }else if(!marcadorPublicas && marcadorPrivadas){
+
+        console.log('Mostrar privadas');
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        
+        marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Privada').addTo(map)
+        // if (marcasFiltradas) {
+        //     map.removeLayer(marcasFiltradas);
+        // }
+        // marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        // marcadorPublicas = true; 
+    }else if(!marcadorPublicas && !marcadorPrivadas){
+
+
+        console.log('Mostrar nada');
+        if (marcasFiltradas) {
+            map.removeLayer(marcasFiltradas);
+        }
+        
+        // if (marcasFiltradas) {
+        //     map.removeLayer(marcasFiltradas);
+        // }
+        // marcasFiltradas = Filtrar(estadoActualGlobal.toLocaleUpperCase(), null, null, null, 'Publica').addTo(map)
+        // marcadorPublicas = true; 
     }
 })
 
