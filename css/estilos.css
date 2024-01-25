@@ -18,34 +18,57 @@
 /* ---------- MENU ---------- */
 .Menu{
     & .mincyt{
+        background-color: #FFFFFF;
+        
+        & .imgMincyt{
+            max-height: 50px;
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+
+    & .fondo-azul{
         width: 100%;
     }
 
     & .tepuy{
-        width: 100%;
-    }
-
-    /* &-tepuy-solo{
         position: absolute;
-        margin-left: 100px;
+        left: 100px;
         padding: 15px;
-        margin-top: 8%;
-        position: absolute;
+        margin-top: 1%;
+        width: 40%;
         animation: aparecerIzquierda 1s ease-out;
     }
 
-    @keyframes aparecerIzquierda {
-        from {
-            transform: translateX(-100%);
-        }
+    & .educacion{
+        right: 0;
+        position: absolute;
+        margin-top: 13%;
+        width: 40%;
+        animation: aparecerDerecha 1s ease-out;
+    }
 
-        to {
-            transform: translateX(0);
-        }
-    }  */
 }
 
+@keyframes aparecerIzquierda {
+    from {
+        transform: translateX(-100%);
+    }
 
+    to {
+        transform: translateX(0);
+    }
+} 
+
+@keyframes aparecerDerecha {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+} 
 
 /* ---------- ESTADISTICAS Y FILTROS ---------- */
 .Estadisticas-contenedor {

@@ -1,4 +1,4 @@
-const CARRERAS_DATA = {
+let CARRERAS_DATA = {
 
     'UBTJR': {
         "Carreras Largas": [
@@ -1179,215 +1179,153 @@ const CARRERAS_DATA = {
             { id: "16", nombre: "Maestría en Mantenimiento" }
         ]
     },
-
-    // FALTAN==========================================================================================================
-    'UPTNTMLS': {
-        "Carreras Cortas": [
-            { id: "", nombre: "" }
-        ],
-
+   
+    'UPTNTMS': {
         "Carreras Largas": [
-            { id: "", nombre: "" }
-        ],
+            { id: "1", nombre: "PNF en Administración"},
+            { id: "2", nombre: "PNF en Agroalimentación"},
+            { id: "3", nombre: "PNF en Construcción Civil"},
+            { id: "4", nombre: "PNF en Informática"},
+            { id: "5", nombre: "PNF en Procesamiento y Distribución de Alimentos"},
+            { id: "6", nombre: "PNF en Seguridad Alimentaria y Cultura Nutricional"},
+            { id: "7", nombre: "PNF en Medicina Veterinaria"}
 
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
-
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
-        ],
+        ]
     },
 
     'UMBV': {
-        "Carreras Cortas": [
-            { id: "", nombre: "" }
-        ],
-
         "Carreras Largas": [
-            { id: "", nombre: "" }
+            { id: "1", nombre: "Operaciones aeroespaciales: Piloto Militar de aviación de caza, combate, helicóptero, transporte de carga, ejecutivo, presidencial y táctico."},
+            { id: "2", nombre: "Defensa aeroespacial integral."},
+            { id: "3", nombre: "Operaciones de guerra electrónica."},
+            { id: "4", nombre: "Logística."},
+            { id: "5", nombre: "Inteligencia aeroespacial."},
+            { id: "6", nombre: "Fuerzas especiales."},
+            { id: "7", nombre: "Administración financiera."},
+            { id: "8", nombre: "Administración de talento humano."},
+            { id: "9", nombre: "Metalmecánica."},
+            { id: "10", nombre: "Tránsito aéreo."},
+            { id: "11", nombre: "Vigilancia y control."},
+            { id: "12", nombre: "Defensa antiaérea."},
+            { id: "13", nombre: "Meteorología."},
+            { id: "14", nombre: "Electrónica aeronáutica."},
+            { id: "15", nombre: "Abastecimiento aeronáutico."},
+            { id: "16", nombre: "Armamento aeroespacial."},
+            { id: "17", nombre: "Tecnología aeroespacial."},
+            { id: "18", nombre: "Telecomunicaciones aeronáuticas."},
+            { id: "19", nombre: "Ingeniería militar, mención mecánica aeronáutica."}
         ],
 
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
+        "Cursos": [
+            { id: "20", nombre: "Curso de Formación de Oficiales Asimilados."},
+            { id: "21", nombre: "Curso Especial de Formación de Oficiales de Comando."},
+            { id: "22", nombre: "Curso de Formación de Oficiales Asimilados."},
 
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
-        ],
+        ]
     },
 
     'UPTNMLS': {
         "Carreras Cortas": [
-            { id: "", nombre: "" }
-        ],
-
-        "Carreras Largas": [
-            { id: "", nombre: "" }
-        ],
-
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
-
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
-        ],
+            { id: "1", nombre: "Construcción civil."},
+            { id: "2", nombre: "Mecánica."},
+            { id: "3", nombre: "Mantenimiento."},
+            { id: "4", nombre: "Electricidad."},
+            { id: "5", nombre: "Electrónica."},
+            { id: "6", nombre: "Instrumentación y control."},
+            { id: "7", nombre: "Higiene y seguridad laboral."},
+            { id: "8", nombre: "Enfermería comunitaria."},
+            { id: "9", nombre: "Fisioterapia"},
+            { id: "10", nombre: "Terapia ocupacional"},
+            { id: "11", nombre: "Informática "}
+        ]
     },
 
     'UPTOSCR': {
-        "Carreras Cortas": [
-            { id: "", nombre: "" }
-        ],
-
         "Carreras Largas": [
-            { id: "", nombre: "" }
-        ],
-
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
-
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
-        ],
+            { id: "1", nombre: "Química."},
+            { id: "2", nombre: "Agroalimentaria."},
+            { id: "3", nombre: "Electricidad."},
+            { id: "4", nombre: "Informática."},
+            { id: "5", nombre: "Ing. Industrial."},
+            { id: "6", nombre: "Procesos químicos."},
+            { id: "7", nombre: "Ingeniería en Informática."},
+            { id: "8", nombre: "Procesos y Distribución de Alimentos."},
+            { id: "9", nombre: "Instrumentación y Control."},
+            { id: "10", nombre: "Electrónica."}
+        ]
     },
 
     'UPTPLMR': {
-        "Carreras Cortas": [
-            { id: "", nombre: "" }
-        ],
-
         "Carreras Largas": [
-            { id: "", nombre: "" }
-        ],
-
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
-
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
+            { id: "1", nombre: "PNF en Informática."},
+            { id: "2", nombre: "PNF en Agroalimentación."},
+            { id: "3", nombre: "PNF en Construcción naval-mecánica y mantenimiento naval."},
+            { id: "4", nombre: "PNF en Ingeniería de procesamiento y distribución de alimentos."},
+            { id: "5", nombre: "PNF en Ingeniería mecánica."},
+            { id: "6", nombre: "PNF en Seguridad alimentaria y cultura nutricional."},
+            { id: "7", nombre: "PNF en Mercadeo."},
+            { id: "8", nombre: "PNF en Comercio exterior."},
+            { id: "9", nombre: "PNF en Publicidad."},
+            { id: "10", nombre: "PNF en Administración."}
         ],
     },
 
     'UPTPJJM': {
-        "Carreras Cortas": [
-            { id: "", nombre: "" }
-        ],
-
         "Carreras Largas": [
-            { id: "", nombre: "" }
-        ],
+            { id: "1", nombre: "Ingeniería Agroalimentaria"},
+            { id: "2", nombre: "Ingeniería eléctrica "},
+            { id: "3", nombre: "Ingeniería mecánica "},
+            { id: "4", nombre: "Ingeniería en mantenimiento"},
+            { id: "5", nombre: "Ingeniería en informática "},
+            { id: "6", nombre: "Ingeniería Informática"},
+            { id: "7", nombre: "Ingeniería en informática"},
 
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
-
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
-        ],
+            { id: "8", nombre: "Licenciatura en administración "},            ,
+            { id: "9", nombre: "Licenciatura en administración"},
+            { id: "10", nombre: "Licenciatura en administración "}
+        ]
     },
 
     'UNEIT': {
-        "Carreras Cortas": [
-            { id: "", nombre: "" }
-        ],
-
         "Carreras Largas": [
-            { id: "", nombre: "" }
-        ],
-
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
-
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
-        ],
+            { id: "1", nombre: "Licenciatura en Derecho "},
+            { id: "2", nombre: "Licenciatura en Comunicación "},
+            { id: "3", nombre: "Licenciatura en Educación Cultural Bilingüe "},
+            { id: "4", nombre: "Licenciatura en Agroecología"}
+        ]
     },
 
     'UNEG': {
         "Carreras Cortas": [
-            { id: "", nombre: "" }
+            { id: "21", nombre: "Educación Integral"},
+            { id: "3", nombre: "Educación. Mención Educación Física, Deporte Y Recreación"},
+            { id: "4", nombre: "Educación. Mención Lengua Y Literatura"},
+            { id: "5", nombre: "Educación. Mención Matemática"},
+            { id: "6", nombre: "Educación En Ciencias: Física, Química Y Biología"},
+
+            { id: "7", nombre: "TSU en Empresa De Alojamiento Turístico"},
+            { id: "8", nombre: "TSU en Turismo"},
+
         ],
 
         "Carreras Largas": [
-            { id: "", nombre: "" }
-        ],
+            { id: "9", nombre: "Licenciatura En Gestión De Alojamiento Turístico"},
+            { id: "10", nombre: "Licenciatura En Ciencias Ambientales"},
+            { id: "11", nombre: "Licenciatura En Administración De Empresas"},
+            { id: "12", nombre: "Licenciatura En Administración Mención Banca Y Finanzas"},
+            { id: "13", nombre: "Licenciatura En Ciencias Fiscales"},
+            { id: "14", nombre: "Licenciatura En Contaduría Pública"},
+            { id: "15", nombre: "Licenciatura En Tecnología En Producción Agropecuaria"},
 
-        "Especialización": [
-            { id: "", nombre: "" },
-        ],
-
-        "Maestrias" : [
-            { id: "", nombre: "" },
-        ],
-
-        "Doctorados": [
-            { id: "", nombre: "" },
-        ],
-
-        "Diplomados": [
-            { id: "", nombre: "" }
-        ],
+            { id: "16", nombre: "Ingeniería En Informática"},
+            { id: "17", nombre: "Ingeniería En Materiales"},
+            { id: "18", nombre: "Ingeniería Industrial"},
+            { id: "19", nombre: "Ingeniería De Producción Animal"},
+            { id: "20", nombre: "Ingeniería En Industrias Forestales"}
+        ]
     },
+
+    // FALTAN==========================================================================================================
 
     'IDEA': {
         "Carreras Cortas": [
@@ -1412,7 +1350,7 @@ const CARRERAS_DATA = {
 
         "Diplomados": [
             { id: "", nombre: "" }
-        ],
+        ]
     },
 
     // FALTAN===================================================================================
@@ -1720,6 +1658,7 @@ const CARRERAS_DATA = {
             { id: "21", nombre: "Educación. Especialidad: Química" }
         ]
     },
+
     // ---------------------------------UNIVERSIDADES PRICIPALES-----------------------------------
     
     'UMC': {
@@ -2497,6 +2436,306 @@ const CARRERAS_DATA = {
             { id: "93", nombre: "Diplomado en confiabilidad integral de activos y procesos industriales" },
             { id: "94", nombre: "Diplomado de desarrollo gerencial y responsabilidad social empresarial" },
             { id: "95", nombre: "Diplomado de Prospectiva y Estrategia" }
+        ]
+    },
+
+    // ---------------------------UNIVERSIDADES PRIVADAS-------------------------------------
+    
+    'UBA': {
+        "Carreras Cortas": [
+            { id: "1", nombre: "TSU en Administración de Empresas" },
+            { id: "2", nombre: "TSU en Comercio Exterior" },
+            { id: "3", nombre: "TSU en Banca y Finanzas" },
+            { id: "4", nombre: "TSU en Publicidad y Mercadeo" },
+            { id: "5", nombre: "TSU en Administración de Personal" },
+            { id: "6", nombre: "TSU en Turismo" },
+            { id: "7", nombre: "TSU en Informática" }
+        ],
+
+        "Carreras Largas": [
+            { id: "8", nombre: "Ingeniería Civil" },
+            { id: "9", nombre: "Ingeniería Eléctrica" },
+            { id: "10", nombre: "Ingeniería Electrónica" },
+            { id: "11", nombre: "Ingeniería Mecánica" },
+            { id: "12", nombre: "Ingeniería Química" },
+            { id: "13", nombre: "Ingeniería Ambiental" },
+
+            { id: "14", nombre: "Licenciatura en Biología" },
+            { id: "15", nombre: "Licenciatura en Química" },
+            { id: "16", nombre: "Licenciatura en Física" },
+            { id: "17", nombre: "Licenciatura en Letras" },
+            { id: "18", nombre: "Licenciatura en Educación" },
+            { id: "19", nombre: "Licenciatura en Filosofía" },
+            { id: "20", nombre: "Licenciatura en Historia" },
+            { id: "21", nombre: "Licenciatura en Antropología" },
+            { id: "22", nombre: "Licenciatura en Sociología" },
+            { id: "23", nombre: "Licenciatura en Derecho" },
+            { id: "24", nombre: "Licenciatura en Administración" },
+            { id: "25", nombre: "Licenciatura en Contaduría Pública" },
+            { id: "26", nombre: "Licenciatura en Economía" },
+            { id: "27", nombre: "Licenciatura en Turismo" },
+            { id: "28", nombre: "Licenciatura en Comunicación Social" },
+            { id: "29", nombre: "Licenciatura en Psicología" },
+            { id: "30", nombre: "Licenciatura en Trabajo Social" }
+        ],
+
+        "Maestrias" : [
+            { id: "31", nombre: "Maestría en Administración" },
+            { id: "32", nombre: "Maestría en Ciencias de la Computación" },
+            { id: "33", nombre: "Maestría en Derecho" },
+            { id: "34", nombre: "Maestría en Educación" },
+            { id: "35", nombre: "Maestría en Ingeniería Civil" },
+            { id: "36", nombre: "Maestría en Ingeniería Eléctrica" },
+            { id: "37", nombre: "Maestría en Ingeniería Electrónica" },
+            { id: "38", nombre: "Maestría en Ingeniería Mecánica" },
+            { id: "39", nombre: "Maestría en Ingeniería Química" },
+            { id: "40", nombre: "Maestría en Ingeniería Ambiental" },
+            { id: "41", nombre: "Maestría en Biología" },
+            { id: "42", nombre: "Maestría en Química" },
+            { id: "43", nombre: "Maestría en Física" },
+            { id: "44", nombre: "Maestría en Letras" },
+            { id: "45", nombre: "Maestría en Filosofía" },
+            { id: "46", nombre: "Maestría en Historia" },
+            { id: "47", nombre: "Maestría en Antropología" },
+            { id: "48", nombre: "Maestría en Sociología" },
+            { id: "49", nombre: "Maestría en Turismo" },
+            { id: "50", nombre: "Maestría en Comunicación Social" },
+            { id: "51", nombre: "Maestría en Psicología" },
+            { id: "52", nombre: "Maestría en Trabajo Social" }
+        ],
+
+        "Doctorados": [
+            { id: "53", nombre: "Doctorado en Administración"},
+            { id: "54", nombre: "Doctorado en Ciencias de la Computación"},
+            { id: "55", nombre: "Doctorado en Derecho"},
+            { id: "56", nombre: "Doctorado en Educación"},
+            { id: "57", nombre: "Doctorado en Ingeniería Civil"},
+            { id: "58", nombre: "Doctorado en Ingeniería Eléctrica"},
+            { id: "59", nombre: "Doctorado en Ingeniería Electrónica"},
+            { id: "60", nombre: "Doctorado en Ingeniería Mecánica"},
+            { id: "61", nombre: "Doctorado en Ingeniería Química"},
+            { id: "62", nombre: "Doctorado en Ingeniería Ambiental"},
+            { id: "63", nombre: "Doctorado en Biología"},
+            { id: "64", nombre: "Doctorado en Química"},
+            { id: "65", nombre: "Doctorado en Física"},
+            { id: "66", nombre: "Doctorado en Letras"},
+            { id: "67", nombre: "Doctorado en Filosofía"},
+            { id: "68", nombre: "Doctorado en Historia"},
+            { id: "69", nombre: "Doctorado en Antropología"},
+            { id: "70", nombre: "Doctorado en Sociología"},
+            { id: "71", nombre: "Doctorado en Turismo"},
+            { id: "72", nombre: "Doctorado en Comunicación Social"},
+            { id: "73", nombre: "Doctorado en Psicología"},
+            { id: "74", nombre: "Doctorado en Trabajo Social"}
+        ]
+    },
+
+    'UCAB': { 
+        "Carreras Cortas" : [
+            { id: "1", nombre: "Educación mencion Biología y Química" },
+            { id: "2", nombre: "Educación mencion Ciencias Pedagógicas" },
+            { id: "3", nombre: "Educación mencion Ciencias Sociales" },
+            { id: "4", nombre: "Educación mencion Física y Matemáticas" },
+            { id: "5", nombre: "Educación mencion Filosofía" },
+            { id: "6", nombre: "Educación mencion Integral y Pre-escolar" }
+        ],
+        "Carreras Largas": [
+            { id: "7", nombre: "Licenciatura en Administración" },
+            { id: "8", nombre: "Licenciatura en Contaduría" },
+            { id: "9", nombre: "Licenciatura en Ciencias Sociales" },
+            { id: "10", nombre: "Licenciatura en Comunicación Social" },
+            { id: "11", nombre: "Licenciatura en Derecho" },
+            { id: "12", nombre: "Licenciatura en Economía" },
+            { id: "13", nombre: "Licenciatura en Filosofía" },
+            { id: "14", nombre: "Licenciatura en Letras" },
+            { id: "15", nombre: "Licenciatura en Psicología" },
+            { id: "16", nombre: "Licenciatura en Teología" },
+
+            { id: "17", nombre: "Ingeniería Civil"},
+            { id: "18", nombre: "Ingeniería Industrial"},
+            { id: "19", nombre: "Ingeniería en Informática"},
+            { id: "20", nombre: "Ingeniería de Telecomunicaciones"}
+            
+        ],
+
+        "Programa de Estudios Avanzados" : [
+            { id: "21", nombre: "Programa de Estudios Avanzados en Ciencias Penales y Criminológicas"},
+            { id: "22", nombre: "Programa de Estudios Avanzados en Derecho Administrativo"},
+            { id: "23", nombre: "Programa de Estudios Avanzados en Derecho de la Familia y del Niño"},
+            { id: "24", nombre: "Programa de Estudios Avanzados en Derecho del Trabajo"},
+            { id: "25", nombre: "Programa de Estudios Avanzados en Derecho Financiero"},
+            { id: "26", nombre: "Programa de Estudios Avanzados en Derecho Mercantil"},
+            { id: "27", nombre: "Programa de Estudios Avanzados en Derecho Procesal"},
+            { id: "28", nombre: "Programa de Estudios Avanzados en Derechos Humanos: Acceso a la Justicia"},
+            { id: "29", nombre: "Programa de Estudios Avanzados en Derechos Humanos: Participación Política"},
+            { id: "30", nombre: "Programa de Estudios Avanzados en Derecho Constitucional"},
+            { id: "31", nombre: "Programa de Estudios Avanzados en Derecho de Familia y Niño"},
+            { id: "32", nombre: "Programa de Estudios Avanzados en Derecho Procesal Penal"},
+            { id: "33", nombre: "Programas de Estudios Avanzados en Regulación y Servicios Básicos"},
+            { id: "34", nombre: "Programa de Estudios Avanzados en Ingeniería Ambiental"},
+            { id: "35", nombre: "Programa de Estudios Avanzados en Ingeniería Estructural"},
+            { id: "36", nombre: "Programa de Estudios Avanzados en Ingeniería Industrial y Productividad"},
+            { id: "37", nombre: "Programa de Estudios Avanzados en Sistemas de Información"},
+            { id: "38", nombre: "Programa de Estudios Avanzados en Sistemas de la Calidad"},
+            { id: "39", nombre: "Programa de Estudios Avanzados en Dirección de Empresas Constructoras e Inmobiliarias"},
+            { id: "40", nombre: "Programa de Estudios Avanzados en Gerencia de la Energía"},
+            { id: "41", nombre: "Programa de Estudios Avanzados en Gestión de las Comunicaciones y Tecnologías de Información"},
+            { id: "42", nombre: "Programa de Estudios Avanzados en Gestión Logística"},
+            { id: "43", nombre: "Programa de Estudios Avanzados en Administración de Empresas"},
+            { id: "44", nombre: "Programa de Estudios Avanzados en Educación: Mención Gerencia Educativa"},
+            { id: "45", nombre: "Programa de Estudios Avanzados en Gerencia de Proyectos"},
+            { id: "46", nombre: "Programa de Estudios Avanzados en Gerencia de Recursos Humanos y Relaciones Industriales"},
+            { id: "47", nombre: "Programa de Estudios Avanzados en Gerencia del Sector Público"},
+            { id: "49", nombre: "Programa de Estudios Avanzados en Análisis Demográfico para el Desarrollo"},
+            { id: "50", nombre: "Programa de Estudios Avanzados en Dirección de Empresas Industriales"},
+            { id: "51", nombre: "Programa de Estudios Avanzados en Dirección Estratégica de Recursos Humanos"},
+            { id: "52", nombre: "Programa de Estudios Avanzados en Gerencia de Proyectos"},
+            { id: "53", nombre: "Programa de Estudios Avanzados en Gerencia de Servicios de Salud"},
+            { id: "54", nombre: "Programa de Estudios Avanzados en Gerencia de Riesgos y Seguros"},
+            { id: "55", nombre: "Programa de Estudios Avanzados en Gerencia Financiera"},
+            { id: "56", nombre: "Programa de Estudios Avanzados en Gestión Social"},
+            { id: "57", nombre: "Programa de Estudios Avanzados en Gestión de Marketing"},
+            { id: "58", nombre: "Programa de Estudios Avanzados en Gobernabilidad y Gerencia Política"},
+            { id: "59", nombre: "Programa de Estudios Técnicos Avanzados en Seguros"},
+            { id: "60", nombre: "Programas de Estudios Avanzados en Ciencias Económicas"},
+            { id: "61", nombre: "Programas de Estudios Avanzados en Economía Aplicada"},
+            { id: "62", nombre: "Programas de Estudios Avanzados en Instituciones Financieras"},
+            { id: "63", nombre: "Programas de Estudios Avanzados en Finanzas Públicas"},
+            { id: "64", nombre: "Programas de Estudios Avanzados en Comunicación Social"},
+            { id: "65", nombre: "Programas de Estudios Avanzados en Desarrollo Organizacional"},
+            { id: "66", nombre: "Programas de Estudios Avanzados en Educación: Mención Procesos de Aprendizaje"},
+            { id: "67", nombre: "Programas de Estudios Avanzados en Filosofía"},
+            { id: "68", nombre: "Programas de Estudios Avanzados en Publicidad"},
+            { id: "69", nombre: "Programas de Estudios Avanzados en Psicología Clínica Comunitaria"},
+            { id: "70", nombre: "Programas de Estudios Avanzados en Historia de las Américas"},
+            { id: "71", nombre: "Programas de Estudios Avanzados en Historia de Venezuela"},
+            { id: "72", nombre: "Programas de Estudios Avanzados en Metodología de las Ciencias del Comportamiento"},
+            { id: "73", nombre: "Programas de Estudios Avanzados en Comunicación y Política"},
+            { id: "74", nombre: "Programa de Estudios Avanzados en Educación en Valores"},
+            { id: "75", nombre: "Programa de Estudios Avanzados en Educación en Derechos Humanos"},
+            { id: "76", nombre: "Programas de Estudios Avanzados en Libertad de Expresión y Derecho a la Información"},
+            { id: "77", nombre: "Programa de Estudios Avanzados en Periodismo"},
+            { id: "78", nombre: "Programas de Estudios Técnicos Avanzados en Medios y Comunicaciones Estratégicas"},
+            { id: "79", nombre: "Programas de Estudios Avanzados en Teología Bíblica"},
+            { id: "80", nombre: "Programas de Estudios Avanzados en Teología Espiritual"},
+            { id: "81", nombre: "Programas de Estudios Avanzados en Teología Fundamental"},
+            { id: "82", nombre: "Programas de Estudios Avanzados en Teología Pastoral"},
+            { id: "83", nombre: "Programas de Estudios Avanzados en Teología"}
+        ],
+
+        "Especializaciones" : [
+            { id: "84", nombre: "Especialización en Técnica en Telecomunicaciones"},
+            { id: "85", nombre: "Especialización en Gerencia de Programas Sociales"},
+            { id: "86", nombre: "Especialización en Gerencia de Servicios Asistenciales en Salud"},
+            { id: "87", nombre: "Especialización en Educación en Valores Ciudadano"}
+        ],
+
+        "Maestrias" : [
+            { id: "88", nombre: "Maestría en Gerencia de Programas Sociales"},
+            { id: "89", nombre: "Maestría en Gerencia de Servicios Asistenciales en Salud"}
+            
+        ],
+
+        "Doctorados": [
+            { id: "90", nombre: "Doctorado en Derecho"},
+            { id: "91", nombre: "Doctorado en Historia"},
+            { id: "92", nombre: "Doctorado en Psicología"},
+            { id: "93", nombre: "Doctorado en Ciencias Económicas"}
+            
+        ]
+    },
+
+    'UAH': {
+        "Carreras Largas": [
+            { id: "1", nombre: "Contaduría Pública."},
+            { id: "2", nombre: "Economía."},
+            { id: "3", nombre: "Comercio Internacional."},
+            { id: "4", nombre: "Administración de Empresas."},
+            { id: "5", nombre: "Publicidad"},
+            { id: "6", nombre: "Ingeniería en Informática."},
+            { id: "7", nombre: "Ejercicio Independiente o libre de su profesión, creando empresas de asistencia técnica en las áreas de auditorías, asesorías contables y fiscales."},
+            { id: "8", nombre: "Diseño e instalación de sistemas administrativos y contables."},
+            { id: "9", nombre: "Elaboración y revisión de presupuestos; así como la formulación y evaluación de proyectos."},
+            { id: "10", nombre: "Docente-investigador en instituciones públicas o privadas."},
+            { id: "11", nombre: "Ejercicio Independiente o libre de su profesión, creando empresas de asistencia técnica en las áreas administrativas e industriales."},
+            { id: "12", nombre: "Empleado en empresas públicas: Ministerios, Gobernaciones, Institutos Autónomos, Alcaldías y otras de carácteres privado que requieran sus servicios en tareas de dirección, ejecución, supervisión o asesoramiento."},
+            { id: "13", nombre: "Docente-investigador en instituciones públicas o privadas."},
+            { id: "14", nombre: "Ejercicio Independiente o libre de su profesión, creando empresas de asistencia técnica para diseñar e instalar sistemas económicos y administrativos; elaborar y revisar presupuestos; formular y evaluar proyectos."},
+            { id: "15", nombre: "Empleado en empresas públicas y privadas."},
+            { id: "16", nombre: "Docente-investigador en instituciones públicas o privadas."}
+        ],
+
+        "Especialización": [
+            { id: "17", nombre: "Especialización en Derecho de las Telecomunicaciones"},
+            { id: "18", nombre: "Especialización en Estrategias para la Educación a Distancia"}
+        ],
+
+        "Diplomados": [
+            { id: "19", nombre: "Diplomados en Componente Docente para el Desempeño en la Educación Superior"},
+            { id: "20", nombre: "Diplomados en Gerencia de Centros de Salud"},
+            { id: "21", nombre: "Diplomados en Mercadeo en las Telecomunicaciones"},
+            { id: "22", nombre: "Diplomados en Gerencia de Proyecto"},
+            { id: "23", nombre: "Diplomados en Banca y Finanzas"},
+            { id: "24", nombre: "Diplomados en Gerencia Estratégica Financiera"},
+            { id: "25", nombre: "Diplomados en Gerencia de Talento Humano"},
+            { id: "26", nombre: "Diplomados en Gerencia de Mercadeo Y Ventas"},
+            { id: "27", nombre: "Diplomados en Investigación en el Contexto Social"}
+        ]
+    },
+
+    'UNICA': {
+        "Carreras Cortas": [
+            { id: "1", nombre: "TSU en Artes Audiovisuales" },
+            { id: "2", nombre: "Educación. Mención Lengua y Literatura."},
+            { id: "3", nombre: "Educación. Mención Ciencias Sociales."},
+            { id: "4", nombre: "Educación. Mención Integral"},
+            { id: "5", nombre: "Plan Especial de Formación Docente, Para Egresados en Artes, Música, Filosofía y Teología. "}
+            
+        ],
+
+        "Carreras Largas": [
+            { id: "6", nombre: "Filosofía." },
+            { id: "7", nombre: "Teología." },
+            { id: "8", nombre: "Música." },
+            { id: "9", nombre: "Música. Mención Musicología." },
+            { id: "10", nombre: "Artes Plásticas." },
+            { id: "11", nombre: "Artes. Mención Museología." },
+            { id: "12", nombre: "Artes. Mención Diseño Gráfico." },
+            { id: "13", nombre: "Comunicación Social. Mención Desarrollo social." }
+        ],
+
+        "Especialización": [
+            { id: "14", nombre: "Especialización en Dirección Coral." },
+            { id: "15", nombre: "Especialización en Composición Musical." },
+            { id: "16", nombre: "Especialización en Enseñanza de la Lengua." }
+        ],
+
+        "Maestrias" : [
+            { id: "17", nombre: "Maestría en Filosofía. Mención: Pensamiento Medieval." },
+            { id: "18", nombre: "Maestría en Filosofía. Mención: Pensamiento Latinoamericano." }
+        ]
+    },
+
+    'UCAT': {
+        "Carreras Cortas": [
+            { id: "1", nombre: "TSU en Ciencias Penales y Criminalística" }
+        ],
+
+        "Carreras Largas": [
+            { id: "2", nombre: "Licenciatura en Derecho" },
+            { id: "3", nombre: "Licenciatura en Ciencias Políticas" },
+            { id: "4", nombre: "Licenciatura en Política Internacional" },
+            { id: "5", nombre: "Licenciatura en Administración y Gestión Pública" },
+            { id: "6", nombre: "Licenciatura en Biología" },
+            { id: "7", nombre: "Licenciatura en Química Integral" },
+            { id: "8", nombre: "Licenciatura en Ciencias Sociales" },
+            { id: "9", nombre: "Licenciatura en Informática" },
+            { id: "10", nombre: "Licenciatura en Matemática" },
+            { id: "11", nombre: "Licenciatura en Contaduría Pública" },
+            { id: "12", nombre: "Licenciatura en Administración de Gerencia de Empresas" },
+            { id: "13", nombre: "Licenciatura en Administración de Gerencia de Recursos Humanos" },
+            { id: "14", nombre: "Licenciatura en Administración de Informática Gerencial" },
+            { id: "15", nombre: "Licenciatura en Administración de Mercadeo" }
         ]
     },
 };

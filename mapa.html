@@ -35,14 +35,20 @@
 <div class="Menu">
 
   <!-- Mincyt -->
-  <div>
-    <img class="mincyt" src="./img/cintillo-mincyt.png"/>
+  <div class="container-fluid">
+    <div class="row mincyt">
+      <div class="col-md-4 col-sm-12 col-12" ><img class="imgMincyt" src="./img/gobierno.png"/></div>
+      <div class="col-md-4 col-sm-0 col-12" ></div>
+      <div class="col-md-2 col-sm-6 col-6" ><img class="imgMincyt" src="./img/evento.png"/></div>
+      <div class="col-md-2 col-sm-6 col-6" ><img class="imgMincyt" src="./img/mincyt.png"/></div>
+    </div>
   </div>
 
   <!-- Tepuy -->
   <div>
-    <!-- <img class="tepuy-solo" src="./img/tepuy-solo.png" width="20%" /> -->
-    <img class="tepuy" src="./img/fondo-azul.png"/>
+    <img class="tepuy" src="./img/tepuy-logo.png"/>
+    <img class="educacion" src="./img/cinta-educacion.png"/>
+    <img class="fondo-azul" src="./img/fondo-azul.png"/>
   </div>
 </div>
 
@@ -55,7 +61,7 @@
         <div>
           <!-- Estado del filtro -->
           <div class="row">
-            <div class="col-2">
+            <div class="col-1">
               <select class="select" name="select-location">
                 <option disabled selected>Tipo</option>
                 <option>Todas</option>
@@ -69,7 +75,7 @@
                 <option>Todos</option>
               </select>
             </div>
-            <div class="col-4">
+            <div class="col-3">
               <select class="select" id="estadisticas_universidades">
                 <option disabled selected>Universidad</option>
                 <option>Todas</option>
@@ -91,6 +97,13 @@
                 <option>Todos</option>
                 <option>Masculino</option>
                 <option>Femenino</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <select class="select" name="select-location">
+                <option disabled selected>Discapacidad</option>
+                <option>Todos</option>
+                <option>Inclusive</option>
               </select>
             </div>
           </div>
