@@ -2,13 +2,13 @@
 var miVariable
 
 // Mayúsculas para constantes
-const URL = ''
+const URL = 'https://'
 
 // Camel Case para nombres de funciones
 function miFuncion(){}
 
 // Camel Case para propiedades de objetos
-const persona = {
+const PERSONA = {
     nombreCompleto: "John Doe",
     edad: 30,
     correoElectronico: "john@example.com"
@@ -29,6 +29,6 @@ const DIAS_DE_LA_SEMANA = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes",
 button.addEventListener("click", handleClickEvent);
 function calcularPromedio(listaDeNumeros) {}
 
-// Snake Case o Kebab Case para nombres de archivos
-// mi_archivo_util.js o miArchivoUtil.js
-import miModulo from "mi-modulo";
+// Kebab Case para nombres de archivos
+// mi-archivo-util.js
+import miModulo from "mi-modulo.js";

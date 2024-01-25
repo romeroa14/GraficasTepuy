@@ -4,8 +4,7 @@
     Fecha de creacion: 12-01-2024
  */
 
-
-// ---------- CREAMOS LA FUNCION DE ELIMINAR ACENTOS EN UN TEXTO ----------
+// Funcion para eliminar acentos
 function eliminarAcentos(texto) {
     const mapaAcentos = {
     'á': 'a',
@@ -22,7 +21,7 @@ function eliminarAcentos(texto) {
     'ñ': 'n'
 };
 
-// Utiliza una expresión regular para buscar y reemplazar caracteres acentuados
+// Expresión regular para buscar y reemplazar caracteres acentuados
 return texto.replace(/[áéíóúÁÉÍÓÚ]/g, (match) => mapaAcentos[match] || match);
 }
 

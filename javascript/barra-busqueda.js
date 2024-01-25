@@ -182,11 +182,9 @@ function crearSiglas(textoCompleto) {
 }
 
 
-// ---------- SELECT DE ESTADOS Y UNIVERSIDADES ---------- SE VA
-
+// ---------- SELECT DE ESTADOS Y UNIVERSIDADES ----------
 let selectUniversidad = document.getElementById("select-location3");
 let selectEstado = document.getElementById("select-location");
-let estadoActual = '';
 selectUniversidad.disabled = true;
 
 // Funcionalidad del select de Estados

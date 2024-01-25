@@ -284,7 +284,7 @@ fetch(municipiosLink)
 
 
 
-// ---------- LEYENDA DEL MAPA ---------- SE VA
+// ---------- LEYENDA DEL MAPA ----------
 
 // Agregando leyenda
 const leyenda = L.control.legend({
