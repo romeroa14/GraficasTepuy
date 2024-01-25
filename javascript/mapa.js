@@ -11,6 +11,7 @@ import { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioS
 import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
 
 export { geojsonLink, municipiosLink }
+export { resetLayer }
 export { map }
 
 // ---------- INICIALIZAR MAPA ----------
@@ -47,13 +48,16 @@ var selectedLayer = null; // Para almacenar la capa seleccionada actualmente
 var selectedLayerMunicipio = null; // Para almacenar la capa seleccionada actualmente el municipio
 let marcasHover;
 
-function resetLayer() {
+// Funcion para restablecer el mapa (quitar capa municipio)
+function resetLayer(resetData) {
     if (municipiosLayer) map.removeLayer(municipiosLayer);
     if (municipiosLayerTmp) map.removeLayer(municipiosLayerTmp);
-    setGlobal('estadoActual', null)
-    setGlobal('municipioActual', null)
+    if(resetData) {
+        setGlobal('estadoActual', null)
+        setGlobal('municipioActual', null)
+    }
 }
-export { resetLayer }
+
 
 // Función para manejar el clic en los Estados
 function onEachFeature(feature, layer) {
@@ -63,6 +67,7 @@ function onEachFeature(feature, layer) {
     
     layer.on({
         click: function (e) {
+            console.log(e);
             setGlobal('estadoActual', feature.properties.ESTADO)
             setGlobal('municipioActual', null)
 
@@ -85,7 +90,6 @@ function onEachFeature(feature, layer) {
             if (getGlobal('marcasFiltradas')) {
                 map.removeLayer(getGlobal('marcasFiltradas'));
             }
-            console.log("------------ "+getGlobal('tipoActual'));
             if (getGlobal('tipoActual') != 'Ninguna')
             setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO).addTo(map))
 
@@ -324,6 +328,7 @@ var mostrarPublicas = true;
 var mostrarPrivadas = true;
 
 actividadMarcaPublica.addEventListener("click",()=>{
+    console.log(getGlobal('estadoActual'));
     if (getGlobal('marcasFiltradas')) {
         map.removeLayer(getGlobal('marcasFiltradas'));
     }
@@ -362,7 +367,7 @@ actividadMarcaPublica.addEventListener("click",()=>{
 })
 
 actividadMarcaPrivada.addEventListener("click",()=>{
-    // console.log(getGlobal('estadoActual'));
+    console.log(getGlobal('estadoActual'));
     if (getGlobal('marcasFiltradas')) {
         map.removeLayer(getGlobal('marcasFiltradas'));
     }
@@ -399,6 +404,8 @@ actividadMarcaPrivada.addEventListener("click",()=>{
         return
     }
 })
+
+
 
 // Cambiar titulo de la leyenda
 let titulo = document.querySelector('.leaflet-legend-title')

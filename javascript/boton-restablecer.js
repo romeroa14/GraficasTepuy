@@ -38,7 +38,7 @@ const botonRestablecer = L.Control.extend({
                 AlternarPanel(false)
                 boton_alternar.checked = false
             }
-            resetLayer()
+            resetLayer(true)
         }); 
         return div;
     }
