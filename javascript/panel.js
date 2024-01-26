@@ -17,6 +17,7 @@ export { BotonMostraPanel };
 
 // ---------- FUNCION PARA MOSTRAR PANEL DE INFORMACION ----------
 function mostrarPanel(siglas) {
+    
     // Mostrar la infomacion de la uni filtrada
     panel_informacion.removeAttribute('hidden')
 
@@ -64,6 +65,8 @@ const BotonMostraPanel = L.Control.extend({
     },
 
     onAdd: function (map) {
+
+        // Crear estructura HTML del boton
         var contenedorBoton = L.DomUtil.create('div');
         contenedorBoton.setAttribute('id', 'contenedor_boton_alternar');
         contenedorBoton.setAttribute('hidden', 'true');
@@ -92,6 +95,7 @@ const BotonMostraPanel = L.Control.extend({
     }
 })
 
+// Funcion para hacer aparecer u ocultar el boton
 function AlternarPanel(mostrar){
     if(mostrar){
         panel_columna.classList.add('col-4');

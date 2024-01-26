@@ -278,7 +278,6 @@ selectUniversidad.addEventListener("click",()=>{
     
         // Enfocar el estado
         var siglas = crearSiglas(universidadActual);
-        console.log(siglas);
         let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Filtrar por siglas

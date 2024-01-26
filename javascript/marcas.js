@@ -114,14 +114,14 @@ for (let universidadKey in UNI_DATA) {
         panel_direccion.innerHTML = universidad["direccion"];
         panel_logo.src = universidad["logo"];
 
-        panel_Graph_estudiantes.innerHTML = ""
-        panel_Graph_Transporte.innerHTML = ""
-        panel_Graph_Personal.innerHTML = ""
+        // panel_Graph_estudiantes.innerHTML = ""
+        // panel_Graph_Transporte.innerHTML = ""
+        // panel_Graph_Personal.innerHTML = ""
      
-        // Creamos graficas en los divs nuevos
-        crearGrafica(document.getElementById('panel_Graph_estudiantes'),'Cantidad_estudiantes', ['Nuevo Ingreso', 'Reingresos', 'Egresados'], [406, 508, 670], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'], 'pie')
-        crearGrafica(document.getElementById('panel_Graph_Transporte'),'Transporte', ['Rutas Sede 1: ', 'Rutas Sede 2: ', 'Rutas Sede 3: ', 'Rutas Sede 4: '], [40, 50, 60, 30], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'], 'pie')
-        crearGrafica(document.getElementById('panel_Graph_Personal'),'Personal', ['Personal Administrativo', 'Personal de Limpieza', 'Personal Transporte', 'Personal Comedor','Personal Obrero'], [40, 50, 60, 30], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'], 'pie')
+        // // Creamos graficas en los divs nuevos
+        // crearGrafica(document.getElementById('panel_Graph_estudiantes'),'Cantidad_estudiantes', ['Nuevo Ingreso', 'Reingresos', 'Egresados'], [406, 508, 670], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'], 'pie')
+        // crearGrafica(document.getElementById('panel_Graph_Transporte'),'Transporte', ['Rutas Sede 1: ', 'Rutas Sede 2: ', 'Rutas Sede 3: ', 'Rutas Sede 4: '], [40, 50, 60, 30], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'], 'pie')
+        // crearGrafica(document.getElementById('panel_Graph_Personal'),'Personal', ['Personal Administrativo', 'Personal de Limpieza', 'Personal Transporte', 'Personal Comedor','Personal Obrero'], [40, 50, 60, 30], ['#7448c250', '#21c0d780', '#d99e2b50', '#cd3a8150', '#9c99cc50'], 'pie')
 
         // Verificar si el panel esta oculto para mostrarlo
         if(!boton_alternar.checked){
@@ -131,24 +131,21 @@ for (let universidadKey in UNI_DATA) {
         }
 
         // Si la portada no carga/existe, mostrar una imagen por defecto
-        panel_fachada.onerror = function () {panel_fachada.src = './img/no-imagen.png';}
-        panel_logo.onerror = function () {panel_logo.src = './img/no-imagen.png';}
+        panel_fachada.onerror = () => panel_fachada.src = './img/no-imagen.png';
+        panel_logo.onerror = () => panel_logo.src = './img/no-imagen.png';
 
     });
 
     // Asignarle evento al pasar el mouse sobre la marca
-    nuevaMarca.on("mouseover", function () {
-        this.openPopup();
-    });
+    nuevaMarca.on("mouseover", function () { this.openPopup() });
 
     // Asignarle evento al quitar el mouse de la marca
-    nuevaMarca.on("mouseout", function () {
-        this.closePopup();
-    });
+    nuevaMarca.on("mouseout", function () { this.closePopup() });
 
     // Crear objeto con los datos de la nueva marca
     let objeto = new CrearMarca(
-        nuevaMarca, universidad["nombre"], 
+        nuevaMarca, 
+        universidad["nombre"], 
         universidad["estado"], 
         universidad["municipio"], 
         universidad["tipo"],
@@ -169,8 +166,8 @@ for (let universidadKey in UNI_DATA) {
 function constructorAutoridades(autoridades){
 
     // Limpiar anterior div y crear nuevo div
-    document.getElementById('panel_autoridades').innerHTML = ''
-    var contenedorAutoridades = document.createElement('div');
+    panel_autoridades.innerHTML = ''
+    var div = document.createElement('div');
 
     autoridades.forEach(persona => {
 
@@ -179,13 +176,13 @@ function constructorAutoridades(autoridades){
         img.src = persona['foto'];
         img.onerror = function () {img.src = './img/no-foto.png';}
         img.className = 'autoridad-foto';
-        contenedorAutoridades.appendChild(img)
+        div.appendChild(img)
     
         // Añadir nombre
         var nombre = document.createElement('div');
         nombre.classList.add('autoridad-nombre')
         nombre.innerHTML = persona['nombre']
-        contenedorAutoridades.appendChild(nombre)
+        div.appendChild(nombre)
 
         // Añadir cargo
         var cargo = document.createElement('div');
@@ -196,7 +193,7 @@ function constructorAutoridades(autoridades){
         // Añadir reseña
         var reseña = document.createElement('p');
         reseña.innerHTML = persona['reseña']
-        contenedorAutoridades.appendChild(reseña)        
+        div.appendChild(reseña)        
 
         // Añadir fichaTecnica
         var fichaTecnica = document.createElement('div');
@@ -206,25 +203,25 @@ function constructorAutoridades(autoridades){
         a.href = ''
         a.innerHTML = persona['nombre']+".pdf"
         fichaTecnica.appendChild(a)
-        contenedorAutoridades.appendChild(fichaTecnica)
+        div.appendChild(fichaTecnica)
     
         // Añadir linea divisora
         var hr = document.createElement('hr')
         hr.classList.add('autoridad-hr')
-        contenedorAutoridades.appendChild(hr)
+        div.appendChild(hr)
 
     });
 
     // Retorna una estructura HTML con todas las autoridades
-    return contenedorAutoridades
+    return div
 }
 
 // Constructor de lista de carreras
 function constructorCarreras(siglas){
 
     // Limpiar div e iniciaizar algunas variables
-    document.getElementById('panel_carreras').innerHTML = ''
-    var contenedorCarreras = document.createElement('div');
+    panel_carreras.innerHTML = ''
+    var div = document.createElement('div');
     const br = document.createElement('br');
     
     // Recibe todos los tipos de carreras de la universidad buscada
@@ -241,11 +238,11 @@ function constructorCarreras(siglas){
         var tipo = document.createElement('b');
         tipo.classList.add('encabezado')
         tipo.innerHTML = tipoCarrera
-        contenedorCarreras.appendChild(tipo)
+        div.appendChild(tipo)
 
         // Inicializar nueva lista para tipo de carrera
         var ul = document.createElement('ul');
-        contenedorCarreras.appendChild(ul)
+        div.appendChild(ul)
 
         // Iterar por cada carrera dentro de cada tipo de carrera
         CARRERAS_DATA[siglas][tipoCarrera].forEach(carrera => {
@@ -259,5 +256,5 @@ function constructorCarreras(siglas){
     }
 
     // Retorna una estructura HTML con todas las carreras
-    return contenedorCarreras
+    return div
 }
