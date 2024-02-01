@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa de Venezuela</title>
+  <title>Tepuy | Mapa de Universidades</title>
 
   <!-- Añadir Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -59,70 +59,73 @@
     <div class="container Estadisticas-contenedor mt-5 mb-3">
       <form action="#" method="POST">
         <div>
-          <!-- Estado del filtro -->
+
+          <!-- Fila #1 del filtro -->
           <div class="row">
-            <div class="col-1">
-              <select class="select" name="select-location">
-                <option disabled selected>Tipo</option>
-                <option>Todas</option>
-                <option>Públicas</option>
-                <option>Privadas</option>
-              </select>
-            </div>
             <div class="col-2">
-              <select class="select" id="estadisticas_estado">
+              <select class="select" name="select_estado" id="select_estado">
                 <option disabled selected>Estado</option>
-                <option>Todos</option>
               </select>
             </div>
             <div class="col-3">
-              <select class="select" id="estadisticas_universidades">
-                <option disabled selected>Universidad</option>
-                <option>Todas</option>
-              </select>
-            </div>
-            <div class="col-2">
-              <select class="select" id="select_tipo_persona">
-                <option disabled selected>Tipo de persona</option>
-                <option>Todo</option>
-                <option>Profesores</option>
-                <option>Estudiantes</option>
-                <option>Administrativos</option>
-                <option>Obreros</option>
-              </select>
-            </div>
-            <div class="col-2">
-              <select class="select" name="select-location">
-                <option disabled selected>Sexo</option>
+              <select disabled class="select" name="select_municipio" id="select_municipio">
+                <option disabled selected>Municipio</option>
                 <option>Todos</option>
-                <option>Masculino</option>
-                <option>Femenino</option>
               </select>
             </div>
+            <div class="col-1">
+              <select disabled class="select" name="select_tipo" id="select_tipo">
+                <option disabled selected>Tipo</option>
+                <option value="Todos">Todas</option>
+                <option value="Publica">Públicas</option>
+                <option value="Privada">Privadas</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <select disabled class="select" name="select_universidades" id="select_universidades">
+                <option disabled selected>Universidad</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Fila #2 del filtro -->
+          <div class="row">
             <div class="col-2">
-              <select class="select" name="select-location">
+              <select disabled class="select" name="select_tipo_persona" id="select_tipo_persona">
+                <option disabled selected>Tipo de persona</option>
+                <option value="Todo">Todo</option>
+                <option value="Profesores">Profesores</option>
+                <option value="Estudiantes">Estudiantes</option>
+                <option value="Administrativos">Administrativos</option>
+                <option value="Obreros">Obreros</option>
+              </select>
+            </div>
+            <div class="col-1">
+              <select disabled class="select" name="select_sexo" id="select_sexo">
+                <option disabled selected>Sexo</option>
+                <option value="Todos">Todos</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <select disabled class="select" name="select_discapacidad" id="select_discapacidad">
                 <option disabled selected>Discapacidad</option>
                 <option>Todos</option>
                 <option>Inclusive</option>
               </select>
             </div>
+            <div class="col-3">
+              <select disabled class="filtroEstadistica-cargos select" name="select_cargo" id="select_cargo">
+                <option disabled selected>Cargos</option>
+              </select>
+            </div>
           </div>
 
-          <div class="filtros-secundarios">
-            <select hidden class="filtroEstadistica-cargos select" name="select-cargo" id="select_cargo">
-              <option disabled selected>Cargos1</option>
-              <option>Todos</option>
-            </select>
-            <!-- <select class="filtroEstadistica-cargos select" name="select-cargo">
-              <option disabled selected>Cargos2</option>
-              <option>Todos</option>
-            </select>
-            <select class="filtroEstadistica-cargos select" name="select-cargo">
-              <option disabled selected>Cargos3</option>
-              <option>Todos</option>
-            </select> -->
-          </div>
+          
 
+
+          <!-- Boton para filtrar -->
           <div>
             <button class="boton" type="submit">Filtrar</button>
           </div>
@@ -344,16 +347,12 @@
 
             <!-- Select de estados -->
             <div class="col-3">
-              <select class="select select-location" name="select-location" id="select-location">
-                <option disabled selected>Estado</option>
-              </select>
+              <select class="select select-location" name="select-mapa-estado" id="select_mapa_estado"></select>
             </div>
 
             <!-- Select de universidades -->
             <div class="col-3">
-              <select class="select select-location3" name="select-location" id="select-location3">
-                <option disabled selected>Universidades</option>
-              </select>
+              <select disabled class="select select-location3" name="select-mapa-uni" id="select_mapa_uni"></select>
             </div>
           </div>
 
@@ -367,7 +366,7 @@
 
         <!-- PANEL -->
         <div hidden id="panel_columna">
-           <div class="Panel-contenedor"><!-- id="contenedor_panel" -->
+          <div class="Panel-contenedor"><!-- id="contenedor_panel" -->
 
             <!-- PORTADA -->
             <div id="panel_informacion">
@@ -434,7 +433,7 @@
                     <b class="encabezado">Direccion:</b>
                     <div id="panel_direccion"></div><br>
                     <b class="encabezado">Página web:</b>
-                    <div><a id="panel_pagina"></a></div><br>
+                    <div><a target="_blank" id="panel_pagina"></a></div><br>
                     <b class="encabezado">Misión:</b>
                     <div id="panel_mision"></div><br>
                     <b class="encabezado">Visión:</b>
@@ -442,24 +441,23 @@
                     <b class="encabezado">Autoridades:</b>
                     <div id="panel_autoridades"></div><br>
 
-                    </div class= "panel_autoridades">
+                  </div>
 
-                    <!-- Cargar estadisticas -->
-                    <div id="categoria_estadisticas" class="accordion-collapse collapse" data-bs-parent="#panel_categorias">
-                      <b>Estadisticas</b><br>
+                  <!-- Cargar estadisticas -->
+                  <div id="categoria_estadisticas" class="accordion-collapse collapse" data-bs-parent="#panel_categorias">
+                    <b>Estadisticas</b><br>
 
-                      <div class="row">
-                        <div id="panel_Graph_estudiantes"></div>
-                        <div id="panel_Graph_Transporte"></div>
-                        <div id="panel_Graph_Personal"></div>
-                      </div>
+                    <div class="row">
+                      <div id="panel_Graph_estudiantes"></div>
+                      <div id="panel_Graph_Transporte"></div>
+                      <div id="panel_Graph_Personal"></div>
                     </div>
+                  </div>
 
                     <!-- Cargar carreras -->
                     <div id="categoria_carreras" class="accordion-collapse collapse" data-bs-parent="#panel_categorias">
                       <div id="panel_carreras"></div>
                     </div>
-                  </div>
                 </div>
 
               </div>
@@ -479,9 +477,10 @@
     <script src="javascript/graficos.js" type="module"></script>
 
     <!-- AÑADIENDO SCRIPTS -->
-    <script src="javascript/data/sugerencias.js"></script>
+    <script src="javascript/data/sugerencias.js" type="module"></script>
     <script src="plugins/mapaLeyenda/mapaLeyenda.js"></script>
-    <script src="javascript/select.js"></script>
+    <script src="javascript/select-estadisticas.js" type="module"></script>
+    <script src="javascript/select-mapa.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </div>
 

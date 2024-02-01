@@ -12,8 +12,8 @@ var marcasFiltradas;
 var marcasHoverTemp;
 
 // Funcion para mostrar marcas segun el estado o municipio
-function Filtrar(tipo, estado, municipio, siglas, hover) {  
-    if (tipo === '') return console.log("Filtrando por: nada");
+function Filtrar(tipo, estado, municipio, siglas, hover) {
+    if (tipo === 'Ninguna') return console.log("Filtrando por: nada");
 
     // Devolver array solo con marcas
     if (hover) {
@@ -66,8 +66,7 @@ function Filtrar(tipo, estado, municipio, siglas, hover) {
     if (tipo) {
         console.log("Filtrando por: pais")
         if (tipo === "Ambas"){
-            marcasFiltradas = marcasGlobal
-            .map((objeto) => objeto.marca);
+            marcasFiltradas = marcasGlobal.map((objeto) => objeto.marca);
         } else {
             marcasFiltradas = marcasGlobal
             .filter((objeto) => objeto.tipo == tipo)

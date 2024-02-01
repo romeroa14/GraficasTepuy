@@ -1,7 +1,8 @@
 /* 
     Script: Inicializar mapa junto a las capas y eventos de Estado y Municipios
-    Autores: Alfredo, Victor, Diego y Jairo
+    Autores: Alfredo, Victor, Juan y Jairo
     Fecha de creacion: 07-12-2023
+    Reseña de Jairo: 'Calidad'
  */
 
 import { Filtrar } from "./funciones/filtrarMarcas.js"; 
@@ -11,32 +12,33 @@ import { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioS
 import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
 
 export { geojsonLink, municipiosLink }
+export { resetLayer }
 export { map }
 
 // ---------- INICIALIZAR MAPA ----------
 
-// Crear mapa con una base detallada
+// Crear capa del mapa detallado
 var mapa = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© The Ghost", opacity: 0.3,
 });
 
+// Crear mapa
 var map = L.map("map", {
-    center: [39.73, -104.99],
-    zoom: 10,
+    center: [7, -66],
+    zoom: 6,
     minZoom: 6,
     maxZoom: 13,
     layers: [mapa],
-}).setView([7, -66], 6);
+});
 
 
 // Enlaces con los GeoJSON de Venezuela y municipios
 var geojsonLink = "./geo/estados.geojson";
 var municipiosLink = "./geo/municipios.geojson";
 
-// var marcasFiltradas = getGlobal('marcasFiltradas')
-
 // ---------- CONFIGURAR ESTADOS Y MUNICIPIOS DEL MAPA ----------
 
+// Agregar botones al mapa
 map.addControl(new BotonMostraPanel());
 map.addControl(new botonRestablecer());
 
@@ -47,15 +49,18 @@ var selectedLayer = null; // Para almacenar la capa seleccionada actualmente
 var selectedLayerMunicipio = null; // Para almacenar la capa seleccionada actualmente el municipio
 let marcasHover;
 
-function resetLayer() {
+// Funcion para restablecer el mapa (quitar capa municipio)
+function resetLayer(resetData) {
     if (municipiosLayer) map.removeLayer(municipiosLayer);
     if (municipiosLayerTmp) map.removeLayer(municipiosLayerTmp);
-    setGlobal('estadoActual', null)
-    setGlobal('municipioActual', null)
+    if(resetData) {
+        setGlobal('estadoActual', null)
+        setGlobal('municipioActual', null)
+    }
 }
-export { resetLayer }
 
-// Función para manejar el clic en los Estados
+
+// Función para manejar los eventos en los Estados
 function onEachFeature(feature, layer) {
     
     // Popup que muestra el nombre del estado
@@ -63,6 +68,9 @@ function onEachFeature(feature, layer) {
     
     layer.on({
         click: function (e) {
+            if(!getGlobal('tipoActual')) titulo.innerHTML = 'SELECCIONA UN TIPO A MOSTRAR';
+
+            // Actualizar variables globales
             setGlobal('estadoActual', feature.properties.ESTADO)
             setGlobal('municipioActual', null)
 
@@ -85,7 +93,6 @@ function onEachFeature(feature, layer) {
             if (getGlobal('marcasFiltradas')) {
                 map.removeLayer(getGlobal('marcasFiltradas'));
             }
-            console.log("------------ "+getGlobal('tipoActual'));
             if (getGlobal('tipoActual') != 'Ninguna')
             setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO).addTo(map))
 
@@ -115,7 +122,7 @@ function onEachFeature(feature, layer) {
             
             // Eliminar marcas hover si hay mucho zoom
             if (map.getZoom() <= 8 && map.getZoom() >= 5) {
-                marcasHover = Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO, null, null, true);
+                marcasHover = Filtrar(null, feature.properties.ESTADO, null, null, true);
             } else {
                 return;
             }
@@ -162,14 +169,14 @@ function onEachFeature(feature, layer) {
     });
 }
 
-// Funcion para manejar el clic en Municipios
+// Funcion para manejar eventos en Municipios
 function onEachFeatureMunicipios(feature, layer) {
-    layer.bindTooltip(feature.properties.MUNICIPIO, { permanent: false, direction: "bottom" });
+    layer.bindTooltip(feature.properties.MUNICIPIO, { permanent: false, direction: "top" });
     layer.on({
         click: function (e) {
+
+            // Actualizar variable global
             setGlobal('municipioActual', feature.properties.MUNICIPIO)
-            // Hacer zoom al estado seleccionado (deshabilitado por comodidad)
-            // map.fitBounds(e.target.getBounds());
 
             // Si ya hay una capa seleccionada, desmarcarla
             if (selectedLayerMunicipio) {
@@ -184,7 +191,7 @@ function onEachFeatureMunicipios(feature, layer) {
             if (getGlobal('marcasFiltradas')) {
                 map.removeLayer(getGlobal('marcasFiltradas'));
             }
-            console.log("------------ "+getGlobal('tipoActual'));
+            // console.log("------------ "+getGlobal('tipoActual'));
             if (getGlobal('tipoActual') != 'Ninguna')
             setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO, feature.properties.MUNICIPIO).addTo(map))
         },
@@ -231,7 +238,7 @@ function loadMunicipios(selectedGID) {
     }).addTo(map);
 }
 
-// Función para manejar el clic en un municipio
+// Función para manejar eventos en los municipio
 function onEachMunicipio(feature, layer) {
     layer.on({
         click: function () {
@@ -295,6 +302,7 @@ const leyenda = L.control.legend({
     column: 1,
     color: "#000000",
     legends: [
+        // Boton para alternar universidades Publicas
         {
             label: "Universidades Publicas",
             filcolor: "#000000",
@@ -303,6 +311,8 @@ const leyenda = L.control.legend({
             layers: [],
             inactive: false
         },
+
+        // Boton para alternar universidades Privadas
         {
             label: "Universidades Privadas",
             color: "#000000",
@@ -316,13 +326,13 @@ const leyenda = L.control.legend({
     ]
 }).addTo(map);
 
-
-// console.log(leyenda.options.legends[0].inactive);
+// Obtener los elementos dentro de la leyenda
 let actividadMarcaPublica = document.querySelector('.leaflet-legend-item')
 let actividadMarcaPrivada = document.querySelector("section > div > div:nth-child(2)")
 var mostrarPublicas = true;
 var mostrarPrivadas = true;
 
+// Evento de botones de la leyenda (Publica)
 actividadMarcaPublica.addEventListener("click",()=>{
     if (getGlobal('marcasFiltradas')) {
         map.removeLayer(getGlobal('marcasFiltradas'));
@@ -333,36 +343,34 @@ actividadMarcaPublica.addEventListener("click",()=>{
         mostrarPublicas = true
     }
     
-    // console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
     if (mostrarPublicas && mostrarPrivadas) {
-        console.log("-------------- lasdos");
+        // console.log("-------------- Leyenda: Ambas");
         setGlobal('tipoActual', 'Ambas')
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
     }
     if (!mostrarPublicas && !mostrarPrivadas) {
-        console.log("-------------- nonguna");
+        // console.log("-------------- Leyenda: Ninguna");
         setGlobal('tipoActual', 'Ninguna')
         return
     }
 
     if (mostrarPublicas) {
-        console.log("-------------- solopublica");
+        // console.log("-------------- Leyenda: Solo publica");
         setGlobal('tipoActual', 'Publica')
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
     }
     if (mostrarPrivadas) {
-        console.log("-------------- soloprivada");
+        // console.log("-------------- Leyenda: Solo privada");
         setGlobal('tipoActual', 'Privada')
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
     }
-
-    // console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
 })
 
-actividadMarcaPrivada.addEventListener("click",()=>{
-    // console.log(getGlobal('estadoActual'));
+// Evento de botones de la leyenda (Privada)
+actividadMarcaPrivada.addEventListener("click", () => {
+    console.log(getGlobal('estadoActual'));
     if (getGlobal('marcasFiltradas')) {
         map.removeLayer(getGlobal('marcasFiltradas'));
     }
@@ -372,28 +380,25 @@ actividadMarcaPrivada.addEventListener("click",()=>{
         mostrarPrivadas = true
     }
 
-    // console.log("Publica: "+mostrarPublicas+" | Privada: "+mostrarPrivadas);
     if (mostrarPublicas && mostrarPrivadas) {
-        console.log("-------------- lasdos");
+        // console.log("-------------- Leyenda: Ambas");
         setGlobal('tipoActual', 'Ambas')
-        // NOTA: si estadoActual = null, da error al usar toLocaleUpperCase(), por eso se usa el operador ternario. 
-        //       Si estadoActual = null, devuelve null, sino, aplica toLocaleUpperCase()
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
     }
     if (!mostrarPublicas && !mostrarPrivadas) {
-        console.log("-------------- ninguna");
+        // console.log("-------------- Leyenda: Ninguna");
         setGlobal('tipoActual', 'Ninguna')
         return
     }
 
     if (mostrarPrivadas) {
-        console.log("-------------- soloprivada");
+        // console.log("-------------- Leyenda: Solo privada");
         setGlobal('tipoActual', 'Privada')
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
     }
     if (mostrarPublicas) {
-        console.log("-------------- solopublica");
+        // console.log("-------------- Leyenda: Solo publica");
         setGlobal('tipoActual', 'Publica')
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), getGlobal('estadoActual') == null ? getGlobal('estadoActual') : getGlobal('estadoActual').toLocaleUpperCase(), getGlobal('municipioActual') == null ? getGlobal('municipioActual') : getGlobal('municipioActual').toLocaleUpperCase()).addTo(map))
         return
@@ -417,13 +422,13 @@ map.on({
     },
     zoomstart: function() {
 
-        // Ocultar los bordes al comenzar a hacer zoom
+        // Ocultar los bordes de los estados al hacer zoom
         geojsonLayer.setStyle({ weight: 0 });
         municipiosLayer.setStyle({ weight: 0 });
     },
     zoomend: function() {
 
-        // Mostrar los bordes al finalizar el zoom
+        // Mostrar los bordes de los estados al finalizar el zoom
         geojsonLayer.setStyle(geojsonStyle);
         municipiosLayer.setStyle(geojsonStyle);
 
@@ -438,6 +443,7 @@ map.on({
     }
 });
 
+// Funcion para borrar los tooltips
 function closeAllTooltips() {
     map.eachLayer(function (layer) {
         if (layer.closeTooltip) {

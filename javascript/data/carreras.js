@@ -1,6 +1,6 @@
 let CARRERAS_DATA = {
 
-    'UBTJR': {
+    UBTJR: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Seguridad Ciudadana." },
             { id: "2", nombre: "PNF en Investigación Penal." },
@@ -22,7 +22,7 @@ let CARRERAS_DATA = {
 
     },
 
-    'UNES': {
+    UNES: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Construcción Civil"},
             { id: "2", nombre: "TSU en Mecánica Industrial"},
@@ -31,7 +31,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UVH': {
+    UVH: {
         "Carreras Largas": [
             { id: "1", nombre: "Ingeniería de Petróleo"},
             { id: "2", nombre: "Ingeniería Petroquímica" },
@@ -60,7 +60,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UPTBJFR': {
+    UPTBJFR: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Construcción Civil" },
             { id: "2", nombre: "TSU en Mecánica Industrial" },
@@ -79,7 +79,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UPTA': {
+    UPTA: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Administración"},
             { id: "2", nombre: "Licenciatura en Agroalimentación"},
@@ -113,7 +113,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UPTAEB': {
+    UPTAEB: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Distribucion y Logistica" },
             { id: "2", nombre: "PNF en Administracion" },
@@ -128,7 +128,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTALTAP': {
+    UPTALTAP: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Agroalimentación" },
             { id: "2", nombre: "PNF en Construcción Civil" },
@@ -138,7 +138,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTBAL': {
+    UPTBAL: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Administración" },
             { id: "2", nombre: "PNF en Agroalimentación" },
@@ -158,7 +158,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEFM': {
+    UNEFM: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Administración"},
             { id: "2", nombre: "PNF en Agroalimentación"},
@@ -215,7 +215,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UCLA': {
+    UCLA: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Administración Comercial"},
             { id: "2", nombre: "Licenciatura en Contaduría Pública"},
@@ -282,7 +282,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNESUR': {
+    UNESUR: {
         "Carreras Cortas": [
             { id: "1", nombre: "PFG en Administración de Empresas Agropecuarias" },
             { id: "2", nombre: "PFG en Contaduría Pública" },
@@ -300,7 +300,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'ULAC': {
+    ULAC: {
         "Especialización": [
             { id: "1", nombre: "Especialización en Derecho Internacional de los Derechos Humanos" },
             { id: "2", nombre: "Especialización en Derecho Internacional Humanitario" },
@@ -354,7 +354,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UDS': {
+    UDS: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Actividad Física y Salud" },
             { id: "2", nombre: "Licenciatura en Entrenamiento Deportivo" },
@@ -376,7 +376,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEARTE': {
+    UNEARTE: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Artes Audiovisuales" },
             { id: "2", nombre: "PNF en Artes Plásticas" },
@@ -402,7 +402,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UNERMB': {
+    UNERMB: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en administración mención aduana." },
             { id: "2", nombre: "Licenciatura en administración mención tributaria." },
@@ -446,7 +446,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNESR': {
+    UNESR: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Administración Mención Recursos Humanos" },
             { id: "2", nombre: "Licenciatura en Administración Mención Recursos Materiales Financieros" },
@@ -456,7 +456,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'LAUICOM': {
+    LAUICOM: {
         "Carreras Largas": [
             { id: "1", nombre: "Periodismo" },
             { id: "2", nombre: "Producción de radio" },
@@ -475,7 +475,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNATUR': {
+    UNATUR: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU Hotelería y Servicios de la Hospitalidad" },
             { id: "2", nombre: "TSU Turismo" }
@@ -488,7 +488,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTM': {
+    UPTM: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Administración" },
             { id: "6", nombre: "Licenciatura en Contaduría Pública" },
@@ -504,7 +504,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNETRANS': {
+    UNETRANS: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU Electricidad Mención Telecomunicaciones" },
             { id: "2", nombre: "TSU en Electricidad" },
@@ -525,7 +525,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEM': {
+    UNEM: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Educación Inicial." },
             { id: "2", nombre: "PNF en Educación Física." },
@@ -584,7 +584,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNELMLK': {
+    UNELMLK: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Diseño integral Comunitario" },
             { id: "2", nombre: "PNF en Instrumentación y Control" },
@@ -598,14 +598,14 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNETI': {
+    UNETI: {
         "Carreras Largas": [
             { id: "1", nombre: "Ingeniería en Informática" },
             { id: "2", nombre: "Ingeniería en Telecomunicaciones" },
         ]
     },
 
-    'UNEXCA': {
+    UNEXCA: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Educación Especial" },
             { id: "2", nombre: "TSU en Educación Inicial" },
@@ -634,7 +634,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNET': {
+    UNET: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Electromedicina" },
             { id: "2", nombre: "TSU en Producción Agropecuaria" },
@@ -672,7 +672,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNA': {
+    UNA: {
         "Carreras Largas": [
             { id: "1", nombre: "Administración" },
             { id: "2", nombre: "Contaduría" },
@@ -731,7 +731,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'ULA': {
+    ULA: {
         "Carreras Cortas": [
             { id: "1", nombre: "Educación Mención Ciencias de la Salud" },
             { id: "2", nombre: "Educación Mención Ciencias Sociales" },
@@ -844,7 +844,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UC': {
+    UC: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Tecnología Cardiopulmonar" },
             { id: "2", nombre: "TSU en Citotecnología" },
@@ -998,7 +998,7 @@ let CARRERAS_DATA = {
         // ]
     },
 
-    'UPTPC': {
+    UPTPC: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Mecánica Automotriz" },
             { id: "2", nombre: "TSU Mecánica Térmica" },
@@ -1016,7 +1016,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTLL': {
+    UPTLL: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Administración" },
             { id: "2", nombre: "TSU en Agroalimentaria" },
@@ -1030,7 +1030,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTCMS': {
+    UPTCMS: {
         "Carreras Largas": [
             { id: "1", nombre: "Ingeniería Eléctrica" },
             { id: "2", nombre: "Ingeniería Transporte ferroviario" },
@@ -1042,7 +1042,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTAIET': {
+    UPTAIET: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU Universitario en Agroalimentación" },
             { id: "2", nombre: "TSU en Construcción Civil" },
@@ -1065,7 +1065,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTB': {
+    UPTB: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Informática" },
             { id: "2", nombre: "TSU en Eléctrica" },
@@ -1102,7 +1102,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTV': {
+    UPTV: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Química" },
             { id: "2", nombre: "Licenciatura en Biología" },
@@ -1119,7 +1119,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UBC': {
+    UBC: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Gestión y Desarrollo Comunal" },
             { id: "2", nombre: "PNF en Economía Comunal" },
@@ -1137,7 +1137,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEXEE': {
+    UNEXEE: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Gestión de Mantenimiento Eléctrico " },
             { id: "2", nombre: "TSU en Redes Eléctricas " },
@@ -1153,7 +1153,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEXPO': {
+    UNEXPO: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Construcción Civil y Obras Civiles" },
         ],
@@ -1180,7 +1180,7 @@ let CARRERAS_DATA = {
         ]
     },
    
-    'UPTNTMS': {
+    UPTNTMS: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Administración"},
             { id: "2", nombre: "PNF en Agroalimentación"},
@@ -1193,7 +1193,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UMBV': {
+    UMBV: {
         "Carreras Largas": [
             { id: "1", nombre: "Operaciones aeroespaciales: Piloto Militar de aviación de caza, combate, helicóptero, transporte de carga, ejecutivo, presidencial y táctico."},
             { id: "2", nombre: "Defensa aeroespacial integral."},
@@ -1224,7 +1224,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTNMLS': {
+    UPTNMLS: {
         "Carreras Cortas": [
             { id: "1", nombre: "Construcción civil."},
             { id: "2", nombre: "Mecánica."},
@@ -1240,7 +1240,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTOSCR': {
+    UPTOSCR: {
         "Carreras Largas": [
             { id: "1", nombre: "Química."},
             { id: "2", nombre: "Agroalimentaria."},
@@ -1255,7 +1255,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTPLMR': {
+    UPTPLMR: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Informática."},
             { id: "2", nombre: "PNF en Agroalimentación."},
@@ -1270,7 +1270,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UPTPJJM': {
+    UPTPJJM: {
         "Carreras Largas": [
             { id: "1", nombre: "Ingeniería Agroalimentaria"},
             { id: "2", nombre: "Ingeniería eléctrica "},
@@ -1286,7 +1286,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEIT': {
+    UNEIT: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Derecho "},
             { id: "2", nombre: "Licenciatura en Comunicación "},
@@ -1295,7 +1295,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEG': {
+    UNEG: {
         "Carreras Cortas": [
             { id: "21", nombre: "Educación Integral"},
             { id: "3", nombre: "Educación. Mención Educación Física, Deporte Y Recreación"},
@@ -1327,7 +1327,7 @@ let CARRERAS_DATA = {
 
     // FALTAN==========================================================================================================
 
-    'IDEA': {
+    IDEA: {
         "Carreras Cortas": [
             { id: "", nombre: "" }
         ],
@@ -1355,7 +1355,7 @@ let CARRERAS_DATA = {
 
     // FALTAN===================================================================================
 
-    'UPTJAA': {
+    UPTJAA: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Administración" },
             { id: "2", nombre: "TSU en Agroalimentación" },
@@ -1387,7 +1387,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UCVAG': {
+    UCVAG: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Agroalimentación" },
             { id: "2", nombre: "TSU en Procesamiento y Distribución de Alimentos" },
@@ -1405,7 +1405,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UTDFT': {
+    UTDFT: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Administración" },
             { id: "2", nombre: "TSU en Agroalimentación" },
@@ -1415,7 +1415,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTAMCA': {
+    UPTAMCA: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Administración" },
             { id: "2", nombre: "TSU en Agroalimentación" },
@@ -1452,7 +1452,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTTMBI': {
+    UPTTMBI: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Administración" },
             { id: "2", nombre: "TSU en Agroalimentación" },
@@ -1477,7 +1477,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTYAB': {
+    UPTYAB: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Administración" },
             { id: "2", nombre: "TSU en Agroalimentación" },
@@ -1513,7 +1513,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTFAG': {
+    UPTFAG: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Agroalimentación " },
             { id: "2", nombre: "TSU en Construcción Civil " },
@@ -1544,7 +1544,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UCS': {
+    UCS: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Medicina integral comunitaria" },
             { id: "2", nombre: "PNF en Histocitotecnología" },
@@ -1574,7 +1574,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPAFV': {
+    UPAFV: {
         "Carreras Largas": [
             { id: "1", nombre: "Licenciatura en Desarrollo Endógeno"},
             { id: "2", nombre: "Licenciatura en Pedagogía Alternativa"}
@@ -1587,7 +1587,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNERG': {
+    UNERG: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Agronomía mención Producción Animal" },
             { id: "2", nombre: "PNF en Agronomía mención Producción Vegetal" },
@@ -1633,7 +1633,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPEL': {
+    UPEL: {
         "Carreras Cortas": [
             { id: "1", nombre: "Educación. Especialidad: Artes Escénicas" },
             { id: "2", nombre: "Educación. Especialidad: Artes Plásticas" },
@@ -1661,7 +1661,7 @@ let CARRERAS_DATA = {
 
     // ---------------------------------UNIVERSIDADES PRICIPALES-----------------------------------
     
-    'UMC': {
+    UMC: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU Transporte Acuático" }
         ],
@@ -1676,7 +1676,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UBV': {
+    UBV: {
         "Carreras Cortas": [
             { id: "1", nombre: "PFG Agroecología" },
             { id: "2", nombre: "PFG Arquitectura" },
@@ -1757,7 +1757,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNEFA': {
+    UNEFA: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Análisis y Diseño de Sistemas" },
             { id: "2", nombre: "TSU en Comunicaciones y Electrónica" },
@@ -1786,7 +1786,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UPTZ': {
+    UPTZ: {
         "Carreras Largas": [
             { id: "1", nombre: "PNF en Hidrocarburos" },
             { id: "2", nombre: "PNF en Electricidad " },
@@ -1804,7 +1804,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UCV': {
+    UCV: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU Cardiopulmonar" },
             { id: "2", nombre: "TSU Enfermería" },
@@ -2179,7 +2179,7 @@ let CARRERAS_DATA = {
         ],
     },
 
-    'UNELLEZ': {
+    UNELLEZ: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Agroindustrial Mención Granos y Semillas." },
             { id: "2", nombre: "TSU en Pesca Continental y Piscicultura." },
@@ -2324,7 +2324,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'USB': {
+    USB: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Comercio Exterior" },
             { id: "2", nombre: "TSU en Organización Empresarial" },
@@ -2441,7 +2441,7 @@ let CARRERAS_DATA = {
 
     // ---------------------------UNIVERSIDADES PRIVADAS-------------------------------------
     
-    'UBA': {
+    UBA: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Administración de Empresas" },
             { id: "2", nombre: "TSU en Comercio Exterior" },
@@ -2530,7 +2530,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UCAB': { 
+    UCAB: { 
         "Carreras Cortas" : [
             { id: "1", nombre: "Educación mencion Biología y Química" },
             { id: "2", nombre: "Educación mencion Ciencias Pedagógicas" },
@@ -2645,7 +2645,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UAH': {
+    UAH: {
         "Carreras Largas": [
             { id: "1", nombre: "Contaduría Pública."},
             { id: "2", nombre: "Economía."},
@@ -2683,7 +2683,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UNICA': {
+    UNICA: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Artes Audiovisuales" },
             { id: "2", nombre: "Educación. Mención Lengua y Literatura."},
@@ -2716,7 +2716,7 @@ let CARRERAS_DATA = {
         ]
     },
 
-    'UCAT': {
+    UCAT: {
         "Carreras Cortas": [
             { id: "1", nombre: "TSU en Ciencias Penales y Criminalística" }
         ],

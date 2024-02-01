@@ -20,16 +20,16 @@ const UNI_DATA = {
         coordenadas: [10.501951604095092, -66.91681005734324],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: 'María Teresa López',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rectora',
                 foto: '',
-                url_curriculum1: 'enlace.pdf'
+                url_curriculum: 'enlace.pdf'
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: 'José Manuel Rodríguez',
                 cedula: '',
                 reseña: '',
@@ -38,7 +38,7 @@ const UNI_DATA = {
                 url_curriculum: 'enlace.pdf'
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: 'Maribel García',
                 cedula: '',
                 reseña: '',
@@ -73,7 +73,7 @@ const UNI_DATA = {
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: 'enlace.pdf'
+                url_curriculum: 'enlace.pdf'
             },
         ]
     },
@@ -355,13 +355,13 @@ const UNI_DATA = {
         coordenadas: [8.998021301627139, -71.91932197731236],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: 'Dr. Edgar Alexander Martínez Meza',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: 'enlace.pdf'
+                url_curriculum: 'enlace.pdf'
             },
         ]
     },
@@ -586,16 +586,16 @@ const UNI_DATA = {
         coordenadas: [10.167356, -64.681362],
         autoridades: [ 
             {
-                id1: '1',
+                id: '1',
                 nombre: '',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -604,7 +604,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -633,16 +633,16 @@ const UNI_DATA = {
         coordenadas: [10.680480220845197, -71.67656897639434],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: '',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -651,7 +651,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -679,16 +679,16 @@ const UNI_DATA = {
         coordenadas: [10.419140467238352, -66.958353984656],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: 'Jorge Miguel Sierraalta Zavarce',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: 'Mirna Hernández',
                 cedula: '',
                 reseña: '',
@@ -697,7 +697,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: 'Arnoldo Azuaje',
                 cedula: '',
                 reseña: '',
@@ -706,7 +706,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id4: '4',
+                id: '4',
                 nombre: 'Marmeric Rondón',
                 cedula: '',
                 reseña: '',
@@ -735,16 +735,16 @@ const UNI_DATA = {
         coordenadas: [10.515879785149398, -66.91243145312004],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: 'Belkis Bigott Suzzarini',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rectora',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: 'Nelson Herrera',
                 cedula: '',
                 reseña: '',
@@ -753,7 +753,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: 'Armando Rojas',
                 cedula: '',
                 reseña: '',
@@ -762,7 +762,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id4: '4',
+                id: '4',
                 nombre: 'Lenin Romero',
                 cedula: '',
                 reseña: '',
@@ -791,16 +791,16 @@ const UNI_DATA = {
         coordenadas: [10.013171498416284, -69.4493055207691],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: '',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -809,7 +809,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -838,16 +838,16 @@ const UNI_DATA = {
         coordenadas: [10.40353484881695, -66.88179077843259],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: '',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -856,7 +856,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -885,16 +885,16 @@ const UNI_DATA = {
         coordenadas: [10.495528979022703, -66.84546356309079],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: '',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -903,7 +903,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: '',
                 cedula: '',
                 reseña: '',
@@ -932,16 +932,16 @@ const UNI_DATA = {
         coordenadas: [7.793720316636929, -72.19998124758915],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: 'Raúl A. Casanova O.',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: 'Martín A. Paz P.',
                 cedula: '',
                 reseña: '',
@@ -950,7 +950,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: 'Martín A. Paz P.',
                 cedula: '',
                 reseña: '',
@@ -959,7 +959,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id4: '4',
+                id: '4',
                 nombre: 'Elcy Y. Nuñez M.',
                 cedula: '',
                 reseña: '',
@@ -988,16 +988,16 @@ const UNI_DATA = {
         coordenadas: [10.510060171033581, -66.89990400541866],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: 'Manuel Castro Pereira',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
             {
-                id2: '2',
+                id: '2',
                 nombre: 'Néstor Leal Ortíz',
                 cedula: '',
                 reseña: '',
@@ -1006,7 +1006,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id3: '3',
+                id: '3',
                 nombre: 'Arnaldo Escalona',
                 cedula: '',
                 reseña: '',
@@ -1015,7 +1015,7 @@ const UNI_DATA = {
                 url_curriculum: ''
             },
             {
-                id4: '4',
+                id: '4',
                 nombre: 'Arelis Coromoto Saavedra',
                 cedula: '',
                 reseña: '',
@@ -1044,13 +1044,13 @@ const UNI_DATA = {
         coordenadas: [8.607190948247272, -71.14530691535094],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: 'Mario Bonucci Rossini ',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
         ]
     },
@@ -1073,13 +1073,13 @@ const UNI_DATA = {
         coordenadas: [10.277680384843347, -68.00665284940989],
         autoridades: [
             {
-                id1: '1',
+                id: '1',
                 nombre: '',
                 cedula: '',
                 reseña: '',
                 cargo: 'Rector',
                 foto: '',
-                url_curriculum1: ''
+                url_curriculum: ''
             },
         ]
     },
@@ -3210,4 +3210,4 @@ Se rescatarán todas las agrupaciones musicales (Tecnología Banda Show, Tecnolo
 
 }
 
-export {UNI_DATA };
+export { UNI_DATA };

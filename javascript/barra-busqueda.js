@@ -6,9 +6,9 @@
 
 import { UNI_DATA } from "./data/universidadesData.js";
 import { Filtrar } from "./funciones/filtrarMarcas.js";
-import { map } from "./mapa.js";
 import { mostrarPanel } from "./panel.js";
-import { eliminarAcentos } from "./funciones/eliminarAcentos.js";
+import { map } from "./mapa.js";
+import { sugerenciasUniversidades } from "./data/sugerencias.js";
 import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
 
 // ---------- BARRA DE BUSQUEDA ----------
@@ -54,7 +54,7 @@ inputBar.onkeyup = (e) =>{
         if (getGlobal('marcasFiltradas')) {
             map.removeLayer(getGlobal('marcasFiltradas'));
         }
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, siglas).addTo(map))
+        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
         desplazarse(coordDesplazamiento);
     }
 }
@@ -239,17 +239,20 @@ function crearSiglas(textoCompleto) {
 }
 
 
-// ---------- SELECT DE ESTADOS Y UNIVERSIDADES ----------
-let selectUniversidad = document.getElementById("select-location3");
+
+
+/*
+let selectUniversidad = select _mapa_uni
 let selectEstado = document.getElementById("select-location");
+var estadoActual
 selectUniversidad.disabled = true;
 
 // Funcionalidad del select de Estados
-selectEstado.addEventListener("change",()=>{
-    
+selectEstado.addEventListener("change", () => {
+
     // setEstadoActualGlobal(selectEstado.value.toLocaleLowerCase())
     estadoActual = selectEstado.value.toLocaleLowerCase()
-    setGlobal('estadoActual', estadoActual)
+    setGlobal('estadoActual', selectEstado.value.toLocaleUpperCase())
     setGlobal('municipioActual', null)
     
     if(estadoActual == "estado") {
@@ -265,6 +268,7 @@ selectEstado.addEventListener("change",()=>{
             map.removeLayer(getGlobal('marcasFiltradas'));
         }
         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), estadoActual.toLocaleUpperCase()).addTo(map))
+        resetLayer()
     }
 })
 
@@ -275,7 +279,6 @@ selectUniversidad.addEventListener("click",()=>{
     
         // Enfocar el estado
         var siglas = crearSiglas(universidadActual);
-        console.log(siglas);
         let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
 
         // Filtrar por siglas
@@ -286,3 +289,4 @@ selectUniversidad.addEventListener("click",()=>{
         desplazarse(coordDesplazamiento);
         mostrarPanel(siglas)
 })
+ */

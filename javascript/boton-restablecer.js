@@ -19,6 +19,8 @@ const botonRestablecer = L.Control.extend({
     },
 
     onAdd: function (map) {
+
+        // Crear estructura HTML del boton
         var div = L.DomUtil.create('div');
 
         var label = L.DomUtil.create('label', '', div);
@@ -38,8 +40,9 @@ const botonRestablecer = L.Control.extend({
                 AlternarPanel(false)
                 boton_alternar.checked = false
             }
-            resetLayer()
+            resetLayer(true)
         }); 
+        
         return div;
     }
 })
