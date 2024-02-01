@@ -1,7 +1,8 @@
 /* 
     Script: Inicializar mapa junto a las capas y eventos de Estado y Municipios
-    Autores: Alfredo, Victor, Diego y Jairo
+    Autores: Alfredo, Victor, Juan y Jairo
     Fecha de creacion: 07-12-2023
+    Reseña de Jairo: 'Calidad'
  */
 
 import { Filtrar } from "./funciones/filtrarMarcas.js"; 
@@ -35,8 +36,6 @@ var map = L.map("map", {
 var geojsonLink = "./geo/estados.geojson";
 var municipiosLink = "./geo/municipios.geojson";
 
-// var marcasFiltradas = getGlobal('marcasFiltradas')
-
 // ---------- CONFIGURAR ESTADOS Y MUNICIPIOS DEL MAPA ----------
 
 // Agregar botones al mapa
@@ -69,6 +68,7 @@ function onEachFeature(feature, layer) {
     
     layer.on({
         click: function (e) {
+            if(!getGlobal('tipoActual')) titulo.innerHTML = 'SELECCIONA UN TIPO A MOSTRAR';
 
             // Actualizar variables globales
             setGlobal('estadoActual', feature.properties.ESTADO)
@@ -122,7 +122,7 @@ function onEachFeature(feature, layer) {
             
             // Eliminar marcas hover si hay mucho zoom
             if (map.getZoom() <= 8 && map.getZoom() >= 5) {
-                marcasHover = Filtrar(getGlobal('tipoActual'), feature.properties.ESTADO, null, null, true);
+                marcasHover = Filtrar(null, feature.properties.ESTADO, null, null, true);
             } else {
                 return;
             }

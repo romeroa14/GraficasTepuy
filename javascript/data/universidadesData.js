@@ -3210,4 +3210,4 @@ Se rescatarán todas las agrupaciones musicales (Tecnología Banda Show, Tecnolo
 
 }
 
-export {UNI_DATA };
+export { UNI_DATA };

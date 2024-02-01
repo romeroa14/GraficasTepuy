@@ -6,11 +6,10 @@
 
 import { UNI_DATA } from "./data/universidadesData.js";
 import { Filtrar } from "./funciones/filtrarMarcas.js";
-import { map } from "./mapa.js";
 import { mostrarPanel } from "./panel.js";
-import { eliminarAcentos } from "./funciones/eliminarAcentos.js";
+import { map } from "./mapa.js";
+import { sugerenciasUniversidades } from "./data/sugerencias.js";
 import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
-import { resetLayer } from "./mapa.js";
 
 // ---------- BARRA DE BUSQUEDA ----------
 
@@ -240,14 +239,16 @@ function crearSiglas(textoCompleto) {
 }
 
 
-// ---------- SELECT DE ESTADOS Y UNIVERSIDADES ----------
-let selectUniversidad = document.getElementById("select-location3");
+
+
+/*
+let selectUniversidad = select _mapa_uni
 let selectEstado = document.getElementById("select-location");
 var estadoActual
 selectUniversidad.disabled = true;
 
 // Funcionalidad del select de Estados
-selectEstado.addEventListener("change",()=>{
+selectEstado.addEventListener("change", () => {
 
     // setEstadoActualGlobal(selectEstado.value.toLocaleLowerCase())
     estadoActual = selectEstado.value.toLocaleLowerCase()
@@ -288,3 +289,4 @@ selectUniversidad.addEventListener("click",()=>{
         desplazarse(coordDesplazamiento);
         mostrarPanel(siglas)
 })
+ */

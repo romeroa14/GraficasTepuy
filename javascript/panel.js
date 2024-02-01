@@ -17,22 +17,23 @@ export { BotonMostraPanel };
 
 // ---------- FUNCION PARA MOSTRAR PANEL DE INFORMACION ----------
 function mostrarPanel(siglas) {
+    let universidad = UNI_DATA[siglas]
     
     // Mostrar la infomacion de la uni filtrada
     panel_informacion.removeAttribute('hidden')
 
     // LLenar datos
-    panel_nombre.innerHTML = `${UNI_DATA[siglas]["nombre"]} (${UNI_DATA[siglas]["siglas"]})`;
-    panel_descripcion.innerHTML = UNI_DATA[siglas]["descripcion"];
-    panel_fachada.src = UNI_DATA[siglas]["portada"];
-    panel_pagina.setAttribute('href', UNI_DATA[siglas]["pagina"]);
-    panel_pagina.innerHTML = UNI_DATA[siglas]["pagina"];
-    panel_mision.innerHTML = UNI_DATA[siglas]["mision"];
-    panel_vision.innerHTML = UNI_DATA[siglas]["vision"];
-    panel_autoridades.appendChild(constructorAutoridades(UNI_DATA[siglas]["autoridades"]));
+    panel_nombre.innerHTML = `${UNI_DATA[siglas]["nombre"]} (${universidad["siglas"]})`;
+    panel_descripcion.innerHTML = universidad["descripcion"];
+    panel_fachada.src = universidad["portada"];
+    panel_pagina.setAttribute('href', universidad["pagina"]);
+    panel_pagina.innerHTML = universidad["pagina"];
+    panel_mision.innerHTML = universidad["mision"];
+    panel_vision.innerHTML = universidad["vision"];
+    panel_autoridades.appendChild(constructorAutoridades(universidad["autoridades"]));
     panel_carreras.appendChild(constructorCarreras(siglas));
-    panel_direccion.innerHTML = UNI_DATA[siglas]["direccion"];
-    panel_logo.src = UNI_DATA[siglas]["logo"];
+    panel_direccion.innerHTML = universidad["direccion"];
+    panel_logo.src = universidad["logo"];
 
     panel_Graph_estudiantes.innerHTML = ""
     panel_Graph_Transporte.innerHTML = ""
