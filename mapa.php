@@ -39,7 +39,7 @@
 
       <!-- filtros de busquedas del mapa-->
       <?php
-      include './php/inc/busqueda-filtro.php';
+      include './php/inc/mapa-filtro.php';
       ?>
 
       <!-- MAPA -->
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-
+  
   <?php
   include './php/inc/script.php';
   ?>

@@ -1,3 +1,7 @@
+<?php
+  include './php/funciones/main.php';
+?>
+
 <!-- ----------ESTADISTICAS ---------- -->
 <h2 class="cintillo">Estadísticas</h2>
 
@@ -11,6 +15,22 @@
             <div class="col-2">
               <select class="select" name="select_estado" id="select_estado">
                 <option disabled selected>Estado</option>
+                <?php
+                  $estados = conexion();
+                  $estados = $estados->query("SELECT nombre_estado FROM sys_pais_estados e INNER JOIN sys_pais p on p.id = e.pais_id WHERE p.nombre_pais = 'Venezuela' ORDER by nombre_estado");
+                if ($estados->rowCount()) {
+                  $estados = $estados->fetchAll();
+                  foreach ($estados as $row) {
+                    echo '<option value = "'.$row['nombre_estado'].'" name = "'.$row['nombre_estado'].'">'.$row['nombre_estado'].'</option>';
+                  }
+                }else{
+                  echo 'error';
+                }
+                $estado = $row['nombre_estado'];
+                  $estados = null;
+
+                ?> 
+
                 
               </select>
             </div>
@@ -18,6 +38,23 @@
               <select disabled class="select" name="select_municipio" id="select_municipio">
                 <option disabled selected>Municipio</option>
                 <option>Todos</option>
+                <?php
+
+                  $estado = $_POST['valor='];
+                  echo '<option value = "'.$estado.'" name = "'.$estado.'">'.$estado.'</option>'
+                //   $estados = conexion();
+                //   $estados = $estados->query("SELECT nombre_estado FROM sys_pais_estados e INNER JOIN sys_pais p on p.id = e.pais_id WHERE p.nombre_pais = 'Venezuela' ORDER by nombre_estado");
+                // if ($estados->rowCount()) {
+                //   $estados = $estados->fetchAll();
+                //   foreach ($estados as $row) {
+                //     echo '<option value = "'.$row['nombre_estado'].'" name = "'.$row['nombre_estado'].'">'.$row['nombre_estado'].'</option>';
+                //   }
+                // }else{
+                //   echo 'error';
+                // }
+                //   $estados = null;
+                ?> 
+    
               </select>
             </div>
             <div class="col-1">

@@ -111,3 +111,27 @@
 		$tabla.='</nav>';
 		return $tabla;
 	}
+
+	// Funcion para eliminar acentos
+	function eliminarAcentos($texto) {
+		$mapaAcentos = array(
+			'á' => 'a',
+			'é' => 'e',
+			'í' => 'i',
+			'ó' => 'o',
+			'ú' => 'u',
+			'Á' => 'A',
+			'É' => 'E',
+			'Í' => 'I',
+			'Ó' => 'O',
+			'Ú' => 'U',
+			'ü' => 'u',
+			'ñ' => 'n'
+		);
+	
+		// Expresión regular para buscar y reemplazar caracteres acentuados
+		return preg_replace_callback('/[áéíóúÁÉÍÓÚüñ]/u', function($match) use ($mapaAcentos) {
+			return isset($mapaAcentos[$match[0]]) ? $mapaAcentos[$match[0]] : $match[0];
+		}, $texto);
+	}
+	
