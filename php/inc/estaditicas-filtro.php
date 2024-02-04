@@ -1,7 +1,4 @@
-<?php
-  include './php/funciones/main.php';
-?>
-
+<?php require_once './php/funciones/main.php';?>
 <!-- ----------ESTADISTICAS ---------- -->
 <h2 class="cintillo">Estadísticas</h2>
 
@@ -13,52 +10,22 @@
           <!-- Fila #1 del filtro -->
           <div class="row">
             <div class="col-2">
-              <select class="select" name="select_estado" id="select_estado">
-                <option disabled selected>Estado</option>
-                <?php
-                  $estados = conexion();
-                  $estados = $estados->query("SELECT nombre_estado FROM sys_pais_estados e INNER JOIN sys_pais p on p.id = e.pais_id WHERE p.nombre_pais = 'Venezuela' ORDER by nombre_estado");
-                if ($estados->rowCount()) {
-                  $estados = $estados->fetchAll();
-                  foreach ($estados as $row) {
-                    echo '<option value = "'.$row['nombre_estado'].'" name = "'.$row['nombre_estado'].'">'.$row['nombre_estado'].'</option>';
-                  }
-                }else{
-                  echo 'error';
-                }
-                $estado = $row['nombre_estado'];
-                  $estados = null;
-
-                ?> 
+              <select class="select" name="select_estado" id="select_1" >
+                <option disabled selected>Estados</option>
+                <?php 
+                include './php/funciones/estadisticas_consultas.php';
+                mostrar_estados() ?> 
 
                 
               </select>
             </div>
             <div class="col-3">
-              <select disabled class="select" name="select_municipio" id="select_municipio">
-                <option disabled selected>Municipio</option>
-                <option>Todos</option>
-                <?php
-
-                  $estado = $_POST['valor='];
-                  echo '<option value = "'.$estado.'" name = "'.$estado.'">'.$estado.'</option>'
-                //   $estados = conexion();
-                //   $estados = $estados->query("SELECT nombre_estado FROM sys_pais_estados e INNER JOIN sys_pais p on p.id = e.pais_id WHERE p.nombre_pais = 'Venezuela' ORDER by nombre_estado");
-                // if ($estados->rowCount()) {
-                //   $estados = $estados->fetchAll();
-                //   foreach ($estados as $row) {
-                //     echo '<option value = "'.$row['nombre_estado'].'" name = "'.$row['nombre_estado'].'">'.$row['nombre_estado'].'</option>';
-                //   }
-                // }else{
-                //   echo 'error';
-                // }
-                //   $estados = null;
-                ?> 
-    
+              <select disabled class="select" name="select_2" id="select_2" >
+                <option disabled selected>Municipios</option>
               </select>
             </div>
             <div class="col-1">
-              <select disabled class="select" name="select_tipo" id="select_tipo">
+              <select disabled class="select" name="select_tipo" id="select_3" >
                 <option disabled selected>Tipo</option>
                 <option value="Todos">Todas</option>
                 <option value="Publica">Públicas</option>
@@ -66,7 +33,7 @@
               </select>
             </div>
             <div class="col-6">
-              <select disabled class="select" name="select_universidades" id="select_universidades">
+              <select disabled class="select" name="select_universidades" id="select_4">
                 <option disabled selected>Universidad</option>
               </select>
             </div>
