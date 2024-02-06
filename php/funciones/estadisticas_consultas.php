@@ -5,6 +5,7 @@ function mostrar_estados(){
     $estados = $estados->query("SELECT id_estado, nombre_estado FROM sys_pais_estados e INNER JOIN sys_pais p on p.id = e.pais_id WHERE p.nombre_pais = 'Venezuela' ORDER by nombre_estado");
     if ($estados->rowCount()) {
         $estados = $estados->fetchAll();
+        echo '<option value = "0" name = "0">Todos</option>';
         foreach ($estados as $row) {
             echo '<option value = "' . $row['id_estado'] . '" name = "' . $row['nombre_estado'] . '">' . $row['nombre_estado'] . '</option>';
         }
