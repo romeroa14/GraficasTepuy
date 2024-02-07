@@ -1,0 +1,2367 @@
+[
+
+    {
+        "id_uni": "1",
+        
+        "Carreras Largas": [
+            { "nombre": "PNF en Seguridad Ciudadana." },
+            { "nombre": "PNF en Investigación Penal." },
+            { "nombre": "PNF en Criminalística." },
+            { "nombre": "PNF en Bomberil en Ciencias del Fuego y Seguridad Contra Incendios."},
+            { "nombre": "PNF en Protección Civil y Administración de Desastres."},
+            { "nombre": "PNF en Servicios Penitenciarios."},
+            { "nombre": "PNF en Seguridad de la Nación."},
+            { "nombre": "PNF en Bomberil en Emergencia Prehospitalaria."},
+            { "nombre": "PNF en Ingeniería Estructural de Seguridad contra Incendios."},
+            { "nombre": "PNF en Criminología"},
+            { "nombre": "PNF en Derecho"}
+        ],
+
+        "Programa Nacional de Formación Avanzada": [
+            {  "nombre": "PNFA en Seguridad Ciudadana (menciones Policial, Bomberíl, Penitenciario y Criminalística)." },
+            {  "nombre": "PNFA en Investigación Penal." }
+        ]
+
+    },
+
+    {
+        "id_uni": "2",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Construcción Civil"},
+            { "nombre": "TSU en Mecánica Industrial"},
+            { "nombre": "TSU en Electricidad"},
+            { "nombre": "TSU en Informática"}
+        ]
+    },
+
+    {
+        "id_uni": "3",
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería de Petróleo"},
+            { "nombre": "Ingeniería Petroquímica" },
+            { "nombre": "Ingeniería Geológica" },
+            { "nombre": "Ingeniería Civil " },
+            { "nombre": "Ingeniería Eléctrica " },
+            { "nombre": "Ingeniería Mecánica " }
+        ],
+
+        "Maestrias" : [
+            { "nombre": "Maestría en Exploración y Producción de Hidrocarburos" },
+            { "nombre": "Maestría en Caracterización y Explotación de Yacimientos" },
+            { "nombre": "Maestría en Gestión de Datos en Exploración y Producción de Hidrocarburos" },
+            {  "nombre": "Maestría en Ecología e Hidrocarburos" },
+            {  "nombre": "Maestría en Derecho de los Hidrocarburos " },
+            {  "nombre": "Maestría en Planificación Estratégica" },
+            {  "nombre": "Maestría en Gestión del Talento Humano" }
+        ],
+
+        "Diplomados": [
+            {  "nombre": "Diplomado en Procesamiento de Hidrocarburos" },
+            {  "nombre": "Diplomado en Petroquímica" },
+            {  "nombre": "Diplomado en Finanzas" },
+            {  "nombre": "Diplomado en Geopolítica" },
+            {  "nombre": "Diplomado en Formación Supervisoria" }
+        ]
+    },
+
+    {
+        "id_uni": "4",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Construcción Civil" },
+            { "nombre": "TSU en Mecánica Industrial" },
+            { "nombre": "TSU en Electricidad" },
+            { "nombre": "TSU en Informática" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Administración" },
+            { "nombre": "Licenciatura en Educación mención Inglés" },
+            { "nombre": "Licenciatura en Enfermería" },
+
+            { "nombre": "Ingeniería Civil" },
+            { "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería Eléctrica" }
+        ]
+    },
+
+    {
+        "id_uni": "5",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Administración"},
+            { "nombre": "Licenciatura en Agroalimentación"},
+            { "nombre": "Licenciatura en Contaduría Pública"},
+            { "nombre": "Licenciatura en Prevención y Salud en el Trabajo"},
+            { "nombre": "Licenciatura en Sistemas de Calidad y Ambiente"},
+
+            { "nombre": "Ingeniería en Electricidad"},
+            { "nombre": "Ingeniería en Electricidad (Técnica)"},
+            { "nombre": "Ingeniería en Electrónica"},
+            { "nombre": "Ingeniería en Informática"},
+            {  "nombre": "Ingeniería de Mantenimiento"},
+            {  "nombre": "Ingeniería en Instrumentación y Control"},
+            {  "nombre": "Ingeniería Mecánica"}
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Administración"},
+            {  "nombre": "Maestría en Contaduría Pública"},
+            {  "nombre": "Maestría en Educación"},
+            {  "nombre": "Maestría en Ingeniería Industrial"},
+            {  "nombre": "Maestría en Procesos Industriales"}
+        ],
+
+        "Diplomados": [
+            {  "nombre": "Diplomado en Gerencia de Mantenimiento"},
+            {  "nombre": "Diplomado en Gerencia de Proyectos"},
+            {  "nombre": "Diplomado en Gestión Ambiental"},
+            {  "nombre": "Diplomado en Gestión de la Calidad"},
+            {  "nombre": "Diplomado en Sistemas de Información"}
+        ]
+    },
+
+    {
+        "id_uni": "6",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Distribucion y Logistica" },
+            { "nombre": "PNF en Administracion" },
+            { "nombre": "PNF en Agroalimentacion" },
+            { "nombre": "PNF en Higiene y Seguridad Laboral" },
+            { "nombre": "PNF en Turismo" },
+            { "nombre": "PNF en Contaduria" },
+            { "nombre": "PNF en Entrenamiento Deportivo" },
+            { "nombre": "PNF en Ciencias de Información" },
+            { "nombre": "PNF en Sistemas de calidad y ambiente" },
+            { "nombre": "PNF en Informática" }
+        ]
+    },
+
+    {
+        "id_uni": "7",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Agroalimentación" },
+            { "nombre": "PNF en Construcción Civil" },
+            { "nombre": "PNF en Mecánica, Informática" },
+            { "nombre": "PNF en Medicina Veterinaria" },
+            { "nombre": "PNF en Seguridad Alimentaria y Cultura Nutricional" }
+        ]
+    },
+
+    {
+        "id_uni": "8",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Administración" },
+            { "nombre": "PNF en Agroalimentación" },
+            { "nombre": "PNF en Construcción civil" },
+            { "nombre": "PNF en Hotelería" },
+            { "nombre": "PNF en Informática" },
+            { "nombre": "PNF en Procesamiento y distribución de alimentos" },
+            { "nombre": "PNF en Seguridad alimentaria y cultura nutricional" },
+            { "nombre": "PNF en Sistemas e informática" },
+            { "nombre": "PNF en Turismo" },
+            {  "nombre": "Ingeniería de Mantenimiento" }
+        ],
+
+        "Programa Nacional de Formación Avanzada": [
+            {  "nombre": "PFA en Producción Sostenible de Cacao y sus Derivados"},
+            {  "nombre": "PFA en Gestión Pública"}
+        ]
+    },
+
+    {
+        "id_uni": "9",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Administración"},
+            { "nombre": "PNF en Agroalimentación"},
+            { "nombre": "PNF en Construcción civil"},
+            { "nombre": "PNF en Hotelería"},
+            { "nombre": "PNF en Informática"},
+            { "nombre": "PNF en Procesamiento y distribución de alimentos"},
+            { "nombre": "PNF en Seguridad alimentaria y cultura nutricional"},
+            { "nombre": "PNF en Sistemas e informática"},
+            { "nombre": "PNF en Turismo"},
+            {  "nombre": "PNF en Ciencias Biológicas"},
+            {  "nombre": "PNF en Ciencias Básicas"},
+            {  "nombre": "PNF en Ciencias de la Tierra"},
+            {  "nombre": "PNF en Ciencias Exactas"},
+            {  "nombre": "PNF en Ciencias Marinas"},
+            {  "nombre": "PNF en Ciencias Naturales"},
+            {  "nombre": "PNF en Administración"},
+            {  "nombre": "PNF en Antropología"},
+            {  "nombre": "PNF en Ciencias de la Educación"},
+            {  "nombre": "PNF en Derecho"},
+            {  "nombre": "PNF en Economía"},
+            {  "nombre": "PNF en Historia"},
+            {  "nombre": "PNF en Letras"},
+            {  "nombre": "PNF en Psicología"},
+            {  "nombre": "PNF en Sociología"},
+            {  "nombre": "PNF en Humanidades"},
+            {  "nombre": "PNF en Arte"},
+            {  "nombre": "PNF en Comunicación Social"},
+            {  "nombre": "PNF en Música"},
+            {  "nombre": "PNF en Filosofía"},
+            {  "nombre": "PNF en Letras"},
+            {  "nombre": "PNF en Teatro"},
+            {  "nombre": "PNF en Artes"},
+            {  "nombre": "PNF en Artes Audiovisuales"},
+            {  "nombre": "PNF en Artes Plásticas"},
+            {  "nombre": "PNF en Danza"},
+            {  "nombre": "PNF en Música"},
+            {  "nombre": "PNF en Teatro"},
+
+            {  "nombre": "Ingeniería de Mantenimiento" },
+            {  "nombre": "Ingeniería Agronómica" },
+            {  "nombre": "Ingeniería Civil" },
+            {  "nombre": "Ingeniería de Alimentos" },
+            {  "nombre": "Ingeniería Eléctrica" },
+            {  "nombre": "Ingeniería Electrónica" },
+            {  "nombre": "Ingeniería Industrial" },
+            {  "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería Química" }
+        ],
+
+        "Programa Nacional de Formación Avanzada": [
+            {  "nombre": "PNFA en Producción Sostenible de Cacao y sus Derivados"},
+            {  "nombre": "PNFA en Gestión Pública"}
+        ]
+    },
+
+    {
+        "id_uni": "10",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Administración Comercial"},
+            { "nombre": "Licenciatura en Contaduría Pública"},
+            { "nombre": "Licenciatura en Economía"},
+            { "nombre": "Licenciatura en Tecnología Agroindustrial"},
+            { "nombre": "Licenciatura en Tecnología Agropecuaria"},
+            { "nombre": "Licenciatura en Urbanismo"},
+            { "nombre": "Licenciatura en Medicina Veterinaria"},
+            { "nombre": "Licenciatura en Tecnología Agropecuaria"},
+            { "nombre": "Licenciatura en Análisis de Sistemas"},
+            {  "nombre": "Licenciatura en Medicina"},
+            {  "nombre": "Licenciatura en Desarrollo Humano"},
+            {  "nombre": "Licenciatura en Psicología"},
+            {  "nombre": "Licenciatura en Artes Plásticas"},
+            {  "nombre": "Licenciatura en Música"},
+            {  "nombre": "Licenciatura en Matemática"},
+            {  "nombre": "Licenciatura en Física"},
+            {  "nombre": "Licenciatura en Enfermería"},
+
+            {  "nombre": "Ingeniería Agronómica"},
+            {  "nombre": "Ingeniería Agroindustrial"},
+            {  "nombre": "Ingeniería Civil"},
+            {  "nombre": "Ingeniería en Informática"},
+            {  "nombre": "Ingeniería Telemática"},
+            {  "nombre": "Ingeniería de Producción"}
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Administración" },
+            {  "nombre": "Maestría en Contaduría Pública" },
+            {  "nombre": "Maestría en Economía" },
+            {  "nombre": "Maestría en Educación" },
+            {  "nombre": "Maestría en Ingeniería Industrial" },
+            {  "nombre": "Maestría en Psicología" },
+            {  "nombre": "Maestría en Trabajo Social" },
+            {  "nombre": "Maestría en Ciencias Políticas" },
+            {  "nombre": "Maestría en Arquitectura" },
+            {  "nombre": "Maestría en Ingeniería Civil" },
+            {  "nombre": "Maestría en Ingeniería Eléctrica" },
+            {  "nombre": "Maestría en Ingeniería Mecánica" },
+            {  "nombre": "Maestría en Ingeniería Química" },
+            {  "nombre": "Maestría en Ingeniería Informática" },
+            {  "nombre": "Maestría en Física" },
+            {  "nombre": "Maestría en Matemáticas" }
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Administración" },
+            {  "nombre": "Doctorado en Contaduría Pública" },
+            {  "nombre": "Doctorado en Economía" },
+            {  "nombre": "Doctorado en Educación" },
+            {  "nombre": "Doctorado en Ingeniería Industrial" },
+            {  "nombre": "Doctorado en Psicología" },
+            {  "nombre": "Doctorado en Trabajo Social" },
+            {  "nombre": "Doctorado en Ciencias Políticas" },
+            {  "nombre": "Doctorado en Arquitectura" },
+            {  "nombre": "Doctorado en Ingeniería Civil" },
+            {  "nombre": "Doctorado en Ingeniería Eléctrica" },
+            {  "nombre": "Doctorado en Ingeniería Mecánica" },
+            {  "nombre": "Doctorado en Ingeniería Química" },
+            {  "nombre": "Doctorado en Ingeniería Informática" },
+            {  "nombre": "Doctorado en Física" },
+            {  "nombre": "Doctorado en Matemáticas" }
+        ]
+    },
+
+    {
+        "id_uni": "11",
+
+        "Carreras Cortas": [
+            { "nombre": "PFG en Administración de Empresas Agropecuarias" },
+            { "nombre": "PFG en Contaduría Pública" },
+            { "nombre": "PFG en Ingeniería en Alimentos" },
+            { "nombre": "PFG en Ingeniería en la Producción Agropecuaria" },
+            { "nombre": "TSU en Salud Animal" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Construcción Civil " },
+            { "nombre": "PNF en Informática" },
+            { "nombre": "PNF en Ingeniería Industrial" },
+            { "nombre": "PNF en Mécanica" },
+            {  "nombre": "PNF en Medicina Veterinaria" }
+        ]
+    },
+
+    {
+        "id_uni": "12",
+
+        "Especialización": [
+            { "nombre": "Especialización en Derecho Internacional de los Derechos Humanos" },
+            { "nombre": "Especialización en Derecho Internacional Humanitario" },
+            { "nombre": "Especialización en Derecho Penal Internacional" },
+            { "nombre": "Especialización en Cirugía Bucal" },
+            { "nombre": "Especialización en Cooperativismo" },
+            { "nombre": "Especialización en Investigación Participativa para el Desarrollo Local"},
+            { "nombre": "Especialización en Participación en Políticas Públicas y Gestión Municipal"},
+            { "nombre": "Especialización en Análisis del Discurso" }
+        ],
+
+        "Maestrías" : [
+            { "nombre": "Maestría en Educación Inicial" },
+            {  "nombre": "Maestría en Educación Especial Integral" },
+            {  "nombre": "Maestría en Integración Regional Perspectivas Comparadas (América Latina y Europa)" },
+            {  "nombre": "Maestría en Gerencia de Turismo Sostenible"},
+            {  "nombre": "Maestría en Educación Especial Integral" },
+            {  "nombre": "Maestría en Negociaciones Económicas Internacionales"},
+            {  "nombre": "Maestría en Economía Política"},
+            {  "nombre": "Maestría en Estudios del Caribe"},
+            {  "nombre": "Maestría en Comunicación, Democracia y Movimientos Sociales en América Latina y el Caribe"}
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Ciencias de la Educación" },
+            {  "nombre": "Doctorado en Patrimonio Cultural" },
+            {  "nombre": "Doctorado en Ciencias Gerenciales" },
+            {  "nombre": "Derecho Internacional Público" }
+        ],
+
+        "Postdoctorados" : [
+            {  "nombre": "Postdoctorado en Filosofía y Paradigmas de la Investigación Social" },
+            {  "nombre": "Postdoctorado en Fronteras de Latinoamérica y el Caribe, visión compartida" }
+        ],
+
+        "Diplomados": [
+            {  "nombre": "Diplomado en Emergencias Epidemiológicas y Desastres" },
+            {  "nombre": "Diplomado en Internacional en Emergencias Médicas Prehospitalarias" },
+            {  "nombre": "Diplomado en Internacional en Medicina Crítica y Cuidados Intensivos" },
+            {  "nombre": "Diplomado en Derecho Laboral" },
+            {  "nombre": "Diplomado para la Certificación Internacional de Recreadores Profesionales" },
+            {  "nombre": "Diplomado en Rehabilitación Cardiopulmonar"},
+            {  "nombre": "Diplomado en Formación Docente"},
+            {  "nombre": "Diplomado en Protocolo de Estado Mayor"},
+            {  "nombre": "Diplomado en Evento, Protocolo y Etiqueta"},
+            {  "nombre": "Diplomado en Gastronomía Dietoterapéutica"},
+            {  "nombre": "Diplomado en Taller de Valoración de Empresas"},
+            {  "nombre": "Diplomado en Administración Aeronáutica"},
+            {  "nombre": "Diplomado en Gestión de Talento Humano"},
+            {  "nombre": "Diplomado en Coaching Media"}
+        ]
+    },
+
+    {
+        "id_uni": "13",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Actividad Física y Salud" },
+            { "nombre": "Licenciatura en Entrenamiento Deportivo" },
+            { "nombre": "Licenciatura en Gestión Tecnológica del Deporte" }
+        ],
+
+        "Especialización": [
+            { "nombre": "Especialización en Metodologia del Entrenamiento Deportivo" }
+        ],
+
+        "Maestrias" : [
+            { "nombre": "Maestria en Gerencia del Deporte 2015 MPPJD." },
+            { "nombre": "Maestria en Gerencia del Deporte 2015 sede academica." },
+            { "nombre": "Maestria en Gerencia del Deporte Cohorte 2014 - Guatire." },
+            { "nombre": "Maestria en Gerencia del Deporte Cohorte 2014 - Sede Academica." },
+            { "nombre": "Maestria en Gerencia del Deporte Cohorte 2013." },
+            {  "nombre": "Maestría en Actividad Física y Salud" },
+            {  "nombre": "Maestría en Gestión Deportiva" }
+        ]
+    },
+
+    {
+        "id_uni": "14",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Artes Audiovisuales" },
+            { "nombre": "PNF en Artes Plásticas" },
+            { "nombre": "PNF en Danza" },
+            { "nombre": "PNF en Educación para las Artes" },
+            { "nombre": "PNF en Historia del Arte" },
+            { "nombre": "PNF en Música" },
+            { "nombre": "PNF en Teatro" }
+        ],
+
+        "Maestrias" : [
+            { "nombre": "Maestria en Artes Audiovisuales" },
+            { "nombre": "Maestria en Artes Plásticas" },
+            {  "nombre": "Maestria en Danza" },
+            {  "nombre": "Maestria en Educación para las Artes" },
+            {  "nombre": "Maestria en Historia del Arte" },
+            {  "nombre": "Maestria en Música" },
+            {  "nombre": "Maestria en Teatro" }
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Artes Audiovisuales" }
+        ]
+    },
+
+    {
+        "id_uni": "15",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en administración mención aduana." },
+            { "nombre": "Licenciatura en administración mención tributaria." },
+            { "nombre": "Licenciatura en administración mención gerencia industrial." },
+            { "nombre": "Licenciatura en educación mención educación integral." },
+            { "nombre": "Licenciatura en educación mención matemática y física." },
+            { "nombre": "Licenciatura en educación mención biología y química." },
+            { "nombre": "Licenciatura en educación mención ciencias sociales (área Geografía, área Historia)." },
+            { "nombre": "Licenciatura en educación mención educación física y recreación." },
+            {  "nombre": "Licenciatura en educación mención orientación." },
+
+            {  "nombre": "PNF en educación especial." },
+            {  "nombre": "PNF en contaduría pública." },
+            {  "nombre": "PNF agroalimentación" },
+
+            {  "nombre": "Ingeniería en mantenimiento mecánico." },
+            {  "nombre": "Ingeniería de gas." },
+            {  "nombre": "Ingeniería en informática." }
+        ],
+
+        "Especialización": [
+            {  "nombre": "Especialización en Metodología de la Investigación." }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Magíster scientiarum en Administración de la Educación Básica." },
+            {  "nombre": "Magíster scientiarum en Administración de la Educación Básica." },
+            {  "nombre": "Magíster scientiarum en Docencia para la Educación Superior." },
+            {  "nombre": "Magíster scientiarum en Gerencia Financiera." },
+            {  "nombre": "Magíster scientiarum en Gerencia de Recursos Humanos." },
+            {  "nombre": "Magíster scientiarum en Didáctica de la Matemática." },
+            {  "nombre": "Magíster scientiarum en Enseñanza de Ciencias Naturales." },
+            {  "nombre": "Magíster scientiarum en Estudios Geohistoricos-Culturales." },
+            {  "nombre": "Magíster scientiarum en Procesos de Gas Natural." },
+            {  "nombre": "Magíster scientiarum en Gerencia de la Innovación Tecnológica." }
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Educación." },
+            {  "nombre": "Doctorado en Ciencias Sociales." }
+        ]
+    },
+
+    {
+        "id_uni": "16",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Administración Mención Recursos Humanos" },
+            { "nombre": "Licenciatura en Administración Mención Recursos Materiales Financieros" },
+            { "nombre": "Licenciatura en Administración Mención Mercadeo"},
+            { "nombre": "Licenciatura en Administración Mención Organización y sistemas"},
+            { "nombre": "Licenciatura en Administración Mención Informática"}
+        ]
+    },
+
+    {
+        "id_uni": "17",
+
+        "Carreras Largas": [
+            { "nombre": "Periodismo" },
+            { "nombre": "Producción de radio" },
+            { "nombre": "Producción de televisión" },
+            { "nombre": "Producción de cine" },
+            { "nombre": "Publicidad y mercadotecnia" },
+            { "nombre": "Comunicación corporativa" },
+            { "nombre": "Comunicación interpersonal" },
+            { "nombre": "Comunicación política" }
+        ],
+
+        "Diplomados": [
+            { "nombre": "Diplomado en Comunicación Política" },
+            {  "nombre": "Diplomado en Inteligencia artificial no code para comunicación y marketing" },
+            {  "nombre": "Diplomado en Bolivarianismo vs monroísmo" }
+        ]
+    },
+
+    {
+        "id_uni": "18",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU Hotelería y Servicios de la Hospitalidad" },
+            { "nombre": "TSU Turismo" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Turismo, mención Alojamiento" },
+            { "nombre": "Licenciatura en Turismo, mención Gastronomía" },
+            { "nombre": "Licenciatura en Turismo, mención Gestión Turística" }
+        ]
+    },
+
+    {
+        "id_uni": "19",
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Administración" },
+            { "nombre": "Licenciatura en Contaduría Pública" },
+            { "nombre": "Licenciatura en Seguridad Alimentaria y Cultura Nutricional" },
+
+            { "nombre": "Ingeniería en Informática" },
+            { "nombre": "Ingeniería en Materiales Industriales" },
+            { "nombre": "Ingeniería en Construcción Civil" },
+            { "nombre": "Ingeniería en Geo-ciencias" },
+            { "nombre": "Ingeniería en Agroalimentación" },
+
+            { "nombre": "PNF en Medicina Veterinaria" }
+        ]
+    },
+
+    {
+        "id_uni": "20",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU Electricidad Mención Telecomunicaciones" },
+            { "nombre": "TSU en Electricidad" },
+            { "nombre": "TSU en Calidad y Ambiente" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura En Administración" },
+            { "nombre": "Licenciatura En Contaduría Pública" },
+            { "nombre": "Ingeniería En Informática" },
+            { "nombre": "Ingeniería En Mecánica" },
+            { "nombre": "Ingeniería En Procesos Químicos" },
+            { "nombre": "Licenciatura En Química" },
+            {  "nombre": "Ingeniería En Electrónica" },
+            {  "nombre": "Ingeniería en construcción civil" },
+            {  "nombre": "Ingeniería En Tecnológia De Los Materiales" },
+            {  "nombre": "Ingeniería Instrumentación Y Control" }
+        ]
+    },
+
+    {
+        "id_uni": "21",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Educación Inicial." },
+            { "nombre": "PNF en Educación Física." },
+            { "nombre": "PNF en Educación Primaria." },
+            { "nombre": "PNF en Educación en Química." },
+            { "nombre": "PNF en Educación en Biología." },
+            { "nombre": "PNF en Educación en Matemática." },
+            { "nombre": "PNF en Educación en Lengua." },
+            { "nombre": "PNF en Educación de Jóvenes, Adultas y Adultos." },
+            { "nombre": "PNF en Educación en Geografía, Historia y Ciudadanía." },
+            {  "nombre": "PNF en Educación Indígena: mención Inicial, Primaria y Media." },
+            {  "nombre": "PNF en Educación en Idiomas Extranjeros, mención: Inglés, francés y portugués." },
+            {  "nombre": "PNF en Gestión Institucional, mención: Administración y Gestión Escolar mención: Mantenimiento de Ambientes Escolares." },
+            {  "nombre": "PNF en Educación Media Técnica y Profesional mención: Agropecuaria, Industrial, Comercio y Servicios Administrativos, Promoción Social, Servicios de Salud, Arte, Seguridad y Defensa." }
+        ],
+
+        "Programa Nacional de Formación Avanzada": [
+            {  "nombre": "PFA en Educación Física." },
+            {  "nombre": "PFA en Educación Inicial." },
+            {  "nombre": "PFA en Educación Primaria." },
+            {  "nombre": "PFA en Educación Sexual." },
+            {  "nombre": "PFA en Educación y Trabajo." },
+            {  "nombre": "PFA en Educación de Jóvenes, Adultos y Adultas." },
+            {  "nombre": "PFA en Educación en Agroecología." },
+            {  "nombre": "PFA en Educación en Ciencias Naturales." },
+            {  "nombre": "PFA en Pedagogía Cultural e interculturalidad." },
+            {  "nombre": "PFA en Educación Física para niños y niñas." },
+            {  "nombre": "PFA en Promoción de la Lectura y la Escritura." },
+            {  "nombre": "PFA en Educación en Geografía, Historia y Ciudadanía." },
+            {  "nombre": "PFA en Dirección y Supervisión Educativa." },
+            {  "nombre": "PFA en Educación en Lenguas Extranjeras: Inglés Para Educación Media." },
+            {  "nombre": "PFA en Lenguas Extranjeras Inglés para Educación Primaria." },
+            {  "nombre": "PFA en Educación Especial para la Prevención y Atención integral Temprana." },
+            {  "nombre": "PFA en Especialización Educación y Tecnología de la información y Comunicación." },
+            {  "nombre": "PFA en Especialización en Educación Física para adolescentes, jóvenes, adultos y adultas." },
+            {  "nombre": "PFA en Especialización Educación en Lengua y Comunicación, Derechos de los niños, niñas y adolescentes, convivencia solidaria y paz." },
+            {  "nombre": "PFA en Lectura y Literatura Infantil" },
+            {  "nombre": "PFA en Educación Rural y en frontera." },
+            {  "nombre": "PFA en Educación Matemática" }
+        ],
+    
+        "Maestrias" : [
+            {  "nombre": "Maestría en Educación Inicial." },
+            {  "nombre": "Maestría en Educación Primaria." },
+            {  "nombre": "Maestría en Inglés para Educación Media." },
+            {  "nombre": "Maestría en Dirección y Supervisión Educativa." },
+            {  "nombre": "Maestría en Matemáticas para Educación Media." },
+            {  "nombre": "Maestría en Educación Física para Educación Media." },
+            {  "nombre": "Maestría en Ciencias Naturales para Educación Media." },
+            {  "nombre": "Maestría en Lengua y Comunicación para Educación Medía." },
+            {  "nombre": "Maestría en Geografía, Historia y Ciudadanía para Educación Media." }
+        ],
+    
+        "Doctorados": [
+            {  "nombre": "Doctorado en Educación" }
+        ]
+    },
+
+    {
+        "id_uni": "22",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Diseño integral Comunitario" },
+            { "nombre": "PNF en Instrumentación y Control" },
+            { "nombre": "PNF en Transporte Ferroviario" },
+            { "nombre": "PNF en Construcción Civil" },
+            { "nombre": "PNF en Mecánica" },
+            { "nombre": "PNF en Electricidad" },
+            { "nombre": "PNF en Medicina Veterinaria" },
+            { "nombre": "PNF en Psicología Social" },
+            { "nombre": "PNF en Fisioterapia" }
+        ]
+    },
+
+    {
+        "id_uni": "23",
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería en Informática" },
+            { "nombre": "Ingeniería en Telecomunicaciones" }
+        ]
+    },
+
+    {
+        "id_uni": "24",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Educación Especial" },
+            { "nombre": "TSU en Educación Inicial" },
+            { "nombre": "TSU en Trabajo Social | UNESCO" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Administración" },
+            { "nombre": "PNF en Contaduría Pública" },
+            { "nombre": "PNF en Distribución y Logística" },
+            { "nombre": "PNF en Educación Especial | Lenguaje de señas." },
+            { "nombre": "PNF en Ingeniería Informática" },
+            { "nombre": "PNF en Turismo" },
+
+            {  "nombre": "Licenciatura en Trabajo Social" },
+
+            {  "nombre": "Ingeniería en Informática" }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Seguridad de Datos" },
+            {  "nombre": "Maestría en Seguridad de la Información Mención Auditoría de Sistemas" },
+            {  "nombre": "Maestría en Seguridad de la Información Mención Desarrollo Tecnológico" },
+            {  "nombre": "Maestría en Seguridad de la Información Mención Gestión de Sistemas" },
+            {  "nombre": "Maestría en Seguridad de la Información Mención Informática Forense" }
+        ]
+    },
+
+    {
+        "id_uni": "25",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Electromedicina" },
+            { "nombre": "TSU en Producción Agropecuaria" },
+            { "nombre": "TSU en Inspección Sanitaria" },
+            { "nombre": "TSU en Información de Salud" },
+            { "nombre": "TSU en Citotecnología" },
+            { "nombre": "TSU en Entrenamiento Deportivo" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería Agroindustrial" },
+            { "nombre": "Ingeniería Agronómica" },
+            { "nombre": "Ingeniería Ambiental" },
+            {  "nombre": "Ingeniería de Producción Animal" },
+            {  "nombre": "Ingeniería Industrial" },
+            {  "nombre": "Ingeniería en Informática" },
+            {  "nombre": "Ingeniería Electrónica" },
+            {  "nombre": "Ingeniería Civil" }
+        ],
+
+        "Carreras Posgrado": [
+            {  "nombre": "Ciencias Básicas" },
+            {  "nombre": "Ciencias de la Salud" },
+            {  "nombre": "Ciencias Sociales" },
+            {  "nombre": "Ingeniería" },
+            {  "nombre": "Tecnología" }
+        ],
+
+        "Extesión": [
+            {  "nombre": "Extensión de Educación" },
+            {  "nombre": "Extensión de Cultura" },
+            {  "nombre": "Extensión de Deportes" },
+            {  "nombre": "Extensión de Salud" },
+            {  "nombre": "Extensión de Desarrollo comunitario" }
+        ]
+    },
+
+    {
+        "id_uni": "26",
+
+        "Carreras Largas": [
+            { "nombre": "Administración" },
+            { "nombre": "Contaduría" },
+            { "nombre": "Economía" },
+            { "nombre": "Derecho" },
+            { "nombre": "Educación" },
+            { "nombre": "Educación Inicial" },
+            { "nombre": "Educación Primaria" },
+            { "nombre": "Educación Especial" },
+            { "nombre": "Informática" },
+            {  "nombre": "Lingüística" },
+            {  "nombre": "Pedagogía" },
+            {  "nombre": "Psicología" },
+            {  "nombre": "Sociología" },
+            {  "nombre": "Turismo" },
+            {  "nombre": "Administración de Empresas Turísticas" },
+            {  "nombre": "Turismo Ecológico" },
+            {  "nombre": "Informática Educativa" },
+            {  "nombre": "Educación en Ciencias Sociales" },
+            {  "nombre": "Educación en Ciencias Naturales" }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Administración" },
+            {  "nombre": "Maestría en Contaduría" },
+            {  "nombre": "Maestría en Economía" },
+            {  "nombre": "Maestría en Derecho" },
+            {  "nombre": "Maestría en Educación" },
+            {  "nombre": "Maestría en Educación Inicial" },
+            {  "nombre": "Maestría en Educación Primaria" },
+            {  "nombre": "Maestría en Educación Especial" },
+            {  "nombre": "Maestría en Informática" },
+            {  "nombre": "Maestría en Lingüística" },
+            {  "nombre": "Maestría en Pedagogía" },
+            {  "nombre": "Maestría en Psicología" },
+            {  "nombre": "Maestría en Sociología" },
+            {  "nombre": "Maestría en Turismo" },
+            {  "nombre": "Maestría en Administración de Empresas Turísticas" },
+            {  "nombre": "Maestría en Turismo Ecológico" },
+            {  "nombre": "Maestría en Informática Educativa" },
+            {  "nombre": "Maestría en Educación en Ciencias Sociales" },
+            {  "nombre": "Maestría en Educación en Ciencias Naturales " }
+        ],
+
+        "Extensión": [
+            {  "nombre": "Cursos de actualización" },
+            {  "nombre": "Cursos de formación" },
+            {  "nombre": "Cursos de capacitación" },
+            {  "nombre": "Diplomados" },
+            {  "nombre": "Seminarios" },
+            {  "nombre": "Taller" },
+            {  "nombre": "Congresos" },
+            {  "nombre": "Simposios" },
+            {  "nombre": "Jornadas" },
+            {  "nombre": "Conferencias" }
+        ]
+    },
+
+    {
+        "id_uni": "27",
+
+        "Carreras Cortas": [
+            { "nombre": "Educación Mención Ciencias de la Salud" },
+            { "nombre": "Educación Mención Ciencias Sociales" },
+            { "nombre": "Educación Mención Ciencias de la Educación" },
+            { "nombre": "Educación Mención Lengua y Literatura Venezolana" },
+            { "nombre": "Educación Mención Inglés" },
+            { "nombre": "Educación Mención Geografía" },
+            { "nombre": "Educación Mención Historia" },
+            { "nombre": "Educación Mención Filosofía" },
+            { "nombre": "Educación Mención Pedagogía" },
+            {  "nombre": "Educación Mención Psicología" }            
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "Licenciatura en Actuación" },
+            {  "nombre": "Licenciatura en Artes Visuales" },
+            {  "nombre": "Licenciatura en Danza y Arte del Movimiento" },
+            {  "nombre": "Licenciatura en Diseño Gráfico" },
+            {  "nombre": "Licenciatura en Música Mención Dirección Coral" },
+            {  "nombre": "Licenciatura en Arquitectura" },
+            {  "nombre": "Licenciatura en Diseño" },
+            {  "nombre": "Licenciatura en Biología" },
+            {  "nombre": "Licenciatura en Bioquímica" },
+            {  "nombre": "Licenciatura en Física" },
+            {  "nombre": "Licenciatura en Matemáticas" },
+            {  "nombre": "Licenciatura en Química" },
+            {  "nombre": "Licenciatura en Administración de Empresas" },
+            {  "nombre": "Licenciatura en Contaduría Pública" },
+            {  "nombre": "Licenciatura en Economía" },
+            {  "nombre": "Licenciatura en Sociología" },
+            {  "nombre": "Licenciatura en Ciencias Forestales" },
+            {  "nombre": "Licenciatura en Ingeniería Forestal" },
+            {  "nombre": "Licenciatura en Derecho" },
+            {  "nombre": "Licenciatura en Ciencias Políticas" },
+            {  "nombre": "Licenciatura en Farmacia" },
+            {  "nombre": "Licenciatura en Bioanálisis" },
+            {  "nombre": "Licenciatura en Antropología" },
+            {  "nombre": "Licenciatura en Comunicación Social" },
+            {  "nombre": "Licenciatura en Filología" },
+            {  "nombre": "Licenciatura en Historia" },
+            {  "nombre": "Licenciatura en Letras" },
+            {  "nombre": "Licenciatura en Lingüística" },
+            {  "nombre": "Licenciatura en Filosofía" },
+            {  "nombre": "Licenciatura en Psicología" }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Artes Visuales" },
+            {  "nombre": "Maestría en Diseño" },
+            {  "nombre": "Maestría en Arquitectura" },
+            {  "nombre": "Maestría en Diseño" },
+            {  "nombre": "Maestría en Biología" },
+            {  "nombre": "Maestría en Bioquímica" },
+            {  "nombre": "Maestría en Física" },
+            {  "nombre": "Maestría en Matemáticas" },
+            {  "nombre": "Maestría en Química" },
+            {  "nombre": "Maestría en Administración de Empresas" },
+            {  "nombre": "Maestría en Contaduría Pública" },
+            {  "nombre": "Maestría en Economía" },
+            {  "nombre": "Maestría en Educación" },
+            {  "nombre": "Maestría en Sociología" },
+            {  "nombre": "Maestría en Ciencias Forestales" },
+            {  "nombre": "Maestría en Ingeniería Forestal" },
+            {  "nombre": "Maestría en Derecho" },
+            {  "nombre": "Maestría en Ciencias Políticas" },
+            {  "nombre": "Maestría en Farmacia" },
+            {  "nombre": "Maestría en Bioanálisis" },
+            {  "nombre": "Maestría en Antropología" },
+            {  "nombre": "Maestría en Comunicación Social" },
+            {  "nombre": "Maestría en Filología" },
+            {  "nombre": "Maestría en Historia" },
+            {  "nombre": "Maestría en Letras" },
+            {  "nombre": "Maestría en Lingüística" },
+            {  "nombre": "Maestría en Filosofía" },
+            {  "nombre": "Maestría en Psicología" },
+            {  "nombre": "Maestría en Gestión Ambiental" },
+            {  "nombre": "Maestría en Gestión de Proyectos" },
+            {  "nombre": "Maestría en Estudios Latinoamericanos" },
+            {  "nombre": "Maestría en Estudios Culturales" },
+            {  "nombre": "Maestría en Educación para el Desarrollo Sostenible" },
+            {  "nombre": "Maestría en Derechos Humanos" }
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Artes" },
+            {  "nombre": "Doctorado en Arquitectura" },
+            {  "nombre": "Doctorado en Biología" },
+            {  "nombre": "Doctorado en Bioquímica" },
+            {  "nombre": "Doctorado en Física" },
+            {  "nombre": "Doctorado en Matemáticas" },
+            {  "nombre": "Doctorado en Química" },
+            {  "nombre": "Doctorado en Administración de Empresas" },
+            {  "nombre": "Doctorado en Contaduría Pública" },
+            {  "nombre": "Doctorado en Economía" },
+            {  "nombre": "Doctorado en Educación" },
+            {  "nombre": "Doctorado en Sociología" },
+            {  "nombre": "Doctorado en Ciencias Forestales" },
+            {  "nombre": "Doctorado en Derecho" },
+            {  "nombre": "Doctorado en Ciencias Políticas" },
+            {  "nombre": "Doctorado en Farmacia" },
+            {  "nombre": "Doctorado en Bioanálisis" },
+            {  "nombre": "Doctorado en Antropología" },
+            {  "nombre": "Doctorado en Comunicación Social" },
+            {  "nombre": "Doctorado en Filología" },
+            {  "nombre": "Doctorado en Historia" },
+            {  "nombre": "Doctorado en Letras" },
+            {  "nombre": "Doctorado en Lingüística" },
+            {  "nombre": "Doctorado en Filosofía" },
+            {  "nombre": "Doctorado en Psicología" }
+        ]
+    },
+
+    {
+        "id_uni": "28",
+        "Carreras Cortas": [
+            { "nombre": "TSU en Tecnología Cardiopulmonar" },
+            { "nombre": "TSU en Citotecnología" },
+            { "nombre": "TSU en Imagenología" },
+            { "nombre": "TSU en Histotecnología" },
+            { "nombre": "TSU en Terapia Psicosocial" },
+            { "nombre": "TSU en Registros y Estadísticas de Salud" },
+
+            { "nombre": "Educación, Mención Artes Plásticas" },
+            { "nombre": "Educación, Mención Biología" },
+            { "nombre": "Educación, Mención Ciencias Sociales" },
+            {  "nombre": "Educación Física, Deportes y Recreación" },
+            {  "nombre": "Educación Preescolar" },
+            {  "nombre": "Educación Integral" },
+            {  "nombre": "Educación Musical" },
+            {  "nombre": "Educación para el Trabajo (Comercial)" },
+            {  "nombre": "Educación, Mención Física" },
+            {  "nombre": "Educación, Mención Francés" },
+            {  "nombre": "Educación, Mención Informática" },
+            {  "nombre": "Educación, Mención Inglés" },
+            {  "nombre": "Educación, Mención Lengua y Literatura" },
+            {  "nombre": "Educación, Mención Matemática" },
+            {  "nombre": "Educación, Mención Orientación" },
+            {  "nombre": "Educación, Mención Química" }
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "Ciencias ambientales (Próximamente)" },
+            {  "nombre": "Ciencias de la Computación" },
+            {  "nombre": "Química" },
+            {  "nombre": "Biología" },
+            {  "nombre": "Física" },
+            {  "nombre": "Matemáticas" },
+            {  "nombre": "Medicina" },
+            {  "nombre": "Bioanálisis" },
+            {  "nombre": "Enfermería Licenciatura y TSU" },
+            {  "nombre": "Psicología (aprobada en el 2010 por el CNU, aún no inicia)" },
+            {  "nombre": "Fisioterapia (aprobada en el 2010 por el CNU, aún no inicia)" },
+            {  "nombre": "Administración Comercial" },
+            {  "nombre": "Contaduría Pública" },
+            {  "nombre": "Relaciones Industriales" },
+            {  "nombre": "Economía" },
+            {  "nombre": "Derecho" },
+            {  "nombre": "Ciencias forenses" },
+            {  "nombre": "Ciencias Fiscales" },
+            {  "nombre": "Ciencias Políticas" },
+            {  "nombre": "Arquitectura (Aprobada en el 2010 por el CNU, aún no inicia)" },
+            {  "nombre": "Odontología" },
+            {  "nombre": "Ingeniería civil" },
+            {  "nombre": "Ingeniería Eléctrica" },
+            {  "nombre": "Ingeniería industrial" },
+            {  "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería química" },
+            {  "nombre": "Ingeniería de telecomunicaciones" }
+        ],
+
+        "Especialización": [
+            {  "nombre": "Especialización en Desarrollo del Software" },
+            {  "nombre": "Especialización en Dinámica de Grupo" },
+            {  "nombre": "Especialización en Docencia de la Educación Superior (PEDES)" },
+            {  "nombre": "Especialización en Tecnología de la Computación en Educación" },
+            {  "nombre": "Especialización en Enseñanza de la Geografía Nacional" },
+            {  "nombre": "Especialización en Enseñanza del inglés como lengua extranjera" },
+            {  "nombre": "Especialización en Dinámica de Grupo" },
+            {  "nombre": "Especialización en Dermatología" },
+            {  "nombre": "Especialización en Infectología" },
+            {  "nombre": "Especialización en Medicina Crítica de Adultos" },
+            {  "nombre": "Especialización en Medicina Interna" },
+            {  "nombre": "Especialización en Nefrología de Adultos" },
+            {  "nombre": "Especialización en Nefrología Pediátrica" },
+            {  "nombre": "Especialización en Pediatría y Puericultura" },
+            {  "nombre": "Especialización en Anestesiología y Reanimación" },
+            {  "nombre": "Especialización en Cirugía General" },
+            {  "nombre": "Especialización en Cirugía Pediátrica" },
+            {  "nombre": "Especialización en Medicina Crítica" },
+            {  "nombre": "Especialización en Medicina Interna" },
+            {  "nombre": "Especialización en Obstetricia y Ginecología" },
+            {  "nombre": "Especialización en Cirugía Oncológica" },
+            {  "nombre": "Especialización en Medicina Oncológica" },
+            {  "nombre": "Especialización en Urología" },
+            {  "nombre": "Especialización en Salud Ocupacional" },
+            {  "nombre": "Especialización en Salud y Desarrollo del Adolescente" },
+            {  "nombre": "Especialización en Bioquímica Clínica" },
+            {  "nombre": "Especialización en Criminalística" },
+            {  "nombre": "Especialización en Gerencia Pública" },
+            {  "nombre": "Especialización en Derecho Penal" },
+            {  "nombre": "Especialización en Calidad y Productividad" },
+            {  "nombre": "Especialización en Servicios Automotrices" },
+            {  "nombre": "Especialización en Mantenimiento Industrial" },
+            {  "nombre": "Especialización en Sistemas Térmicos" },
+            {  "nombre": "Especialización en Odontopediatría" },
+            {  "nombre": "Especialización en Endodoncia" },
+            {  "nombre": "Especialización en Ortopedia Dentofacial y Ortodoncia" },
+            {  "nombre": "Especialización en Cirugía Bucal y Maxilofacial." }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Enseñanza de las Ciencias Sociales" },
+            {  "nombre": "Maestría en Gerencia Avanzada en Educación" },
+            {  "nombre": "Maestría en Educación en Física" },
+            {  "nombre": "Maestría en Investigación Educativa" },
+            {  "nombre": "Maestría en Orientación y Asesoramiento" },
+            {  "nombre": "Maestría en Lectura y Escritura" },
+            {  "nombre": "Maestría en Desarrollo Curricular" },
+            {  "nombre": "Maestría en Educación Matemática" },
+            {  "nombre": "Maestría en Literatura Venezolana" },
+            {  "nombre": "Maestría en Historia de Venezuela" },
+            {  "nombre": "Maestría en Enseñanza de la Geografía" },
+            {  "nombre": "Maestría en Nutrición" },
+            { "nombre": "Maestría en Cuidado Integral al Adulto" },
+            { "nombre": "Maestría en Críticamente Enfermo" },
+            { "nombre": "Maestría en Gerontología y Geriatría" },
+            { "nombre": "Maestría en Gerencia de los Servicios de Salud y Enfermería" },
+            { "nombre": "Maestría en Salud Reproductiva" },
+            { "nombre": "Maestría en Toxicología Analítica" },
+            { "nombre": "Maestría en Administración de Empresas Mención Finanzas" },
+            { "nombre": "Maestría en Administración de Empresas Mención Gerencia" },
+            { "nombre": "Maestría en Administración de Empresas Mención Mercadeo" },
+            { "nombre": "Maestría en Administración del Trabajo y Relaciones Laborales" },
+            { "nombre": "Maestría en Ciencias Contables" },
+            { "nombre": "Maestría en Economía de Empresas" },
+            { "nombre": "Maestría en Ciencias Políticas y Administración Pública" },
+            { "nombre": "Maestría en Derecho del trabajo" },
+            { "nombre": "Maestría en Penal" },
+            { "nombre": "Maestría en Gerencia de Construcción" },
+            { "nombre": "Maestría en Ingeniería Ambiental" },
+            { "nombre": "Maestría en Ingeniería Eléctrica" },
+            { "nombre": "Maestría en Ingeniería Industrial" },
+            { "nombre": "Maestría en Ingeniería Mecánica" },
+            { "nombre": "Maestría en Ingeniería de Procesos" },
+            { "nombre": "Maestría en Matemática y Computación" }
+        ],
+
+        "Doctorados": [
+            { "nombre": "Doctorado en Educación" },
+            { "nombre": "Doctorado en Ciencias Sociales" },
+            { "nombre": "Doctorado en Enfermería Área de Concentración Cuidado Humano" },
+            { "nombre": "Doctorado en Ciencias Médicas" },
+            { "nombre": "Doctorado en Ciencias Administrativas y Gerenciales" },
+            { "nombre": "Doctorado en Ingeniería, Área de Ambiente" },
+            { "nombre": "Doctorado en Ingeniería, Área de Bioingeniería y Cómputo Aplicado" },
+            { "nombre": "Doctorado en Ingeniería, Área Eléctrica" },
+            { "nombre": "Doctorado en Ingeniería, Área Química" },
+            { "nombre": "Doctorado en Ingeniería, Área Industrial" },
+            { "nombre": "Doctorado en Ingeniería, Área Mecánica" }
+        ]
+    },
+
+    {
+        "id_uni": "51",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Mecánica Automotriz" },
+            { "nombre": "TSU Mecánica Térmica" },
+            { "nombre": "TSU Metalurgia" }
+            
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Turismo" },
+            { "nombre": "Licenciatura en Informática" },
+            { "nombre": "Licenciatura en Distribución y logística" },
+            { "nombre": "Ingeniería Mecánica" },
+            { "nombre": "Ingeniería Materiales Industriales"},
+            { "nombre": "Ingeniería Mantenimiento" }
+        ]
+    },
+
+    {
+        "id_uni": "52",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Administración" },
+            { "nombre": "TSU en Agroalimentaria" },
+            { "nombre": "TSU en Informática"},
+            { "nombre": "TSU en Salud Animal"}
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería en Informática" },
+            { "nombre": "Ingeniería en Agroalimentación" }
+        ]
+    },
+
+    {
+        "id_uni": "53",
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería Eléctrica" },
+            { "nombre": "Ingeniería Transporte ferroviario" },
+            { "nombre": "Ingeniería Informática" },
+            { "nombre": "Ingeniería Mantenimiento" },
+            { "nombre": "Ingeniería Mecánica" },
+            
+            { "nombre": "Licenciatura en Administración" }
+        ]
+    },
+
+    {
+        "id_uni": "54",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU Universitario en Agroalimentación" },
+            { "nombre": "TSU en Construcción Civil" },
+            { "nombre": "TSU en Electricidad" },
+            { "nombre": "TSU en Informática" },
+            { "nombre": "TSU en Mecánica" }
+        ],
+
+        "Especialización": [
+            { "nombre": "Especialización en Biotecnología mención Agricultura y Soberanía Alimentaria" }
+        ],
+
+        "Maestrias" : [
+            { "nombre": "Maestría en Biotecnología mención Agricultura y Soberanía Alimentaria" }
+        ],
+
+        "Convenio": [
+            { "nombre": "Administración" },
+            {  "nombre": "Medicina Veterinaria" }
+        ]
+    },
+
+    {
+        "id_uni": "55",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Informática" },
+            { "nombre": "TSU en Eléctrica" },
+            { "nombre": "TSU en Metalurgia" },
+            { "nombre": "TSU en Cerámica" },
+            { "nombre": "TSU en Polímeros" },
+            { "nombre": "TSU en Agroalimentación" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería Eléctrica" },
+            { "nombre": "Ingeniería Mecánica" },
+            { "nombre": "Ingeniería Metalúrgica" },
+            {  "nombre": "Ingeniería de Mantenimiento" },
+            {  "nombre": "Ingeniería de Sistemas de Calidad y Ambiente" },
+            {  "nombre": "Ingeniería en Informática" },
+            {  "nombre": "Ingeniería en Materiales Industriales" },
+            {  "nombre": "Ingeniería en Agroalimentación" },
+
+            {  "nombre": "Licenciatura en Geociencia" },
+            {  "nombre": "Licenciatura en Joyería y Orfebrería" },
+
+            {  "nombre": "PNF en Joyería y Orfebrería" }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Ingeniería Eléctrica" },
+            {  "nombre": "Maestría en Ingeniería Mecánica" },
+            {  "nombre": "Maestría en Ingeniería Metalúrgica" },
+            {  "nombre": "Maestría en Ingeniería de Mantenimiento" },
+            {  "nombre": "Maestría en Ingeniería de Sistemas de Calidad y Ambiente" },
+            {  "nombre": "Maestría en Geociencia" },
+            {  "nombre": "Maestría en Informática" }
+        ]
+    },
+
+    {
+        "id_uni": "56",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Química" },
+            { "nombre": "Licenciatura en Biología" },
+            { "nombre": "Ingeniería en Informática" },
+            { "nombre": "Ingeniería en Materiales Industriales" },
+            { "nombre": "Ingeniería en Instrumentación y Control" },
+
+            { "nombre": "Licenciatura en Producción Industrial" }
+        ],
+
+        "Especialización": [
+            { "nombre": "Especialización en Control y Gestión Ambiental" },
+            { "nombre": "Especialización en Automatización de Procesos Industriales" }
+        ]
+    },
+
+    {
+        "id_uni": "57",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Gestión y Desarrollo Comunal" },
+            { "nombre": "PNF en Economía Comunal" },
+            { "nombre": "PNF en Derecho Comunal" },
+            { "nombre": "PNF en Comunicación Social Comunal" },
+            { "nombre": "PNF en Educación Popular y Comunitaria" },
+            { "nombre": "PNF en Agroecología" },
+            { "nombre": "PNF en Turismo Comunal" },
+            { "nombre": "PNF en Informática" },
+
+            { "nombre": "Ingeniería Eléctrica" },
+            {  "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería Civil" },
+            {  "nombre": "Ingeniería Ambiental" }
+        ]
+    },
+
+    {
+        "id_uni": "58",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Gestión de Mantenimiento Eléctrico " },
+            { "nombre": "TSU en Redes Eléctricas " },
+            { "nombre": "TSU en Sistemas de Potencia" }
+
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería en Gestión de Mantenimiento Eléctrico " },
+            { "nombre": "Ingeniería en Redes Eléctricas " },
+            { "nombre": "Ingeniería en Sistemas de Potencia" }
+
+        ]
+    },
+
+    {
+        "id_uni": "59",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Construcción Civil y Obras Civiles" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería Eléctrica" },
+            { "nombre": "Ingeniería Electrónica (Mención Telecomunicaciones)" },
+            { "nombre": "Ingeniería Industrial" },
+            { "nombre": "Ingeniería Metalúrgica" },
+            { "nombre": "Ingeniería de Control de Procesos" },
+            { "nombre": "Mantenimiento Industrial" },
+            { "nombre": "Ingeniería Química" },
+            { "nombre": "Ingeniería Mecánica" }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Ingeniería Eléctrica" },
+            {  "nombre": "Maestría en Ingeniería Electrónica" },
+            {  "nombre": "Maestría en Ingeniería Metalúrgica" },
+            {  "nombre": "Maestría en Ingeniería Industrial" },
+            {  "nombre": "Maestría en Ingeniería Química" },
+            {  "nombre": "Maestría en Ingeniería de Procesos" },
+            {  "nombre": "Maestría en Mantenimiento" }
+        ]
+    },
+
+    {
+        "id_uni": "38",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Administración" },
+            { "nombre": "TSU en Agroalimentación" },
+            { "nombre": "TSU en Contaduría Pública" },
+            { "nombre": "TSU en Electricidad" },
+            { "nombre": "TSU en Informática" },
+            { "nombre": "TSU en Ingeniería Industrial" },
+            { "nombre": "TSU en Mecánica" },
+            { "nombre": "TSU en Procesos Químicos" },
+            { "nombre": "TSU en Química" },
+            {  "nombre": "TSU en Seguridad Alimentaria Y Cultura Nutricional" }
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "Licenciatura en Administración" },
+            {  "nombre": "Licenciatura en Contaduría Pública" },
+            {  "nombre": "Licenciatura en Educación Inicial" },
+            {  "nombre": "Licenciatura en Ingeniería De Mantenimiento" },
+
+            {  "nombre": "Ingeniería Agroalimentación" },
+            {  "nombre": "Ingeniería Electricidad" },
+            {  "nombre": "Ingeniería Informática" },
+            {  "nombre": "Ingeniería De Mantenimiento" },
+            {  "nombre": "Ingeniería Industrial" },
+            {  "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería Procesos Químicos" },
+            {  "nombre": "Ingeniería Química" },
+            {  "nombre": "Ingeniería Seguridad Alimentaria Y Cultura Nutricional" }
+        ]
+    },
+
+    {
+        "id_uni": "39",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Agroalimentación" },
+            { "nombre": "TSU en Procesamiento y Distribución de Alimentos" },
+            { "nombre": "TSU en Nutrición y Dietética" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Agroecología" },
+            { "nombre": "Licenciatura en Medio Ambiente" },
+            { "nombre": "Licenciatura en Gestión Ambiental" },
+
+            { "nombre": "Ingeniería Agronómica" },
+            { "nombre": "Ingeniería Forestal" },
+            { "nombre": "Ingeniería Agroindustrial" }
+        ]
+    },
+
+    {
+        "id_uni": "40",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Administración" },
+            { "nombre": "TSU en Agroalimentación" },
+            { "nombre": "TSU en Contaduría Pública" },
+            { "nombre": "TSU en Construcción Civil" },
+            { "nombre": "TSU en Enfermería Integral Comunitaria" }
+        ]
+    },
+
+    {
+        "id_uni": "41",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Administración" },
+            { "nombre": "TSU en Agroalimentación" },
+            { "nombre": "TSU en Contaduría Pública" },
+            { "nombre": "TSU en Construcción Civil" },
+            { "nombre": "TSU en Enfermería Integral Comunitaria" },
+            { "nombre": "TSU en Educación" },
+            { "nombre": "TSU en Geografía" },
+            { "nombre": "TSU en Historia" },
+            { "nombre": "TSU en Lengua y Literatura" },
+            {  "nombre": "TSU en Matemáticas" },
+            {  "nombre": "TSU en Música" },
+            {  "nombre": "TSU en Química" }
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "Licenciatura en Administración" },
+            {  "nombre": "Licenciatura en Agroalimentación" },
+            {  "nombre": "Licenciatura en Contaduría Pública" },
+            {  "nombre": "Licenciatura en Enfermería" },
+            {  "nombre": "Licenciatura en Educación" },
+            {  "nombre": "Licenciatura en Geografía" },
+            {  "nombre": "Licenciatura en Historia" },
+            {  "nombre": "Licenciatura en Lengua y Literatura" },
+            {  "nombre": "Licenciatura en Matemáticas" },
+            {  "nombre": "Licenciatura en Música" },
+            {  "nombre": "Licenciatura en Química" },
+
+            {  "nombre": "Ingeniería Civil" },
+            {  "nombre": "Ingeniería Eléctrica" },
+            {  "nombre": "Ingeniería Electrónica" },
+            {  "nombre": "Ingeniería Informática" },
+            {  "nombre": "Ingeniería Industrial" }
+        ]
+    },
+
+    {
+        "id_uni": "42",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Administración" },
+            { "nombre": "TSU en Agroalimentación" },
+            { "nombre": "TSU en Contaduría Pública" },
+            { "nombre": "TSU en Construcción Civil" },
+            { "nombre": "TSU en Enfermería Integral Comunitaria" },
+            { "nombre": "TSU en Informática" },
+            { "nombre": "TSU en Mantenimiento en Maquinaria Agrícola y Pesada" },
+            { "nombre": "TSU en Producción Agropecuaria" },
+            { "nombre": "TSU en Turismo" }
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "Licenciatura en Administración" },
+            {  "nombre": "Licenciatura en Agroalimentación" },
+            {  "nombre": "Licenciatura en Contaduría Pública" },
+            {  "nombre": "Licenciatura en Enfermería" },
+            {  "nombre": "Licenciatura en Informática" },
+
+            {  "nombre": "Ingeniería Civil" },
+            {  "nombre": "Ingeniería Agrícola" }
+        ]
+    },
+
+    {
+        "id_uni": "43",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Administración" },
+            { "nombre": "TSU en Agroalimentación" },
+            { "nombre": "TSU en Contaduría Pública" },
+            { "nombre": "TSU en Construcción Civil" },
+            { "nombre": "TSU en Enfermería Integral Comunitaria" },
+            { "nombre": "TSU en Informática" },
+            { "nombre": "TSU en Educación" },
+            { "nombre": "TSU en Geografía" },
+            { "nombre": "TSU en Historia" },
+            {  "nombre": "TSU en Lengua y Literatura" },
+            {  "nombre": "TSU en Matemáticas" },
+            {  "nombre": "TSU en Música" },
+            {  "nombre": "TSU en Química" }
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "Licenciatura en Administración" },
+            {  "nombre": "Licenciatura en Agroalimentación" },
+            {  "nombre": "Licenciatura en Contaduría Pública" },
+            {  "nombre": "Licenciatura en Enfermería" },
+            {  "nombre": "Licenciatura en Educación" },
+            {  "nombre": "Licenciatura en Geografía" },
+            {  "nombre": "Licenciatura en Historia" },
+            {  "nombre": "Licenciatura en Lengua y Literatura" },
+            {  "nombre": "Licenciatura en Matemáticas" },
+            {  "nombre": "Licenciatura en Música" },
+            {  "nombre": "Licenciatura en Química" },
+
+            {  "nombre": "Ingeniería Civil" },
+            {  "nombre": "Ingeniería Electrónica" },
+            {  "nombre": "Ingeniería Informática" }
+        ]
+    },
+
+    {
+        "id_uni": "44",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Agroalimentación " },
+            { "nombre": "TSU en Construcción Civil " },
+            { "nombre": "TSU en Electricidad " },
+            { "nombre": "TSU en Electrónica " },
+            { "nombre": "TSU en Informática " },
+            { "nombre": "TSU en Instrumentación y Control " },
+            { "nombre": "TSU en Mecánica " },
+            { "nombre": "TSU en Procesos Químicos" },
+            { "nombre": "TSU en Administración." },
+            {  "nombre": "TSU en Contaduría Pública." },
+            {  "nombre": "TSU en Química." }
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "Ingeniería Agroalimentación " },
+            {  "nombre": "Ingeniería Construcción Civil " },
+            {  "nombre": "Ingeniería Electricidad " },
+            {  "nombre": "Ingeniería Electrónica " },
+            {  "nombre": "Ingeniería Informática " },
+            {  "nombre": "Ingeniería Instrumentación y Control " },
+            {  "nombre": "Ingeniería Mecánica " },
+            {  "nombre": "Ingeniería Procesos Químicos" },
+
+            {  "nombre": "Licenciatura en Administración." },
+            {  "nombre": "Licenciatura en Contaduría Pública." },
+            {  "nombre": "Licenciatura en Química." }
+        ]
+    },
+
+    {
+        "id_uni": "45",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Medicina integral comunitaria" },
+            { "nombre": "PNF en Histocitotecnología" },
+            { "nombre": "PNF en Enfermería" },
+            { "nombre": "PNF en Bioanálisis" },
+            { "nombre": "PNF en Fisioterapia" },
+            { "nombre": "PNF en Nutrición y Dietética" },
+            { "nombre": "PNF en Odontología" },
+            { "nombre": "PNF en Farmacia" },
+            { "nombre": "PNF en Ingeniería Biomédica" }
+        ],
+
+        "Programa Nacional de Formación Avanzada": [
+            {  "nombre": "PNFA en Medicina general integral" },
+            {  "nombre": "PNFA en Salud pública" },
+            {  "nombre": "PNFA en Salud ocupacional" },
+            {  "nombre": "PNFA en Gerencia en salud" },
+            {  "nombre": "PNFA en Epidemiología" },
+            {  "nombre": "PNFA en Educación médica y bioética" },
+            {  "nombre": "PNFA en Anestesiología" },
+            {  "nombre": "PNFA en Cirugía general" },
+            {  "nombre": "PNFA en Ginecología y obstetricia" },
+            {  "nombre": "PNFA en Medicina interna" },
+            {  "nombre": "PNFA en Patología forense" },
+            {  "nombre": "PNFA en Pediatría" },
+            {  "nombre": "PNFA en Puericultura" }
+        ]
+    },
+
+    {
+        "id_uni": "46",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Desarrollo Endógeno"},
+            { "nombre": "Licenciatura en Pedagogía Alternativa"}
+        ],
+
+        "Maestrias" : [
+            { "nombre": "Maestría en Ecología de Desarrollo Humano"},
+            { "nombre": "Maestría en Pedagogía Crítica" },
+            { "nombre": "Maestría en Innovaciones del Conocimiento"}
+        ]
+    },
+
+    {
+        "id_uni": "47",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Agronomía mención Producción Animal" },
+            { "nombre": "PNF en Agronomía mención Producción Vegetal" },
+            { "nombre": "PNF en Medicina Veterinaria" },
+            { "nombre": "PNF en Medicina" },
+            { "nombre": "PNF en Enfermería" },
+            { "nombre": "PNF en Radiodiagnóstico" },
+            { "nombre": "PNF en Odontología" },
+            { "nombre": "PNF en Administración Comercial" },
+            { "nombre": "PNF en Contaduría Pública" },
+            {  "nombre": "PNF en Economía" },
+            {  "nombre": "PNF en Comunicación Social" },
+            {  "nombre": "PNF en Derecho" },
+            {  "nombre": "PNF en Ingeniería Informática" },
+            {  "nombre": "PNF en Ingeniería Civil" },
+            {  "nombre": "PNF en Ingeniería en Hidrocarburos mención Gas" },
+            {  "nombre": "PNF en Ingeniería en Hidrocarburos mención Petróleo" },
+            {  "nombre": "PNF en Educación Integral" },
+            {  "nombre": "PNF en Educación Mención Computación" },
+            {  "nombre": "PNF en Historia" }
+        ],
+
+        "Programa Nacional de Formación Avanzada": [
+            {  "nombre": "PNFA en Agronomía mención Producción Animal" },
+            {  "nombre": "PNFA en Agronomía mención Producción Vegetal" },
+            {  "nombre": "PNFA en Medicina Veterinaria" },
+            {  "nombre": "PNFA en Medicina" },
+            {  "nombre": "PNFA en Enfermería" },
+            {  "nombre": "PNFA en Radiodiagnóstico" },
+            {  "nombre": "PNFA en Odontología" },
+            {  "nombre": "PNFA en Administración Comercial" },
+            {  "nombre": "PNFA en Contaduría Pública" },
+            {  "nombre": "PNFA en Economía" },
+            {  "nombre": "PNFA en Comunicación Social" },
+            {  "nombre": "PNFA en Derecho" },
+            {  "nombre": "PNFA en Ingeniería Informática" },
+            {  "nombre": "PNFA en Ingeniería Civil" },
+            {  "nombre": "PNFA en Ingeniería en Hidrocarburos mención Gas" },
+            {  "nombre": "PNFA en Ingeniería en Hidrocarburos mención Petróleo" },
+            {  "nombre": "PNFA en Educación Integral" },
+            {  "nombre": "PNFA en Educación Mención Computación" },
+            {  "nombre": "PNFA en Historia" }
+        ]
+    },
+
+    {
+        "id_uni": "48",
+
+        "Carreras Cortas": [
+            { "nombre": "Educación. Especialidad: Artes Escénicas" },
+            { "nombre": "Educación. Especialidad: Artes Plásticas" },
+            { "nombre": "Educación. Especialidad: Biología" },
+            { "nombre": "Educación. Especialidad: Castellano, Literatura Y Latín" },
+            { "nombre": "Educación. Especialidad: Ciencias De La Tierra" },
+            { "nombre": "Educación. Especialidad: Dibujo Técnico (Técnica)" },
+            { "nombre": "Educación. Especialidad: Educación Comercial (Técnica)" },
+            { "nombre": "Educación Especialidad: Educación Especial En Discapacidad Intelectual Y Del Desarrollo" },
+            { "nombre": "Educación. Especialidad: Educación Especial Para Personas En Situación De Discapacidad" },
+            {  "nombre": "Educación. Especialidad: Educación Especial Para Sordos" },
+            {  "nombre": "Educación. Especialidad: Educación Física" },
+            {  "nombre": "Educación. Especialidad: Educación Inicial" },
+            {  "nombre": "Educación. Especialidad: Educación Musical" },
+            {  "nombre": "Educación. Especialidad: Educación Primaria" },
+            {  "nombre": "Educación. Especialidad: Física" },
+            {  "nombre": "Educación. Especialidad: Francés Como Lengua Extranjera" },
+            {  "nombre": "Educación. Especialidad: Geografía E Historia" },
+            {  "nombre": "Educación. Especialidad: Informática" },
+            {  "nombre": "Educación. Especialidad: Inglés Como Lengua Extranjera" },
+            {  "nombre": "Educación. Especialidad: Matemática" },
+            {  "nombre": "Educación. Especialidad: Química" }
+        ]
+    },
+    
+    {
+        "id_uni": "65",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU Transporte Acuático" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería Marítima" },
+            { "nombre": "Ingeniería Ambiental" },
+            { "nombre": "Ingeniería Informática" },
+
+            { "nombre": "Licenciatura en Turismo" },
+            { "nombre": "Licenciatura en Administración" }
+        ]
+    },
+
+    {
+        "id_uni": "61",
+
+        "Carreras Cortas": [
+            { "nombre": "PFG Agroecología" },
+            { "nombre": "PFG Arquitectura" },
+            { "nombre": "PFG Comunicación Social" },
+            { "nombre": "PFG Economía Política" },
+            { "nombre": "PFG Estudios Jurídicos" },
+            { "nombre": "PFG Estudios Políticos y Gobierno" },
+            { "nombre": "PFG Gestión Ambiental" },
+            { "nombre": "PFG Gestión en Salud Pública" },
+            { "nombre": "PFG Gestión Social del Desarrollo Local" },
+            {  "nombre": "PFG Informática para la Gestión Social" },
+            {  "nombre": "PFG Psicología" },
+            {  "nombre": "PFG Radioterapia" },
+            {  "nombre": "PFG Refinación y Petroquímica" }
+        ],
+
+        "Carreras Largas": [
+            {  "nombre": "PNF Educación" },
+            {  "nombre": "PNF Enfermería" },
+            {  "nombre": "PNF Historia" },
+            {  "nombre": "PNF Medicina integral comunitaria" },
+            {  "nombre": "PNF Seguridad alimentaria y cultura nutricional" }
+        ],
+
+        "Especialización": [
+            {  "nombre": "Especialiación en Docencia Universitaria" },
+            {  "nombre": "Especialiación en Pensamiento Nuestro Americano Bolívar y Martí" },
+            {  "nombre": "Especialiación en Propiedad Intelectual" },
+            {  "nombre": "Especialiación en Gestión Judicial" },
+            {  "nombre": "Especialiación en Imageneología" },
+            {  "nombre": "Especialiación en Oncohematología" },
+            {  "nombre": "Especialiación en Medicina del Quemado" },
+            {  "nombre": "Especialiación en Ortopedia y Traumatología" },
+            {  "nombre": "Especialiación en Anestesiología" },
+            {  "nombre": "Especialiación en Cirugía Integral" },
+            {  "nombre": "Especialiación en Cardiología" },
+            {  "nombre": "Especialiación en Medicina Crítica" },
+            {  "nombre": "Especialiación en Seguridad Industrial" },
+            {  "nombre": "Especialiación en Higiene Ocupacional" }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Ciencias para el Desarrollo Estratégico" },
+            {  "nombre": "Maestría en Derechos Humanos" },
+            {  "nombre": "Maestría en Derecho Internacional Público" },
+            {  "nombre": "Maestría en Educación Comparada" },
+            {  "nombre": "Maestría en Educación" },
+            {  "nombre": "Maestría en Ciencias de la Energía" }
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Ciencias para el Desarrollo Estratégico" },
+            {  "nombre": "Doctorado en Ciencias de la Energía" }
+        ],
+
+        "Diplomados": [
+            {  "nombre": "Diplomados en Formación y Actualización Pedagógica" },
+            {  "nombre": "Diplomados en Metodología de la Investigación" },
+            {  "nombre": "Diplomados en EL PETRO en la economía disruptiva, blockchain y criptodivisas" },
+            {  "nombre": "Diplomados en Gestión Social en Nutrición" },
+            {  "nombre": "Diplomados en Registro y análisis de indicadores sociales" },
+            {  "nombre": "Diplomados en Cronista Comunales" },
+            {  "nombre": "Diplomados en Introducción a la Epidemiología Crítica, Salud Colectiva y Derecho a laVida" },
+            {  "nombre": "Diplomados en Introducción al Estudio del Derecho Ambienta" },
+            {  "nombre": "Diplomados en Gestión de la Diversidad Biológica en Venezuela" },
+            {  "nombre": "Diplomados en Gestión Integral de los Residuos y Desechos Sólidos en Venezuela" },
+            {  "nombre": "Diplomados en Educación Ambiental para el Desarrollo Comunitario" },
+            {  "nombre": "Diplomados en Ordenamiento Territorial y Desarrollo Sustentable" },
+            {  "nombre": "Diplomados en Diplomado en Fotografía" },
+            {  "nombre": "Diplomados en Desarrollo comunitario" },
+            {  "nombre": "Diplomados en Gestión de Consejos Comunales" },
+            {  "nombre": "Diplomados en Seguridad Industrial e Higiene Ocupacional" },
+            {  "nombre": "Diplomados en Técnicas de Planificación Social" },
+            {  "nombre": "Diplomados en Tecnología de Gestión Total Eficiente de la Energía" },
+
+            {  "nombre": "Curso de Ampliación en Evaluación y Planificación" },
+            {  "nombre": "Curso de Ampliación en Curso de Locución" }
+        ]
+    },
+
+    {
+        "id_uni": "62",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Análisis y Diseño de Sistemas" },
+            { "nombre": "TSU en Comunicaciones y Electrónica" },
+            { "nombre": "TSU en Enfermería" },
+            { "nombre": "TSU en Hotelería" },
+            { "nombre": "TSU en Mecánica Dental" },
+            { "nombre": "TSU en Turismo" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería Aeronáutica" },
+            { "nombre": "Ingeniería Civil" },
+            { "nombre": "Ingeniería Eléctrica" },
+            {  "nombre": "Ingeniería Electrónica" },
+            {  "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería de Sistemas" },
+            {  "nombre": "Ingeniería de Telecomunicaciones" },
+
+            {  "nombre": "Licenciatura en Administración de Desastres y Gestión de Riesgos" },
+            {  "nombre": "Licenciatura en Administración y Gestión Municipal" },
+            {  "nombre": "Licenciatura en Economía Social" },
+            {  "nombre": "Licenciatura en Educación Integral" },
+            {  "nombre": "Licenciatura en Enfermería (Ampliación - Hospital Militar)" },
+            {  "nombre": "Licenciatura en Contaduría Pública" },
+            {  "nombre": "Licenciatura en Turismo" }
+        ]
+    },
+
+    {
+        "id_uni": "63",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Hidrocarburos" },
+            { "nombre": "PNF en Electricidad " },
+            { "nombre": "PNF en Electrónica" },
+            { "nombre": "PNF en Procesos Qímicos" },
+            { "nombre": "PNF en Higiene y Seuridad Industrial" },
+            { "nombre": "PNF en Higiene y Seuridad Laboral" },
+            { "nombre": "PNF en Mecánica Industrial" },
+            { "nombre": "PNF en Mecánica" },
+            { "nombre": "PNF en Materiales Industriales" },
+            {  "nombre": "PNF en Administración de Mantenimiento" },
+            {  "nombre": "PNF en Administración de Empresas" },
+            {  "nombre": "PNF en Mantenimiento" },
+            {  "nombre": "PNF en Administración" }
+        ]
+    },
+
+    {
+        "id_uni": "60",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU Cardiopulmonar" },
+            { "nombre": "TSU Enfermería" },
+            { "nombre": "TSU Radiología e Imagenología" },
+            { "nombre": "TSU Salud Pública" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Agronomía" },
+            { "nombre": "Licenciatura en Antropología" },
+            { "nombre": "Licenciatura en Arquitectura" },
+            { "nombre": "Licenciatura en Administración" },
+            { "nombre": "Licenciatura en Archivología" },
+            {  "nombre": "Licenciatura en Artes" },
+            {  "nombre": "Licenciatura en Bibliotecología" },
+            {  "nombre": "Licenciatura en Bioanálisis" },
+            {  "nombre": "Licenciatura en Biología" },
+            {  "nombre": "Licenciatura en Ciencias Actuariales." },
+            {  "nombre": "Licenciatura en Ciencias Políticas" },
+            {  "nombre": "Licenciatura en Computación" },
+            {  "nombre": "Licenciatura en Comunicación Social" },
+            {  "nombre": "Licenciatura en Contaduría" },
+            {  "nombre": "Licenciatura en Cardiorrespiratorio" },
+            {  "nombre": "Licenciatura en Derecho" },
+            {  "nombre": "Licenciatura en Economía" },
+            {  "nombre": "Licenciatura en Educación" },
+            {  "nombre": "Licenciatura en Enfermería" },
+            {  "nombre": "Licenciatura en Estadística" },
+            {  "nombre": "Licenciatura en Estudios Internacionales" },
+            {  "nombre": "Licenciatura en Farmacia" },
+            {  "nombre": "Licenciatura en Filosofía" },
+            {  "nombre": "Licenciatura en Física" },
+            {  "nombre": "Licenciatura en Fisioterapia" },
+            {  "nombre": "Licenciatura en Geografía" },
+            {  "nombre": "Licenciatura en Geoquímica" },
+            {  "nombre": "Licenciatura en Historia" },
+            {  "nombre": "Licenciatura en Idiomas Modernos" },
+            {  "nombre": "Licenciatura en Letras" },
+            {  "nombre": "Licenciatura en Matemática" },
+            {  "nombre": "Licenciatura en Medicina" },
+            {  "nombre": "Licenciatura en Medicina Veterinaria" },
+            {  "nombre": "Licenciatura en Nutrición y Dietética" },
+            {  "nombre": "Licenciatura en Odontología" },
+            {  "nombre": "Licenciatura en Psicología" },
+            {  "nombre": "Licenciatura en Química" },
+            {  "nombre": "Licenciatura en Radiología e Imagenología" },
+            {  "nombre": "Licenciatura en Salud Pública" },
+            {  "nombre": "Licenciatura en Sociología" },
+            {  "nombre": "Licenciatura en Terapia Ocupacional" },
+            {  "nombre": "Licenciatura en Trabajo Social" },
+            {  "nombre": "Licenciatura en Traducción" },
+            {  "nombre": "Licenciatura en Traducción e Interpretación." },
+
+            {  "nombre": "Ingeniería Civil" },
+            {  "nombre": "Ingeniería Eléctrica" },
+            {  "nombre": "Ingeniería Geodésica" },
+            {  "nombre": "Ingeniería Geofísica" },
+            {  "nombre": "Ingeniería Geológica" },
+            {  "nombre": "Ingeniería Hidrometeorológica" },
+            {  "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería Metalúrgica" },
+            {  "nombre": "Ingeniería en Minas" },
+            {  "nombre": "Ingeniería Química" },
+            {  "nombre": "Ingeniería de Petróleo" },
+            {  "nombre": "Ingeniería de Procesos Industriales" }
+        ],
+
+        "Especialización": [
+            {  "nombre": "Especialización en Botánica Agrícola" },
+            {  "nombre": "Especialización en Ciencias del Suelo" },
+            {  "nombre": "Especialización en Ciencias del Suelo: Geomática" },
+            {  "nombre": "Especialización en Estadística" },
+            {  "nombre": "Especialización en Gerencia de Sistemas de" },
+            {  "nombre": "Especialización en Calidad y Control de" },
+            {  "nombre": "Especialización en Estados de Producción" },
+            {  "nombre": "Especialización en Ingeniería Agrícola" },
+            {  "nombre": "Especialización en Producción Animal" },
+            {  "nombre": "Especialización en Mención Sistemas" },
+            {  "nombre": "Especialización en de Producción" },
+            {  "nombre": "Especialización en Zoología Agrícola" },
+            {  "nombre": "Especialización en Ingeniería Agrícola Mención Planificación y Manejo Ambiental del Medio Físico" },
+            {  "nombre": "Especialización en Moneda e Instituciones Financieras" },
+            {  "nombre": "Especialización en Política y Comercio Petrolero Internacional" },
+            {  "nombre": "Especialización en Finanzas de Empresas" },
+            {  "nombre": "Especialización en Mercadeo para Empresas" },
+            {  "nombre": "Especialización en Organización de Empresas" },
+            {  "nombre": "Especialización en Auditoria" },
+            {  "nombre": "Especialización en Estadística" },
+            {  "nombre": "Especialización en Análisis de Datos en Ciencias Sociales" },
+            {  "nombre": "Especialización en Gerencia de Proyectos de Investigación y Desarrollo" },
+            {  "nombre": "Especialización en Relaciones Internacionales" },
+            {  "nombre": "Especialización en Administración en Recursos Humanos" },
+            {  "nombre": "Especialización en Seguridad Social en las mención Planificación de la Seguridad Social" },
+            {  "nombre": "Especialización en Seguridad Social en las mención Gerencia Social" },
+            {  "nombre": "Especialización en Seguridad Social en las mención Bienestar Laboral" },
+            {  "nombre": "Especialización en Seguridad Social en las mención Bienestar Estudiantil" },
+            {  "nombre": "Especialización en Farmacia Hospitalaria" },
+            {  "nombre": "Especialización en Farmacia Comunitaria" },
+            {  "nombre": "Especialización en Mercadeo" },
+            {  "nombre": "Especialización en Aseguramiento de la Calidad" },
+            {  "nombre": "Especialización en Toxicología" },
+            {  "nombre": "Especialización en Ciencia y Tecnología" },
+            {  "nombre": "Especialización en Cosmética" },
+            {  "nombre": "Especialización en Administración en Salud Pública" },
+            {  "nombre": "Especialización en Administración de Hospitales" },
+            {  "nombre": "Especialización en Anatomía Patológica (HMCA, IAP)" },
+            {  "nombre": "Especialización en Anestesiología (HDL, HMCA, HMPC, HUC)" },
+            { "nombre": "Especialización en Cardiología (HMCA, HUC, HV)" },
+            { "nombre": "Especialización en Cirugía Cardiovascular (HUC)" },
+            { "nombre": "Especialización en Cirugía General (HDL, HGO, HMCA, HMPC, HUC, HV)" },
+            { "nombre": "Especialización en Cirugía Oncológica (IOLR)" },
+            { "nombre": "Especialización en Cirugía Pediátrica (HGO, HJMR, HUC)" },
+            { "nombre": "Especialización en Cirugía Plástica y Reconstructiva (HCJB, HMCA, MPC, HUC)" },
+            { "nombre": "Especialización en Cirugía de la Mano (HMPC)" },
+            { "nombre": "Especialización en Cirugía del Tórax (HUC)" },
+            { "nombre": "Especialización en Clínica Mental (HUC)" },
+            { "nombre": "Especialización en Dermatología y Sifilografía (HMCA, HUC, IB)" },
+            { "nombre": "Especialización en Dermopatología (IB)" },
+            { "nombre": "Especialización en Endocrinología y Enfermedades Metabólicas (HMCA, HUC)" },
+            { "nombre": "Especialización en Enfermería en Medicina" },
+            { "nombre": "Especialización en Crítica Pediátrica (HJMR)" },
+            { "nombre": "Especialización en Epidemiología" },
+            { "nombre": "Especialización en Gastroenterología (HDL, HGO, HMCA, HMPC, HOPM, HUC, HV)" },
+            { "nombre": "Especialización en Ginecología Infanto-Juvenil (HJMR)" },
+            { "nombre": "Especialización en Hematología (BMS, HUC)" },
+            { "nombre": "Especialización en Higiene Ocupacional (EMRL)" },
+            { "nombre": "Especialización en Infectología (HUC)" },
+            { "nombre": "Especialización en Inmunología Clínica y de Laboratorio. (IOH)" },
+            { "nombre": "Especialización en Inmunología de Laboratorio (IOH)" },
+            { "nombre": "Especialización en Medicina Crítica (HMPC, HUC)" },
+            { "nombre": "Especialización en Medicina Crítica Pediátrica (HJMR, HMPC)" },
+            { "nombre": "Especialización en Medicina Física y Rehabilitación (HMCA, INRM)" },
+            { "nombre": "Especialización en Medicina Interna (HDL, HGO, HMCA, HMPC, HUC, HV)" },
+            { "nombre": "Especialización en Medicina Ocupacional (CSO)" },
+            { "nombre": "Especialización en Medicina Oncológica (HOPM, IOLR)" },
+            { "nombre": "Especialización en Microbiología Medica (IB)" },
+            { "nombre": "Especialización en Nefrología (HMPC, HUC)" },
+            { "nombre": "Especialización en Neonatología (MCP)" },
+            { "nombre": "Especialización en Neumonología Clínica (HJIB, HUC)" },
+            { "nombre": "Especialización en Neurocirugía (HMPC, HUC, HV)" },
+            { "nombre": "Especialización en Neurocirugía Pediátrica (HJMR)" },
+            { "nombre": "Especialización en Neurofisiología Aplicada (HUC)" },
+            { "nombre": "Especialización en Neurología (HUC, HV)" },
+            { "nombre": "Especialización en Nutrición Clínica (AD-HUC)" },
+            { "nombre": "Especialización en Obstetricia y Ginecología (HDL, HGO, HMPC, HUC, HVL, MCP)" },
+            { "nombre": "Especialización en Oftalmología (HDL)" },
+            { "nombre": "Especialización en Oftalmología (HMPC)" },
+            { "nombre": "Especialización en Oftalmología (HUC)" },
+            { "nombre": "Especialización en Otorrinolaringología (HDL)" },
+            { "nombre": "Especialización en Otorrinolaringología (HUC)" },
+            { "nombre": "Especialización en Pediatría y Puericultura (HDL)" },
+            { "nombre": "Especialización en Pediatría y Puericultura (HGO, HJIB, HJMR, HMCA, HMPC, HPET, HUC)" },
+            { "nombre": "Especialización en Psiquiatría (CSMEP, HMCA, HPC, HUC, HV)" },
+            { "nombre": "Especialización en Psiquiatría Infantil y Juvenil (HJMR)" },
+            { "nombre": "Especialización en Radiodiagnóstico (HDL, HMCA, HMPC, HUC)" },
+            { "nombre": "Especialización en Radioterapia y Medicina Nuclear (HUC)" },
+            { "nombre": "Especialización en Reumatología (HUC, HV)" },
+            { "nombre": "Especialización en Salud Ocupacional (CSO)" },
+            { "nombre": "Especialización en Traumatología y Ortopedia (HGO, HMPC, HUC)" },
+            { "nombre": "Especialización en Urología (HMCA, HUC, HV)" },
+            { "nombre": "Especialización en Arquitectura – Diseño Urbano" },
+            { "nombre": "Especialización en Arquitectura Planificación de Transporte" },
+            { "nombre": "Especialización en Economía Urbana" },
+            { "nombre": "Especialización en Arquitectura – Desarrollo Tecnológico de la Construcción" },
+            { "nombre": "Especialización en Arquitectura – Museología" },
+            { "nombre": "Especialización en Ciencias Penales y Criminológicas" },
+            { "nombre": "Especialización en Derecho Administrativo" },
+            { "nombre": "Especialización en Derechos Humano" },
+            { "nombre": "Especialización en Derecho Internacional Económico y de la Integración" },
+            { "nombre": "Especialización en Derecho Mercantil" },
+            { "nombre": "Especialización en Derecho de la Navegación y el Comercio exterior" },
+            { "nombre": "Especialización en Derecho de la Niñez y de la Adolescencia" },
+            { "nombre": "Especialización en Derecho y Política Internacional" },
+            { "nombre": "Especialización en Derecho Procesal" },
+            { "nombre": "Especialización en Derecho Tributario" },
+            { "nombre": "Especialización en Gobierno y Política Pública" },
+            { "nombre": "Especialización en Procesos y Sistemas Electorales" },
+            { "nombre": "Especialización en Derecho de Menores" },
+            { "nombre": "Especialización en Teatro Latinoamericano" },
+            { "nombre": "Especialización en Musicología Latinoamericana" },
+            { "nombre": "Especialización en Gerencia en Redes de unidades de Servicios de Información" },
+            { "nombre": "Especialización en Información y Comunicación para el Desarrollo" },
+            { "nombre": "Especialización en Políticas y Planificación de la Comunicación Social en América Latina" },
+            { "nombre": "Especialización en Comunicación Cultural" },
+            { "nombre": "Especialización en Información Internacional" },
+            { "nombre": "Especialización en Educación para el uso de Creativo de la Televisión" },
+            { "nombre": "Especialización en Orientación" },
+            { "nombre": "Especialización en Docencia en la Educación Superior" },
+            { "nombre": "Especialización en Tecnologías de la Información y la Comunicación" },
+            { "nombre": "Especialización en Docencia Universitaria" },
+            { "nombre": "Especialización en Lingüística Aplicada a la Enseñanza del Ingles" },
+            { "nombre": "Especialización en Dinámica de Grupos" },
+            { "nombre": "Especialización en Asesoría en Psicología de la Instrucción" },
+            { "nombre": "Especialización en Psicología Clínica" },
+            { "nombre": "Especialización en Intervención Psicosocial" },
+            { "nombre": "Especialización en Análisis Conductual" },
+            { "nombre": "Especialización en Metodología " },
+            { "nombre": "Especialización en Cirugía Bucal" },
+            { "nombre": "Especialización en Endodoncia" },
+            { "nombre": "Especialización en Odontología Infantil" },
+            { "nombre": "Especialización en Odontología Operatoria y Estética" },
+            { "nombre": "Especialización en Ortodoncia" },
+            { "nombre": "Especialización en Periodoncia" },
+            { "nombre": "Especialización en Prostodoncia" },
+            { "nombre": "Especialización en Física Médica" },
+            { "nombre": "Especialización en Geoquímica de Hidrocarburos" },
+            { "nombre": "Especialización en Sistemas de Información" },
+            { "nombre": "Especialización en Modelos Aleatorios" },
+            { "nombre": "Especialización en Medicina Aviar" },
+            { "nombre": "Especialización en Medicina y Cirugía de Pequeños Animales" },
+            { "nombre": "Especialización en Reproducción Animal y Tecnología de la" },
+            { "nombre": "Especialización en Inseminación Artificial" },
+            { "nombre": "Especialización en Investigación de Operaciones" },
+            { "nombre": "Especialización en Computación Emergente" },
+            { "nombre": "Especialización en Física de los Ensayos no Destructivos" },
+            { "nombre": "Especialización en Mantenimiento Vial" },
+            { "nombre": "Especialización en Diseño de Carreteras" },
+            { "nombre": "Especialización en Comunicaciones y Redes de Comunicación de Datos" },
+            { "nombre": "Especialización en Sistemas de Adquisición de Datos y Control Supervisorio" },
+            { "nombre": "Especialización en Instrumentación" },
+            { "nombre": "Especialización en Controles industriales" },
+            { "nombre": "Especialización en Sistemas Eléctricos de Potencia" },
+            { "nombre": "Especialización en Telecomunicaciones Digitales" },
+            { "nombre": "Especialización en Gerencia Integrada de Yacimientos de" },
+            { "nombre": "Especialización en Hidrocarburos" },
+            { "nombre": "Especialización en Diseño de Sistemas de Tuberías " },
+            { "nombre": "Especialización en Ingeniería de Procesos" },
+            { "nombre": "Especialización en Instrumentación y Control de Procesos" },
+            { "nombre": "Especialización en Evaluación de Materiales y Control de Equipos" }
+        ],
+
+        "Maestrias" : [
+            { "nombre": "Maestría en Agronomía" },
+            { "nombre": "Maestría en Botánica Agrícola" },
+            { "nombre": "Maestría en Ciencias del Suelo" },
+            { "nombre": "Maestría en Desarrollo Rural" },
+            { "nombre": "Maestría en Entomología" },
+            { "nombre": "Maestría en Entomología en Salud Pública" },
+            { "nombre": "Maestría en Estadística" },
+            { "nombre": "Maestría en Ingeniería Agrícola" },
+            { "nombre": "Maestría en Producción Animal" },
+            { "nombre": "Maestría en Zoología Agrícola" },
+            { "nombre": "Maestría en Teoría y Política Económica" },
+            { "nombre": "Maestría en Moneda e Instituciones Financieras" },
+            { "nombre": "Maestría en Economía Internacional" },
+            { "nombre": "Maestría en Maestría en Gerencia Empresarial" },
+            { "nombre": "Maestría en Estadística" },
+            { "nombre": "Maestría en Estudios de la Mujer" },
+            { "nombre": "Maestría en Gestión de Investigación y Desarrollo" },
+            { "nombre": "Maestría en Relaciones Internacionales" },
+            { "nombre": "Maestría en Seguridad Social" },
+            { "nombre": "Maestría en Farmacología" },
+            { "nombre": "Maestría en Química de Medicamentos" },
+            { "nombre": "Maestría en Toxicología" },
+            { "nombre": "Maestría en Anatomía Patológica (IAP)" },
+            { "nombre": "Maestría en Ciencias Fisiológicas (IME)" },
+            { "nombre": "Maestría en Epidemiología de las Enfermedades" },
+            { "nombre": "Maestría en Endémicas (IB)" },
+            { "nombre": "Maestría en Estudios individualizados (CEPG)" },
+            { "nombre": "Maestría en Inmunología Básica (IDI)" },
+            { "nombre": "Maestría en Inmunología Clínica (IDI)" },
+            { "nombre": "Maestría en Salud Ocupacional (CSO)" },
+            { "nombre": "Maestría en Parasitología (IMT)" },
+            { "nombre": "Maestría en Arquitectura – Diseño Urbano, Menciones: Gestión, Diseño" },
+            { "nombre": "Maestría en Arquitectura – Historia de la Arquitectura" },
+            { "nombre": "Maestría en Conservación y Restauración de Monumentos" },
+            { "nombre": "Maestría en Arquitectura - Planificación de Transporte" },
+            { "nombre": "Maestría en Planificación Urbana, Política y Acción Local" },
+            { "nombre": "Maestría en Arquitectura – Economía Urbana" },
+            { "nombre": "Maestría en Arquitectura – Desarrollo Tecnológico de la Construcción" },
+            { "nombre": "Maestría en Arquitectura – Diseño Arquitectónico" },
+            { "nombre": "Maestría en Arquitectura – Paisajismo" },
+            { "nombre": "Maestría en Derecho Internacional" },
+            { "nombre": "Maestría en Teatro Latinoamericano" },
+            { "nombre": "Maestría en Musicología Latinoamericana" },
+            { "nombre": "Maestría en Gerencia en Redes de unidades de Servicios de Información" },
+            { "nombre": "Maestría en Información y Comunicación para el Desarrollo" },
+            { "nombre": "Maestría en Políticas y Planificación de la Comunicación Social en América Latina" },
+            { "nombre": "Maestría en Comunicación Cultural" },
+            { "nombre": "Maestría en Información Internacional" },
+            { "nombre": "Maestría en Educación para el uso de Creativo de la Televisión" },
+            { "nombre": "Maestría en Orientación" },
+            { "nombre": "Maestría en Docencia en la Educación Superior" },
+            { "nombre": "Maestría en Tecnologías de la Información y la Comunicación" },
+            { "nombre": "Maestría en Docencia Universitaria" },
+            { "nombre": "Maestría en Lingüística Aplicada a la Enseñanza del Ingles" },
+            { "nombre": "Maestría en Dinámica de Grupos" },
+            { "nombre": "Maestría en Asesoría en Psicología de la Instrucción" },
+            { "nombre": "Maestría en Psicología Clínica" },
+            { "nombre": "Maestría en Intervención Psicosocial" },
+            { "nombre": "Maestría en Análisis Conductual" },
+            { "nombre": "Maestría en Metodología" },
+            { "nombre": "Maestría en Medicina Estomatológica" },
+            { "nombre": "Maestría en Práctica Social y Salud" },
+            { "nombre": "Maestría en Botánica" },
+            { "nombre": "Maestría en Biología Celular" },
+            { "nombre": "Maestría en Ecología" },
+            { "nombre": "Maestría en Zoología" },
+            { "nombre": "Maestría en Ciencias y Tecnología" },
+            { "nombre": "Maestría en de Alimentos" },
+            { "nombre": "Maestría en Física" },
+            { "nombre": "Maestría en Física Médica" },
+            { "nombre": "Maestría en Instrumentación " },
+            { "nombre": "Maestría en Química" },
+            { "nombre": "Maestría en Geoquímica" },
+            { "nombre": "Maestría en Ciencias de la Computación" },
+            { "nombre": "Maestría en Matemática" },
+            { "nombre": "Maestría en Modelos Aleatorios" },
+            { "nombre": "Maestría en Medicina Veterinaria" },
+            { "nombre": "Maestría en Medicina Aviar" },
+            { "nombre": "Maestría en Reproducción Animal y Tecnología de la Inseminación Artificial" },
+            { "nombre": "Maestría en Ciencias Metodológicas" },
+            { "nombre": "Maestría en Investigación de operaciones" },
+            { "nombre": "Maestría en Computación Emergente" },
+            { "nombre": "Maestría en Física de los Ensayos no Destructivos" },
+            { "nombre": "Maestría en Ingeniería Estructural" },
+            { "nombre": "Maestría en Ingeniería en Sismopersistente" },
+            { "nombre": "Maestría en Ingeniería Hidráulica" },
+            { "nombre": "Maestría en Ingeniería Sanitaria Menciones: Calidad del Agua," },
+            { "nombre": "Maestría en Ingeniería Ambiental" },
+            { "nombre": "Maestría en Ingeniería Eléctrica" },
+            { "nombre": "Maestría en Ciencias Geológicas" },
+            { "nombre": "Maestría en Geofísica" },
+            { "nombre": "Maestría en Ingeniería Mecánica" },
+            { "nombre": "Maestría en Ingeniería Química" },
+            { "nombre": "Maestría en Metalurgia y Ciencias de los Materiales" }
+        ],
+
+        "Doctorados": [
+            { "nombre": "Doctorado en Ciencias Agrícolas" },
+            { "nombre": "Doctorado en Ciencias del Suelo" },
+            { "nombre": "Doctorado en Entomología" },
+            { "nombre": "Doctorado en Zoología Agrícola" },
+            { "nombre": "Doctorado en Contáctenos para más información" },
+            { "nombre": "Doctorado en Economía" },
+            { "nombre": "Doctorado en Doctorado en Gerencia" },
+            { "nombre": "Doctorado en Ciencias Sociales" },
+            { "nombre": "Doctorado en Estadística" },
+            { "nombre": "Doctorado en Gestión de Investigación y Desarrollo" },
+            { "nombre": "Doctorado en Seguridad Social" },
+            { "nombre": "Doctorado en Ciencias Mención: Farmacología" },
+            { "nombre": "Doctorado en Química de Medicamentos" },
+            { "nombre": "Doctorado en Ciencias Farmacéuticas" },
+            { "nombre": "Doctorado en Anatomía Patológica (IAP)" },
+            { "nombre": "Doctorado en Ciencias Fisiológicas (IME)" },
+            { "nombre": "Doctorado en Estudios Individualizados (CEPG)" },
+            { "nombre": "Doctorado en Parasitología (IMT)" },
+            { "nombre": "Doctorado en Arquitectura – Urbanismo" },
+            { "nombre": "Doctorado en Ciencias Menciones: Derecho y Ciencias Políticas" },
+            { "nombre": "Doctorado en Educación" },
+            { "nombre": "Doctorado en Filosofía" },
+            { "nombre": "Doctorado en Historia" },
+            { "nombre": "Doctorado en Estudios del Discurso" },
+            { "nombre": "Doctorado en Psicología" },
+            { "nombre": "Doctorado en Humanidades" },
+            { "nombre": "Doctorado en Botánica" },
+            { "nombre": "Doctorado en Biología Celular" },
+            { "nombre": "Doctorado en Ecología" },
+            { "nombre": "Doctorado en Zoología" },
+            { "nombre": "Doctorado en Ciencia y Tecnologíade Alimentos" },
+            { "nombre": "Doctorado en Física" },
+            { "nombre": "Doctorado en Instrumentación" },
+            { "nombre": "Doctorado en Química" },
+            { "nombre": "Doctorado en Geoquímica" },
+            { "nombre": "Doctorado en Ciencias de la Computación" },
+            { "nombre": "Doctorado en Matemática" },
+            { "nombre": "Doctorado en Medicina Veterinaria" },
+            { "nombre": "Doctorado en Mecánica Teórica Aplicada" },
+            { "nombre": "Doctorado en Mecánica Teórica Aplicada" },
+            { "nombre": "Doctorado en Ingeniería Estructural" },
+            { "nombre": "Doctorado en Metalurgia y Ciencias de los Materiale" }
+        ]
+    },
+
+    {
+        "id_uni": "50",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Agroindustrial Mención Granos y Semillas." },
+            { "nombre": "TSU en Pesca Continental y Piscicultura." },
+            { "nombre": "TSU para la Industria de Alimentos." },
+            { "nombre": " TSU en Construcción Civil." },
+            { "nombre": "TSU en Informática." },
+            { "nombre": "TSU en Topografía." },
+            { "nombre": "Arquitectura." }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Economía Agrícola." },
+            { "nombre": "Licenciatura en Educación Mención Arte." },
+            {  "nombre": "Licenciatura en Educación Mención Agropecuaria" },
+            {  "nombre": " Licenciatura en Educación Mención Biología." },
+            {  "nombre": " Licenciatura en Educación Mención Castellano y Literatura." },
+            {  "nombre": " Licenciatura en Educación Mención Educación Física, Deporte y Recreación." },
+            {  "nombre": " Licenciatura en Educación Mención Especial." },
+            {  "nombre": "Licenciatura en Educación Mención Física." },
+            {  "nombre": "Licenciatura en Educación Mención Geografía e Historia." },
+            {  "nombre": " Licenciatura en Educación Mención Inglés." },
+            {  "nombre": " Licenciatura en Educación Mención Integral." },
+            {  "nombre": " Licenciatura en Educación Mención Matemática." },
+            {  "nombre": " Licenciatura en Educación Mención Química." },
+            {  "nombre": " Licenciatura en Botánica Tropical." },
+            {  "nombre": " Licenciatura en Orientación." },
+            {  "nombre": " Licenciatura en Estadística de la Salud." },
+            {  "nombre": " Licenciatura en Enfermería." },
+            {  "nombre": " Licenciatura en Derecho." },
+            {  "nombre": " Licenciatura en Administración." },
+            {  "nombre": " Licenciatura en Contaduría Pública." },
+            {  "nombre": " Licenciatura en Planificación del Desarrollo." },
+            {  "nombre": " Licenciatura en Sociología del Desarrollo." },
+            {  "nombre": " Licenciatura en Turismo Agroecológico." },
+            {  "nombre": " Licenciatura en Arquitectura." },
+            {  "nombre": " Licenciatura en Meteorología" },
+
+            {  "nombre": "Ingeniería Agrícola." },
+            {  "nombre": "Ingeniería Agroindustrial." },
+            {  "nombre": "Ingeniería Agronómica." },
+            {  "nombre": "Ingeniería en Producción Animal." },
+            {  "nombre": "Ingeniería en Recursos Naturales Renovables.Ingeniería Civil." },
+            {  "nombre": "Ingeniería en Informática." },
+            {  "nombre": "Ingeniería en Minas.​" },
+            {  "nombre": "Ingeniería de Petróleo." }
+        ],
+
+        "Especialización": [
+            {  "nombre": "Especialización en Ciencias de la Educación Superior Mención Orientación Educativa." },
+            {  "nombre": "Especialización en Contaduría Mención Auditoría." },
+            {  "nombre": "Especialización en Educación Integral." },
+            {  "nombre": "Especialización en Derecho Agrario y Ambiental." },
+            {  "nombre": "Especialización en TSU en Tecnologías de Alimentos." },
+            {  "nombre": "Especialización en Planificación y Gerencia." },
+            {  "nombre": "Especialización Integral y Estratégico en Extensión Agrícola." },
+            {  "nombre": "Especialización en Ingeniería Agroindustrial Mención Gerencia de Productos." },
+            {  "nombre": "Especialización en Recursos Naturales Renovables Mención Manejo de Fauna Silvestre y Acuática." },
+            {  "nombre": "Especialización en Recursos Naturales Renovables Mención Manejo de los Recursos Agua y Suelo." },
+            {  "nombre": "Especialización en Recursos Naturales Renovables Mención Panificación de los Recursos Naturales Renovables." },
+            {  "nombre": "Especialización en Ingeniería Ambiental." },
+            {  "nombre": "Especialización en Ciencias de la Educación Superior Mención Orientación Educativa." },
+            {  "nombre": "Especialización en Contaduría Mención Auditoría." },
+            {  "nombre": "Especialización en Educación Integral." },
+            {  "nombre": "Especialización en Derecho Agrario y Ambiental." },
+            {  "nombre": "Especialización en TSU en Tecnologías de Alimentos." },
+            {  "nombre": "Especialización en Planificación y Gerencia." },
+            {  "nombre": "Especialización Integral y Estratégico en Extensión Agrícola." },
+            {  "nombre": "Especialización en Ingeniería Agroindustrial Mención Gerencia de Productos." },
+            {  "nombre": "Especialización en Recursos Naturales Renovables Mención Manejo de Fauna Silvestre y Acuática." },
+            {  "nombre": "Especialización en Recursos Naturales Renovables Mención Manejo de los Recursos Agua y Suelo." },
+            {  "nombre": "Especialización en Recursos Naturales Renovables Mención Panificación de los Recursos Naturales Renovables." },
+            {  "nombre": "Especialización en Ingeniería Ambiental." }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Administración Mención Gerencia General." },
+            {  "nombre": "Maestría en Administración Mención Gerencia y Planificación Institucional." },
+            {  "nombre": "Maestría en Ciencias de la Educación Superior Mención Docencia Universitaria." },
+            {  "nombre": "Maestría en Ciencias de la Educación Superior Mención Gerencia y Planificación." },
+            {  "nombre": "Maestría en Ciencias de la Educación Superior Mención Pedagogía de la Educación Física." },
+            {  "nombre": "Maestría en Ciencias de la Educación Superior Mención Planificación y Administración del Deporte." },
+            {  "nombre": "Maestría en Ciencias de la Educación Superior Mención Pedagogía de la Educación Física." },
+            {  "nombre": "Maestría en Docencia Universitaria." },
+            {  "nombre": "Maestría en Desarrollo Rural." },
+            {  "nombre": "Maestría en Educación Ambiental." },
+            {  "nombre": "Maestría en Educación Mención Gerencia y Planificación." },
+            {  "nombre": "Maestría en Gerencia General." },
+            {  "nombre": "Maestría en Gerencia Pública." },
+            {  "nombre": "Maestría en Ingeniería Agroindustrial." },
+            {  "nombre": "Maestría en Ingeniería Ambiental." },
+            {  "nombre": "Maestría en Innovación Curricular." },
+            {  "nombre": "Maestría en Planificación y Administración del Deporte." },
+            {  "nombre": "Maestría en Producción Animal Sostenible." },
+            {  "nombre": "Maestría en Orientación Educativa." },
+            {  "nombre": "Maestría en Educación Mención Orientación Educativa." },
+            {  "nombre": "Maestría en Fitotecnia." },
+            {  "nombre": "Maestría en Zootecnia." },
+            {  "nombre": "Maestría en Recursos Naturales Renovables Mención Planificación de los Recursos Naturales Renovables." },
+            {  "nombre": "Maestría en Recursos Naturales Renovables Mención Manejo de Fauna Silvestre y Acuática." },
+            {  "nombre": "Maestría en Recursos Naturales Renovables Mención Manejo de los Recursos Agua y Suelo." },
+            {  "nombre": "Maestría en Salud Mención Salud Pública." },
+            {  "nombre": "Maestría en Agroecología." }
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Ambiente y Desarrollo." },
+            {  "nombre": "Doctorado en Ciencias Sociales." },
+            {  "nombre": "Doctorado en Educación." },
+            {  "nombre": "Doctorado en Gerencia Avanzada." },
+            {  "nombre": "Doctorado en Bioquímica y Fisiología Animal." },
+            {  "nombre": "Doctorado en Planificación y Desarrollo Sustentable." },
+            {  "nombre": "Doctorado en Didáctica y Aprendizaje." },
+            {  "nombre": "Doctorado en Clínica de Bovinos y Suínos." },
+            {  "nombre": "Doctorado en Sanidad Animal." },
+            {  "nombre": "Doctorado en Psicopedagogía." },
+            {  "nombre": "Doctorado en Biotecnología Avanzada." },
+            {  "nombre": "Doctorado en Tecnologías de Información y Comunicación." },
+            {  "nombre": "Doctorado en Ambiente y Desarrollo." },
+            {  "nombre": "Doctorado en Ingeniería Agroindustrial." },
+            {  "nombre": "Doctorado en Producción Animal." },
+            {  "nombre": "Doctorado en Ciencia y Tecnología de Alimentos." },
+            {  "nombre": "Doctorado en Genética y Reproducción Animal." },
+            {  "nombre": "Doctorado en Biodiversidad." },
+            {  "nombre": "Doctorado en Química de Productos Naturales." },
+            { "nombre": "Doctorado en Ciencias Forenses." },
+            { "nombre": "Doctorado en Ciencias Jurídicas." },
+            { "nombre": "Doctorado en Derecho Constitucional." },
+            { "nombre": "Doctorado en Desarrollo Rural y Territorial." },
+            { "nombre": "Doctorado en Petroquímica." },
+            { "nombre": "Doctorado en Políticas Públicas." },
+            { "nombre": "Doctorado en Derecho Internacional." },
+            { "nombre": "Doctorado en Finanzas." }
+        ],
+
+        "Postdoctorado": [
+            { "nombre": "Postdoctorado en Ciencias Sociales y Económicas." },
+            { "nombre": " Postdoctorado en Ciencias Jurídicas y Políticas." },
+            { "nombre": " Postdoctorado en Ciencias del Agro y del Mar." },
+            { "nombre": " Postdoctorado en Ciencias de la Salud." },
+            { "nombre": " Postdoctorado en Ciencias de la Educación y Humanidades." },
+            { "nombre": " Postdoctorado en Ciencias Básica" }
+        ]
+    },
+
+    {
+        "id_uni": "64",
+
+        "Carreras Cortas": [
+            { "nombre": "TSU en Comercio Exterior" },
+            { "nombre": "TSU en Organización Empresarial" },
+            { "nombre": "TSU en Tecnología Eléctrica" },
+            { "nombre": "TSU en Organización Empresarial" }
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Arquitectura" },
+            { "nombre": "Licenciatura en Urbanismo" },
+            { "nombre": "Licenciatura en Biología" },
+            { "nombre": "Licenciatura en Física" },
+            { "nombre": "Licenciatura en Matemáticas" },
+            {  "nombre": "Licenciatura en Matemáticas, mención: Didáctica de la Matemática" },
+            {  "nombre": "Licenciatura en Matemáticas, mención: Estadística y Matemáticas Computacionales" },
+            {  "nombre": "Licenciatura en Química" },
+            {  "nombre": "Licenciatura en Economía" },
+            {  "nombre": "Licenciatura en Estudios y Artes Liberales" },
+            {  "nombre": "Ingeniería en Computación" },
+            {  "nombre": "Ingeniería Electrónica" },
+            {  "nombre": "Ingeniería Eléctrica" },
+            {  "nombre": "Ingeniería Geofísica" },
+            {  "nombre": "Ingeniería de Materiales" },
+            {  "nombre": "Ingeniería Mecánica" },
+            {  "nombre": "Ingeniería de Producción" },
+            {  "nombre": "Ingeniería Química" },
+            {  "nombre": "Ingeniería de Telecomunicaciones" }
+        ],
+
+        "Especialización": [
+            {  "nombre": "Especialización en Nutrición Clínica" },
+            {  "nombre": "Especialización en Evaluación y Control de Calidad en la Industria Alimentaria" },
+            {  "nombre": "Especialización en Confiabilidad de Sistemas Industriales" },
+            {  "nombre": "Especialización en Diseño y Mantenimiento Industrial" },
+            {  "nombre": "Especialización en Distribución de Energía Eléctrica" },
+            {  "nombre": "Especialización en Equipos Rotativos" },
+            {  "nombre": "Especialización en Estadística Computacional" },
+            {  "nombre": "Especialización en Gestión de las Telecomunicaciones" },
+            {  "nombre": "Especialización en Ingeniería del Gas Natural" },
+            {  "nombre": "Especialización en Ingeniería Estructural" },
+            {  "nombre": "Especialización en Ingeniería Geotécnica" },
+            {  "nombre": "Especialización en Instalaciones Eléctricas" },
+            {  "nombre": "Especialización en Mecánica de Plantas de Procesos" },
+            {  "nombre": "Especialización en Sistemas de Potencia" },
+            {  "nombre": "Especialización en Sistemas Industriales" },
+            {  "nombre": "Especialización en Telecomunicaciones" },
+            {  "nombre": "Especialización en Telemática" },
+            {  "nombre": "Especialización en Transmisión de Energía Eléctrica" },
+            {  "nombre": "Especialización Técnica en Manufactura y Mantenimiento" },
+            {  "nombre": "Especialización en Desarrollo Organizacional" },
+            {  "nombre": "Especialización en Finanzas de la Empresa" },
+            {  "nombre": "Especialización en Gerencia de Auditoría de Estado" },
+            {  "nombre": "Especialización en Gerencia de la Empresa" },
+            {  "nombre": "Especialización en Gerencia de la Tecnología y de la Innovación" },
+            {  "nombre": "Especialización en Gerencia de Mercadeo" },
+            {  "nombre": "Especialización en Gerencia del Negocio del Gas Natural" },
+            {  "nombre": "Especialización en Gestión Ambiental" },
+            {  "nombre": "Especialización en Gestión de Proyectos" },
+            {  "nombre": "Especialización en Informática Educativa" },
+            {  "nombre": "Especialización en Ingeniería Clínica" },
+            {  "nombre": "Especialización en la Enseñanza de Idiomas Extranjeros: Inglés" },
+            {  "nombre": "Especialización en Opinión Pública y Comunicación Política" },
+            {  "nombre": "Especialización en Transporte Público" }
+        ],
+
+        "Maestrias" : [
+            {  "nombre": "Maestría en Biología" },
+            {  "nombre": "Maestría en Ciencias de la Computación" },
+            {  "nombre": "Maestría en Física" },
+            {  "nombre": "Maestría en Matemáticas" },
+            {  "nombre": "Maestría en Química" },
+            {  "nombre": "Maestría en Nutrición" },
+            {  "nombre": "Maestría en Ciencia de los Alimentos " },
+            {  "nombre": "Maestría en Ciencias de la Tierra" },
+            {  "nombre": "Maestría en Estadística" },
+            {  "nombre": "Maestría en Ingeniería Biomédica" },
+            {  "nombre": "Maestría en Ingeniería de Materiales" },
+            {  "nombre": "Maestría en Ingeniería Eléctrica" },
+            {  "nombre": "Maestría en Ingeniería Electrónica" },
+            {  "nombre": "Maestría en Ingeniería de Sistemas" },
+            {  "nombre": "Maestría en Ingeniería Mecánica" },
+            {  "nombre": "Maestría en Ingeniería Química" },
+            {  "nombre": "Maestría en Administración de Empresas" },
+            {  "nombre": "Maestría en Desarrollo y Ambiente" },
+            {  "nombre": "Maestría en Lingüística Aplicada" },
+            {  "nombre": "Maestría en Literatura latinoamericana" },
+            {  "nombre": "Maestría en Música" },
+            {  "nombre": "Maestría en Psicología" },
+            {  "nombre": "Maestría en Ciencias Políticas" },
+            {  "nombre": "Maestría en Filosofía" },
+            {  "nombre": "Maestría en Transporte Público" }
+        ],
+
+        "Doctorados": [
+            {  "nombre": "Doctorado en Biología" },
+            {  "nombre": "Doctorado en Ciencias de la Computación" },
+            {  "nombre": "Doctorado Interdisciplinario en Ciencias" },
+            {  "nombre": "Doctorado en Física" },
+            {  "nombre": "Doctorado en Matemáticas" },
+            {  "nombre": "Doctorado en Química" },
+            {  "nombre": "Doctorado en Nutrición " },
+            {  "nombre": "Doctorado en Ciencia de los Alimentos" },
+            {  "nombre": "Doctorado en Ciencias Políticas" },
+            {  "nombre": "Doctorado en Filosofía" }
+        ],
+
+        "Diplomados": [
+            {  "nombre": "Diplomado en Software Libre" },
+            {  "nombre": "Diplomado en confiabilidad integral de activos y procesos industriales" },
+            {  "nombre": "Diplomado de desarrollo gerencial y responsabilidad social empresarial" },
+            {  "nombre": "Diplomado de Prospectiva y Estrategia" }
+        ]
+    }
+]

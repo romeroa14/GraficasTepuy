@@ -1,0 +1,101 @@
+[
+    {
+        "nombre1": "Paola",
+        "nombre2": "Vanessa",
+        "apellido1": "Miranda",
+        "apellido2": "Espinoza",
+        "nacimiento": "1998-07-27",
+        "cedula": 26745161,
+        "foto": "./data/20230210_124311.png",
+        "sexo": "Femenino",
+        "direccion": "Parroquia San Angustin, Autopista Francisco Fajardo, Residencia Hornos de Cal, Caracas.",
+        "telefono": 4241577433,
+        "empleado_tipo": "Administrativo",
+        "condicion": "Fijo",
+        "cargo": "Ingeniera Eléctrica",
+        "habilidades": [
+            {
+                "id1": "1",
+                "habilidad": "Spinning"
+            },
+            {
+                "id2": "2",
+                "habilidad": "Física"
+            },
+            {
+                "id3": "3",
+                "habilidad": "Analisis de Datos"
+            },
+            {
+                "id4": "4",
+                "habilidad": "Electricista"
+            }
+        ]
+    },
+    {
+        "nombre1": "Edith",
+        "nombre2": "Del Carmen",
+        "apellido1": "Torres",
+        "apellido2": "Montes de Oca",
+        "nacimiento": "1969-08-22",
+        "cedula": 8679932,
+        "foto": "./data/20230210_124311.png",
+        "sexo": "Femenino",
+        "direccion": "Calle Bucare, Colinas de Carrizal, Carrizal, Edo. Miranda, Venezuela",
+        "telefono": 4142548265,
+        "empleado_tipo": "Administrativo",
+        "condicion": "Fijo",
+        "cargo": "Analista de Personal",
+        "habilidades": [
+            {
+                "id1": "1",
+                "habilidad": "Excel"
+            },
+            {
+                "id2": "2",
+                "habilidad": "Analisis de Datos"
+            },
+            {
+                "id3": "3",
+                "habilidad": "Administracion de Empresas"
+            },
+            {
+                "id4": "4",
+                "habilidad": "fullstack"
+            }
+        ]
+    },
+    {
+        "nombre1": "Fulanito",
+        "nombre2": "Sutanito",
+        "apellido1": "Urabaki",
+        "apellido2": "Ajax",
+        "nacimiento": "1988-09-23",
+        "cedula": 7654321,
+        "foto": "./data/20230210_124311.png",
+        "sexo": "Masculino",
+        "direccion": "En lo mas profundo de tu corazon rebosante de amor por ti",
+        "telefono": 4161234567,
+        "empleado_tipo": "Obrero",
+        "condicion": "Contratado",
+        "cargo": "Barrendero",
+        "habilidades": [
+            {
+                "id1": "1",
+                "habilidad": "backend"
+            },
+            {
+                "id2": "2",
+                "habilidad": "frontend"
+            },
+            {
+                "id3": "3",
+                "habilidad": "data entry"
+            },
+            {
+                "id4": "4",
+                "habilidad": "fullstack"
+            }
+        ]
+    }
+]
