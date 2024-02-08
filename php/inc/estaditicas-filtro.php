@@ -21,15 +21,15 @@
             </div>
             <div class="col-3">
               <select disabled class="select" name="select_2" id="select_2" >
-                <option disabled selected>Municipios</option>
+                <option   selected>Municipios</option>
               </select>
             </div>
             <div class="col-1">
-              <select disabled class="select" name="select_tipo" id="select_3" >
-                <option disabled selected>Tipo</option>
-                <option value="Todos">Todas</option>
-                <option value="Publica">Públicas</option>
-                <option value="Privada">Privadas</option>
+              <select value = '0' disabled class="select" name="select_tipo" id="select_3" >
+                <option  disabled selected>Tipo</option>
+                <option value="todos">Todas</option>
+                <option value="publica">Públicas</option>
+                <option value="privada">Privadas</option>
               </select>
             </div>
             <div class="col-6">

@@ -1,18 +1,51 @@
 const selects_estaditicas=document.querySelectorAll(".select");
 
 function mostrar_datos(e){
-    let id_actual = this.value
+    let value_actual = this.value
     let select_actual = this.id
-    select_actual = parseInt(select_actual.match(/\d/)[0]);
-    let select_siguiente = select_actual + 1 
-    select_siguiente = select_siguiente.toString()
-    console.log( `select actual = ${select_actual}, siguiente id =${select_siguiente}`);
+    select_actual = select_actual.match(/\d/)[0];
+    let select_siguiente = (parseInt(select_actual) + 1).toString()
+
+            if(select_actual == '1'){
+
+                let estado = this.value
+                selects_estaditicas.forEach(select => {
+                    select.disabled=true
+                    select.selectedIndex = 0;
+                    
+                });
+                this.disabled=false;
+                this.value = estado
+                if (value_actual == 'todos') {
+                    return;
+                }
+                
+            }
+            if (select_actual == '2') {
+                
+                let value_select_siguiente  = document.querySelector('#select_3').value
+                if (value_select_siguiente == '0') {
+                    return;
+                }else{
+                    let estado  = document.querySelector('#select_1').value
+                    let tipo = document.querySelector('#select_3').value
+                    value_actual = estado+','+value_actual+','+tipo
+                }
+                
+            }
+            if (select_actual == '3') {
+                let estado  = document.querySelector('#select_1').value
+                let municipio = document.querySelector('#select_2').value
+                value_actual = estado+','+municipio+','+value_actual
+            }
+
+    console.log( `value actual = ${value_actual}, select actual = ${select_actual}, siguiente id =${select_siguiente}`);
     fetch('./php/funciones/municipios.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: 'id=' + id_actual
+        body: 'id=' +select_actual +','+value_actual
     })
     .then(res => {
         if(!res.ok) {
@@ -20,26 +53,54 @@ function mostrar_datos(e){
         }
         return res.text(); // Cambiamos a res.text() para leer la respuesta como texto
     })
+    // .then(html => console.log(html))
     .then(html => {
         if (html != '') {
 
             if (select_actual == '1') {
                 document.querySelector(`#select_${parseInt(select_actual)+2}`).disabled = false;
-                
-            }if (select_actual == '2') {
-                return
-            } else {
                 let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
                 siguiente_select.disabled = false;
                 siguiente_select.innerHTML = html;
+                siguiente_select.options[0].disabled=true;
+            }else
+            if (select_actual == '2') {
+                let siguiente_select = document.querySelector(`#select_${parseInt(select_actual)+2}`)
+                siguiente_select.innerHTML = html;
+                siguiente_select.options[0].disabled=true;
+                
+
             }
+            if (select_actual == '3') {
+                let siguiente_select = document.querySelector(`#select_${parseInt(select_actual)+1}`)
+                siguiente_select.disabled = false;
+                siguiente_select.innerHTML = html;
+                siguiente_select.options[0].disabled=true;
+
+            }
+
+
+            if (select_actual > '3') {
+                let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
+                siguiente_select.disabled = false;
+                siguiente_select.innerHTML = html;
+
+            }
+            
+                
             
                 
 
                 
             
         }else{
-            document.querySelector(`#select_${id_siguiente}`).innerHTML = '<option value="">sin municipio</option>'
+            if(select_actual != '2') {
+                let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
+                    siguiente_select.disabled = false;
+                    siguiente_select.innerHTML = '<option value="">sin datos</option>';
+                
+            }
+            
         }
         
     })
@@ -47,6 +108,8 @@ function mostrar_datos(e){
         console.error('Ocurrió un error ' + error);
     });
 };
+
+
 
 selects_estaditicas.forEach(select => {
     select.addEventListener("change",mostrar_datos);

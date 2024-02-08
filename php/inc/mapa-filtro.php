@@ -15,12 +15,12 @@
 
     <!-- Select de estados -->
     <div class="col-3">
-      <select class="select select-location" name="select-mapa-estado" id="select_mapa_estado"></select>
+      <select class="select-location" name="select-mapa-estado" id="select_mapa_estado"></select>
     </div>
 
     <!-- Select de universidades -->
     <div class="col-3">
-      <select disabled class="select select-location3" name="select-mapa-uni" id="select_mapa_uni"></select>
+      <select disabled class="select-location3" name="select-mapa-uni" id="select_mapa_uni"></select>
     </div>
   </div>
 

@@ -1,0 +1,165 @@
+[
+
+    {
+        "code_uni": "uni0061",
+
+        "Carreras Largas": [
+            { "id": "1", "nombre": "PNF en Administración"},
+            { "id": "2", "nombre": "PNF en Agroalimentación"},
+            { "id": "3", "nombre": "PNF en Construcción Civil"},
+            { "id": "4", "nombre": "PNF en Informática"},
+            { "id": "5", "nombre": "PNF en Procesamiento y Distribución de Alimentos"},
+            { "id": "6", "nombre": "PNF en Seguridad Alimentaria y Cultura Nutricional"},
+            { "id": "7", "nombre": "PNF en Medicina Veterinaria"}
+
+        ]
+    },
+
+    {
+        "code_uni": "uni0027",
+
+        "Carreras Largas": [
+            { "id": "1", "nombre": "Operaciones aeroespaciales: Piloto Militar de aviación de caza, combate, helicóptero, transporte de carga, ejecutivo, presidencial y táctico."},
+            { "id": "2", "nombre": "Defensa aeroespacial integral."},
+            { "id": "3", "nombre": "Operaciones de guerra electrónica."},
+            { "id": "4", "nombre": "Logística."},
+            { "id": "5", "nombre": "Inteligencia aeroespacial."},
+            { "id": "6", "nombre": "Fuerzas especiales."},
+            { "id": "7", "nombre": "Administración financiera."},
+            { "id": "8", "nombre": "Administración de talento humano."},
+            { "id": "9", "nombre": "Metalmecánica."},
+            { "id": "10", "nombre": "Tránsito aéreo."},
+            { "id": "11", "nombre": "Vigilancia y control."},
+            { "id": "12", "nombre": "Defensa antiaérea."},
+            { "id": "13", "nombre": "Meteorología."},
+            { "id": "14", "nombre": "Electrónica aeronáutica."},
+            { "id": "15", "nombre": "Abastecimiento aeronáutico."},
+            { "id": "16", "nombre": "Armamento aeroespacial."},
+            { "id": "17", "nombre": "Tecnología aeroespacial."},
+            { "id": "18", "nombre": "Telecomunicaciones aeronáuticas."},
+            { "id": "19", "nombre": "Ingeniería militar, mención mecánica aeronáutica."}
+        ],
+
+        "Cursos": [
+            { "id": "20", "nombre": "Curso de Formación de Oficiales Asimilados."},
+            { "id": "21", "nombre": "Curso Especial de Formación de Oficiales de Comando."},
+            { "id": "22", "nombre": "Curso de Formación de Oficiales Asimilados."}
+
+        ]
+    },
+
+    {
+        "code_uni": "uni0054",
+
+        "Carreras Cortas": [
+            { "id": "1", "nombre": "Construcción civil."},
+            { "id": "2", "nombre": "Mecánica."},
+            { "id": "3", "nombre": "Mantenimiento."},
+            { "id": "4", "nombre": "Electricidad."},
+            { "id": "5", "nombre": "Electrónica."},
+            { "id": "6", "nombre": "Instrumentación y control."},
+            { "id": "7", "nombre": "Higiene y seguridad laboral."},
+            { "id": "8", "nombre": "Enfermería comunitaria."},
+            { "id": "9", "nombre": "Fisioterapia"},
+            { "id": "10", "nombre": "Terapia ocupacional"},
+            { "id": "11", "nombre": "Informática "}
+        ]
+    },
+
+    {
+        "code_uni": "uni0057",
+
+        "Carreras Largas": [
+            { "id": "1", "nombre": "Química."},
+            { "id": "2", "nombre": "Agroalimentaria."},
+            { "id": "3", "nombre": "Electricidad."},
+            { "id": "4", "nombre": "Informática."},
+            { "id": "5", "nombre": "Ing. Industrial."},
+            { "id": "6", "nombre": "Procesos químicos."},
+            { "id": "7", "nombre": "Ingeniería en Informática."},
+            { "id": "8", "nombre": "Procesos y Distribución de Alimentos."},
+            { "id": "9", "nombre": "Instrumentación y Control."},
+            { "id": "10", "nombre": "Electrónica."}
+        ]
+    },
+
+    {
+        "code_uni": "uni0058",
+
+        "Carreras Largas": [
+            { "id": "1", "nombre": "PNF en Informática."},
+            { "id": "2", "nombre": "PNF en Agroalimentación."},
+            { "id": "3", "nombre": "PNF en Construcción naval-mecánica y mantenimiento naval."},
+            { "id": "4", "nombre": "PNF en Ingeniería de procesamiento y distribución de alimentos."},
+            { "id": "5", "nombre": "PNF en Ingeniería mecánica."},
+            { "id": "6", "nombre": "PNF en Seguridad alimentaria y cultura nutricional."},
+            { "id": "7", "nombre": "PNF en Mercadeo."},
+            { "id": "8", "nombre": "PNF en Comercio exterior."},
+            { "id": "9", "nombre": "PNF en Publicidad."},
+            { "id": "10", "nombre": "PNF en Administración."}
+        ]
+    },
+
+    {
+        "code_uni": "uni0055",
+
+        "Carreras Largas": [
+            { "id": "1", "nombre": "Ingeniería Agroalimentaria"},
+            { "id": "2", "nombre": "Ingeniería eléctrica "},
+            { "id": "3", "nombre": "Ingeniería mecánica "},
+            { "id": "4", "nombre": "Ingeniería en mantenimiento"},
+            { "id": "5", "nombre": "Ingeniería en informática "},
+            { "id": "6", "nombre": "Ingeniería Informática"},
+            { "id": "7", "nombre": "Ingeniería en informática"},
+
+            { "id": "8", "nombre": "Licenciatura en administración "},            
+            { "id": "9", "nombre": "Licenciatura en administración"},
+            { "id": "10", "nombre": "Licenciatura en administración "}
+        ]
+    },
+
+    {
+        "code_uni": "uni0009",
+
+        "Carreras Largas": [
+            { "id": "1", "nombre": "Licenciatura en Derecho "},
+            { "id": "2", "nombre": "Licenciatura en Comunicación "},
+            { "id": "3", "nombre": "Licenciatura en Educación Cultural Bilingüe "},
+            { "id": "4", "nombre": "Licenciatura en Agroecología"}
+        ]
+    },
+
+    {
+        "code_uni": "uni0007",
+
+        "Carreras Cortas": [
+            { "id": "21", "nombre": "Educación Integral"},
+            { "id": "3", "nombre": "Educación. Mención Educación Física, Deporte Y Recreación"},
+            { "id": "4", "nombre": "Educación. Mención Lengua Y Literatura"},
+            { "id": "5", "nombre": "Educación. Mención Matemática"},
+            { "id": "6", "nombre": "Educación En Ciencias: Física, Química Y Biología"},
+
+            { "id": "7", "nombre": "TSU en Empresa De Alojamiento Turístico"},
+            { "id": "8", "nombre": "TSU en Turismo"}
+
+        ],
+
+        "Carreras Largas": [
+            { "id": "9", "nombre": "Licenciatura En Gestión De Alojamiento Turístico"},
+            { "id": "10", "nombre": "Licenciatura En Ciencias Ambientales"},
+            { "id": "11", "nombre": "Licenciatura En Administración De Empresas"},
+            { "id": "12", "nombre": "Licenciatura En Administración Mención Banca Y Finanzas"},
+            { "id": "13", "nombre": "Licenciatura En Ciencias Fiscales"},
+            { "id": "14", "nombre": "Licenciatura En Contaduría Pública"},
+            { "id": "15", "nombre": "Licenciatura En Tecnología En Producción Agropecuaria"},
+
+            { "id": "16", "nombre": "Ingeniería En Informática"},
+            { "id": "17", "nombre": "Ingeniería En Materiales"},
+            { "id": "18", "nombre": "Ingeniería Industrial"},
+            { "id": "19", "nombre": "Ingeniería De Producción Animal"},
+            { "id": "20", "nombre": "Ingeniería En Industrias Forestales"}
+        ]
+    }
+
+]
+
