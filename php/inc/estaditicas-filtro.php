@@ -42,9 +42,9 @@
           <!-- Fila #2 del filtro -->
           <div class="row">
             <div class="col-2">
-              <select disabled class="select" name="select_tipo_persona" id="select_tipo_persona">
+              <select disabled class="select" name="select_tipo_persona" id="select_5">
                 <option disabled selected>Tipo de persona</option>
-                <option value="Todo">Todo</option>
+                <option value="todos">Todos</option>
                 <option value="Profesores">Profesores</option>
                 <option value="Estudiantes">Estudiantes</option>
                 <option value="Administrativos">Administrativos</option>
@@ -52,22 +52,20 @@
               </select>
             </div>
             <div class="col-1">
-              <select disabled class="select" name="select_sexo" id="select_sexo">
+              <select disabled class="select" name="select_sexo" id="select_6">
                 <option disabled selected>Sexo</option>
-                <option value="Todos">Todos</option>
+                <option value="todos">Todos</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
               </select>
             </div>
             <div class="col-6">
-              <select disabled class="select" name="select_discapacidad" id="select_discapacidad">
+              <select disabled class="select" name="select_discapacidad" id="select_7">
                 <option disabled selected>Discapacidad</option>
-                <option>Todos</option>
-                <option>Inclusive</option>
               </select>
             </div>
             <div class="col-3">
-              <select disabled class="filtroEstadistica-cargos select" name="select_cargo" id="select_cargo">
+              <select disabled class="select" name="select_cargo" id="select_8">
                 <option disabled selected>Cargos</option>
               </select>
             </div>

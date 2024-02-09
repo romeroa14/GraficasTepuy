@@ -7,22 +7,18 @@ function mostrar_datos(e){
     let select_siguiente = (parseInt(select_actual) + 1).toString()
 
             if(select_actual == '1'){
-
                 let estado = this.value
                 selects_estaditicas.forEach(select => {
                     select.disabled=true
                     select.selectedIndex = 0;
-                    
                 });
                 this.disabled=false;
                 this.value = estado
                 if (value_actual == 'todos') {
                     return;
                 }
-                
             }
             if (select_actual == '2') {
-                
                 let value_select_siguiente  = document.querySelector('#select_3').value
                 if (value_select_siguiente == '0') {
                     return;
@@ -38,8 +34,33 @@ function mostrar_datos(e){
                 let municipio = document.querySelector('#select_2').value
                 value_actual = estado+','+municipio+','+value_actual
             }
+            if (select_actual == '4') {
+                select_siguiente = document.querySelector(`#select_${parseInt(select_actual)+1}`)
+                select_siguiente.disabled=false;
+                return
+            }
+            if (select_actual == '5') {
+                for (let index = 6; index <= 8; index++) {
+                    let select = document.querySelector(`#select_${index.toString()}`)
+                    select.disabled=true
+                    select.selectedIndex = 0;
+                    
+                }
+                
+                select_siguiente = document.querySelector(`#select_${parseInt(select_actual)+1}`)
+                select_siguiente.disabled=false;
+                return
+                
+            }
+            // }
+            // if (select_actual == '6') {
+            //     select_siguiente = document.querySelector(`#select_${parseInt(select_actual)+1}`)
+            //     select_siguiente.disabled=false;
+            //     return
+            // }
 
-    console.log( `value actual = ${value_actual}, select actual = ${select_actual}, siguiente id =${select_siguiente}`);
+
+    console.log( `value actual = ${value_actual}, select actual = ${select_actual}, select siguiente =${select_siguiente}`);
     fetch('./php/funciones/municipios.php', {
         method: 'POST',
         headers: {
@@ -78,29 +99,24 @@ function mostrar_datos(e){
                 siguiente_select.options[0].disabled=true;
 
             }
+            if (select_actual == '4' || select_actual == '5' ) {
+                siguiente_select.disabled = false;
+                siguiente_select.options[0].disabled=true;
+                
 
-
-            if (select_actual > '3') {
+            }
+            if (select_actual == '6') {
                 let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
                 siguiente_select.disabled = false;
                 siguiente_select.innerHTML = html;
-
+                siguiente_select.options[0].disabled=true
             }
-            
-                
-            
-                
-
-                
-            
-        }else{
-            if(select_actual != '2') {
+            if (select_actual == '7') {
                 let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
-                    siguiente_select.disabled = false;
-                    siguiente_select.innerHTML = '<option value="">sin datos</option>';
-                
+                siguiente_select.disabled = false;
+                // siguiente_select.innerHTML = html;
+                // siguiente_select.options[0].disabled=true
             }
-            
         }
         
     })

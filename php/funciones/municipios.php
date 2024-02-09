@@ -20,12 +20,10 @@
             }else{
                 echo '<option disabled value="">Universidad</option>';
             }
-            
-
-        }else{
-            
-        } 
-        
+        }
+        if ($select_actual == '6' ){
+            mostrar_discapacidad();
+        }
         
 
 
