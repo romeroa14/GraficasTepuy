@@ -28,8 +28,8 @@
               <select value = '0' disabled class="select" name="select_tipo" id="select_3" >
                 <option  disabled selected>Tipo</option>
                 <option value="todos">Todas</option>
-                <option value="publica">Públicas</option>
-                <option value="privada">Privadas</option>
+                <option value="Publica">Públicas</option>
+                <option value="Privada">Privadas</option>
               </select>
             </div>
             <div class="col-6">

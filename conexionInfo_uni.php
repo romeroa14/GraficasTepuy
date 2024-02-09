@@ -59,7 +59,7 @@ foreach ($data as $universidad) {
     $consulta->execute($marcadores_consulta);
     if (!$consulta->rowCount()){
         // $conexion = conexion();
-        $insert = $conexion->prepare("INSERT INTO sys_institucion (institucion, abreviatura, tipo_univ, mision, vision, descripcion, id_municipio) VALUES (:nombre, :siglas, :tipo, :mision, :vision, :descripcion, :id_municipio)");
+        $insert = $conexion->prepare("INSERT INTO sys_institucion (institucion, abreviatura, tipo_univ, mision, vision, descripcion, municipio_id) VALUES (:nombre, :siglas, :tipo, :mision, :vision, :descripcion, :id_municipio)");
         
         $marcadores=[
             ":nombre"=>$nombre_uni,

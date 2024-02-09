@@ -2,7 +2,7 @@
 	
 	# Conexion a la base de datos #
 	function conexion(){
-		$pdo = new PDO('mysql:host=localhost;dbname=laravel_sistema', 'root', '');
+		$pdo = new PDO('mysql:host=localhost;dbname=laravel_sistema_ce', 'root', '');
 		return $pdo;
 	}
 
