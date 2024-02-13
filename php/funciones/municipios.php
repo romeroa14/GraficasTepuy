@@ -24,8 +24,12 @@
         if ($select_actual == '6' ){
             mostrar_discapacidad();
         }
-        
-
+        if ($select_actual == '7' ){
+            mostrar_grupo_cargos($valor_actual);
+        }
+        if ($select_actual == '21' ){
+            mostrar_universidad($valor_actual,'todos','todos');
+        }
 
         
         } 
@@ -34,3 +38,5 @@
     }
     
 ?>
+
+

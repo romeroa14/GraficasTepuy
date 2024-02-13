@@ -97,7 +97,7 @@ const mostrarSugerencias = (list) =>{
 }
 
 
-// -------------- variables necesarias para la funcionalidad de als flechas--------
+// -------------- variables necesarias para la funcionalidad de las flechas--------
 let contador = 0;
 let alturaSugerencia = 0;
 let posicionAcumulada = 0;
@@ -241,11 +241,10 @@ function crearSiglas(textoCompleto) {
 
 
 
-/*
-let selectUniversidad = select _mapa_uni
-let selectEstado = document.getElementById("select-location");
+
+let selectEstado = document.querySelector("#select_21");
+let selectUniversidad = document.querySelector("#select_22");
 var estadoActual
-selectUniversidad.disabled = true;
 
 // Funcionalidad del select de Estados
 selectEstado.addEventListener("change", () => {
@@ -258,9 +257,8 @@ selectEstado.addEventListener("change", () => {
     if(estadoActual == "estado") {
         return
     }else{
-        selectUniversidad.disabled = false;
         estadoActual = eliminarAcentos(estadoActual)
-    
+        console.log(estadoActual);
         let coordDesplazamiento = sugerenciasEstados[estadoActual]["coordenadas"];
         let zoomDesplazamiento = sugerenciasEstados[estadoActual]["zoom"];
         map.flyTo(coordDesplazamiento, zoomDesplazamiento);
@@ -289,4 +287,4 @@ selectUniversidad.addEventListener("click",()=>{
         desplazarse(coordDesplazamiento);
         mostrarPanel(siglas)
 })
- */
+

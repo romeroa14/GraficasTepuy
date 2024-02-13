@@ -3,7 +3,7 @@
 function mostrar_estados(){
     $estados = conexion();
                     $estados = $estados->query("SELECT est.id, est.nombre_estado FROM sys_pais_estados est INNER JOIN sys_pais pais on pais.id = est.pais_id WHERE pais.nombre_pais = 'Venezuela' ORDER by est.nombre_estado");
-                    echo '<option value="todos">Todos</option>';
+                    echo '<option selected value="">Estados</option><option value="todos">Todos</option>';
                     if ($estados->rowCount()) {
                         $estados = $estados->fetchAll();
                         foreach ($estados as $row) {
@@ -37,34 +37,54 @@ function mostrar_municipios($id){
 
 function mostrar_universidad($estado, $id, $tipo){
     $db = conexion();
-    if ($id == 'todos' &&  $tipo == 'todos') {
-        $query = "SELECT est.id, inst.id, inst.institucion, inst.abreviatura FROM sys_institucion inst INNER JOIN sys_pais_municipios muni ON inst.municipio_id = muni.id INNER JOIN sys_pais_estados est ON muni.estado_id = est.id INNER JOIN sys_pais pais ON est.pais_id = pais.id WHERE pais.nombre_pais = 'Venezuela' And est.id = '$estado' ORDER BY muni.nombre_municipio";
+    if($estado == 'todos' && $id == 'todos' &&  $tipo == 'todos'){
+        $query = "SELECT est.id, inst.id, inst.institucion, inst.abreviatura 
+        FROM sys_institucion inst 
+        INNER JOIN sys_sede sede ON inst.id = sede.sys_institucion_id
+        INNER JOIN sys_pais_municipios muni ON sede.dir_municipio = muni.id 
+        INNER JOIN sys_pais_estados est ON muni.estado_id = est.id 
+        INNER JOIN sys_pais pais ON est.pais_id = pais.id 
+        WHERE pais.nombre_pais = 'Venezuela'  
+        ORDER BY inst.id";
+    }else if ($id == 'todos' &&  $tipo == 'todos') {
+        $query = "SELECT est.id, inst.id, inst.institucion, inst.abreviatura 
+        FROM sys_institucion inst 
+        INNER JOIN sys_sede sede ON inst.id = sede.sys_institucion_id
+        INNER JOIN sys_pais_municipios muni ON sede.dir_municipio = muni.id 
+        INNER JOIN sys_pais_estados est ON muni.estado_id = est.id 
+        INNER JOIN sys_pais pais ON est.pais_id = pais.id 
+        WHERE pais.nombre_pais = 'Venezuela' And est.id = '$estado' 
+        ORDER BY muni.nombre_municipio";
     } else if($id == 'todos'){
         $query = "SELECT est.id, inst.id, inst.institucion, inst.abreviatura, inst.tipo_univ
         FROM sys_institucion inst 
-        INNER JOIN sys_pais_municipios muni ON inst.municipio_id = muni.id 
+        INNER JOIN sys_sede sede ON inst.id = sede.sys_institucion_id
+        INNER JOIN sys_pais_municipios muni ON sede.dir_municipio = muni.id 
         INNER JOIN sys_pais_estados est ON muni.estado_id = est.id 
         INNER JOIN sys_pais pais ON est.pais_id = pais.id 
         WHERE pais.nombre_pais = 'Venezuela' And est.id = '$estado' AND inst.tipo_univ = '$tipo' ";
     }else if ($tipo == 'todos'){
         $query = "SELECT inst.id, inst.institucion, inst.abreviatura, inst.tipo_univ
         FROM sys_institucion inst 
-        INNER JOIN sys_pais_municipios muni ON inst.municipio_id = muni.id 
+        INNER JOIN sys_sede sede ON inst.id = sede.sys_institucion_id
+        INNER JOIN sys_pais_municipios muni ON sede.dir_municipio = muni.id 
         INNER JOIN sys_pais_estados est ON muni.estado_id = est.id 
         INNER JOIN sys_pais pais ON est.pais_id = pais.id 
-        WHERE pais.nombre_pais = 'Venezuela' AND inst.municipio_id = '$id'";
+        WHERE pais.nombre_pais = 'Venezuela' AND sede.dir_municipio = '$id'";
     }else{
-        $query = "SELECT est.nombre_estado, est.id, muni.id, muni.nombre_municipio, inst.id, inst.institucion, inst.abreviatura, inst.tipo_univ 
+        $query = "SELECT inst.id, inst.institucion, inst.abreviatura, inst.tipo_univ 
         FROM sys_institucion inst 
-        INNER JOIN sys_pais_municipios muni ON inst.municipio_id = muni.id 
+        INNER JOIN sys_sede sede ON inst.id = sede.sys_institucion_id
+        INNER JOIN sys_pais_municipios muni ON sede.dir_municipio = muni.id 
         INNER JOIN sys_pais_estados est ON muni.estado_id = est.id 
         INNER JOIN sys_pais pais ON est.pais_id = pais.id 
-        WHERE pais.nombre_pais = 'Venezuela'  AND inst.municipio_id = '$id' AND inst.tipo_univ = '$tipo' ";
+        WHERE pais.nombre_pais = 'Venezuela'  AND sede.dir_municipio = '$id' AND inst.tipo_univ = '$tipo' ";
     }
+    
     
                     
                     $resultado = $db->query($query);
-                    echo '<option value="">Universidad</option><option value="todos">Todos</option>';
+                    echo '<option value="">Universidades</option><option value="todos">Todos</option>';
                     if ($resultado->rowCount()) {
                         foreach ($resultado as $row) {
                             echo '<option value = "' . $row['inst.id'] . '" name = "' . $row['abreviatura'] . '">(' . $row['abreviatura'] . ') - ' . $row['institucion'] . '</option>';
@@ -91,3 +111,22 @@ function mostrar_discapacidad(){
                     // return $datos;
 }
 
+function mostrar_grupo_cargos($valor_actual){
+    $db = conexion();
+    if ($valor_actual == 'todos'){
+        $query = "SELECT id, group_name FROM rrhh_groups ORDER BY group_name";
+    }else{
+        $query = "SELECT id, group_name FROM rrhh_groups WHERE rrhh_category_id = '$valor_actual' ORDER BY group_name";
+    }
+        $resultado = $db->query($query);
+        echo '<option value="">Grupo de cargos</option><option value="todos">Todos</option>';
+        if ($resultado->rowCount()) {
+            foreach ($resultado as $row) {
+                echo '<option value = "' . $row['id'] . '" name = "' . $row['group_name'] . '">' . $row['group_name'] . '</option>';
+            } //end while
+        }else {
+            echo '<option value="">No hay Grupo de cargos</option>'; // Mensaje de opción vacía si no hay municipios
+        } //end if
+        // return $datos;
+    
+}

@@ -11,9 +11,9 @@
           <div class="row">
             <div class="col-2">
               <select class="select" name="select_estado" id="select_1" >
-                <option disabled selected>Estados</option>
+                
                 <?php 
-                include './php/funciones/estadisticas_consultas.php';
+                require_once './php/funciones/estadisticas_consultas.php';
                 mostrar_estados() ?> 
 
                 
@@ -34,7 +34,7 @@
             </div>
             <div class="col-6">
               <select disabled class="select" name="select_universidades" id="select_4">
-                <option disabled selected>Universidad</option>
+                <option disabled selected>Universidades</option>
               </select>
             </div>
           </div>
@@ -45,10 +45,10 @@
               <select disabled class="select" name="select_tipo_persona" id="select_5">
                 <option disabled selected>Tipo de persona</option>
                 <option value="todos">Todos</option>
-                <option value="Profesores">Profesores</option>
-                <option value="Estudiantes">Estudiantes</option>
-                <option value="Administrativos">Administrativos</option>
-                <option value="Obreros">Obreros</option>
+                <option value="0">Estudiantes</option>
+                <option value="1">Profesores</option>
+                <option value="2">Administrativos</option>
+                <option value="3">Obreros</option>
               </select>
             </div>
             <div class="col-1">
@@ -59,13 +59,18 @@
                 <option value="Femenino">Femenino</option>
               </select>
             </div>
-            <div class="col-6">
+            <div class="col-3">
               <select disabled class="select" name="select_discapacidad" id="select_7">
                 <option disabled selected>Discapacidad</option>
               </select>
             </div>
             <div class="col-3">
-              <select disabled class="select" name="select_cargo" id="select_8">
+              <select disabled class="select" name="select_grupo_cargos" id="select_8">
+                <option disabled selected>Grupo de cargos</option>
+              </select>
+            </div>
+            <div class="col-3">
+              <select disabled class="select" name="select_cargo" id="select_9">
                 <option disabled selected>Cargos</option>
               </select>
             </div>

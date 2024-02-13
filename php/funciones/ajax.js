@@ -3,14 +3,17 @@ const selects_estaditicas=document.querySelectorAll(".select");
 function mostrar_datos(e){
     let value_actual = this.value
     let select_actual = this.id
-    select_actual = select_actual.match(/\d/)[0];
+    select_actual = select_actual.match(/\d+/)[0];
     let select_siguiente = (parseInt(select_actual) + 1).toString()
 
-            if(select_actual == '1'){
+            if(select_actual == '1'  ){
                 let estado = this.value
                 selects_estaditicas.forEach(select => {
-                    select.disabled=true
-                    select.selectedIndex = 0;
+                    if (select.id != 'select_21' && select.id != 'select_22') {
+                        select.disabled=true
+                        select.selectedIndex = 0;
+                        
+                    }
                 });
                 this.disabled=false;
                 this.value = estado
@@ -40,7 +43,7 @@ function mostrar_datos(e){
                 return
             }
             if (select_actual == '5') {
-                for (let index = 6; index <= 8; index++) {
+                for (let index = 6; index <= 9; index++) {
                     let select = document.querySelector(`#select_${index.toString()}`)
                     select.disabled=true
                     select.selectedIndex = 0;
@@ -52,12 +55,14 @@ function mostrar_datos(e){
                 return
                 
             }
-            // }
-            // if (select_actual == '6') {
-            //     select_siguiente = document.querySelector(`#select_${parseInt(select_actual)+1}`)
-            //     select_siguiente.disabled=false;
-            //     return
-            // }
+            
+            if (select_actual == '7') {
+                // select_siguiente = document.querySelector(`#select_${parseInt(select_actual)+1}`)
+                // select_siguiente.disabled=false;
+                value_actual = document.querySelector('#select_5').value
+                
+            }
+            
 
 
     console.log( `value actual = ${value_actual}, select actual = ${select_actual}, select siguiente =${select_siguiente}`);
@@ -112,10 +117,22 @@ function mostrar_datos(e){
                 siguiente_select.options[0].disabled=true
             }
             if (select_actual == '7') {
+                let siguiente_select = document.querySelector(`#select_${parseInt(select_actual)+1}`)
+                siguiente_select.disabled = false;
+                siguiente_select.innerHTML = html;
+                siguiente_select.options[0].disabled=true;
+            }
+            if (select_actual == '8') {
                 let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
                 siguiente_select.disabled = false;
                 // siguiente_select.innerHTML = html;
                 // siguiente_select.options[0].disabled=true
+            }
+            if (select_actual == '21') {
+                let siguiente_select = document.querySelector(`#select_${parseInt(select_actual)+1}`)
+                siguiente_select.disabled = false;
+                siguiente_select.innerHTML = html;
+                siguiente_select.options[0].disabled=true
             }
         }
         

@@ -1,3 +1,4 @@
+
 <!-- FILTROS DE BUSQUEDA -->
 <div id="contenedor-filtros">
   <div class="row">
@@ -15,12 +16,17 @@
 
     <!-- Select de estados -->
     <div class="col-3">
-      <select class="select-location" name="select-mapa-estado" id="select_mapa_estado"></select>
+      <select class="select" name="select-mapa-estado" id="select_21">
+      <?php mostrar_estados() ?>
+      </select>          
+                
     </div>
 
     <!-- Select de universidades -->
     <div class="col-3">
-      <select disabled class="select-location3" name="select-mapa-uni" id="select_mapa_uni"></select>
+      <select disabled class="select" name="select-mapa-uni" id="select_22">
+        <option selected>universidades</option>
+      </select>
     </div>
   </div>
 

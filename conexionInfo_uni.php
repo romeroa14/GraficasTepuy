@@ -26,10 +26,10 @@ if ($data === null) {
 
 
 // Recorrer los datos e insertar en la base de datos
-
+$code_uni = 1;
 foreach ($data as $universidad) {
     // Obtener valores
-    $code_uni = $universidad['code_uni'];
+    
     $nombre_uni = $universidad['nombre'];
     $siglas= $universidad['siglas'];
     $mision= $universidad['mision'];
@@ -54,12 +54,11 @@ foreach ($data as $universidad) {
    
 
     $conexion = conexion();
-    $consulta = $conexion->prepare("SELECT institucion FROM sys_institucion WHERE institucion = :nombre_uni");
+    $consulta_inst = $conexion->prepare("SELECT institucion FROM sys_institucion WHERE institucion = :nombre_uni");
     $marcadores_consulta=[":nombre_uni"=>$nombre_uni];
-    $consulta->execute($marcadores_consulta);
-    if (!$consulta->rowCount()){
-        // $conexion = conexion();
-        $insert = $conexion->prepare("INSERT INTO sys_institucion (institucion, abreviatura, tipo_univ, mision, vision, descripcion, municipio_id) VALUES (:nombre, :siglas, :tipo, :mision, :vision, :descripcion, :id_municipio)");
+    $consulta_inst->execute($marcadores_consulta);
+    if (!$consulta_inst->rowCount()){
+        $insert = $conexion->prepare("INSERT INTO sys_institucion (institucion, abreviatura, tipo_univ, mision, vision, descripcion) VALUES (:nombre, :siglas, :tipo, :mision, :vision, :descripcion)");
         
         $marcadores=[
             ":nombre"=>$nombre_uni,
@@ -67,8 +66,8 @@ foreach ($data as $universidad) {
             ":tipo"=>$tipo,
             ":mision"=>$mision,
             ":vision"=>$vision,
-            ":descripcion"=>$descripcion,
-            ":id_municipio"=>$id_municipio
+            ":descripcion"=>$descripcion
+            
         ]; 
         $insert->execute($marcadores);
         if ($insert->rowCount()) {
@@ -76,7 +75,28 @@ foreach ($data as $universidad) {
         }
         $consulta = null;
     }
-    
+
+    $consulta_sede = $conexion->prepare("SELECT inst.institucion FROM sys_sede sede INNER JOIN sys_institucion inst ON sede.sys_institucion_id = :nombre_uni");
+    $marcadores_sede=[":nombre_uni"=>$nombre_uni];
+    $consulta_sede->execute($marcadores_sede);
+    if (!$consulta_inst->rowCount()){
+        $insert2 = $conexion->prepare("INSERT INTO sys_sede (sys_institucion_id, dir_estado, dir_municipio) VALUES (:insitucion_id, :estado, :municipio)");
+        
+        $marcadores=[
+            ":insitucion_id"=>$code_uni,
+            ":estado"=>$estado,
+            ":municipio"=>$id_municipio
+            
+        ]; 
+        $insert2->execute($marcadores);
+        
+        if ($insert2->rowCount()) {
+            echo $code_uni.'<br>';
+        }
+        $consulta = null;
+    }
+
+    $code_uni += 1;
 
         // echo $nombre_uni.'<br>';
     // echo "Institución agregada: ". $nombre_uni;
