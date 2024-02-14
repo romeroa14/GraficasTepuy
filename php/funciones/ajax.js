@@ -1,3 +1,11 @@
+import { UNI_DATA } from "./../../javascript/data/universidadesData.js";
+import { Filtrar } from "./../../javascript/filtrarMarcas.js";
+import { mostrarPanel } from "./panel.js";
+import { map } from "./../../javascript/mapa.js";
+import { sugerenciasUniversidades } from "./data/sugerencias.js";
+import { getGlobal, setGlobal } from "./../../javascript/funciones/variablesGlobales.js"; 
+import { eliminarAcentos } from "./../../javascript/funciones/eliminarAcentos.js"; 
+
 const selects_estaditicas=document.querySelectorAll(".select");
 
 function mostrar_datos(e){
@@ -61,6 +69,27 @@ function mostrar_datos(e){
                 // select_siguiente.disabled=false;
                 value_actual = document.querySelector('#select_5').value
                 
+            }
+            if (select_actual == '21') {
+            //     estadoActual = value_actual.toLocaleLowerCase()
+            //     setGlobal('estadoActual', this.value.toLocaleUpperCase())
+            //     setGlobal('municipioActual', null)
+                
+            //     if(estadoActual == "estados") {
+            //         return
+            //     }else{
+            //         estadoActual = eliminarAcentos(estadoActual)
+            //         console.log(estadoActual);
+            //         let coordDesplazamiento = sugerenciasEstados[estadoActual]["coordenadas"];
+            //         let zoomDesplazamiento = sugerenciasEstados[estadoActual]["zoom"];
+            //         map.flyTo(coordDesplazamiento, zoomDesplazamiento);
+            //         if (getGlobal('marcasFiltradas')) {
+            //             map.removeLayer(getGlobal('marcasFiltradas'));
+            //         }
+            //         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), estadoActual.toLocaleUpperCase()).addTo(map))
+            //         resetLayer()
+            //     }
+            //     return
             }
             
 
