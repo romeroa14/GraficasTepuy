@@ -15,7 +15,7 @@ import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js";
 
 // Funcionalidades de la barra de busqueda
 const containerBar = document.querySelector('.Barra-busqueda-contenedor');
-const inputBar = containerBar.querySelector('input');
+const inputBar = containerBar.querySelector('#input_mapa_busqueda');
 const sugerenciasBar = document.querySelector('.sugerencias');
 
 // Crear filtrado de la barra de busqueda

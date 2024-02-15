@@ -4,7 +4,7 @@
     <script src="javascript/barra-busqueda.js" type="module"></script>
     <script src="javascript/estadisticas.js" type="module"></script>
     <script src="javascript/graficos.js" type="module"></script>
-    <script src="./php/funciones/ajax.js" type="module"></script>
+    <script src="./php/funciones/estaditicas_selects.js" type="module"></script>
 
     <!-- AÑADIENDO SCRIPTS -->
     <script src="javascript/data/sugerencias.js" type="module"></script>

@@ -1,10 +1,10 @@
-import { UNI_DATA } from "./../../javascript/data/universidadesData.js";
-import { Filtrar } from "./../../javascript/filtrarMarcas.js";
-import { mostrarPanel } from "./panel.js";
-import { map } from "./../../javascript/mapa.js";
-import { sugerenciasUniversidades } from "./data/sugerencias.js";
-import { getGlobal, setGlobal } from "./../../javascript/funciones/variablesGlobales.js"; 
-import { eliminarAcentos } from "./../../javascript/funciones/eliminarAcentos.js"; 
+// import { UNI_DATA } from "../../javascript/data/universidadesData.js";
+// import { Filtrar } from "./../../javascript/filtrarMarcas.js";
+// import { mostrarPanel } from "./panel.js";
+// import { map } from "../../javascript/mapa.js";
+// import { sugerenciasUniversidades } from "./data/sugerencias.js";
+// import { getGlobal, setGlobal } from "../../javascript/funciones/variablesGlobales.js"; 
+// import { eliminarAcentos } from "../../javascript/funciones/eliminarAcentos.js"; 
 
 const selects_estaditicas=document.querySelectorAll(".select");
 
@@ -95,7 +95,7 @@ function mostrar_datos(e){
 
 
     console.log( `value actual = ${value_actual}, select actual = ${select_actual}, select siguiente =${select_siguiente}`);
-    fetch('./php/funciones/municipios.php', {
+    fetch('./php/funciones/estadisticas_consultas_selects.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'

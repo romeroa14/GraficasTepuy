@@ -7,7 +7,7 @@
     <div class="col-6">
       <div class="Barra-busqueda-contenedor active">
         <div class="barra-boton">
-          <input type="text" class="form-control" placeholder="Buscar universidad ..." />
+          <input type="text" class="form-control" id="input_mapa_busqueda" placeholder="Buscar universidad ..." />
           <button class="btn btn-outline-secondary" type="button" id="boton-busqueda">Buscar</button>
         </div>
         <ul class="sugerencias" hidden="hidden"></ul>
