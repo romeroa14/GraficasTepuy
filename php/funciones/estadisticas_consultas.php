@@ -87,7 +87,7 @@ function mostrar_universidad($estado, $id, $tipo){
                     echo '<option value="">Universidades</option><option value="todos">Todos</option>';
                     if ($resultado->rowCount()) {
                         foreach ($resultado as $row) {
-                            echo '<option value = "' . $row['inst.id'] . '" name = "' . $row['abreviatura'] . '">(' . $row['abreviatura'] . ') - ' . $row['institucion'] . '</option>';
+                            echo '<option value = "' . $row['id'] . '" name = "' . $row['abreviatura'] . '">(' . $row['abreviatura'] . ') - ' . $row['institucion'] . '</option>';
                         } //end while
                     }else {
                         echo '<option value="">No hay universidades</option>'; // Mensaje de opción vacía si no hay municipios
@@ -126,6 +126,24 @@ function mostrar_grupo_cargos($valor_actual){
             } //end while
         }else {
             echo '<option value="">No hay Grupo de cargos</option>'; // Mensaje de opción vacía si no hay municipios
+        } //end if
+        // return $datos;
+    
+}
+
+function consultar_coordenadas($id){
+    $db = conexion();
+    
+        $query = "SELECT latitud, longitud FROM `sys_sede` WHERE sys_institucion_id = $id";
+    
+        $resultado = $db->query($query);
+        if ($resultado->rowCount()) {
+            foreach ($resultado as $row) {
+                
+                echo $row['latitud'].",". $row['longitud'];
+            } //end while
+        }else {
+            echo '<option value="">No hay coordenadas</option>'; // Mensaje de opción vacía si no hay municipios
         } //end if
         // return $datos;
     
