@@ -80,12 +80,14 @@ foreach ($data as $universidad) {
     $marcadores_sede=[":nombre_uni"=>$nombre_uni];
     $consulta_sede->execute($marcadores_sede);
     if (!$consulta_inst->rowCount()){
-        $insert2 = $conexion->prepare("INSERT INTO sys_sede (sys_institucion_id, dir_estado, dir_municipio) VALUES (:insitucion_id, :estado, :municipio)");
+        $insert2 = $conexion->prepare("INSERT INTO sys_sede (sys_institucion_id, dir_estado, dir_municipio, latitud, longitud) VALUES (:insitucion_id, :estado, :municipio, :latitud, :longitud)");
         
         $marcadores=[
             ":insitucion_id"=>$code_uni,
             ":estado"=>$estado,
-            ":municipio"=>$id_municipio
+            ":municipio"=>$id_municipio,
+            ":latitud"=>$coordenadas[0],
+            ":longitud"=>$coordenadas[1]
             
         ]; 
         $insert2->execute($marcadores);
@@ -103,25 +105,4 @@ foreach ($data as $universidad) {
     $conexion = null;
 }
 
-// print_r($code_uni[0]);
-    // print_r($code_uni);
-    // print_r($pagina);
-    // print_r($mision);
-    // print_r($vision);
-    // print_r($descripcion);
-    // print_r($portada);
-    // print_r($logo);
-    // print_r($escudo);
-    // print_r($estado);
-    // print_r($municipio);
-    // print_r($direccion);
-    // print_r($tipo);
-    // print_r($marcador);
-    // print_r($coordenadas);
-    // print_r($autoridades);
-// // Éxito: Todos los datos se insertaron correctamente
-// echo "Datos insertados correctamente en la base de datos";
-
-// // Cerrar la conexión
-// $conn->close();
 ?>

@@ -7,8 +7,11 @@
         $variables = explode(',', $_POST['id']);
         $select_actual = $variables[0];
         $valor_actual = $variables[1];
-        $valor_actual2 = $variables[2];
-        $valor_actual3 = $variables[3];
+        if (isset($valor_actual2) ||  isset($valor_actual3)) {
+            $valor_actual2 = $variables[2];
+            $valor_actual3 = $variables[3];
+        }
+        
         // echo $valor_actual.','. $select_actual;
 
         if ($select_actual == '1' ){
@@ -30,7 +33,11 @@
         if ($select_actual == '21' ){
             mostrar_universidad($valor_actual,'todos','todos');
         }
+        if ($select_actual == '22' ){
+            $universidad = $valor_actual;
+            consultar_coordenadas($universidad);
 
+        }
         
         } 
     else {
