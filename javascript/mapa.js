@@ -5,11 +5,11 @@
     Reseña de Jairo: 'Calidad'
  */
 
-import { Filtrar } from "./funciones/filtrarMarcas.js"; 
+import { Filtrar } from "./estadisticas/filtrarMarcas.js"; 
 import { BotonMostraPanel } from "./panel.js";
 import { botonRestablecer } from "./boton-restablecer.js";
 import { geojsonStyle, municipiosStyle, hoverMunicipiosStyle, selectedMunicipioStyle, highlightStyle, hoverStyle } from "./mapa-estilos.js";
-import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
+import { getGlobal, setGlobal } from "./estadisticas/variablesGlobales.js"; 
 
 export { geojsonLink, municipiosLink }
 export { resetLayer }

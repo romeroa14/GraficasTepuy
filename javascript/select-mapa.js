@@ -4,11 +4,11 @@
  */
 
 import { UNI_DATA } from "./data/universidadesData.js";
-import { Filtrar } from "./funciones/filtrarMarcas.js";
+import { Filtrar } from "./estadisticas/filtrarMarcas.js";
 import { map } from "./mapa.js";
 import { AlternarPanel, mostrarPanel } from "./panel.js";
-import { eliminarAcentos } from "./funciones/eliminarAcentos.js";
-import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js";
+import { eliminarAcentos } from "./estadisticas/eliminarAcentos.js";
+import { getGlobal, setGlobal } from "./estadisticas/variablesGlobales.js";
 import { listaEstaMuni } from "./data/estados-municipios.js";
 
 // Valores por defecto del select de estado
