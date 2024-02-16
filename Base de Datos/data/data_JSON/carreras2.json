@@ -1,0 +1,165 @@
+[
+
+    {
+        "id_uni": "29",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Administración"},
+            { "nombre": "PNF en Agroalimentación"},
+            { "nombre": "PNF en Construcción Civil"},
+            { "nombre": "PNF en Informática"},
+            { "nombre": "PNF en Procesamiento y Distribución de Alimentos"},
+            { "nombre": "PNF en Seguridad Alimentaria y Cultura Nutricional"},
+            { "nombre": "PNF en Medicina Veterinaria"}
+
+        ]
+    },
+
+    {
+        "id_uni": "30",
+
+        "Carreras Largas": [
+            { "nombre": "Operaciones aeroespaciales: Piloto Militar de aviación de caza, combate, helicóptero, transporte de carga, ejecutivo, presidencial y táctico."},
+            { "nombre": "Defensa aeroespacial integral."},
+            { "nombre": "Operaciones de guerra electrónica."},
+            { "nombre": "Logística."},
+            { "nombre": "Inteligencia aeroespacial."},
+            { "nombre": "Fuerzas especiales."},
+            { "nombre": "Administración financiera."},
+            { "nombre": "Administración de talento humano."},
+            { "nombre": "Metalmecánica."},
+            { "nombre": "Tránsito aéreo."},
+            { "nombre": "Vigilancia y control."},
+            { "nombre": "Defensa antiaérea."},
+            { "nombre": "Meteorología."},
+            { "nombre": "Electrónica aeronáutica."},
+            { "nombre": "Abastecimiento aeronáutico."},
+            { "nombre": "Armamento aeroespacial."},
+            { "nombre": "Tecnología aeroespacial."},
+            { "nombre": "Telecomunicaciones aeronáuticas."},
+            { "nombre": "Ingeniería militar, mención mecánica aeronáutica."}
+        ],
+
+        "Cursos": [
+            { "nombre": "Curso de Formación de Oficiales Asimilados."},
+            { "nombre": "Curso Especial de Formación de Oficiales de Comando."},
+            { "nombre": "Curso de Formación de Oficiales Asimilados."}
+
+        ]
+    },
+
+    {
+        "id_uni": "31",
+
+        "Carreras Cortas": [
+            { "nombre": "Construcción civil."},
+            { "nombre": "Mecánica."},
+            { "nombre": "Mantenimiento."},
+            { "nombre": "Electricidad."},
+            { "nombre": "Electrónica."},
+            { "nombre": "Instrumentación y control."},
+            { "nombre": "Higiene y seguridad laboral."},
+            { "nombre": "Enfermería comunitaria."},
+            { "nombre": "Fisioterapia"},
+            { "nombre": "Terapia ocupacional"},
+            { "nombre": "Informática "}
+        ]
+    },
+
+    {
+        "id_uni": "32",
+
+        "Carreras Largas": [
+            { "nombre": "Química."},
+            { "nombre": "Agroalimentaria."},
+            { "nombre": "Electricidad."},
+            { "nombre": "Informática."},
+            { "nombre": "Ing. Industrial."},
+            { "nombre": "Procesos químicos."},
+            { "nombre": "Ingeniería en Informática."},
+            { "nombre": "Procesos y Distribución de Alimentos."},
+            { "nombre": "Instrumentación y Control."},
+            { "nombre": "Electrónica."}
+        ]
+    },
+
+    {
+        "id_uni": "33",
+
+        "Carreras Largas": [
+            { "nombre": "PNF en Informática."},
+            { "nombre": "PNF en Agroalimentación."},
+            { "nombre": "PNF en Construcción naval-mecánica y mantenimiento naval."},
+            { "nombre": "PNF en Ingeniería de procesamiento y distribución de alimentos."},
+            { "nombre": "PNF en Ingeniería mecánica."},
+            { "nombre": "PNF en Seguridad alimentaria y cultura nutricional."},
+            { "nombre": "PNF en Mercadeo."},
+            { "nombre": "PNF en Comercio exterior."},
+            { "nombre": "PNF en Publicidad."},
+            { "nombre": "PNF en Administración."}
+        ]
+    },
+
+    {
+        "id_uni": "35",
+
+        "Carreras Largas": [
+            { "nombre": "Ingeniería Agroalimentaria"},
+            { "nombre": "Ingeniería eléctrica "},
+            { "nombre": "Ingeniería mecánica "},
+            { "nombre": "Ingeniería en mantenimiento"},
+            { "nombre": "Ingeniería en informática "},
+            { "nombre": "Ingeniería Informática"},
+            { "nombre": "Ingeniería en informática"},
+
+            { "nombre": "Licenciatura en administración "},            
+            { "nombre": "Licenciatura en administración"},
+            { "nombre": "Licenciatura en administración "}
+        ]
+    },
+
+    {
+        "id_uni": "36",
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura en Derecho "},
+            { "nombre": "Licenciatura en Comunicación "},
+            { "nombre": "Licenciatura en Educación Cultural Bilingüe "},
+            { "nombre": "Licenciatura en Agroecología"}
+        ]
+    },
+
+    {
+        "id_uni": "37",
+
+        "Carreras Cortas": [
+            { "nombre": "Educación Integral"},
+            { "nombre": "Educación. Mención Educación Física, Deporte Y Recreación"},
+            { "nombre": "Educación. Mención Lengua Y Literatura"},
+            { "nombre": "Educación. Mención Matemática"},
+            { "nombre": "Educación En Ciencias: Física, Química Y Biología"},
+
+            { "nombre": "TSU en Empresa De Alojamiento Turístico"},
+            { "nombre": "TSU en Turismo"}
+
+        ],
+
+        "Carreras Largas": [
+            { "nombre": "Licenciatura En Gestión De Alojamiento Turístico"},
+            { "nombre": "Licenciatura En Ciencias Ambientales"},
+            { "nombre": "Licenciatura En Administración De Empresas"},
+            { "nombre": "Licenciatura En Administración Mención Banca Y Finanzas"},
+            { "nombre": "Licenciatura En Ciencias Fiscales"},
+            { "nombre": "Licenciatura En Contaduría Pública"},
+            { "nombre": "Licenciatura En Tecnología En Producción Agropecuaria"},
+
+            { "nombre": "Ingeniería En Informática"},
+            { "nombre": "Ingeniería En Materiales"},
+            { "nombre": "Ingeniería Industrial"},
+            { "nombre": "Ingeniería De Producción Animal"},
+            { "nombre": "Ingeniería En Industrias Forestales"}
+        ]
+    }
+
+]
+
