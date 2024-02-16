@@ -13,7 +13,7 @@
               <select class="select" name="select_estado" id="select_1" >
                 
                 <?php 
-                require_once './php/funciones/estadisticas_consultas.php';
+                require_once './php/estadisticas/estadisticas_consultas.php';
                 mostrar_estados() ?> 
 
                 

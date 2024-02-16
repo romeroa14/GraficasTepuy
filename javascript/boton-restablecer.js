@@ -4,7 +4,7 @@
     Fecha de creacion: 18-01-2024
  */
 
-import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
+import { getGlobal, setGlobal } from "./estadisticas/variablesGlobales.js"; 
 import { AlternarPanel } from "./panel.js";
 import { resetLayer } from './mapa.js';
 
