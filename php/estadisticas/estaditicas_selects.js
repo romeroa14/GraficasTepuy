@@ -1,10 +1,13 @@
-// import { UNI_DATA } from "../../javascript/data/universidadesData.js";
-// import { Filtrar } from "./../../javascript/filtrarMarcas.js";
-// import { mostrarPanel } from "./panel.js";
-// import { map } from "../../javascript/mapa.js";
+
+
+import { Filtrar } from "../../javascript/funciones/filtrarMarcas.js";
+import { AlternarPanel, mostrarPanel } from "../../javascript/panel.js";
+import { map } from "../../javascript/mapa.js";
+import { listaEstaMuni } from "../../javascript/data/estados-municipios.js";
+import { resetLayer } from "../../javascript/mapa.js";
 // import { sugerenciasUniversidades } from "./data/sugerencias.js";
-// import { getGlobal, setGlobal } from "../../javascript/estadisticas/variablesGlobales.js"; 
-// import { eliminarAcentos } from "../../javascript/estadisticas/eliminarAcentos.js"; 
+import { getGlobal, setGlobal } from "../../javascript/funciones/variablesGlobales.js"; 
+import { eliminarAcentos} from "../../javascript/funciones/eliminarAcentos.js"; 
 
 const selects_estaditicas=document.querySelectorAll(".select");
 
@@ -65,32 +68,22 @@ function mostrar_datos(e){
             }
             
             if (select_actual == '7') {
-                // select_siguiente = document.querySelector(`#select_${parseInt(select_actual)+1}`)
-                // select_siguiente.disabled=false;
                 value_actual = document.querySelector('#select_5').value
                 
             }
-            if (select_actual == '21') {
-            //     estadoActual = value_actual.toLocaleLowerCase()
-            //     setGlobal('estadoActual', this.value.toLocaleUpperCase())
-            //     setGlobal('municipioActual', null)
+            if (select_actual == '8') {
+                let tipo_persona = document.querySelector('#select_5').value
+                value_actual = tipo_persona+','+value_actual
+
                 
-            //     if(estadoActual == "estados") {
-            //         return
-            //     }else{
-            //         estadoActual = eliminarAcentos(estadoActual)
-            //         console.log(estadoActual);
-            //         let coordDesplazamiento = sugerenciasEstados[estadoActual]["coordenadas"];
-            //         let zoomDesplazamiento = sugerenciasEstados[estadoActual]["zoom"];
-            //         map.flyTo(coordDesplazamiento, zoomDesplazamiento);
-            //         if (getGlobal('marcasFiltradas')) {
-            //             map.removeLayer(getGlobal('marcasFiltradas'));
-            //         }
-            //         setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), estadoActual.toLocaleUpperCase()).addTo(map))
-            //         resetLayer()
-            //     }
-            //     return
             }
+            if (select_actual == '21' || select_actual == '22') {
+                document.querySelector('#input_mapa_busqueda').value = ''
+                
+                
+            }
+
+            
             
 
 
@@ -118,26 +111,21 @@ function mostrar_datos(e){
                 siguiente_select.disabled = false;
                 siguiente_select.innerHTML = html;
                 siguiente_select.options[0].disabled=true;
-            }else
+            }
             if (select_actual == '2') {
                 let siguiente_select = document.querySelector(`#select_${parseInt(select_actual)+2}`)
                 siguiente_select.innerHTML = html;
                 siguiente_select.options[0].disabled=true;
-                
-
             }
             if (select_actual == '3') {
                 let siguiente_select = document.querySelector(`#select_${parseInt(select_actual)+1}`)
                 siguiente_select.disabled = false;
                 siguiente_select.innerHTML = html;
                 siguiente_select.options[0].disabled=true;
-
             }
             if (select_actual == '4' || select_actual == '5' ) {
                 siguiente_select.disabled = false;
                 siguiente_select.options[0].disabled=true;
-                
-
             }
             if (select_actual == '6') {
                 let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
@@ -154,15 +142,67 @@ function mostrar_datos(e){
             if (select_actual == '8') {
                 let siguiente_select = document.querySelector(`#select_${select_siguiente}`)
                 siguiente_select.disabled = false;
-                // siguiente_select.innerHTML = html;
-                // siguiente_select.options[0].disabled=true
+                siguiente_select.innerHTML = html;
+                siguiente_select.options[0].disabled=true;
             }
             if (select_actual == '21') {
                 let siguiente_select = document.querySelector(`#select_${parseInt(select_actual)+1}`)
                 siguiente_select.disabled = false;
                 siguiente_select.innerHTML = html;
                 siguiente_select.options[0].disabled=true
-            }
+                select_actual = document.querySelector('#select_21')
+                let estadoActual = select_actual.selectedOptions[0].textContent.trim().toLocaleLowerCase()
+                // setGlobal('estadoActual', estadoActual.selectedOptions[0].textContent.trim().toLocaleUpperCase())
+                // setGlobal('municipioActual', null)
+                    estadoActual = eliminarAcentos(estadoActual)
+                    estadoActual = estadoActual.charAt(0).toUpperCase() + estadoActual.slice(1)
+                    // console.log(estadoActual);
+                    let coordDesplazamiento = listaEstaMuni[estadoActual]["coordenadas"];
+                    let zoomDesplazamiento = listaEstaMuni[estadoActual]["zoom"];
+                    // console.log(coordDesplazamiento +','+zoomDesplazamiento);
+                    map.flyTo(coordDesplazamiento, zoomDesplazamiento);
+
+                    //------- Mostrar todas la universidades de ese estado --------
+                    if (getGlobal('marcasFiltradas')) {
+                        map.removeLayer(getGlobal('marcasFiltradas'));
+                    }
+                    setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), estadoActual.toLocaleUpperCase()).addTo(map))
+                    resetLayer()
+                    AlternarPanel(false)
+
+                    // ------ agregando la funcion de la leyenda ----------
+                    setGlobal('estadoActual',estadoActual)
+                }
+                if (select_actual == '22') {
+                        let coordenadas = html.split(',',2)
+                        console.log(coordenadas);
+                        map.flyTo(coordenadas, map.getZoom())
+
+                        let siglas = document.querySelector('#select_22').selectedOptions[0].textContent.trim().toLocaleLowerCase().match(/\(([^)]+)\)/)[1].toLocaleUpperCase()
+                        console.log(siglas);
+
+
+
+                        if (getGlobal('marcasFiltradas')) {
+                            map.removeLayer(getGlobal('marcasFiltradas'));
+                        }
+                        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
+                        resetLayer()
+
+                        mostrarPanel(siglas)
+                        select_estado = document.querySelector('#select_21')
+                    let estadoActual = select_estado.selectedOptions[0].textContent.trim().toLocaleLowerCase()
+                    estadoActual = eliminarAcentos(estadoActual)
+                    estadoActual = estadoActual.charAt(0).toUpperCase() + estadoActual.slice(1)
+                    console.log(estadoActual);
+
+                        // ------ agregando la funcion de la leyenda ----------
+                    setGlobal('estadoActual',estadoActual)
+                        }
+                    
+                
+                
+            
         }
         
     })

@@ -7,7 +7,7 @@
 import { CARRERAS_DATA } from "./data/carreras.js";
 import { AlternarPanel } from "./panel.js";
 import { UNI_DATA } from "./data/universidadesData.js";
-import { crearGrafica } from "./graficos.js";
+// import { crearGrafica } from "./graficos.js";
 
 export { constructorAutoridades };
 export { constructorCarreras };

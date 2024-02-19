@@ -12,7 +12,7 @@ let listaEstaMuni = {
             'AUTONOMO RIO NEGRO'
         ]
     },
-    "Anzoátegui": {
+    "Anzoategui": {
         "coordenadas": [9.099049053761691, -64.2081664302623],
         "zoom": 8,
         "municipios": [
@@ -100,7 +100,7 @@ let listaEstaMuni = {
             'OCUMARE DE LA COSTA DE ORO'
         ]
     },
-    "Bolívar": {
+    "Bolivar": {
         "coordenadas": [6.240181127106679, -63.483118190345365],
         "zoom": 7,
         "municipios": [
@@ -151,7 +151,7 @@ let listaEstaMuni = {
             'TINACO'
         ]
     },
-    "Delta Amacuro": {
+    "Delta amacuro": {
         "coordenadas": [8.912872796719038, -61.36060313370347],
         "zoom": 8,
         "municipios": [
@@ -161,14 +161,14 @@ let listaEstaMuni = {
             'TUCUPITA'
         ]  
     },
-    "Distrito Capital": {
+    "Distrito capital": {
         "coordenadas": [10.471164171498925, -66.99085235595705],
         "zoom": 11.5,
         "municipios": [
             'LIBERTADOR'
         ]
     },
-    "Falcón": {
+    "Falcon": {
         "coordenadas": [11.152115326128591, -69.88599600490045],
         "zoom": 8,
         "municipios": [
@@ -199,7 +199,7 @@ let listaEstaMuni = {
             'ZAMORA'
         ]
     },
-    "Guárico": {
+    "Guarico": {
         "coordenadas": [8.880311174904532, -66.60107865439922],
         "zoom": 8,
         "municipios": [
@@ -240,14 +240,14 @@ let listaEstaMuni = {
             'URDANETA'
         ]
     },
-    "La Guaira": {
+    "La guaira": {
         "coordenadas": [10.591938380528376, -66.82758240799845],
         "zoom": 10,
         "municipios": [
             'VARGAS'
         ]
     },
-    "Mérida": {
+    "Merida": {
         "coordenadas": [8.516471068595997, -71.21985973012148],
         "zoom": 8,
         "municipios": [
@@ -323,7 +323,7 @@ let listaEstaMuni = {
             'URACOA'
         ]
     },
-    "Nueva Esparta": {
+    "Nueva esparta": {
         "coordenadas": [10.96022545050653, -64.02719780001561],
         "zoom": 10,
         "municipios": [
@@ -407,7 +407,7 @@ let listaEstaMuni = {
             'VALERA'
         ]
     },
-    "Táchira": {
+    "Tachira": {
         "coordenadas": [7.941079425553923, -72.01859231058509],
         "zoom": 9,
         "municipios": [

@@ -4,13 +4,13 @@
     Fecha de creacion: 10/01/2024
  */
 
-import { UNI_DATA } from "./data/universidadesData.js";
+
 import { Filtrar } from "./funciones/filtrarMarcas.js";
 import { mostrarPanel } from "./panel.js";
 import { map } from "./mapa.js";
-import { sugerenciasUniversidades } from "./data/sugerencias.js";
+import { resetLayer } from "./mapa.js";
 import { getGlobal, setGlobal } from "./funciones/variablesGlobales.js"; 
-import { eliminarAcentos} from "./funciones/eliminarAcentos.js"; 
+
 
 // ---------- BARRA DE BUSQUEDA ----------
 
@@ -19,86 +19,7 @@ const containerBar = document.querySelector('.Barra-busqueda-contenedor');
 const inputBar = containerBar.querySelector('#input_mapa_busqueda');
 const sugerenciasBar = document.querySelector('.sugerencias');
 
-// Crear filtrado de la barra de busqueda
-inputBar.onkeyup = (e) =>{
-    let userData = e.target.value;
-    let arraySugerencias = [];
-    if (userData) {
-        sugerenciasBar.removeAttribute('hidden')
-        arraySugerencias = sugerenciasUniversidades.filter(data => {
-            return data.toLocaleLowerCase().includes(userData.toLocaleLowerCase())
-        });
 
-        arraySugerencias = arraySugerencias.map(data => {
-            return (data = `<li > ${data} </li>`);
-        });
-        
-        containerBar.classList.add('active');
-        mostrarSugerencias(arraySugerencias);
-        
-    }else{
-        sugerenciasBar.setAttribute('hidden','hidden')
-    }
-
-
-
-    // Agregandole funcionalidad al boton de buscar
-    let botonBuscar = document.querySelector(".btn-outline-secondary")
-    botonBuscar.onclick = ()=>{
-
-            let inputActual = document.querySelector(".form-control").value
-            var siglas = crearSiglas(inputActual);
-            
-            let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
-
-        // Mostrar marcas por siglas
-        if (getGlobal('marcasFiltradas')) {
-            map.removeLayer(getGlobal('marcasFiltradas'));
-        }
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
-        desplazarse(coordDesplazamiento);
-    }
-}
-
-let listaSugerencias;
-let todasSugerencias;
-// Mostramos el filtrado de la barra de busqueda
-const mostrarSugerencias = (list) =>{
-    
-    if (list.lenght == 0) {
-        let userValue = inputBar.value;
-        listaSugerencias = `<li > ${userValue} </li>`
-    } else {
-        listaSugerencias = list.join(' ');
-    }
-    sugerenciasBar.innerHTML = listaSugerencias;
-    let selectUl = sugerenciasBar;
-    let selectLiAll = selectUl.querySelectorAll('li')
-    let cantidadSugerencias = selectLiAll.length;
-    selectLiAll.forEach(function(li) {
-        li.addEventListener('click', function() {
-            let inputSeleccion = document.querySelector(".form-control");
-            inputSeleccion.value = li.innerText;
-            let siglas = crearSiglas(inputSeleccion.value);
-                
-            let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
-
-        // Mostrar marcas por siglas
-        if (getGlobal('marcasFiltradas')) {
-            map.removeLayer(getGlobal('marcasFiltradas'));
-        }
-        
-        desplazarse(coordDesplazamiento);
-        selectUl.setAttribute('hidden','hidden')
-        mostrarPanel(siglas);
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
-        })})
-        todasSugerencias = listaSugerencias
-        
-}
-
-
-// -------------- variables necesarias para la funcionalidad de las flechas--------
 let contador = 0;
 let alturaSugerencia = 0;
 let posicionAcumulada = 0;
@@ -106,90 +27,216 @@ let posicionBordeTop = 0;
 let posicionBordeBot = 0;
 let posicionAbsolutaBot = 0;
 let posicionAbsolutaTop = 0;
+let eventoEjecutado = false;
 
 
-inputBar.addEventListener('keyup',(e)=>{
-    const maxheightValue = window.getComputedStyle(sugerenciasBar).maxHeight
-    let alturaMaxima = extraerPrimerNumero(maxheightValue);
-    let eventoEjecutado = false;
-    let selectLiAll = sugerenciasBar.querySelectorAll('li');
-    let cantidadSugerencias = selectLiAll.length;
+// Crear filtrado de la barra de busqueda
+inputBar.onkeyup = (e) => {
+
     
+
+        if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp' && e.key !== 'Enter' && e.key !== 'Escape') {
+                eventoEjecutado = true;
+                contador = 0;
+                posicionAbsolutaBot = 0;
+                posicionAbsolutaBot = 0;
+                posicionAcumulada = 0;
+
+            let userData = e.target.value;
+            if (userData){
+            fetch('./javascript/consulta_barra_busqueda.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'busqueda=' + userData
+                }).then(res => {
+                    if (!res.ok) {
+                        throw new Error('Hubo un error en la respuesta');
+                    }
+                    return res.text();
+                })
+                .then(html => {
+                    sugerenciasBar.innerHTML = html;
+                    sugerenciasBar.removeAttribute('hidden')
+                    containerBar.classList.add('active');
+                    mostrarSugerencias()
+
+                }).catch(error => console.log(error));
+            } else {
+                sugerenciasBar.setAttribute('hidden', 'hidden')
+            }
+        } else {
+            
+            const maxheightValue = window.getComputedStyle(sugerenciasBar).maxHeight
+            let alturaMaxima = extraerPrimerNumero(maxheightValue);
+            let selectLiAll = sugerenciasBar.querySelectorAll('li');
+            let cantidadSugerencias = selectLiAll.length;
+            eventoEjecutado = false;
+
+            // console.log('e.key: '+e.key);
+            // console.log('contador: '+contador);
+            // console.log('cantidadSugerencias: '+cantidadSugerencias);
+            console.log('eventoEjecutado: '+eventoEjecutado);
+
+            if (e.key === 'ArrowDown' && contador >= 0 && contador <= cantidadSugerencias && cantidadSugerencias > 0 && !eventoEjecutado) {
+                if (contador < cantidadSugerencias) {
+                    contador++;
+                }
+                // se capturan los tamaños de del elemento
+                posicionBordeTop = selectLiAll[contador - 1].offsetTop;
+                alturaSugerencia = selectLiAll[contador - 1].offsetHeight;
+                posicionBordeBot = posicionBordeTop + alturaSugerencia;
+                //si el elemento no esta fuera de la visibilidad del contenedor
+                
+                if (posicionAbsolutaBot <= alturaMaxima) {
+                    posicionAbsolutaBot = posicionBordeBot - posicionAcumulada;
+                    posicionAbsolutaTop = posicionAbsolutaBot - alturaSugerencia;
+                }
+                //si el elemento esta fuera de la visibilidad del contenedor
+                if (posicionAbsolutaBot > alturaMaxima && contador <= cantidadSugerencias) {
+                    posicionAcumulada += alturaSugerencia
+                    sugerenciasBar.scrollTop = posicionAcumulada;
+                    posicionAbsolutaBot -= alturaSugerencia;
+                    posicionAbsolutaTop = posicionAbsolutaBot - alturaSugerencia
+
+                }
+                selectLiAll[contador - 1].style.backgroundColor = '#ddd';
+                if (selectLiAll[contador - 2]) {
+                    selectLiAll[contador -2].removeAttribute('style')
+                }
+                eventoEjecutado = true;
+            } else if (e.key === 'ArrowUp' && contador >= 1 && contador <= cantidadSugerencias && cantidadSugerencias > 0 && !eventoEjecutado) {
+                if (contador > 1) {
+                    contador--;
+                }
+                // se capturan los tamaños de del elemento
+                posicionBordeTop = selectLiAll[contador - 1].offsetTop;
+                alturaSugerencia = selectLiAll[contador - 1].offsetHeight;
+                posicionBordeBot = posicionBordeTop + alturaSugerencia;
+                //si el elemento no esta fuera de la visibilidad del contenedor
+                if (posicionAbsolutaTop > 0) {
+                    posicionAbsolutaTop -= alturaSugerencia;
+                    posicionAbsolutaBot = posicionAbsolutaTop + alturaSugerencia
+
+                }
+                //si el elemento esta fuera de la visibilidad del contenedor
+                if (posicionAbsolutaTop < 0 && posicionAcumulada >= 0) {
+                    posicionAcumulada -= alturaSugerencia
+                    sugerenciasBar.scrollTop = posicionAcumulada;
+                    posicionAbsolutaTop += alturaSugerencia;
+                    posicionAbsolutaBot = posicionAbsolutaTop + alturaSugerencia
+
+                }
+
+                selectLiAll[contador - 1].style.backgroundColor = '#ddd';
+                selectLiAll[contador].removeAttribute('style')
+                eventoEjecutado = true;
+            } else if (e.key === 'Enter' && cantidadSugerencias > 0 && !eventoEjecutado) {
+                let etiqueta = selectLiAll[contador - 1]
+                seleccionarOpcion(etiqueta);
+                posicionAbsolutaBot = 0;
+                posicionAbsolutaBot = 0;
+                posicionAcumulada = 0;
+                contador = 0;
+                return;
+            } else if (e.key === 'Escape' && cantidadSugerencias > 0 && !eventoEjecutado) {
+                inputBar.value = '';
+                sugerenciasBar.setAttribute('hidden', 'hidden');
+                contador = 0;
+                posicionAbsolutaBot = 0;
+                posicionAbsolutaBot = 0;
+                posicionAcumulada = 0;
+                return;
+            } 
+
+
+        }
     
-    if (e.key === 'ArrowDown' && contador >= 0 && contador <= cantidadSugerencias && cantidadSugerencias > 0 && !eventoEjecutado ) {
-        if (contador < cantidadSugerencias) {
-            contador++;
-        }
-        // se capturan los tamaños de del elemento
-        posicionBordeTop = selectLiAll[contador-1].offsetTop;
-        alturaSugerencia = selectLiAll[contador-1].offsetHeight;
-        posicionBordeBot = posicionBordeTop + alturaSugerencia;
-        //si el elemento no esta fuera de la visibilidad del contenedor
-        if (posicionAbsolutaBot <= alturaMaxima) {
-            posicionAbsolutaBot = posicionBordeBot - posicionAcumulada;
-            posicionAbsolutaTop = posicionAbsolutaBot - alturaSugerencia;
-        }
-        //si el elemento esta fuera de la visibilidad del contenedor
-        if (posicionAbsolutaBot > alturaMaxima && contador <= cantidadSugerencias) {
-            posicionAcumulada +=alturaSugerencia
-            sugerenciasBar.scrollTop = posicionAcumulada;
-            posicionAbsolutaBot -= alturaSugerencia;
-            posicionAbsolutaTop = posicionAbsolutaBot - alturaSugerencia
-            
-        }
-        selectLiAll[contador-1].style.backgroundColor = '#ddd';
-        eventoEjecutado = true;
-    }else if (e.key === 'ArrowUp' && contador >= 1 && contador <= cantidadSugerencias && cantidadSugerencias > 0 && !eventoEjecutado) {
-        if (contador >1 ) {
-            contador--;
-        }
-        // se capturan los tamaños de del elemento
-        posicionBordeTop = selectLiAll[contador-1].offsetTop;
-        alturaSugerencia = selectLiAll[contador-1].offsetHeight;
-        posicionBordeBot = posicionBordeTop + alturaSugerencia;
-        //si el elemento no esta fuera de la visibilidad del contenedor
-        if (posicionAbsolutaTop>0) {
-            posicionAbsolutaTop -= alturaSugerencia;
-            posicionAbsolutaBot = posicionAbsolutaTop + alturaSugerencia
-            
-        }
-        //si el elemento esta fuera de la visibilidad del contenedor
-        if (posicionAbsolutaTop < 0 && posicionAcumulada>=0) {
-            posicionAcumulada -=alturaSugerencia
-            sugerenciasBar.scrollTop = posicionAcumulada;
-            posicionAbsolutaTop += alturaSugerencia;
-            posicionAbsolutaBot = posicionAbsolutaTop + alturaSugerencia
 
-        }
+}
 
-        selectLiAll[contador-1].style.backgroundColor = '#ddd';
-        eventoEjecutado = true;
-    }else if (e.key === 'Enter' && cantidadSugerencias > 0 && !eventoEjecutado ) {
-        let etiqueta = selectLiAll[contador-1]
-        seleccionarOpcion(etiqueta);
-        posicionAbsolutaBot=0;
-        posicionAbsolutaBot=0;
-        posicionAcumulada=0;
-        contador = 0;
-        return;
-    }else if (e.key === 'Escape' && cantidadSugerencias > 0 && !eventoEjecutado ) {
-        inputBar.value = '';
-        sugerenciasBar.setAttribute('hidden','hidden');
-        contador = 0;
-        posicionAbsolutaBot=0;
-        posicionAbsolutaBot=0;
-        posicionAcumulada=0;
-        return;
-    }else{
-        eventoEjecutado = true;
-        contador = 0;
-        posicionAbsolutaBot=0;
-        posicionAbsolutaBot=0;
-        posicionAcumulada=0;
+
+
+
+// Agregandole funcionalidad al boton de buscar
+let botonBuscar = document.querySelector("#boton-busqueda")
+    botonBuscar.onclick = ()=>{
+
+            let inputActual = inputBar.value
+            var siglas = inputActual.trim().toLocaleLowerCase().match(/\(([^)]+)\)/)[1].toLocaleUpperCase()
+            console.log(siglas);
+            fetch('./javascript/consulta_barra_busqueda.php',{
+                method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'siglas=' + siglas
+            }).then(res => {
+                if(!res.ok) {
+                    throw new Error('Hubo un error en la respuesta');
+                }
+                return res.text(); 
+            })
+            .then(data =>{
+                let coordenadas = data.split(',',2)
+                console.log(coordenadas);
+                map.flyTo(coordenadas, map.getZoom())
+
+                if (getGlobal('marcasFiltradas')) {
+                    map.removeLayer(getGlobal('marcasFiltradas'));
+                }
+                setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
+                resetLayer()
+    
+            }).catch(error => console.log(error))
+            
     }
-    
 
-})
+// Mostramos el filtrado de la barra de busqueda
+const mostrarSugerencias = () =>{
+    let selectUl = sugerenciasBar;
+    let selectLiAll = selectUl.querySelectorAll('li')
+    selectLiAll.forEach(function(li) {
+        li.addEventListener('click', function() {
+            let inputSeleccion = document.querySelector("#input_mapa_busqueda");
+            inputSeleccion.value = li.innerText;
+            let siglas = inputSeleccion.value.trim().toLocaleLowerCase().match(/\(([^)]+)\)/)[1].toLocaleUpperCase();
+            fetch('./javascript/consulta_barra_busqueda.php',{
+                method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'siglas=' + siglas
+            })
+            .then(res => {
+                if(!res.ok) {
+                    throw new Error('Hubo un error en la respuesta');
+                }
+                return res.text(); 
+            })
+            .then(data =>{
+                let coordenadas = data.split(',',2)
+                console.log(coordenadas);
+                map.flyTo(coordenadas, map.getZoom())
+
+                if (getGlobal('marcasFiltradas')) {
+                    map.removeLayer(getGlobal('marcasFiltradas'));
+                }
+                setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
+                resetLayer()
+                selectUl.setAttribute('hidden', 'hidden')
+                console.log(siglas);
+                mostrarPanel(siglas);
+        
+            })
+            .catch(error => console.log(error))
+        })
+    })
+}
+
+
+
 
 //funcion para sacar de un string los numero y convertir la variable a numero
 function extraerPrimerNumero(texto) {
@@ -199,35 +246,44 @@ function extraerPrimerNumero(texto) {
 
 // Agregamos el contenido al input
 function seleccionarOpcion(elemento) {
-    let inputSeleccion = document.querySelector(".form-control");
+    let inputSeleccion = document.querySelector("#input_mapa_busqueda");
     
     inputSeleccion.value = elemento.innerText;
-    const sugerenciasBar = document.querySelector('.sugerencias')
-    sugerenciasBar.setAttribute('hidden','hidden')
-    let inputValue = document.querySelector(".form-control").value;
-        if (inputValue) {
-            var siglas = crearSiglas(inputValue);
-            
-            let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
+    document.querySelector('.sugerencias').setAttribute('hidden','hidden')
+        if (inputSeleccion.value) {
+            var siglas = inputSeleccion.value.trim().toLocaleLowerCase().match(/\(([^)]+)\)/)[1].toLocaleUpperCase()
+            console.log(siglas);
+            fetch('./javascript/consulta_barra_busqueda.php',{
+                method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'siglas=' + siglas
+            }).then(res => {
+                if(!res.ok) {
+                    throw new Error('Hubo un error en la respuesta');
+                }
+                return res.text(); 
+            })
+            .then(data =>{
+                let coordenadas = data.split(',',2)
+                console.log(coordenadas);
+                map.flyTo(coordenadas, map.getZoom())
 
-        // Mostrar marcas por siglas
-        if (getGlobal('marcasFiltradas')) {
-            map.removeLayer(getGlobal('marcasFiltradas'));
+                if (getGlobal('marcasFiltradas')) {
+                    map.removeLayer(getGlobal('marcasFiltradas'));
+                }
+                setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
+                resetLayer()
+                mostrarPanel(siglas);
+            }).catch(error => console.log(error))
         }
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
-        desplazarse(coordDesplazamiento);
-        }
-    var siglas = crearSiglas(inputSeleccion.value)
-    mostrarPanel(siglas);
-    return siglas;
+    
 }
 
 export { seleccionarOpcion }
 
-// Funcion para desplazarse al sitio
-const desplazarse = (coord) =>{
-    map.flyTo(coord, map.getZoom())
-}
+
 
 function crearSiglas(textoCompleto) {
     // Utilizando una expresión regular para extraer el texto entre paréntesis
@@ -239,53 +295,4 @@ function crearSiglas(textoCompleto) {
     return siglas;
 }
 
-
-
-
-
-let selectEstado = document.querySelector("#select_21");
-let selectUniversidad = document.querySelector("#select_22");
-var estadoActual
-
-// Funcionalidad del select de Estados
-selectEstado.addEventListener("change", () => {
-
-    // setEstadoActualGlobal(selectEstado.value.toLocaleLowerCase())
-    estadoActual = selectEstado.value.toLocaleLowerCase()
-    setGlobal('estadoActual', selectEstado.value.toLocaleUpperCase())
-    setGlobal('municipioActual', null)
-    
-    if(estadoActual == "estado") {
-        return
-    }else{
-        estadoActual = eliminarAcentos(estadoActual)
-        console.log(estadoActual);
-        let coordDesplazamiento = sugerenciasEstados[estadoActual]["coordenadas"];
-        let zoomDesplazamiento = sugerenciasEstados[estadoActual]["zoom"];
-        map.flyTo(coordDesplazamiento, zoomDesplazamiento);
-        if (getGlobal('marcasFiltradas')) {
-            map.removeLayer(getGlobal('marcasFiltradas'));
-        }
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), estadoActual.toLocaleUpperCase()).addTo(map))
-        resetLayer()
-    }
-})
-
-// Funcionalidad del select de Universidad
-selectUniversidad.addEventListener("click",()=>{
-    let universidadActual = selectUniversidad.value.toLocaleUpperCase();
-    if(universidadActual == "UNIVERSIDADES") return
-    
-        // Enfocar el estado
-        var siglas = crearSiglas(universidadActual);
-        let coordDesplazamiento = UNI_DATA[siglas]["coordenadas"];
-
-        // Filtrar por siglas
-        if (getGlobal('marcasFiltradas')) {
-            map.removeLayer(getGlobal('marcasFiltradas'));
-        }
-        setGlobal('marcasFiltradas', Filtrar(getGlobal('tipoActual'), null, null, siglas).addTo(map))
-        desplazarse(coordDesplazamiento);
-        mostrarPanel(siglas)
-})
 

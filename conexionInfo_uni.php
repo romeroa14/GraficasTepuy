@@ -38,6 +38,7 @@ foreach ($data as $universidad) {
     $portada= $universidad['portada'];
     $logo= $universidad['logo'];
     $escudo= $universidad['escudo'];
+    $pagina= $universidad['pagina'];
     $estado= mb_convert_case($universidad['estado'], MB_CASE_TITLE, "UTF-8");
     $id_municipio= $universidad['municipio'];
     $direccion= $universidad['direccion'];
@@ -48,17 +49,18 @@ foreach ($data as $universidad) {
 
     
     
-    echo $nombre_uni."-----".$estado."------".$tipo."------".$id_municipio."<br>"; 
+    // echo $nombre_uni."-----".$estado."------".$tipo."------".$id_municipio."------".print_r($autoridades)."<br>"; 
 
-
-   
 
     $conexion = conexion();
+
+    echo '----------------------------------  universidad numero: '.$code_uni.'  ---------------------';
+
     $consulta_inst = $conexion->prepare("SELECT institucion FROM sys_institucion WHERE institucion = :nombre_uni");
     $marcadores_consulta=[":nombre_uni"=>$nombre_uni];
     $consulta_inst->execute($marcadores_consulta);
     if (!$consulta_inst->rowCount()){
-        $insert = $conexion->prepare("INSERT INTO sys_institucion (institucion, abreviatura, tipo_univ, mision, vision, descripcion) VALUES (:nombre, :siglas, :tipo, :mision, :vision, :descripcion)");
+        $insert = $conexion->prepare("INSERT INTO sys_institucion (institucion, abreviatura, tipo_univ, mision, vision, descripcion, portal, direccion, logo, portada) VALUES (:nombre, :siglas, :tipo, :mision, :vision, :descripcion, :portal, :direccion, :logo, :portada)");
         
         $marcadores=[
             ":nombre"=>$nombre_uni,
@@ -66,20 +68,24 @@ foreach ($data as $universidad) {
             ":tipo"=>$tipo,
             ":mision"=>$mision,
             ":vision"=>$vision,
-            ":descripcion"=>$descripcion
+            ":descripcion"=>$descripcion,
+            ":portal"=>$pagina,
+            ":direccion"=>$direccion,
+            ":logo"=>$logo,
+            ":portada"=>$portada
             
         ]; 
         $insert->execute($marcadores);
         if ($insert->rowCount()) {
-            echo $nombre_uni.'<br>';
+            echo $nombre_uni.'----';
         }
-        $consulta = null;
+        $consulta_inst = null;
     }
 
-    $consulta_sede = $conexion->prepare("SELECT inst.institucion FROM sys_sede sede INNER JOIN sys_institucion inst ON sede.sys_institucion_id = :nombre_uni");
-    $marcadores_sede=[":nombre_uni"=>$nombre_uni];
-    $consulta_sede->execute($marcadores_sede);
-    if (!$consulta_inst->rowCount()){
+    $consulta_sede = $conexion->prepare("SELECT inst.institucion FROM sys_sede sede INNER JOIN sys_institucion inst ON sede.sys_institucion_id = inst.id  WHERE inst.institucion = :nombre_uni" );
+    $marcadores_consulta_sede=[":nombre_uni"=>$nombre_uni];
+    $consulta_sede->execute($marcadores_consulta_sede);
+    if (!$consulta_sede->rowCount()){
         $insert2 = $conexion->prepare("INSERT INTO sys_sede (sys_institucion_id, dir_estado, dir_municipio, latitud, longitud) VALUES (:insitucion_id, :estado, :municipio, :latitud, :longitud)");
         
         $marcadores=[
@@ -93,11 +99,44 @@ foreach ($data as $universidad) {
         $insert2->execute($marcadores);
         
         if ($insert2->rowCount()) {
-            echo $code_uni.'<br>';
+            echo $code_uni.'------';
         }
-        $consulta = null;
+        $consulta_sede = null;
     }
 
+
+
+
+    foreach ($autoridades as $autoridad) {
+
+        $consulta_autoridad = $conexion->prepare("SELECT aut.nombre FROM sys_institucion inst INNER JOIN sys_institucion_autoridad aut ON inst.id = aut.sys_institucion_id WHERE aut.nombre = :nombre");
+        $marc = [":nombre" => $autoridad['nombre']];
+        $consulta_autoridad->execute($marc);
+        if (!$consulta_autoridad->rowCount()) {
+
+            $insert3 = $conexion->prepare("INSERT INTO sys_institucion_autoridad (sys_institucion_id, nombre, cedula, resenia, cargo, foto, url_curriculum) VALUES (:insitucion_id, :nombre, :cedula, :resenia, :cargo, :foto, :url_curriculum)");
+
+            $marcadores = [
+                ":insitucion_id" => $code_uni,
+                ":nombre" => $autoridad['nombre'],
+                ":cedula" => $autoridad['cedula'],
+                ":resenia" => $autoridad['reseña'],
+                ":cargo" => $autoridad['cargo'],
+                ":foto" => $autoridad['foto'],
+                ":url_curriculum" => $autoridad['url_curriculum']
+
+            ];
+            $insert3->execute($marcadores);
+
+            if ($insert3->rowCount()) {
+                echo $autoridad['nombre'] . '<br>';
+            }
+        }
+
+
+        $consulta_autoridad = null;
+    }
+    
     $code_uni += 1;
 
         // echo $nombre_uni.'<br>';
