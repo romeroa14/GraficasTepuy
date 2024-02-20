@@ -18,7 +18,7 @@ function mostrar_estados()
 
 function mostrar_municipios($id)
 {
-    $db = conexion();
+    
     $html = '';
     if ($id == 'todos') {
         $query = "SELECT muni.id, muni.nombre_municipio FROM sys_pais_municipios muni INNER JOIN sys_pais_estados est ON muni.estado_id = est.id INNER JOIN sys_pais pais ON est.pais_id = pais.id WHERE pais.nombre_pais = 'Venezuela' ORDER BY muni.nombre_municipio";

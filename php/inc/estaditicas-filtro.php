@@ -4,7 +4,7 @@
 
   <!-- Filtros de estadisticas -->
     <div class="container Estadisticas-contenedor mt-5 mb-3">
-      <form action="#" method="POST">
+      <form action="#" method="POST" id="form_estadisticas">
         <div>
 
           <!-- Fila #1 del filtro -->

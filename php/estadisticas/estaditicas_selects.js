@@ -209,9 +209,52 @@ function mostrar_datos(e){
     .catch(error => {
         console.error('Ocurrió un error ' + error);
     });
+
+    // Obtener todos los selects en el formulario
+    
 };
 
+function submitDatos(e){
+    e.preventDefault()
+   
 
+    var form = document.getElementById('form_estadisticas');
+    var selects = form.querySelectorAll('select');
+    var formData = new FormData();
+
+    // Recorrer todos los selects
+    selects.forEach(select => {
+
+        // Obtener el valor seleccionado de cada select
+        var selectValue = select.value;
+
+        // Agregar el valor al objeto FormData con un nombre de clave único
+        formData.append(select.name, selectValue)
+
+    });
+
+        fetch('./php/estadisticas/consultas_graficas.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => {
+            if(!res.ok) {
+                throw new Error('Hubo un error en la respuesta');
+            }
+            return res.text(); // Cambiamos a res.text() para leer la respuesta como texto
+        })
+        .then(data => {
+        
+            console.log(data);
+        })
+   
+
+}
+
+
+
+
+form_estadisticas.addEventListener( "submit", submitDatos)
 
 selects_estaditicas.forEach(select => {
     select.addEventListener("change",mostrar_datos);
