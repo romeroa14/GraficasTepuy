@@ -8,14 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($_POST as $name => $value) {
         $datos_selects[$name] = $value;
     }
-
-     echo 'Datos recolectados según esta lógica: <br>';
-    foreach ($datos_selects as $name => $value) {
-        echo "Nombre del select: $name, Valor seleccionado: $value <br>";
-    } 
-
-
-
     $valuesFiltro = array_values($datos_selects);
     
 
@@ -30,9 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Select_9 = $valuesFiltro[8];
 
     try {
-
-
-
         $db = conexion();
 
         if ($valuesFiltro[0] != ' ' && 
@@ -45,18 +34,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $valuesFiltro[7] = 'Grupo de cargos' &&
             $valuesFiltro[8] = 'Cargos') {
             
-       
-
-        // Preparar la consulta SQL con marcadores de posición
-        $stmt = $db->prepare("SELECT id, apellido_uno, nombre_uno, sys_institucion_id FROM persona WHERE sys_institucion_id = :select1");
-        $stmt->execute(array(':select1' => $Select_1));
-        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+       // Preparar la consulta SQL con marcadores de posición
+        $stmt = $db->prepare("SELECT count(nombre_uno) total_personas, nombre_pais, nombre_estado 
+                                FROM persona p 
+                                INNER JOIN sys_institucion si on p.sys_institucion_id = si.id 
+                                INNER JOIN sys_sede ss ON ss.sys_institucion_id = si.id 
+                                INNER JOIN sys_pais_estados spe ON spe.id = ss.dir_estado 
+                                INNER JOIN sys_pais sp ON spe.pais_id = sp.id 
+                                WHERE sp.nombre_pais = 'Venezuela' AND spe.id = :Select_1");
+        $stmt->execute(array(':Select_1' => $Select_1));
+        
+        if ($stmt->rowCount()) {
+            $stmt = $stmt->fetchAll();
+            foreach ($stmt as $row) {
+                $total_Personas[] = $row['total_personas'];
+            }
+        }
         // Devolver los datos de resultados en formato JSON
-        echo 'Si recibi la informacion de la base de datos' .json_encode($resultados);
-    } else {
-        echo 'estas haciendo mal la comparacion';
-    }
+        echo 'Si recibi la informacion de la base de datos, el total de los estados es: ' .json_encode($total_Personas);
+        } else {
+            echo 'estas haciendo mal la comparacion';
+        }
 
     } catch(PDOException $e) {
         // Manejar errores de consulta
