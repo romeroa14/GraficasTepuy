@@ -85,4 +85,5 @@
           </div>
         </div>
       </form>
+      <div id="graficas_fuertes"></div>
     </div>

@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($_POST as $name => $value) {
         $datos_selects[$name] = $value;
     }
-    $valuesFiltro = array_values($datos_selects);
+$valuesFiltro = array_values($datos_selects);
     
 
     $Select_1 = $valuesFiltro[0];
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $valuesFiltro[8] = 'Cargos') {
             
        // Preparar la consulta SQL con marcadores de posición
-        $stmt = $db->prepare("SELECT count(nombre_uno) total_personas, nombre_pais, nombre_estado 
+        $stmt = $db->prepare("SELECT count(nombre_uno) as total_personas, nombre_pais, nombre_estado 
                                 FROM persona p 
                                 INNER JOIN sys_institucion si on p.sys_institucion_id = si.id 
                                 INNER JOIN sys_sede ss ON ss.sys_institucion_id = si.id 
@@ -43,17 +43,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 INNER JOIN sys_pais sp ON spe.pais_id = sp.id 
                                 WHERE sp.nombre_pais = 'Venezuela' AND spe.id = :Select_1");
         $stmt->execute(array(':Select_1' => $Select_1));
-        
+
+        // $total_Personas = [];
         if ($stmt->rowCount()) {
-            $stmt = $stmt->fetchAll();
-            foreach ($stmt as $row) {
+            $respuesta = $stmt->fetchAll();
+            foreach ($respuesta as $row) {
                 $total_Personas[] = $row['total_personas'];
+                $nombre_estados[] = $row['nombre_estado'];
             }
         }
+
+        $objeto = new stdClass();
+        $objeto->label = $nombre_estados;
+        $objeto->datos = $total_Personas;
+
         // Devolver los datos de resultados en formato JSON
-        echo 'Si recibi la informacion de la base de datos, el total de los estados es: ' .json_encode($total_Personas);
-        } else {
-            echo 'estas haciendo mal la comparacion';
+       echo json_encode($objeto, JSON_UNESCAPED_UNICODE);
+       
+        
+        } elseif ($valuesFiltro[0] != ' ' && 
+                    $valuesFiltro[1] != ' ' &&
+                    $valuesFiltro[2] = 'Tipo ' &&
+                    $valuesFiltro[3] = 'Universidades ' &&
+                    $valuesFiltro[4] = 'Tipo de persona' &&
+                    $valuesFiltro[5] = 'Sexo ' &&
+                    $valuesFiltro[6] = 'Discapacidad ' &&
+                    $valuesFiltro[7] = 'Grupo de cargos' &&
+                    $valuesFiltro[8] = 'Cargos') {
+            # code...
+        }{
+            
         }
 
     } catch(PDOException $e) {
@@ -62,5 +81,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 } else {
-    echo 'No hay un envío por POST';
+    $infoGraficas = [];
+    $infoGraficas = [
+        'error' => 'error',
+        
+    ];
+    // Devolver los datos de resultados en formato JSON
+   echo json_encode($infoGraficas, JSON_UNESCAPED_UNICODE);
 }

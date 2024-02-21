@@ -8,6 +8,7 @@ import { resetLayer } from "../../javascript/mapa.js";
 // import { sugerenciasUniversidades } from "./data/sugerencias.js";
 import { getGlobal, setGlobal } from "../../javascript/funciones/variablesGlobales.js"; 
 import { eliminarAcentos} from "../../javascript/funciones/eliminarAcentos.js"; 
+import { crearGrafica } from "../../javascript/graficos.js";
 
 const selects_estaditicas=document.querySelectorAll(".select");
 
@@ -241,10 +242,18 @@ function submitDatos(e){
             if(!res.ok) {
                 throw new Error('Hubo un error en la respuesta');
             }
-            return res.text(); // Cambiamos a res.text() para leer la respuesta como texto
+            return res.json(); // Cambiamos a res.text() para leer la respuesta como texto
         })
         .then(data => {
-        
+            
+            // var info = data.split(',')
+            // var infoArray = JSON.parse(data)
+            
+            
+            crearGrafica(document.getElementById('graficas_fuertes'),'graficaFuerte1', data.label, data.datos, ['#7448c250'],'bar');
+    
+            console.log(data.label[0]);
+            console.log(data.datos[0]);
             console.log(data);
         })
    
