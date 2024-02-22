@@ -12,5 +12,6 @@
     <script src="javascript/select-estadisticas.js" type="module"></script>
     <script src="javascript/select-mapa.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
     

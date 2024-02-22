@@ -18,6 +18,7 @@ function mostrar_estados()
 
 function mostrar_municipios($id)
 {
+    $db = conexion();
     
     $html = '';
     if ($id == 'todos') {

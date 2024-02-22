@@ -81,9 +81,37 @@
 
           <!-- Boton para filtrar -->
           <div>
-            <button class="boton" type="submit">Filtrar</button>
+            <button class="boton" type="submit"  id="btnSubmit">Filtrar</button>
           </div>
+
+          <div class="modal fade" id="graficasModal" tabindex="-1" aria-labelledby="graficasModallLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <!-- contenido -->
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="profesoresModalLabel">Graficas Dinamicas</h1>
+                  </div>
+                  
+                  <div class="row">
+                    <h2 class="titulo-graph">Estados</h2>
+                    <div id="graficas_fuertes"></div>
+                   </div>
+  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn_cerrar">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+  
+  
         </div>
-      </form>
-      <div id="graficas_fuertes"></div>
+        </form>
+        <script>
+
+          
+        </script>
     </div>

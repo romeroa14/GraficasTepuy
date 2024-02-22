@@ -210,9 +210,6 @@ function mostrar_datos(e){
     .catch(error => {
         console.error('Ocurrió un error ' + error);
     });
-
-    // Obtener todos los selects en el formulario
-    
 };
 
 function submitDatos(e){
@@ -245,23 +242,24 @@ function submitDatos(e){
             return res.json(); // Cambiamos a res.text() para leer la respuesta como texto
         })
         .then(data => {
-            
-            // var info = data.split(',')
-            // var infoArray = JSON.parse(data)
-            
-            
-            crearGrafica(document.getElementById('graficas_fuertes'),'graficaFuerte1', data.label, data.datos, ['#7448c250'],'bar');
-    
-            console.log(data.label[0]);
-            console.log(data.datos[0]);
-            console.log(data);
+            crearGrafica(document.getElementById('graficas_fuertes'),'graficaFuerte1', data.label, data.datos, ['#7448c250'],'pie');
+
+            console.log(data.label[0])
+            console.log(data.datos[0])
+            console.log(data)
+            console.log(e)
         })
    
+        // Abre el modal
+        var graficasModal = new bootstrap.Modal(document.getElementById('graficasModal'));
+        graficasModal.show();
+       
 
 }
 
 
 
+btn_cerrar.addEventListener('click', ()=>{graficas_fuertes.innerHTML = " "})
 
 form_estadisticas.addEventListener( "submit", submitDatos)
 
